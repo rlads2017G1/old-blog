@@ -13,6 +13,7 @@ MathJax.Hub.Config({
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+<br>
 Below is a quick guide to create posts (markdown files) with R studio (part 1), so that you can post it  on your blog hosted on GitHub Pages (part 2, due).
 <!--more-->
 
@@ -84,4 +85,5 @@ knitr::opts_chunk$set(fig.path = "folder_for_image/")
 ```
 The code above will save the output images in a folder called `folder_for_image` in the working directory.
 
-
+<br>
+<br>
