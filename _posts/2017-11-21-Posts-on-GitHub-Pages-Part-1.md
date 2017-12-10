@@ -44,6 +44,8 @@ You could insert a code chunk by clicking the **insert** button on upper part of
 
 * `include=FALSE` runs code but doesn't show anything.
 
+* `comment=NA` removes `##` at the front of every line in the code chunk. 
+
 How a code chunk and its output look like in a markdown file:
 ```r
 library(ggplot2)
@@ -52,7 +54,7 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
 ```
 ![]({{ "/assets/images/markdown1-1.png" | absolute_url }})
 
-,and the original appearance in Rmd file:
+, and the original appearance in Rmd file:
 ```r
 ## ```{r , include=FALSE}
 ## library(ggplot2)
