@@ -147,7 +147,7 @@ Now, the life table is done.
 
 
 ```r
-kable(life_table,align="c")
+kable(life_table, format="markdown", align="c")
 ```
 
 
