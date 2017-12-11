@@ -96,8 +96,8 @@ life_table <- life_table %>%
 Two things worth noting in the `mutate` function:
 
 1. The code `"Lx"=(lx+lead(lx))/2, "Lx"=replace(Lx, 10, 0)`
-    * `lead(lx)` shifts the whole column of lx to its next value, i.e. the column lx becomes lx+1.
-    * Due to `lead(lx)`, the last entry of the new column `Lx` must be a `NA`, so I have to assign `0` to it (otherwise all calculations based on it will become `NA`s).
+    * `lead(lx)` shifts the whole column of $l_x$ to its next value, i.e. the column $l_x$ becomes $l_{x+1}$.
+    * Due to `lead(lx)`, the last entry of the new column $L_x$ must be a `NA`, so I have to assign `0` to it (otherwise all calculations based on it will become `NA`s).
     
 2. The code `"ex"=rev(cumsum(rev(Lx)))/lx` (This is where I was stuck)
     1. The numerator of `ex` is calculated by summing over $L_x$ to $L_{max}$, the maximum age of $L_x$. This is not so intuitive when working with R. 
