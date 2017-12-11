@@ -107,6 +107,7 @@ Two things worth noting in the `mutate` function:
 ### Calculating $r$ by while loop
 
 By the **Eular-Lotka equation**, I can calculate $r$.
+
 $$\displaystyle \sum_{all \hspace{0.3mm} x} e^{-rx}l_x m_x = 1$$
 
 Using `while` loop and Approximate $r$ calculated earlier as the starting value for `r`, $r$ is calculated below. 
