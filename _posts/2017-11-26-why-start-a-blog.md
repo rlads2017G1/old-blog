@@ -3,7 +3,7 @@ layout: post
 title: Why start a Blog?
 key: 20171126
 tags:
-- personal experience
+- experience
 ---
 
 There are many reasons to start a blog. I was inspired by [this post](https://www.r-bloggers.com/advice-to-aspiring-data-scientists-start-a-blog/) and my interest in psychology.

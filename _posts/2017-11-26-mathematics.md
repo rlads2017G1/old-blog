@@ -3,7 +3,7 @@ layout: post
 title: 數學不好，抑或自我限制？
 key: 20171126
 tags:
-- personal experience
+- experience
 - 中文
 ---
 
