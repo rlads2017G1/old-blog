@@ -72,7 +72,7 @@ Here are the variables that need to be calculated.
 |    Intrinsic rate of increase    |  Approximate $r$  |                    $r \approx \frac{ln(R_0)}{G}$                   |
 |    Intrinsic rate of increase    |      (True) $r$     |                  $\displaystyle \sum_{all \hspace{0.3mm} x} e^{-rx}l_x m_x = 1$                 |
 
-$l_x*m_x*e^-rx$ and $V_x$ will be calculated twice for the approximate and the true $r$.
+$l_xm_xe^{-rx}$ and $V_x$ will be calculated twice for the approximate and the true $r$.
 
 ## Constructing Variables
 
