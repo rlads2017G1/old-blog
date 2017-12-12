@@ -8,7 +8,7 @@ titles:
 key: page-about
 ---
 <br>
-Hi, I'm Y.-F. Liao, a psychology major at NTU. I'm fascinated by the possiblity of applying the theory of evolution to explain human behaviour, and this fascination has driven me to study a broad range of interesting subjects. This is a place where I share my notes and some personal experience on learning. You can read my post, [Why Start a Blog?](https://liao961120.github.io/2017/11/26/why-start-a-blog.html), to better understand my blog.
+Hi, I'm Y.-F. Liao, a psychology major at NTU. I'm fascinated by the possiblity of applying the theory of evolution to explain human behaviour, and this fascination has driven me to study a broad range of interesting subjects. This is a place where I share my notes and some personal experience on learning. You can read my post, [Why Start a Blog?](https://liao961120.github.io/2017/11/26/why-start-a-blog.html){:target="_blank"}, to better understand my blog.
 
 ----------------------
 ### Language
