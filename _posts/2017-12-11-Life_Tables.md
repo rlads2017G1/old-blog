@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Constructing Life Tables Using R
+title: Constructing Life Tables with R
 key: 20171121
 tags:
 - R
@@ -16,9 +16,9 @@ MathJax.Hub.Config({
 
 <br>
 
-I have been using the package `dplyr` to handle with data for a while, and I thought I can use it with ease<!--more--> until I was stuck with my homework on **contructing a life table**. I found it easy to do it with spreadsheets, and was embarrassed that I spent that much time dealing it with R. It was due to my unfamiliarity with some functions in R and also insufficient practice.
+I have been using the package `dplyr` to handle with data for a while, and I thought I can use it with ease<!--more--> until I was stuck with my homework on **contructing a life table**. I found spreadsheet as an intuitive tool for handling the task, but had a hard time dealing it with R. I think it was due to my unfamiliarity with the built-in functions and insufficient practice in R. So, I wrote this post as a review and practice of my data wrangling skills in R. 
 
-I will illustrate how I did my homework with R, and you'll find out how easy it is.
+I will illustrate how I constructed a life table with R, and you'll find out how easy it is (and wonder why I stumbled on it).
 
 ## Load Packages
 
@@ -31,7 +31,7 @@ library(knitr)
 ```
 
 ## Load data
-Load the csv file to `life_table`. The raw data contains 3 columns: **Age**, **Survivorship at Age x (lx)**, and **Fecundity at Age x (mx)**. I added `options(scipen=999)` because seeing scientific notations annoys me.
+Load the csv file to `life_table`. The raw data contains 3 columns: **Age**, **Survivorship at Age x ($l_x$)**, and **Fecundity at Age x ($m_x$)**. I added `options(scipen=999)` to disable scientific notations.
 
 ```r
 options(scipen=999)  # Disable Scientific Notation
@@ -78,7 +78,7 @@ $l_xm_xe^{-rx}$ and $V_x$ will be calculated twice for the approximate and the t
 
 ### `mutate`: Creating new columns
 
-Using the pipe `%>%` and the function `mutate` in package `dplyr`, I first construct 7 new variables. Note the dependencies of the variables, so that I can't construct the life tables just at once.
+Using the pipe `%>%` and the function `mutate` in package `dplyr`, I first constructed 7 new variables. Note the dependencies of the variables, so that I couldn't construct the life tables at once.
 
 ```r
 life_table <- life_table %>%
@@ -96,12 +96,12 @@ life_table <- life_table %>%
 Two things worth noting in the `mutate` function:
 
 1. The code `"Lx"=(lx+lead(lx))/2, "Lx"=replace(Lx, 10, 0)`
-    * `lead(lx)` shifts the whole column of $l_x$ to its next value, i.e. the column $l_x$ becomes $l_{x+1}$.
+    * `lead(lx)` shifts the whole column of $l_x$ to its next value, i.e. the column $l_x$ becomes $l_{(x+1)}$.
     * Due to `lead(lx)`, the last entry of the new column $L_x$ must be a `NA`, so I have to assign `0` to it (otherwise all calculations based on it will become `NA`s).
     
 2. The code `"ex"=rev(cumsum(rev(Lx)))/lx` (This is where I was stuck)
     1. The numerator of `ex` is calculated by summing over $L_x$ to $L_{max}$, the maximum age of $L_x$. This is not so intuitive when working with R. 
-    2. `rev(Lx)` reverse the order of $L_x$, and `cumsum()` is for *cummulative sum*. `cumsum(rev(Lx))` then is equivalent to summing $L_x$ backwards (i.e. from $L_{max}$ to $L_x$). 
+    2. `rev(Lx)` reverse the order of $L_x$, and `cumsum()` is for *cummulative sum*. `cumsum(rev(Lx))` then is equivalent to *summing $L_x$ backwards* (i.e. from $L_{max}$ to $L_x$). 
     3. But since $L_x$ is reversed in the first place, `cumsum(rev(Lx))` is also in reverse order. Reversing `cumsum(rev(Lx))` with `rev()` then gives what I want.
     
 ### Calculating $r$ by while loop
@@ -110,7 +110,7 @@ By the **Eular-Lotka equation**, I can calculate $r$.
 
 $$\displaystyle \sum_{all \hspace{0.3mm} x} e^{-rx}l_x m_x = 1$$
 
-Using `while` loop and Approximate $r$ calculated earlier as the starting value for `r`, $r$ is calculated below. 
+Using `while` loop and Approximate $r$ calculated earlier as the starting value for `r`, $r$ is calculated as below. 
 
 ```r
 df <- as.data.frame(life_table)
@@ -141,7 +141,7 @@ life_table <- life_table %>%
         "approx.lx*mx*e^-rx"= lx*mx*exp(-approx.r*Age)
     )
 ```
-Now, the life table is done.
+Now, I'm done constructing a life table.
 
 ## Printing pretty Life Table
 
@@ -149,7 +149,6 @@ Now, the life table is done.
 ```r
 kable(life_table, format="markdown", align="c")
 ```
-
 
 | $Age$ |    $l_x$     |  $m_x$   |  $l_x m_x$  | $x l_x m_x$ |    $L_x$     |    $e_x$    |   $R_0$   |    $G$    | $Approximate$ <br>$r$  |     $r$     |    $V_x$     | $l_x m_x e^{-rx}$ | $Approximate$ <br>$V_x$ | $Approximate$ <br>$l_x m_x e^{-rx}$ |
 |:---:|:---------:|:-----:|:-------:|:-------:|:---------:|:--------:|:------:|:-------:|:---------:|:---------:|:---------:|:-----------:|:---------:|:------------------:|
@@ -164,6 +163,6 @@ kable(life_table, format="markdown", align="c")
 |  8  | 0.0000020 | 12700 | 0.02540 | 0.2032  | 0.0000010 | 0.500000 | 1.2829 | 3.06727 | 0.0812198 | 0.0847117 | 0.0000001 |  0.0128978  | 0.0000001 |     0.0132632      |
 |  9  | 0.0000000 |   0   | 0.00000 | 0.0000  | 0.0000000 |   NaN    | 1.2829 | 3.06727 | 0.0812198 | 0.0847117 | 0.0000000 |  0.0000000  | 0.0000000 |     0.0000000      |
 
-
+Note that I edited the column names of the table in a text editor to make it display in **LaTeX** style. There is no simple `knitr` function (at least I don't know) that print out pretty displayed style text in a table generated from a data frame 
 <br>
 <br>
