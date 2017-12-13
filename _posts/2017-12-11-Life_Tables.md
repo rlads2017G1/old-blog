@@ -16,7 +16,7 @@ MathJax.Hub.Config({
 
 <br>
 
-I have been using the package `dplyr` to handle with data for a while, and I thought I can use it with ease<!--more--> until I was stuck with my homework on **contructing a life table**. I found spreadsheet as an intuitive tool for handling the task, but had a hard time dealing it with R. I think it was due to my unfamiliarity with the built-in functions and insufficient practice in R. So, I wrote this post as a review and practice of my data wrangling skills in R. 
+I have been using the package `dplyr` to handle with data for a while, and I thought I can use it with ease<!--more--> until I was stuck with my homework on **contructing a life table**. I found spreadsheet easy for handling with the task, but had a hard time dealing with in R. I think it was due to my unfamiliarity with the built-in functions and insufficient practice in R. So, I wrote this post as a review and practice of my data wrangling skills in R. 
 
 I will illustrate how I constructed a life table with R, and you'll find out how easy it is (and wonder why I stumbled on it).
 
