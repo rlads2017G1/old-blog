@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 數學不好，抑或自我限制？
+title: 我們錯過了多少？
 key: 20171126
 tags:
 - experience
