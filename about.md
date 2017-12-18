@@ -7,7 +7,7 @@ titles:
   zh-Hant: 關於
 key: page-about
 ---
-<br>
+
 ### Me
 Hi, I'm Y.-F. Liao, a psychology major at NTU. I'm fascinated by the possiblity of applying evolutionary theory to explain human behaviour, and this fascination has driven me to study a broad range of interesting subjects. This is a place where I share my notes and some personal experience on learning. You can read my post, [Why Start a Blog?](https://liao961120.github.io/2017/11/26/why-start-a-blog.html), to better understand my incentive.
 
