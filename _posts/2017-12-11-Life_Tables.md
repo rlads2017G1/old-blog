@@ -4,6 +4,7 @@ title: Constructing Life Tables with R
 key: 20171121
 tags:
 - R
+- DS
 - notes
 ---
 <script type="text/x-mathjax-config">
