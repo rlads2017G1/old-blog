@@ -1,8 +1,11 @@
 Airline Date
 ============================================
-[source](https://openflights.org/data.html)
+[Data source](https://openflights.org/data.html)
 
-## Airline Route database (Network data)
+## routes.csv (Network data)
+[routes.csv](https://github.com/liao961120/liao961120.github.io/blob/master/ds_tour/data/global_airline_network/routes.csv)
+
+### Column (Variables description)
 
 |          Item          |                                                 Description                                                 |
 |:----------------------:|:-----------------------------------------------------------------------------------------------------------:|
@@ -16,9 +19,10 @@ Airline Date
 |          Stops         |                               Number of stops on this flight ("0" for direct)                               |
 |        Equipment       |             3-letter codes for plane type(s) generally used on this flight, separated by spaces             |
 
-## Airport ID
+## airports_with_continent.csv
+[airports_with_continent.csv](https://github.com/liao961120/liao961120.github.io/blob/master/ds_tour/data/global_airline_network/cleaned/airports_with_continent.csv)
 
-|          Item         |                                                                                                               Description                                                                                                              |
+|      Column Name      |                                                                                                               Description                                                                                                              |
 |:---------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |       Airport ID      |                                                                                             Unique OpenFlights identifier for this airport.                                                                                            |
 |          Name         |                                                                                         Name of airport. May or may not contain the City name.                                                                                         |
@@ -34,3 +38,5 @@ Airline Date
 | Tz database time zone |                                                                                       Timezone in "tz" (Olson) format, eg. "America/Los_Angeles".                                                                                      |
 |          Type         |                      Type of the airport. Value "airport" for air terminals, "station" for train stations, "port" for ferry terminals and "unknown" if not known. In airports.csv, only type=airport is included.                      |
 |         Source        | Source of this data. "OurAirports" for data sourced from OurAirports, "Legacy" for old data not matched to OurAirports (mostly DAFIF), "User" for unverified user contributions. In airports.csv, only source=OurAirports is included. |
+|       Continent       |                                                                                                Continents where the airport belongs to.                                                                                                |
+|       ISO_3166_1      |                                                                                                        ISO 3166-1 Country Code.                                                                                                        |
