@@ -43,13 +43,14 @@ tour_korea_2015 <- taiwan_tour %>%
     filter(T_Y==104) %>%
     filter(grepl("Japan|Korea",Country))
 
+Sys.setlocale("LC_TIME", "C")  # set locale to display date in en
 
 plot_tour <- ggplot(tour_korea_2015,mapping = aes(x=YMD, y=Cases, color=Country))+
     geom_line() +
     geom_point() +
     scale_color_manual(values=c("#4621FF", "#FF0000")) +  
-    scale_x_date(labels = function(x) format(x, "%Y-%m"), date_breaks="1 month") +
-    labs(x = "Time", y="", colour = "Number of travelers")
+    scale_x_date(labels = function(x) format(x, "%h"), date_breaks="1 month") +
+    labs(x = "", y="", colour = "Number of travelers")
 
 plot_mers <- ggplot(data=mers_month)+
     geom_line(mapping = aes(x=month_date,y=month_case, color="Cases")) +
@@ -57,7 +58,7 @@ plot_mers <- ggplot(data=mers_month)+
     geom_point(mapping = aes(x=month_date,y=month_case, color="Cases")) +
     geom_point(mapping = aes(x=month_date,y=month_death, color="Deaths")) +
     scale_color_manual(values=c("#EE0000", "#FF9122")) +
-    scale_x_date(labels = function(x) format(x, "%Y-%m"), date_breaks="1 month") +
+    scale_x_date(labels = function(x) format(x, "%h"), date_breaks="1 month") +
     labs(x = "Time", y="", colour = "Cases/Deaths of MERS in Korea")
 
 grid.newpage()
