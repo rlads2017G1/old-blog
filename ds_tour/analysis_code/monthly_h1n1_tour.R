@@ -27,24 +27,25 @@ h1n1_global <- h1n1 %>%
     mutate(YMD=as.Date(YMD(Y_M)))
 
 h1n1_asia <- h1n1_global %>%
-    filter(grepl("Republic of Korea|China|Japan",Country)) #Republic of Korea|China|Japan|Thailand|Indonesia|Singapore|Malaysia
-
+    filter(grepl("Republic of Korea",Country)) #Republic of Korea|China|Japan|Thailand|Indonesia|Singapore|Malaysia
+    # filter(grepl("Republic of Korea|China|Japan",Country))
 # China|Japan|Republic of Korea|Hong Kong|Thailand|Indonesia|Singapore|Malaysia
     
 ## 2009 2010 tour to Asisan countries by month
 tour_asia_country_09_10 <- taiwan_tour %>%
     filter(T_Y==98|T_Y==99) %>%
-    filter(grepl("China|Japan|Korea",Country))  # "中國|日本|韓國|香港|澳門"
+    filter(grepl("Korea",Country))  # "中國|日本|韓國|香港|澳門"
+    # filter(grepl("China|Japan|Korea",Country))
 
 ## 2008 2009 tour to Asisan countries by month
 tour_asia_country_08_09 <- taiwan_tour %>%
     filter(T_Y==97|T_Y==98) %>%
-    filter(grepl("China|Japan|Korea|Hong|Macao",Country))
+    filter(grepl("Korea",Country))
 
 ## 2010 2011 tour to Asisan countries by month
 tour_asia_country_10_11 <- taiwan_tour %>%
     filter(T_Y==99|T_Y==100) %>%
-    filter(grepl("China|Japan|Korea|Hong|Macao",Country))
+    filter(grepl("Korea",Country))
 
 
 
@@ -55,10 +56,21 @@ plot_h1n1 <- ggplot(h1n1_asia,mapping = aes(x=YMD, y=Cases, color=Country))+
     geom_point() +
     scale_x_date(labels = function(x) format(x, "%Y-%m"))
 
+plot_08_09 <- ggplot(tour_asia_country_08_09,mapping = aes(x=YMD, y=Cases, color=Country))+
+    geom_line() +
+    geom_point() +
+    scale_x_date(labels = function(x) format(x, "%Y-%m"))
+
 plot_09_10 <- ggplot(tour_asia_country_09_10,mapping = aes(x=YMD, y=Cases, color=Country))+
     geom_line() +
     geom_point() +
     scale_x_date(labels = function(x) format(x, "%Y-%m"))
 
+plot_10_11 <- ggplot(tour_asia_country_10_11,mapping = aes(x=YMD, y=Cases, color=Country))+
+    geom_line() +
+    geom_point() +
+    scale_x_date(labels = function(x) format(x, "%Y-%m"))
+
+
 grid.newpage()
-grid.draw(rbind(ggplotGrob(plot_h1n1), ggplotGrob(plot_09_10), size = "last"))
+grid.draw(rbind(ggplotGrob(plot_08_09), ggplotGrob(plot_10_11), ggplotGrob(plot_09_10), ggplotGrob(plot_h1n1), size = "last"))
