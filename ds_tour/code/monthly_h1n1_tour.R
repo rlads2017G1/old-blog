@@ -4,9 +4,10 @@ library(plotly)
 library(grid)
 library(tidyr)
 library(stringr)
+library(lubridate)
 options(scipen=999)
 
-YMD <- function(x){paste(x,'-',15,sep="")}
+YMD <- function(x){paste(x,'-',28,sep="")}
 
 h1n1 <- read_csv("./data/H1N1_cleaned.csv") %>%
     mutate(YMD=as.Date(YMD(Y_M)))

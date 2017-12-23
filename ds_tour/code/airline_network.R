@@ -14,22 +14,22 @@ routes <- read_csv("./data/global_airline_network/routes.csv") %>%
     filter(is.na(`Source airport ID`)==F)
 
 ## Set Source Airport
-WE <- airports[airports$Sub_continent == "Western Europe",] %>%
-    arrange(desc(`Airport ID`)) %>%
-    filter(is.na(`Airport ID`)==F) %>%
-    filter(str_detect(Name, "International Airport|international airport"))
-
-
-E <- airports[airports$Continent == "Europe",] %>%
-    arrange(desc(`Airport ID`)) %>%
-    filter(is.na(`Airport ID`)==F) %>%
-    filter(str_detect(Name, "International Airport|international airport"))
-
-
-EA <- airports[airports$Sub_continent == "Eastern Asia",] %>%
-    arrange(desc(`Airport ID`)) %>%
-    filter(is.na(`Airport ID`)==F) %>%
-    filter(str_detect(Name, "International Airport|international airport"))
+# WE <- airports[airports$Sub_continent == "Western Europe",] %>%
+#     arrange(desc(`Airport ID`)) %>%
+#     filter(is.na(`Airport ID`)==F) %>%
+#     filter(str_detect(Name, "International Airport|international airport"))
+# 
+# 
+# E <- airports[airports$Continent == "Europe",] %>%
+#     arrange(desc(`Airport ID`)) %>%
+#     filter(is.na(`Airport ID`)==F) %>%
+#     filter(str_detect(Name, "International Airport|international airport"))
+# 
+# 
+# EA <- airports[airports$Sub_continent == "Eastern Asia",] %>%
+#     arrange(desc(`Airport ID`)) %>%
+#     filter(is.na(`Airport ID`)==F) %>%
+#     filter(str_detect(Name, "International Airport|international airport"))
 
 ## filter specific airports
 
@@ -43,8 +43,8 @@ Dest_HK <- routes[routes$`Destination airport ID`=="3077",]
 
 
 ## Originate: Europe
-xlim <- c(-30, 145)
-ylim <- c(10, 70)
+xlim <- c(-30, 150)
+ylim <- c(-60, 85)
 map("world", col="#f2f2f2", fill=TRUE, bg="white", lwd=0.01, xlim=xlim, ylim=ylim)
 for (i in 1:nrow(routes)) {
     if (routes[i,]$`Source airport ID` %in% E$`Airport ID` & routes[i,]$`Destination airport ID` %in% airports$`Airport ID`) {
@@ -59,7 +59,8 @@ for (i in 1:nrow(routes)) {
 ## Originate: HK airport
 xlim <- c(-30, 150)
 ylim <- c(-60, 85)
-map("world", col="#f2f2f2", fill=TRUE, bg="white", lwd=0.01, mar = c(0.5,.5,.5,.5), ylim=ylim)
+                                #rgb(1,1,1,1) color generate
+map("world", col="black", fill=T, border="white", bg="#FFFFFF00", lwd=0.01, mar = c(0.5,.5,.5,.5), ylim=ylim)
 for (i in 1:nrow(Dest_HK)) {
     if (Dest_HK[i,]$`Source airport ID` %in% Inter_airport$`Airport ID` & Dest_HK[i,]$`Destination airport ID` %in% airports$`Airport ID`) {
         source_air <- Inter_airport[Inter_airport$`Airport ID`==Dest_HK[i,]$`Source airport ID`,]
