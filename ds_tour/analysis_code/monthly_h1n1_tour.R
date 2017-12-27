@@ -7,7 +7,7 @@ library(stringr)
 library(lubridate)
 options(scipen=999)
 
-YMD <- function(x){paste(x,'-',28,sep="")}
+YMD <- function(x){paste(x,'-',01,sep="")}
 
 h1n1 <- read_csv("./data/H1N1_cleaned.csv") %>%
     mutate(YMD=as.Date(YMD(Y_M)))
@@ -16,15 +16,18 @@ rp <- function(x) {
     library(stringr)
     str_replace_all(x,"Mainland","China")}
 
-taiwan_tour <- read_csv("./data/taiwan_tour_to_foreign_cleaned.csv") %>%
+taiwan_tour_byMonth <- read_csv("./data/taiwan_tour_to_foreign_cleaned.csv") %>%
     mutate(YMD=as.Date(YMD(Y_M))) %>%
     separate(Country,c("Ch_Country","Country")) %>%
     mutate(Country=rp(Country))
+# write_csv(taiwan_tour_byMonth, path="./visualization/data/taiwan_tour_byMonth.csv")
 
 h1n1_global <- h1n1 %>%
     group_by(Y_M,Country) %>%
     summarise(Cases=sum(Cases,na.rm = TRUE)) %>%
     mutate(YMD=as.Date(YMD(Y_M)))
+# write_csv(h1n1_global, path="./visualization/data/h1n1_global.csv")
+
 
 h1n1_asia <- h1n1_global %>%
     filter(grepl("Republic of Korea",Country)) #Republic of Korea|China|Japan|Thailand|Indonesia|Singapore|Malaysia

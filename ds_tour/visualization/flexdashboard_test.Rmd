@@ -1,0 +1,282 @@
+---
+title: "旅遊"
+author: 第一組
+output:
+  flexdashboard::flex_dashboard:
+    theme: bootstrap
+    orientation: rows
+    social: [ "twitter", "facebook", "menu" ]
+    navbar:
+      - { title: "About", href: "flexdashboard_test.html", align: left }
+---
+```{r setup, include=FALSE}
+library(dygraphs)
+library(flexdashboard)
+library(tmap)
+library(tmaptools)
+library(xts)
+```
+
+World View
+======================================
+
+row 1 {.tabset}
+------------------
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("./tmap.R")
+```
+
+### 2015
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+World_2015 <- pl.World.year(World.2015,Legend.title = "Travelers: 2015")
+World_2015
+```
+
+### 2014
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+World_2014 <- pl.World.year(World.2014,Legend.title = "Travelers: 2014")
+World_2014
+```
+
+### 2013
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+World_2013 <- pl.World.year(World.2013,Legend.title = "Travelers: 2013")
+World_2013
+```
+
+### 2012
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+World_2012 <- pl.World.year(World.2012,Legend.title = "Travelers: 2012")
+World_2012
+```
+
+### 2011
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+World_2011 <- pl.World.year(World.2011,Legend.title = "Travelers: 2011")
+World_2011
+```
+
+### 2010
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+World_2010 <- pl.World.year(World.2010,Legend.title = "Travelers: 2010")
+World_2010
+```
+
+
+Page 2 {data-navmenu="台灣" data-icon="fa-list"}
+===================================== 
+
+#### h4
+
+* list 1
+    1. sublist 1
+    2. sublist 2
+* list 2
+    * sublist
+    
+Row {data-height=600}
+-------------------------------------
+
+### Static map
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+World.2015 <- append_data(World,tour_code.2015, key.shp="iso_a3",key.data="iso_a3", ignore.na=T)
+
+World_2015 <- tm_shape(World.2015) +
+    tm_fill("count", title = "Travelers from Taiwan", style = "fixed",
+            breaks = c(100, 5000, 10000, 50000, 100000, 200000, 500000, 1000000, 3000000, 4000000)
+    ) +
+    tm_borders() +
+tm_layout(legend.position = c("left","bottom"))
+
+World_2015
+```
+
+
+page 4: storyboard {.storyboard data-icon="fa-plane"}
+=========================================
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(ggplot2)
+library(plotly)
+library(dygraphs)
+library(flexdashboard)
+library(RColorBrewer)
+library(scales)
+library(xts)
+
+# hue_pal()(4) # function to generate ggplot palette, 4 indicates 4 colors
+
+h1n1_global <- read_csv("./data/h1n1_global.csv")
+
+taiwan_tour_month <- read_csv("./data/taiwan_tour_byMonth.csv")
+
+## function: tour to Asisan countries by month
+tour_year_country <- function(date=c(98,97),country="Korea") {
+    tour_year_country <- taiwan_tour_month %>%
+        filter(T_Y==date[1]|T_Y==date[2]) %>%
+        filter(grepl(country,Country)) %>% # "中國|日本|韓國|香港|澳門"
+        # filter(grepl("China|Japan|Korea",Country))
+        rename("Count"=Cases)
+    }
+
+h1n1_country <- function(country="Republic of Korea") {
+    h1n1_country <- h1n1_global %>%
+        filter(grepl(country,Country)) #Republic of Korea|China|Japan|Thailand|Indonesia|Singapore|Malaysia
+        # filter(grepl("Republic of Korea|China|Japan",Country))
+        # China|Japan|Republic of Korea|Hong Kong|Thailand|Indonesia|Singapore|Malaysia
+}
+
+#---Plotting---------
+tour_2009_10_Korea <- tour_year_country(c(98,99),"Korea") %>% select(YMD, Count)
+h1n1_Korea <- h1n1_country("Republic of Korea") %>% select(YMD, Cases)
+Korea <- left_join(tour_2009_10_Korea,h1n1_Korea,by="YMD") %>% mutate(Count=Count/100)
+Korea <- xts(Korea, order.by=(Korea$YMD))[,-1]
+
+tour_2009_10_Japan <- tour_year_country(c(98,99),"Japan") %>% select(YMD, Count)
+h1n1_Japan <- h1n1_country("Japan") %>% select(YMD, Cases)
+Japan <- left_join(tour_2009_10_Japan,h1n1_Japan,by="YMD") %>% mutate(Count=Count/100)
+Japan <- xts(Japan, order.by=(Japan$YMD))[,-1]
+```
+
+### Korea H1N1
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+dygraph(Korea, main = "Korea", group = "H1N1") %>%
+    dyOptions(axisLabelFontSize = 12, axisLineWidth = 0.8, drawGrid=F) %>%
+    dySeries("Cases", axis = 'y2', label = "H1N1病例", color = hue_pal()(2)[1]) %>%
+    dySeries("Count", axis = 'y', label = "旅遊人數(百人)", color=hue_pal()(2)[2]) %>%
+    dyAxis("y", label = "旅遊人數(百)",axisLabelColor = hue_pal()(2)[2]) %>%
+    dyAxis("y2", label = "H1N1病例",axisLabelColor = hue_pal()(2)[1],independentTicks = TRUE) %>%
+    dyRangeSelector(height = 20, strokeColor = "") %>%
+    dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
+    dyLegend(labelsSeparateLines=T)
+```
+
+### Japan H1N1
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+dygraph(Japan, main = "Japan", group = "H1N1") %>%
+    dyOptions(axisLabelFontSize = 12, axisLineWidth = 0.8, drawGrid=F) %>%
+    dySeries("Cases", axis = 'y2', label = "H1N1病例", color = hue_pal()(2)[1]) %>%
+    dySeries("Count", axis = 'y', label = "旅遊人數(百人)", color=hue_pal()(2)[2]) %>%
+    dyAxis("y", label = "旅遊人數(百)",axisLabelColor = hue_pal()(2)[2]) %>%
+    dyAxis("y2", label = "H1N1病例",axisLabelColor = hue_pal()(2)[1],independentTicks = TRUE) %>%
+    dyRangeSelector(height = 20, strokeColor = "") %>%
+    dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
+    dyLegend(labelsSeparateLines=T)
+```
+
+
+page 4: scroll {data-icon="fa-plane"}
+=========================================
+
+row
+-----------------------------
+
+### Korea 2009-10 (H1N1)
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(ggplot2)
+library(plotly)
+library(dygraphs)
+library(flexdashboard)
+library(RColorBrewer)
+library(scales)
+library(xts)
+
+# hue_pal()(4) # function to generate ggplot palette, 4 indicates 4 colors
+
+h1n1_global <- read_csv("./data/h1n1_global_08_11.csv")
+
+taiwan_tour_month <- read_csv("./data/taiwan_tour_byMonth.csv")
+
+## function: tour to Asisan countries by month
+tour_year_country <- function(date=c(98,97),country="Korea") {
+    tour_year_country <- taiwan_tour_month %>%
+        filter(T_Y==date[1]|T_Y==date[2]) %>%
+        filter(grepl(country,Country)) %>% # "中國|日本|韓國|香港|澳門"
+        # filter(grepl("China|Japan|Korea",Country))
+        rename("Count"=Cases)
+    }
+
+h1n1_country <- function(country="Republic of Korea") {
+    h1n1_country <- h1n1_global %>%
+        filter(grepl(country,Country)) #Republic of Korea|China|Japan|Thailand|Indonesia|Singapore|Malaysia
+        # filter(grepl("Republic of Korea|China|Japan",Country))
+        # China|Japan|Republic of Korea|Hong Kong|Thailand|Indonesia|Singapore|Malaysia
+}
+
+#---Plotting---------
+tour_2009_10_Korea <- tour_year_country(c(98,99),"Korea") %>% select(YMD, Count)
+h1n1_Korea <- h1n1_country("Republic of Korea") %>% select(YMD, Cases)
+Korea <- left_join(tour_2009_10_Korea,h1n1_Korea,by="YMD") %>% mutate(Count=Count/100)
+Korea <- xts(Korea, order.by=(Korea$YMD))[,-1]
+
+tour_2009_10_Japan <- tour_year_country(c(98,99),"Japan") %>% select(YMD, Count)
+h1n1_Japan <- h1n1_country("Japan") %>% select(YMD, Cases)
+Japan <- left_join(tour_2009_10_Japan,h1n1_Japan,by="YMD") %>% mutate(Count=Count/100)
+Japan <- xts(Japan, order.by=(Japan$YMD))[,-1]
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+dygraph(Korea, main = "Korea") %>%
+    dyOptions(axisLabelFontSize = 12, axisLineWidth = 0.8, drawGrid=F) %>%
+    dySeries("Cases", axis = 'y2', label = "H1N1病例", color = hue_pal()(2)[1]) %>%
+    dySeries("Count", axis = 'y', label = "旅遊人數(百人)", color=hue_pal()(2)[2]) %>%
+    dyAxis("y", label = "旅遊人數(百)",axisLabelColor = hue_pal()(2)[2]) %>%
+    dyAxis("y2", label = "H1N1病例",axisLabelColor = hue_pal()(2)[1],independentTicks = TRUE) %>%
+    dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
+    dyLegend(labelsSeparateLines=T)
+```
+
+
+row {.tabset}
+-----------------------------
+
+### Korea 2008-09
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tour_2008_09_Korea <- tour_year_country(c(97,98),"Korea") %>% select(YMD, Count)
+h1n1_Korea <- h1n1_country("Republic of Korea") %>% select(YMD, Cases)
+Korea <- left_join(tour_2008_09_Korea,h1n1_Korea,by="YMD") %>% mutate(Count=Count/100)
+Korea <- xts(Korea, order.by=(Korea$YMD))[,-1]
+
+dygraph(Korea, main = "Korea 2008-09") %>%
+    dyOptions(axisLabelFontSize = 12, axisLineWidth = 0.8, drawGrid=F) %>%
+    dySeries("Cases", axis = 'y2', label = "H1N1病例", color = hue_pal()(2)[1]) %>%
+    dySeries("Count", axis = 'y', label = "旅遊人數(百人)", color=hue_pal()(2)[2]) %>%
+    dyAxis("y", label = "旅遊人數(百)",axisLabelColor = hue_pal()(2)[2]) %>%
+    dyAxis("y2", label = "H1N1病例",axisLabelColor = hue_pal()(2)[1],independentTicks = TRUE) %>%
+    dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
+    dyLegend(labelsSeparateLines=T)
+```
+
+### Korea 2010-11
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tour_2010_11_Korea <- tour_year_country(c(99,100),"Korea") %>% select(YMD, Count)
+h1n1_Korea <- h1n1_country("Republic of Korea") %>% select(YMD, Cases)
+Korea <- left_join(tour_2010_11_Korea,h1n1_Korea,by="YMD") %>% mutate(Count=Count/100)
+Korea <- xts(Korea, order.by=(Korea$YMD))[,-1]
+
+dygraph(Korea, main = "Korea 2010-11") %>%
+    dyOptions(axisLabelFontSize = 12, axisLineWidth = 0.8, drawGrid=F) %>%
+    dySeries("Cases", axis = 'y2', label = "H1N1病例", color = hue_pal()(2)[1]) %>%
+    dySeries("Count", axis = 'y', label = "旅遊人數(百人)", color=hue_pal()(2)[2]) %>%
+    dyAxis("y", label = "旅遊人數(百)",axisLabelColor = hue_pal()(2)[2]) %>%
+    dyAxis("y2", label = "H1N1病例",axisLabelColor = hue_pal()(2)[1],independentTicks = TRUE) %>%
+    dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
+    dyLegend(labelsSeparateLines=T)
+```
+

@@ -38,7 +38,7 @@ Inter_airport <- airports %>%
     filter(is.na(`Airport ID`)==F) %>%
     filter(str_detect(Name, "International Airport|international airport"))
 
-Dest_HK <- routes[routes$`Destination airport ID`=="3077",]
+Origin_TW <- routes[routes$`Source airport ID`=="2276",]
 
 
 
@@ -56,15 +56,15 @@ for (i in 1:nrow(routes)) {
     }
 }
 
-## Originate: HK airport
+## Originate: TW airport
 xlim <- c(-30, 150)
 ylim <- c(-60, 85)
                                 #rgb(1,1,1,1) color generate
 map("world", col="black", fill=T, border="white", bg="#FFFFFF00", lwd=0.01, mar = c(0.5,.5,.5,.5), ylim=ylim)
-for (i in 1:nrow(Dest_HK)) {
-    if (Dest_HK[i,]$`Source airport ID` %in% Inter_airport$`Airport ID` & Dest_HK[i,]$`Destination airport ID` %in% airports$`Airport ID`) {
-        source_air <- Inter_airport[Inter_airport$`Airport ID`==Dest_HK[i,]$`Source airport ID`,]
-        dest_air <- airports[airports$`Airport ID`==Dest_HK[i,]$`Destination airport ID`,]
+for (i in 1:nrow(Origin_TW)) {
+    if (Origin_TW[i,]$`Source airport ID` %in% Inter_airport$`Airport ID` & Origin_TW[i,]$`Destination airport ID` %in% airports$`Airport ID`) {
+        source_air <- Inter_airport[Inter_airport$`Airport ID`==Origin_TW[i,]$`Source airport ID`,]
+        dest_air <- airports[airports$`Airport ID`==Origin_TW[i,]$`Destination airport ID`,]
         
         inter <- gcIntermediate(c(source_air[1,]$Longitude, source_air[1,]$Latitude), c(dest_air[1,]$Longitude, dest_air[1,]$Latitude), n=100, addStartEnd=TRUE)
         lines(inter, col="green", lwd=0.001)
