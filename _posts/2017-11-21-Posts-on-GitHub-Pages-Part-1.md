@@ -74,16 +74,16 @@ If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks), where the
 
 $$\frac{\lambda}{3}$$
 
-If you place `\frac{\lambda}{3}` between two `$`s, it would be displayed inline,like this $\frac{\lambda}{3}$.
+If you place `\frac{\lambda}{3}` between two `$`s, it would be displayed inline, like this $\frac{\lambda}{3}$.
 
 
 ## Set Image Path
-When your output of code contains images, R studio would create a folder and save them in it. You can set where you want to save the images in advance(you migth want to do this if you're using Git and GitHub together) by inserting a code chunk after the YML:
+When your output of code contains images, R studio would create a folder and save them in it. You can set where you want to save the images in advance(you might want to do this if you're using Git and GitHub Pages together) by inserting a code chunk after the YML:
 ```r
 {r setup, include=FALSE}
 knitr::opts_chunk$set(fig.path = "folder_for_image/")
 ```
-The code above will save the output images in a folder called `folder_for_image` in the working directory.
+The code above will save the output images in a folder called `folder_for_image` in the current working directory.
 
 <br>
 <br>
