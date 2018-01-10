@@ -14,7 +14,7 @@ MathJax.Hub.Config({
 </script>
 
 <br>
-Below is a quick guide to create posts (markdown files) with R studio (part 1), so that you can post it  on your blog hosted on GitHub Pages (part 2, due).
+Below is a quick guide to creating posts with R studio (part 1), so that you can post it  on your blog hosted on GitHub Pages (part 2, due).
 <!--more-->
 
 ## Getting Started with R markdown
