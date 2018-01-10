@@ -70,7 +70,7 @@ Note that the first code chunk(which contains `include=FALSE`) above didn't appe
 
 ### LaTeX
 LaTeX is used for creating neat mathematic notations, and Rmarkdown supports it.
-If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks, where the LaTeX syntax is between the two `$$`, you will have the output below.
+If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks), where the LaTeX syntax is between the two `$$`, you will have the output below.
 
 $$\frac{\lambda}{3}$$
 
