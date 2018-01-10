@@ -13,7 +13,6 @@ MathJax.Hub.Config({
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<br>
 Below is a quick guide to creating posts with R studio (part 1), so that you can post it  on your blog hosted on GitHub Pages (part 2, due).
 <!--more-->
 
