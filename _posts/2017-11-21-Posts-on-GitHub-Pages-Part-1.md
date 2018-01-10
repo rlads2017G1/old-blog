@@ -66,7 +66,7 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
 ##    geom_histogram(binwidth = 0.5)
 ## ```
 ```
-Note that the first code chunk above didn't appear in the md file.
+Note that the first code chunk(which contains `include=FALSE`) above didn't appear in the md file.
 
 ### LaTeX
 LaTeX is used for creating neat mathematic notations, and Rmarkdown supports it.
