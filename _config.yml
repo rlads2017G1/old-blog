@@ -26,6 +26,13 @@ nav_lists:
       zh-Hans: 关于
       zh-Hant: 關於
     url: /about.html
+  # - title: CV
+  - titles:
+      en: CV
+      zh: CV
+      zh-Hans: CV
+      zh-Hant: CV
+    url: /cv.html
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 repository: https://liao961120.github.io/
