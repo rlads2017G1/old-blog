@@ -27,27 +27,26 @@ nav_lists:
       zh-Hant: 關於
     url: /about.html
 
-  - titles:
-      en: Notes
-      zh: Notes
-      zh-Hans: Notes
-      zh-Hant: Notes
-    sublinks:
-      - title: Biology
-        sublinks:
-          - title: Lotka－Volterra
-            url: /simulation/competition.html
-          - title: Logistic Growth
-            url: /simulation/Discrete_Logistic.html
-  
-  - titles:
-      en: Project
-      zh: Project
-      zh-Hans: Project
-      zh-Hant: Project
-    sublinks:
-      - title: Tour to the World
-        url: https://rlads2017g1.github.io/taiwan.github.io/
+  # - titles:
+  #     en: Notes
+  #     zh: Notes
+  #     zh-Hans: Notes
+  #     zh-Hant: Notes
+  #   sublinks:
+  #     - title: Biology
+  #       sublinks:
+  #         - title: Lotka－Volterra
+  #           url: /simulation/competition.html
+  #         - title: Logistic Growth
+  #           url: /simulation/Discrete_Logistic.html
+  # - titles:
+  #     en: Project
+  #     zh: Project
+  #     zh-Hans: Project
+  #     zh-Hant: Project
+  #   sublinks:
+  #     - title: Tour to the World
+  #       url: https://rlads2017g1.github.io/taiwan.github.io/
   # This is where you add new navigation bar
   # - titles:
   #     en: CV
