@@ -30,6 +30,7 @@
             {% assign __locale = site.data.locale.NAV.ALL %}
             {% include snippets/locale-to-string.html %}
             <li><a href="{{ href | append: "?tag=" | replace: '//', '/'}}">{{ __return }}</a></li>
+            
             {% for list in site.nav_lists %}
                 {% assign __path = list.url %}
                 {% include snippets/prepend-baseurl.html %}
@@ -37,7 +38,29 @@
                 {% assign __locale = list.titles %}
                 {% include snippets/locale-to-string.html %}
                 <li><a href="{{ href }}">{% if list.title %}{{ list.title }}{% else %}{{ __return }}{% endif %}</a></li>
+                {% assign sublinks = entry.sublinks %}
+                {% if sublinks %}
+                <li{{ href }}>
+                    <a href="{{ site.baseurl }}{{ list.url }}">{{ list.titles }}</a>
+                    <ul>
+                        {% for sublink in sublinks %}
+                        <li><a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% else %}
+                <li{{ current }}><a href="{{ site.baseurl }}{{ list.url }}">{{ list.titles }}</a></li>
+                {% endif %}
             {% endfor %}
+            
+            <!-- {% for list in site.nav_lists %}
+                {% assign __path = list.url %}
+                {% include snippets/prepend-baseurl.html %}
+                {% assign href = __return %}
+                {% assign __locale = list.titles %}
+                {% include snippets/locale-to-string.html %}
+                <li><a href="{{ href }}">{% if list.title %}{{ list.title }}{% else %}{{ __return }}{% endif %}</a></li>
+            {% endfor %} -->
             {% if site.paths.rss %}
                 {% assign __path = site.paths.rss %}
             {% else %}
