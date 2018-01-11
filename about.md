@@ -1,7 +1,7 @@
 ---
 layout: page
 titles:
-  en: About / 關於
+  en: About
   zh: 关于
   zh-Hans: 关于
   zh-Hant: 關於
@@ -13,7 +13,7 @@ Hi, I'm Y.-F. Liao, a psychology major at NTU. I'm fascinated by human evolution
 
 This is a place where I share my notes and some personal experience on learning. You can read my post, [Why Start a Blog?](https://liao961120.github.io/2017/11/26/why-start-a-blog.html), to have a better understanding of  my incentive.
 
-----------------------
+<br>
 
 #### Language
 I'll try to make my blog English to reach a wider range of potential audiance (and it's also convenient since many of my notes were originally taken in English). Some posts will be written in Chinese for the intended audience, and some even bilingually (if I have enough leisure time to do so).
