@@ -21,7 +21,7 @@
     @include link-background-colors ( $weibo-color, lighten($weibo-color, 5%))
   }
   .facebook {
-    @include link-background-colors ( $github-color, lighten($github-color, 20%)) //$facebook-color, lighten($facebook-color, 5%))
+    @include link-background-colors ( $facebook-color, lighten($facebook-color, 5%))
   }
   .twitter {
     @include link-background-colors ( $twitter-color, lighten($twitter-color, 5%))
