@@ -80,7 +80,7 @@ disqus:
    shortname: y-f-liao-s-page
 
 ## Google Analytics ##
-ga_tracking_id:  UA-112381830-1
+ga_tracking_id: UA-112381830-1
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
