@@ -160,3 +160,31 @@ titles:
 </div>
 
 <br>
+
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // https://google,developers.appspot.com/chart/interactive/docs/spreadsheets#gid
+      google.load('visualization', '1', {packages: ['corechart', 'line']});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        // Add your sheets url and range below
+        var spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1APDTfB4yib2zF5eco3oSwAidnHibl8xvsIyg0NAwY4A/edit?usp=sharing?range=A1:A8";
+        var query = new google.visualization.Query(spreadsheetUrl);
+        query.send(handleQueryResponse);
+      }
+
+      function handleQueryResponse(response) {
+        var dataTable = response.getDataTable();
+        // https://developers.google.com/chart/interactive/docs/reference?hl=en#methods
+        // getValue(rowIndex, columnIndex)
+        document.getElementById("test").innerHTML = dataTable.getValue(0, 0);
+      }
+    </script>
+  </head>
+
+  <div class="main">
+    <p id="test"></p>
+</div>
