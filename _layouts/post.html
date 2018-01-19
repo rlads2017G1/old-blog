@@ -9,9 +9,7 @@ layout: blog-default
                 <header class="article-header">
                     {% include snippets/page-title.html %}
                     <h1 itemprop="headline" itemprop="name headline">{{ __return }}</h1>
-                    {% include blog/article-data.html %}
-                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a598441175b1b4f"></script>
-                    <div class="addthis_inline_share_toolbox addthis_default_style"></div>          
+                    {% include blog/article-data.html %}      
                 </header>
                 <div class="m-article-content js-article-content" itemprop="articleBody">
                     {{ content }}
@@ -53,6 +51,8 @@ layout: blog-default
             </aside>
         </div>
     </div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a598441175b1b4f"></script>
+    <div class="addthis_inline_share_toolbox addthis_default_style"></div>    
 </div>
 
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
