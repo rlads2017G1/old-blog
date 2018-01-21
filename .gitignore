@@ -185,3 +185,4 @@ _site/
 .jekyll-metadata
 
 /_posts/
+.Rproj.user
