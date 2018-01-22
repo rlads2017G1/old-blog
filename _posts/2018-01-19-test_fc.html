@@ -1,0 +1,184 @@
+---
+layout: post
+title: test2
+key: 20180119
+tags:
+- markdown
+---
+
+<div id="numbered-equations" class="section level2">
+<h2>Numbered equations:</h2>
+<span class="math display" id="eq:binom">\[\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \tag{1}
+\end{equation}\]</span>
+</div>
+<div id="math-equations" class="section level2">
+<h2>Math equations:</h2>
+<ul>
+<li>inline: <span class="math inline">\(\frac{a}{b} = mc^2\)</span></li>
+<li>displayed: <span class="math display">\[\frac{a}{b} = mc^2\]</span></li>
+</ul>
+<div id="subscripts-h2so4" class="section level3">
+<h3>subscripts: H<sub>2</sub>SO<sub>4</sub></h3>
+
+<p>footnotes: 內文<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>References:</p>
+<ul>
+<li><p>see equation <a href="#eq:binom">(1)</a></p></li>
+<li><p>see table <a href="#tab:table">1</a></p></li>
+</ul>
+<p>text reference: <em>superscripts: 剛<sup>2</sup>好</em></p>
+<pre class="r"><code>knitr::kable(
+  head(mtcars[, 1:8], 10),
+  caption = &#39;A table of the first 10 rows of the mtcars data&#39;,
+  align=&#39;c&#39;
+)</code></pre>
+<table>
+<caption><span id="tab:table">Table 1: </span>A table of the first 10 rows of the mtcars data</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">mpg</th>
+<th align="center">cyl</th>
+<th align="center">disp</th>
+<th align="center">hp</th>
+<th align="center">drat</th>
+<th align="center">wt</th>
+<th align="center">qsec</th>
+<th align="center">vs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mazda RX4</td>
+<td align="center">21.0</td>
+<td align="center">6</td>
+<td align="center">160.0</td>
+<td align="center">110</td>
+<td align="center">3.90</td>
+<td align="center">2.620</td>
+<td align="center">16.46</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td>Mazda RX4 Wag</td>
+<td align="center">21.0</td>
+<td align="center">6</td>
+<td align="center">160.0</td>
+<td align="center">110</td>
+<td align="center">3.90</td>
+<td align="center">2.875</td>
+<td align="center">17.02</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td>Datsun 710</td>
+<td align="center">22.8</td>
+<td align="center">4</td>
+<td align="center">108.0</td>
+<td align="center">93</td>
+<td align="center">3.85</td>
+<td align="center">2.320</td>
+<td align="center">18.61</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td>Hornet 4 Drive</td>
+<td align="center">21.4</td>
+<td align="center">6</td>
+<td align="center">258.0</td>
+<td align="center">110</td>
+<td align="center">3.08</td>
+<td align="center">3.215</td>
+<td align="center">19.44</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td>Hornet Sportabout</td>
+<td align="center">18.7</td>
+<td align="center">8</td>
+<td align="center">360.0</td>
+<td align="center">175</td>
+<td align="center">3.15</td>
+<td align="center">3.440</td>
+<td align="center">17.02</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td>Valiant</td>
+<td align="center">18.1</td>
+<td align="center">6</td>
+<td align="center">225.0</td>
+<td align="center">105</td>
+<td align="center">2.76</td>
+<td align="center">3.460</td>
+<td align="center">20.22</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td>Duster 360</td>
+<td align="center">14.3</td>
+<td align="center">8</td>
+<td align="center">360.0</td>
+<td align="center">245</td>
+<td align="center">3.21</td>
+<td align="center">3.570</td>
+<td align="center">15.84</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td>Merc 240D</td>
+<td align="center">24.4</td>
+<td align="center">4</td>
+<td align="center">146.7</td>
+<td align="center">62</td>
+<td align="center">3.69</td>
+<td align="center">3.190</td>
+<td align="center">20.00</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td>Merc 230</td>
+<td align="center">22.8</td>
+<td align="center">4</td>
+<td align="center">140.8</td>
+<td align="center">95</td>
+<td align="center">3.92</td>
+<td align="center">3.150</td>
+<td align="center">22.90</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td>Merc 280</td>
+<td align="center">19.2</td>
+<td align="center">6</td>
+<td align="center">167.6</td>
+<td align="center">123</td>
+<td align="center">3.92</td>
+<td align="center">3.440</td>
+<td align="center">18.30</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>citation <span class="citation">(Abadia &amp; Gonzalez Morales, <a href="#ref-RN9">2010</a>)</span></p>
+<p><span class="citation">Csikszentmihalyi (<a href="#ref-RN15">2014</a>)</span> 主張…</p>
+<hr />
+<div id="refs" class="references">
+<div id="ref-RN9">
+<p>Abadia, O. M., &amp; Gonzalez Morales, M. R. (2010). Redefining neanderthals and art: An alternative interpretation of the multiple species model for the origin of behavioural modernity. <em>Oxford Journal of Archaeology</em>, <em>29</em>, 229–243. Journal Article.</p>
+</div>
+<div id="ref-RN15">
+<p>Csikszentmihalyi, M. (2014). Society, culture, and person: A systems view of creativity. In <em>The systems model of creativity: The collected works of mihaly csikszentmihalyi</em> (pp. 47–61). Book Section, Dordrecht: Springer Netherlands.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>在此打下註解，會顯示在最下方<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
