@@ -5,7 +5,7 @@ title: My CV
 # Yong-Fu Liao
 
 <div id="webaddress">
-<a href="liaomovie2@gmail.com">Email</a>
+<a href="mailto:liaomovie2@gmail.com">Email</a>
 | <a href="https://liao961120.github.io/">liao961120.github.io</a>
 | <a href="https://www.facebook.com/liao961120">Facebook</a>
 </div>
@@ -15,10 +15,11 @@ title: My CV
 
 Undergraduate at National Taiwan University
 
-### Skills
-**R**: data analysis, visualization, and text analysis.
+## Skills
 
-**Web page design**: html, css
+**R**: Data analysis, visualization, and text analysis. Love Rmarkdown formats.
+
+**Web page design**: Use Jekyll and Hugo to build static web pages. Have some basics in html and css.
 
 ### Research interests
 
