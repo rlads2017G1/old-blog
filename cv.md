@@ -55,8 +55,5 @@ __Taipei Municipal Jianguo High School__, Taipei, Taiwan
 - Event Planner & Coordinator: Planned and held *2017 NPSY Volleyball Cup* for university psychology majors.
 
 
-### Footer
-
-Last updated: January 2018
 
 
