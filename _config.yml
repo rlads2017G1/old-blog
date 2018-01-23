@@ -27,6 +27,9 @@ nav_lists:
       zh-Hant: 關於
     url: /about.html
 
+  - titles: CV
+    url: /cv.html
+
   # - titles:
   #     en: Notes
   #     zh: Notes
