@@ -32,8 +32,8 @@ nav_lists:
       Zh: CV
       zh-Hans: CV
       zh-Hant: CV
-    url: /cv.html{:target="_blank"}
-
+    url: /cv.html
+    
   # This is where you add new navigation bar
   # - titles:
   #     en: CV
