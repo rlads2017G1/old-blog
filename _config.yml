@@ -32,7 +32,7 @@ nav_lists:
       Zh: CV
       zh-Hans: CV
       zh-Hant: CV
-    url: /cv.html
+    url: /cv.html target="_blank"
 
   # This is where you add new navigation bar
   # - titles:
