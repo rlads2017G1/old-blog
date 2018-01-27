@@ -20,7 +20,7 @@ opens link in new tab.
 
 For example, `[Foot](#footnotes)` links to the **Footnotes** section ([Foot](#footnotes)).
 
-For Multibite Characters, add `{#identifier}` next to the heading, and use `[Link text](#identifier)` to reference the section.
+For Multibite Characters, add `{#identifier}` next to the heading, and use `[Link text](#identifier)` to reference the section. [Displaying liquid tag](#identifier)
 
 ### Equation Reference (MathJax required)
 
@@ -43,7 +43,7 @@ Warnings: GitHub Pages
 ### Display Raw Liquid Tags
 
 
-#### Displaying liquid tag in code chunks
+#### Displaying liquid tag in code chunks{#identifier}
 
 
 [1] This is footnote
