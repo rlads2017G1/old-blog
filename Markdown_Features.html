@@ -248,8 +248,7 @@ div.tocify {
 <h2>Warnings: GitHub Pages</h2>
 <div id="display-raw-liquid-tags" class="section level3">
 <h3>Display Raw Liquid Tags</h3>
-<p>Becareful of raw (non-functional) liquid tags (or anything that looks like it) in the posts, it might lead to page build error when using Jekyll. Even if the tags appeard in the code chunks, it <strong>won’t be displayed like this</strong>:</p>
-<pre><code>{% if page.mathjax2 == true %}</code></pre>
+<p>Becareful of raw (non-functional) liquid tags (or anything that looks alike) in the posts, it might lead to page build error when using Jekyll. And even when the tags appears in the code chunks, it <strong>won’t be displayed like this</strong>: <code>{% if page.mathjax == true %}</code>, and will still lead to page build error.</p>
 <p>If you want to display raw liquid tags <strong>as contents</strong> in your posts, put the raw liquid tag between <code>{% raw %}</code> and <code>{% endraw %}</code>. If you want them <strong>in code chunks</strong>, wrap the whole thing (including <code>{% raw %}</code> and <code>{% endraw %}</code>) in the code fences, so the thing in the code fences looks like:</p>
 <div id="displaying-liquid-tag-in-code-chunks" class="section level4">
 <h4>Displaying liquid tag in code chunks</h4>
