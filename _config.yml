@@ -100,6 +100,7 @@ exclude:
   - /screenshots
   - /test
   - /_posts/.Rmd
+  - /edit_posts
 
 ## Plugins ##
 gems:

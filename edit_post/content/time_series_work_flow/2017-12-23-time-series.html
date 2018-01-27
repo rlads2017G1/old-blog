@@ -1,0 +1,978 @@
+---
+title: "Time series workflow"
+---
+
+
+
+<pre class="r"><code>library(readr)
+library(dplyr)
+library(lubridate)
+library(tidyr)</code></pre>
+<pre class="r"><code>mers_Korea &lt;- read_csv(&quot;./mers_Korea.csv&quot;) %&gt;%
+    rename(&quot;date&quot;=`[hide]Date`, &quot;cum_case&quot;=`Cases*1*2`, &quot;cum_death&quot;=`Deaths*2`)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">date</th>
+<th align="center">cum_case</th>
+<th align="center">cum_death</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">20 May 2015</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">21 May 2015</td>
+<td align="center">3</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">26 May 2015</td>
+<td align="center">5</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">27 May 2015</td>
+<td align="center">5</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">28 May 2015</td>
+<td align="center">7</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">29 May 2015</td>
+<td align="center">13</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">30 May 2015</td>
+<td align="center">15</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">31 May 2015</td>
+<td align="center">18</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">1 June 2015</td>
+<td align="center">25</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">2 June 2015</td>
+<td align="center">30</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">3 June 2015</td>
+<td align="center">30</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">4 June 2015</td>
+<td align="center">36</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center">5 June 2015</td>
+<td align="center">42</td>
+<td align="center">5</td>
+</tr>
+<tr class="even">
+<td align="center">6 June 2015</td>
+<td align="center">64</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">7 June 2015</td>
+<td align="center">87</td>
+<td align="center">5</td>
+</tr>
+<tr class="even">
+<td align="center">8 June 2015</td>
+<td align="center">95</td>
+<td align="center">7</td>
+</tr>
+<tr class="odd">
+<td align="center">9 June 2015</td>
+<td align="center">108</td>
+<td align="center">7</td>
+</tr>
+<tr class="even">
+<td align="center">10 June 2015</td>
+<td align="center">122</td>
+<td align="center">9</td>
+</tr>
+<tr class="odd">
+<td align="center">11 June 2015</td>
+<td align="center">126</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">12 June 2015</td>
+<td align="center">138</td>
+<td align="center">13</td>
+</tr>
+<tr class="odd">
+<td align="center">13 June 2015</td>
+<td align="center">145</td>
+<td align="center">14</td>
+</tr>
+<tr class="even">
+<td align="center">14 June 2015</td>
+<td align="center">150</td>
+<td align="center">16</td>
+</tr>
+<tr class="odd">
+<td align="center">15 June 2015</td>
+<td align="center">154</td>
+<td align="center">19</td>
+</tr>
+<tr class="even">
+<td align="center">16 June 2015</td>
+<td align="center">162</td>
+<td align="center">19</td>
+</tr>
+<tr class="odd">
+<td align="center">17 June 2015</td>
+<td align="center">165</td>
+<td align="center">23</td>
+</tr>
+<tr class="even">
+<td align="center">18 June 2015</td>
+<td align="center">166</td>
+<td align="center">24</td>
+</tr>
+<tr class="odd">
+<td align="center">19 June 2015</td>
+<td align="center">166</td>
+<td align="center">24</td>
+</tr>
+<tr class="even">
+<td align="center">20 June 2015</td>
+<td align="center">169</td>
+<td align="center">25</td>
+</tr>
+<tr class="odd">
+<td align="center">21 June 2015</td>
+<td align="center">172</td>
+<td align="center">27</td>
+</tr>
+<tr class="even">
+<td align="center">22 June 2015</td>
+<td align="center">175</td>
+<td align="center">27</td>
+</tr>
+<tr class="odd">
+<td align="center">23 June 2015</td>
+<td align="center">179</td>
+<td align="center">27</td>
+</tr>
+<tr class="even">
+<td align="center">24 June 2015</td>
+<td align="center">180</td>
+<td align="center">29</td>
+</tr>
+<tr class="odd">
+<td align="center">25 June 2015</td>
+<td align="center">181</td>
+<td align="center">31</td>
+</tr>
+<tr class="even">
+<td align="center">26 June 2015</td>
+<td align="center">182</td>
+<td align="center">31</td>
+</tr>
+<tr class="odd">
+<td align="center">27 June 2015</td>
+<td align="center">182</td>
+<td align="center">32</td>
+</tr>
+<tr class="even">
+<td align="center">28 June 2015</td>
+<td align="center">182</td>
+<td align="center">32</td>
+</tr>
+<tr class="odd">
+<td align="center">29 June 2015</td>
+<td align="center">182</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">30 June 2015</td>
+<td align="center">182</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">1 July 2015</td>
+<td align="center">183</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">2 July 2015</td>
+<td align="center">184</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">3 July 2015</td>
+<td align="center">185</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">4 July 2015</td>
+<td align="center">186</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">5 July 2015</td>
+<td align="center">186</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">6 July 2015</td>
+<td align="center">186</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">7 July 2015</td>
+<td align="center">186</td>
+<td align="center">35</td>
+</tr>
+<tr class="even">
+<td align="center">8 July 2015</td>
+<td align="center">186</td>
+<td align="center">35</td>
+</tr>
+<tr class="odd">
+<td align="center">9 July 2015</td>
+<td align="center">186</td>
+<td align="center">35</td>
+</tr>
+<tr class="even">
+<td align="center">10 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">11 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">12 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">13 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">14 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">15 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">16 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">17 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">18 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">19 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">20 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">21 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">22 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">23 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">24 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">25 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">26 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">27 July 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">28 July 2015 ~ 24 October 2015</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">25 October 2015</td>
+<td align="center">186</td>
+<td align="center">37</td>
+</tr>
+<tr class="even">
+<td align="center">26 October 2015 ~ 24 November 2015</td>
+<td align="center">186</td>
+<td align="center">37</td>
+</tr>
+<tr class="odd">
+<td align="center">25 November 2015</td>
+<td align="center">186</td>
+<td align="center">38</td>
+</tr>
+<tr class="even">
+<td align="center">26 November 2015 ~ 28 September 2016</td>
+<td align="center">186</td>
+<td align="center">38</td>
+</tr>
+</tbody>
+</table>
+<p>from strings to date format</p>
+<pre class="r"><code>mers_Korea &lt;- mers_Korea %&gt;%    
+    mutate(date=dmy(mers_Korea$date)) %&gt;%
+    filter(date!=is.na(mers_Korea$date)) %&gt;%
+    mutate(case=lead(cum_case)-cum_case) %&gt;%
+    mutate(death=lead(cum_death)-cum_death) %&gt;%
+    replace_na(list(case=0, death=0)) %&gt;%
+    mutate(month=month(date)) %&gt;%
+    select(month, date, case, death, everything()) 
+        ## reorder columns, everything() selects the rest variables
+        ## (order uoy don&#39;t care)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">month</th>
+<th align="center">date</th>
+<th align="center">case</th>
+<th align="center">death</th>
+<th align="center">cum_case</th>
+<th align="center">cum_death</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">2015-05-20</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">2015-05-21</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">3</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">2015-05-26</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">5</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">2015-05-27</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">5</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">2015-05-28</td>
+<td align="center">6</td>
+<td align="center">0</td>
+<td align="center">7</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">2015-05-29</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">13</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">2015-05-30</td>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">15</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">2015-05-31</td>
+<td align="center">7</td>
+<td align="center">1</td>
+<td align="center">18</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-01</td>
+<td align="center">5</td>
+<td align="center">0</td>
+<td align="center">25</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-02</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">30</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-03</td>
+<td align="center">6</td>
+<td align="center">1</td>
+<td align="center">30</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-04</td>
+<td align="center">6</td>
+<td align="center">1</td>
+<td align="center">36</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-05</td>
+<td align="center">22</td>
+<td align="center">0</td>
+<td align="center">42</td>
+<td align="center">5</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-06</td>
+<td align="center">23</td>
+<td align="center">0</td>
+<td align="center">64</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-07</td>
+<td align="center">8</td>
+<td align="center">2</td>
+<td align="center">87</td>
+<td align="center">5</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-08</td>
+<td align="center">13</td>
+<td align="center">0</td>
+<td align="center">95</td>
+<td align="center">7</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-09</td>
+<td align="center">14</td>
+<td align="center">2</td>
+<td align="center">108</td>
+<td align="center">7</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-10</td>
+<td align="center">4</td>
+<td align="center">1</td>
+<td align="center">122</td>
+<td align="center">9</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-11</td>
+<td align="center">12</td>
+<td align="center">3</td>
+<td align="center">126</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-12</td>
+<td align="center">7</td>
+<td align="center">1</td>
+<td align="center">138</td>
+<td align="center">13</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-13</td>
+<td align="center">5</td>
+<td align="center">2</td>
+<td align="center">145</td>
+<td align="center">14</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-14</td>
+<td align="center">4</td>
+<td align="center">3</td>
+<td align="center">150</td>
+<td align="center">16</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-15</td>
+<td align="center">8</td>
+<td align="center">0</td>
+<td align="center">154</td>
+<td align="center">19</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-16</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">162</td>
+<td align="center">19</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-17</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">165</td>
+<td align="center">23</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-18</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">166</td>
+<td align="center">24</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-19</td>
+<td align="center">3</td>
+<td align="center">1</td>
+<td align="center">166</td>
+<td align="center">24</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-20</td>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">169</td>
+<td align="center">25</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-21</td>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">172</td>
+<td align="center">27</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-22</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">175</td>
+<td align="center">27</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-23</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">179</td>
+<td align="center">27</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-24</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">180</td>
+<td align="center">29</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-25</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">181</td>
+<td align="center">31</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-26</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">182</td>
+<td align="center">31</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-27</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">182</td>
+<td align="center">32</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-28</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">182</td>
+<td align="center">32</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">2015-06-29</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">182</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">2015-06-30</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">182</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-01</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">183</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-02</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">184</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-03</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">185</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-04</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-05</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-06</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">186</td>
+<td align="center">33</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-07</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">35</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-08</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">35</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-09</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">186</td>
+<td align="center">35</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-10</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-11</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-12</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-13</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-14</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-15</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-16</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-17</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-18</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-19</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-20</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-21</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-22</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-23</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-24</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-25</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">2015-07-26</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">2015-07-27</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">186</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">2015-10-25</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">186</td>
+<td align="center">37</td>
+</tr>
+<tr class="odd">
+<td align="center">11</td>
+<td align="center">2015-11-25</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">186</td>
+<td align="center">38</td>
+</tr>
+</tbody>
+</table>
+<p>case per day to case per month</p>
+<pre class="r"><code>mers_month &lt;- mers_Korea %&gt;%
+    mutate(month_date=as.Date(paste0(&quot;2015-&quot;,mers_Korea$month,&quot;-28&quot;),&quot;%Y-%m-%d&quot;)) %&gt;%   # pick a (common) date to represent month, e.g. y-m-28 
+    group_by(month_date) %&gt;%
+    summarise(month_case=sum(case), month_death=sum(death))
+
+# or use a function
+YMD &lt;- function(x){paste(&#39;2015&#39;,x,&#39;-28&#39;,sep=&quot;&quot;)}</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">month_date</th>
+<th align="center">month_case</th>
+<th align="center">month_death</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2015-05-28</td>
+<td align="center">23</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">2015-06-28</td>
+<td align="center">158</td>
+<td align="center">32</td>
+</tr>
+<tr class="odd">
+<td align="center">2015-07-28</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">2015-10-28</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">2015-11-28</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
