@@ -4,14 +4,8 @@ title: Creating Posts on GitHub Pages with R Studio (Part 1)
 key: 20171121
 tags:
 - Web Page
+mathjax: true
 ---
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-});
-</script>
-<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
 Below is a quick guide to creating posts with R studio (part 1), so that you can post it  on your blog hosted on GitHub Pages (part 2, due).
 <!--more-->
