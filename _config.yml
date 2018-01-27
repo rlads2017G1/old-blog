@@ -100,7 +100,6 @@ exclude:
   - /screenshots
   - /test
   - /_posts/.Rmd
-  - Markdown_Features_and_warnings.md
 
 ## Plugins ##
 gems:
