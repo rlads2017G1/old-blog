@@ -237,20 +237,20 @@ div.tocify {
 <p>Add <code>\label{eq:name}</code> in the <code>$$</code> tags give the equation identifiers. Use <code>$\eqref{eq:name}$</code> to reference the labled equation.</p>
 <p>Note the dependency of this feature on MathJax support. Read <a href="https://liao961120.github.io/2018/01/27/mathjax.html">this post</a> for details.</p>
 </div>
-<div id="footnotes" class="section level3">
-<h3>Footnotes:</h3>
+<div id="footnotes-kramdown-and-blackfriday" class="section level3">
+<h3>Footnotes (kramdown and Blackfriday)</h3>
 <pre class="md"><code>texttextext [^1]
 [^1]: this will be displayed at bottom</code></pre>
-<p>Click <strong>1</strong> to read foot notes<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
+<p>Click <sup><strong>1</strong></sup> at the ending of this line of text to read foot notes<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
 </div>
 </div>
 <div id="warnings-github-pages" class="section level2">
 <h2>Warnings: GitHub Pages</h2>
 <div id="display-raw-liquid-tags" class="section level3">
 <h3>Display Raw Liquid Tags</h3>
-<p>Becareful of raw (non-functional) liquid tags (or anything that looks like it) in the posts. It might lead to page build error when using Jekyll, even if the tags appeard in the code chunks, like this:</p>
+<p>Becareful of raw (non-functional) liquid tags (or anything that looks like it) in the posts, it might lead to page build error when using Jekyll. Even if the tags appeard in the code chunks, it <strong>won’t be displayed like this</strong>:</p>
 <pre><code>{% if page.mathjax2 == true %}</code></pre>
-<p>If you want to include liquid tags in your posts, put the raw liquid tag between <code>{% raw %}</code> and <code>{% endraw %}</code>. If you want to display in code chunks, wrap the whole thing (including <code>{% raw %}</code> and <code>{% endraw %}</code>) in the code fences. So the thing in the code fences looks like:</p>
+<p>If you want to display raw liquid tags <strong>as contents</strong> in your posts, put the raw liquid tag between <code>{% raw %}</code> and <code>{% endraw %}</code>. If you want them <strong>in code chunks</strong>, wrap the whole thing (including <code>{% raw %}</code> and <code>{% endraw %}</code>) in the code fences, so the thing in the code fences looks like:</p>
 <div id="displaying-liquid-tag-in-code-chunks" class="section level4">
 <h4>Displaying liquid tag in code chunks</h4>
 <pre><code>{% raw %}&lt;raw liquid tags wanted to display&gt;{% endraw %}</code></pre>
