@@ -1,0 +1,38 @@
+---
+layout: page
+title: Posting with Markdown on GitHub Pages (or Hugo)
+---
+
+
+
+<div id="properties-of-kramdown-jekyll-or-blackfriday-hugo" class="section level1">
+<h1>Properties of kramdown (jekyll) or Blackfriday (Hugo)</h1>
+<div id="features" class="section level2">
+<h2>Features</h2>
+<div id="heading-reference" class="section level3">
+<h3>Heading Reference</h3>
+<pre class="md"><code>[Link text](#heading-of-markdown)</code></pre>
+<p>For example, <code>[Foot](#footnotes)</code> links to the Footnotes section (<a href="#footnotes">Foot</a>).</p>
+</div>
+<div id="equation-reference-mathjax-required" class="section level3">
+<h3>Equation Reference (MathJax required)</h3>
+<p>Add <code>\label{eq:name}</code> in the <code>$$</code> tags give the equation identifiers. Use <code>$\eqref{eq:name}$</code> to reference the labled equation[^1].</p>
+<p>Note the dependency of this feature on MathJax support. Read <a href="https://liao961120.github.io/2018/01/27/mathjax.html">this post</a> for details.</p>
+</div>
+<div id="footnotes" class="section level3">
+<h3>Footnotes:</h3>
+<pre class="md"><code>texttextext[^1]
+[^1]: this will be displayed at bottom</code></pre>
+</div>
+</div>
+<div id="warnings-github-pages" class="section level2">
+<h2>Warnings: GitHub Pages</h2>
+<div id="display-raw-liquid-tags" class="section level3">
+<h3>Display Raw Liquid Tags</h3>
+<p>Becareful of raw (non-functional) liquid tags (or anything that looks like it) in the posts. It might lead to page build error when using Jekyll, even if the tags appeard in the code chunks, like this:</p>
+<pre><code>{% if page.mathjax2 == true %}</code></pre>
+<p>If you want to include liquid tags in your posts, put the raw liquid tag between <code>{% raw %}</code> and <code>{% endraw %}</code>. If you want to display in code chunks, wrap the whole thing (including <code>{% raw %}</code> and <code>{% endraw %}</code>) in the code fences. So the thing in the code fences looks like: #### Displaying liquid tag in code chunks</p>
+<pre><code>{% raw %}&lt;raw liquid tags wanted to display&gt;{% endraw %}</code></pre>
+</div>
+</div>
+</div>
