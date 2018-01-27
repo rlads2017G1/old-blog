@@ -37,5 +37,11 @@ Becareful of raw (non-functional) liquid tags (or anything that looks like it) i
 {% raw %}{% if page.mathjax2 == true %}{% endraw %}
 ```
 
-If you want to include liquid tags in your posts, put the raw liquid tag between `{% raw %}\{% raw %}{% endraw %}` and `{% raw %}\{% endraw %}{% endraw %}`. If you want to display in code chunks, wrap the whole thing (include `{% raw %}\{% raw %}{% endraw %}` and `{% raw %}\{% endraw %}{% endraw %}`) in code fences. 
+If you want to include liquid tags in your posts, put the raw liquid tag between the `raw` and `endraw` liquid tags, like this:
+```
+{% raw %}
+{% raw %} <some raw liquid tag> {% endraw %}
+{% endraw %}
+```
+If you want to display in code chunks, wrap the whole thing in code fences.
 
