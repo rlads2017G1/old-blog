@@ -4,7 +4,7 @@ title: Creating Posts on GitHub Pages with R Studio (Part 1)
 key: 20171121
 tags:
 - Web Page
-mathjax: true
+mathjax2: true
 ---
 
 Below is a quick guide to creating posts with R studio (part 1), so that you can post it  on your blog hosted on GitHub Pages (part 2, due).

@@ -75,7 +75,8 @@ leancloud:
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class
 
-mathjax: false
+mathjax: true
+mathjax2: false
 
 ## Paginate ##
 paginate: 5
