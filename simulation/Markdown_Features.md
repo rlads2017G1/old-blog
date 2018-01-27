@@ -42,9 +42,6 @@ Warnings: GitHub Pages
 
 ### Display Raw Liquid Tags
 
-Becareful of raw (non-functional) liquid tags (or anything that looks alike) in the posts, it might lead to page build error when using Jekyll. And even when the tags appears in the code chunks, it **won't be displayed like this**: `{% if page.mathjax == true %}`, and will still lead to page build error.
-
-If you want to display raw liquid tags **as contents** in your posts, put the raw liquid tag between `{% raw %}` and `{% endraw %}`. If you want them **in code chunks**, wrap the whole thing (including `{% raw %}` and `{% endraw %}`) in the code fences, so the thing in the code fences looks like:
 
 #### Displaying liquid tag in code chunks
 
