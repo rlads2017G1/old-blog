@@ -38,7 +38,7 @@ Becareful of raw (non-functional) liquid tags (or anything that looks like it) i
 ```
 
 If you want to include liquid tags in your posts, put the raw liquid tag between the `raw` and `endraw` liquid tags, like this:
-```
+```html
 {% raw %}
 {% raw %}<some raw liquid tag>{% endraw %}
 {% endraw %}
