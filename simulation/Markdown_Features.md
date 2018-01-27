@@ -48,6 +48,5 @@ If you want to display raw liquid tags **as contents** in your posts, put the ra
 
 #### Displaying liquid tag in code chunks
 
-    {% raw %}<raw liquid tags wanted to display>{% endraw %}
 
 [1] This is footnote
