@@ -26,7 +26,7 @@ tags:
 <ul>
 <li><p>R 的生態圈<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>以及 Open Source<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>的概念</p></li>
 <li><p>資料科學與 Story telling: <strong>Coding</strong> 於資料科學中的角色不同於其在工程上的角色，亦及 Aesthetic Coding 與 Functional Coding 的概念。資料科學不僅包含傳統的 Functional Coding，也包含大量的 Aesthetic Coding，用於傳達資料科學上的發現</p></li>
-<li><p>Reproducibility: <a href="http://rmarkdown.rstudio.com/" target="_blank">Rmarkdown</a> (<code>.Rmd</code>) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(<code>Rmd</code>)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版花費的心力。例如，要報告可輸出成投影片、要列印可輸出成 PDF、要放到網路上可輸出成網頁。這讓使用者能有效率的管理與記錄工作流程，是達到 <a href="https://en.wikipedia.org/wiki/Reproducibility" target="_blank">Reproducibility</a> 的基礎。</p></li>
+<li><p>Reproducibility: <a href="http://rmarkdown.rstudio.com/" target="_blank">Rmarkdown</a> (<code>.Rmd</code>) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(<code>Rmd</code>)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版花費的心力。例如，要報告可輸出成投影片、要列印可輸出成 PDF、要放到網路上可輸出成網頁。Rmarkdown 讓使用者能以簡單有效率的方式記錄工作流程，這是達到 <a href="https://en.wikipedia.org/wiki/Reproducibility" target="_blank">Reproducibility</a> 的基礎之一。</p></li>
 <li><p>文本分析: 我本來對這部分最沒有興趣，直到我意識到文本資料是研究人類行為、社會與文化最重要的資料來源之一<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a><sup>,</sup><a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></p></li>
 </ul>
 <div id="start" class="section level3">
@@ -62,34 +62,49 @@ tags:
 <p>我認為要從實作專案收穫那麼多，不可或缺的因素同樣是之前一直強調的：<strong>興趣與熱情</strong>，沒有這些一定不可能堅持完美，不能堅持完美專案就會淪落為練習題(反正只要跑出東西就好)。題目的選擇因而會是成敗的關鍵，(若是團體專案)與組員的溝通與共識更是關鍵中的關鍵，一定要在專案中找到最適合自己的角色，否則專案只會浪費你的時間。</p>
 </div>
 </div>
-<div id="resource" class="section level3">
-<h3>學習資源</h3>
-<p>我起初學 R 印的兩本書以及聽的線上課程，讓我覺得自己起步不算順遂，浪費了一些時間。這是因為當時對 R 不太了解，也不知道如何觸及其社群，因此並未慎選書籍及課程即開啟我的學習歷程。但這過程中，我確實發現一個不錯的東西可以幫助 R 的學習：swirl<a href="#fn18" class="footnoteRef" id="fnref18"><sup>18</sup></a> 是 R 的套件，可以讓使用者直接在 R 的環境中互動式學習 R。</p>
+</div>
+<div id="resource" class="section level2">
+<h2>學習資源</h2>
+<p>我起初學 R 印的兩本書以及聽的線上課程，讓我覺得自己起步不算順遂，浪費了一些時間。這是因為當時對 R 不太了解，也不知道如何觸及其社群，因此並未慎選書籍及課程即開啟我的學習歷程。但這過程中，我確實發現一個不錯的東西：swirl<a href="#fn18" class="footnoteRef" id="fnref18"><sup>18</sup></a> 是 R 的套件，可以讓使用者直接在 R 的環境中互動式學習 R。</p>
+<div class="section level3">
+<h3>學習歷程</h3>
 <p>若回到五個多月前，我會如此安排 R 的學習歷程：</p>
 <ol style="list-style-type: decimal">
 <li><p>基礎參考書 (若有餘力的話 + swirl 當練習題)</p>
 <ul>
 <li><p><strong>Hands-On Programming with R</strong>：這是一本寫得相當好、相當簡單的書，目標讀者是沒有程式經驗的讀者(雖然我覺得縱使有程式經驗也可看這本書了解 R 語言的邏輯)。內容僅聚焦在非常基礎的 <strong>Base R</strong>，但重點是其將 R 的邏輯寫得非常清楚。我是在學 R 一陣子之後才看了這本書，對我有莫大的幫助。這本書相當短，可以很快看完，更多資訊請自行 google 書名。</p></li>
 <li><p><strong><a href="http://r4ds.had.co.nz/" target="_blank">R for Data Science</a></strong>：這本書應該只會越來越紅(不知道會不會變成每個人都推薦的書)。如同其名，這本書就在教你怎麼在資料科學上用 R。與上本書不同的是，這本書以<code>tidyverse</code>套件為基礎而非 Base R。雖然如此，這本書並不需要 Base R 的基礎(但有的話會更好，所以我才推薦<strong>Hands-On</strong>)，需要的基礎書中都有介紹。</p></li>
-<li><p>我建議可以先從 <strong>Hands-On Programming with R</strong> 開始，因為這本書很短可以快速看完。之後再按照進度慢慢看 <strong>R for Data Science</strong> (可配合學校上課進度，這本書短時間內看不完)，逐步累積自己的功力。另外，我推薦的書都是英文的，或許有些人很抗拒英文，但我真的不建議看中文書。當 R 學到某個程度後，更進階的資源幾乎都是英文的；此外，在 google 問題解決方法時，用中文十之八九會找不到答案。看英文書會讓自己熟悉 R 的英文用語，而且這些書用的英文都很簡單。</p></li>
+<li><p>我建議可以先從 <strong>Hands-On Programming with R</strong> 開始，因為這本書很短可以快速看完。之後再按照章節慢慢看 <strong>R for Data Science</strong> (可配合學校上課進度，這本書短時間內看不完)，逐步累積自己的功力。</p>
+<ul>
+<li>我推薦的書都是英文的，或許有些人很抗拒英文，但我真的不建議看中文書。當 R 學到某個程度後，更進階的資源幾乎全為英文；此外，google 問題解決方法時，用中文十之八九會找不到答案。看英文書可讓自己熟悉 R 的英文用語，而且這些書的英文都很簡單。</li>
+</ul></li>
 <li><p>如果有志探索 R 的其它可能性，可以參考 <a href="https://bookdown.org/" target="_blank">bookdown.org</a> 網站上的書(僅推薦 Star 100 以上，上面還是有一些雷書)。這裡的書都是用<code>bookdown</code>套件寫得，而且皆為 open (包含上述的<strong>R for Data Science</strong>)，可以在網頁上看或下載到電腦(詳見<code>bookdown</code>套件)。</p></li>
 </ul></li>
-<li><p>學校課程：如同我於<a href="#course">課程回顧</a>所提，一門 R 的課可以讓自己視野更加廣博。僅是自修閉門造車進步很慢，常常會落掉進度，而且頗為苦悶。有經驗的前輩帶領比較不會走偏方向，同時還能學到許多有趣的東西。</p></li>
+<li><p>學校課程：如同<a href="#course">課程回顧</a>所提，一門 R 的課可以讓自己視野更加廣博。僅是自修閉門造車進步很慢，常常會落掉進度，而且頗為苦悶。有經驗的前輩帶領比較不會走偏方向，同時還能學到許多有趣的東西。 <br></p></li>
 <li><p>將 R 當玩具：如果學 R 如同遊戲一般好玩，那就沒有堅不堅持的問題了，這也是我自認學 R 相當成功的一部份。以下，我將介紹一些我知道的有趣資源，不見得直接與資料分析相關，但一定可與 R 結合。</p>
 <ul>
 <li><p><a href="https://www.r-graph-gallery.com/" target="_blank">R Graph Gallery</a>、<a href="http://www.htmlwidgets.org/" target="_blank">htmlwidgets for R</a>: R 最為吸引人的特徵之一就是其強大的繪圖功能，加上其它套件的擴充，幾乎所有跟資料有關的圖都可以用 R 畫。沒事可以多多欣賞其他人用 R 畫出的圖，除了放鬆，未來也很可能會用到。</p></li>
-<li><p><a href="http://rmarkdown.rstudio.com/gallery.html" target="_blank">Rmarkdown</a>: 先前提過Rmarkdown很強大，可以點進連結感受一下其生產力。我覺得不會用 Rmarkdown 比起不會用 R 還要可惜。</p></li>
-<li><p><a href="https://bookdown.org/yihui/blogdown/" target="_blank">Blogdown</a>: 我目前的網站(一部份)透過 Blogdown 在經營<a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a>。Blogdown 降低了架站的門檻，即使完全不懂 HTML/CSS 也能快速上手。此外，Blogdown 架設的網頁是靜態的，不同於 Wordpress 等的動態網頁，靜態網頁的速度要快許多、不需要付費伺服器、搬遷容易。</p></li>
+<li><p><a href="http://rmarkdown.rstudio.com/gallery.html" target="_blank">Rmarkdown</a>: 先前提過Rmarkdown很強大，可以點進 gallery 感受一下其生產力。我認為不會用 Rmarkdown 比起不會用 R 還要可惜。</p></li>
+<li><p><a href="https://bookdown.org/yihui/blogdown/" target="_blank">Blogdown</a>: 我目前的網站(一部份)透過 Blogdown 在經營<a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a>。Blogdown 降低了架站的門檻，即使完全不懂 HTML/CSS 也能快速上手，同時配合 Git/GitHub 能讓發表新文章的流程非常有效率。此外，Blogdown 架設的網頁是靜態的，不同於 Wordpress 等的動態網頁，靜態網頁的速度要快許多、不需要付費伺服器，而且容易搬遷。</p></li>
+</ul></li>
+<li><p>專案：集大成</p>
+<ul>
+<li><p>資料分析(<strong>R for Data Science</strong>)與視覺化(<strong>R Graph Gallery</strong>, <strong>htmlwidgets</strong>)</p></li>
+<li><p>網頁製作：<strong>Rmarkdown</strong>, <strong>Blogdown</strong></p></li>
+<li><p>將資料分析、視覺化、結合網頁呈現，將成果與大家分享。這一切都可以透過 R 完成，專案因此是我自己最期待的挑戰。</p></li>
 </ul></li>
 </ol>
 </div>
-<div class="section level3">
-<h3>更上一層樓？</h3>
-<pre><code>- R Blogger</code></pre>
+<div id="following-and-followers" class="section level3">
+<h3>更上一層樓：Following and Followers</h3>
+<p><strong>Following</strong> and <strong>Followers</strong> 是我直接借用 GitHub 上的用詞：</p>
+<ul>
+<li><p>Following: 該用戶追蹤的其他用戶</p></li>
+<li><p>Followers: 追蹤該用戶的其他用戶</p></li>
+</ul>
+<p>透過社群網站追蹤一些 R 社群是一個讓自己跟上快速成長的 R 的好方式，讓自己每日都長一些知識。我臉書有追蹤 <a href="https://www.facebook.com/rbloggers/" target="_blank">R bloggers</a>，裡面常出現優質好文，而且通常容易閱讀。</p>
+<p>一個讓自己成長更快速的方式，就是自己成為 R bloggers：我不是指寫的文章要登上<a href="https://www.facebook.com/rbloggers/" target="_blank">R bloggers</a>，而是像那些作者一樣在自己的部落格上寫文章。寫文章是一種很好的學習方式，能幫自己重新組織所學，同時也檢視是否真正了解正在撰寫的主題。文章不見得是寫給別人看的，有時忘記一些東西，查找自己的文章，透過自己的文字重新學習相當方便。推薦兩篇簡短的優質文說明寫 blog 的好處：<a href="https://bookdown.org/yihui/blogdown/personal-experience.html" target="_blank">Yihui Xie</a>、<a href="https://www.r-bloggers.com/advice-to-aspiring-data-scientists-start-a-blog/" target="_blank">David Robertson</a>。</p>
 </div>
-</div>
-<div id="wrap-up" class="section level2">
-<h2>Wrap-up</h2>
 </div>
 <div class="footnotes">
 <hr />
