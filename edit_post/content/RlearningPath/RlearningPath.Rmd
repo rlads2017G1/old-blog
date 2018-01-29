@@ -39,7 +39,7 @@ tags:
 
 這門課與我個性相符，完全顯現在第一堂課實習課(Lab Session)的作業上。作業與 R 並無相關，而是要使用 Markdown 格式撰寫自我介紹。由於我對簡約風有點痴迷[^sim] (受 Markdown 影響後更為痴迷)，我便在 Markdown 上花了一些時間。目前，透過R與 Pandoc Markdown 的整合，我可以用 Rmarkdown 簡潔快速地寫出含有上下標、Footnotes、超連結、citation等等的文件[^md] (不須使用html語法)，我甚至未來考慮使用Rmarkdown撰寫論文。
 
-對 Rmarkdown 的痴迷與熱愛可說是我R語言功力進步的關鍵。**Rmarkdown 賦予每個人將自己的想法傳達給其他人的能力**[^idea]，因此，**能將美好的事物以及想法與大家分享**成為我學習 R 最強烈的動機。例如，當初在做這門課的[期末專案](https://rlads2017g1.github.io/presentation.html){target="_blank"}時，發覺 R 可以畫出各種[互動式圖表](http://gallery.htmlwidgets.org/){target="_blank"}，於是我開始尋找最適合呈現資料的方式。由於不同種類的圖，有時需要不同格式的資料[^dt]，因此為了畫出最適合的圖，我反覆整理許多資料以符合格式要求，使得我 data-wrangling 的能力大幅提升。
+對 Rmarkdown 的痴迷與熱愛可說是我R語言功力進步的關鍵。**Rmarkdown 賦予每個人將想法傳達給其他人的能力**[^idea]，因此，**能將美好的事物以及想法與大家分享**成為我學習 R 最強烈的動機。例如，當初在做這門課的[期末專案](https://rlads2017g1.github.io/presentation.html){target="_blank"}時，發覺 R 可以畫出各種[互動式圖表](http://gallery.htmlwidgets.org/){target="_blank"}，於是我開始尋找最適合呈現資料的方式。由於不同種類的圖，有時需要不同格式的資料[^dt]，因此為了畫出最適合的圖，我反覆整理許多資料以符合格式要求，使得我 data-wrangling 的能力大幅提升。
 
 
 ## R 學習路徑
@@ -84,9 +84,9 @@ R 語言的基礎：**Base R** 是剛開始學 R 的一大障礙，這也是為�
 
     - **[R for Data Science](http://r4ds.had.co.nz/){target="_blank"}**：這本書應該只會越來越紅(不知道會不會變成每個人都推薦的書)。如同其名，這本書就在教你怎麼在資料科學上用 R。與上本書不同的是，這本書以`tidyverse`套件為基礎而非 Base R。雖然如此，這本書並不需要 Base R 的基礎(但有的話會更好，所以我才推薦**Hands-On**)，需要的基礎書中都有介紹。
 
-我建議可以先從 **Hands-On Programming with R** 開始，因為這本書很短可以快速看完。之後再按照進度慢慢看 **R for Data Science** (可配合學校上課進度，這本書短時間內看不完)，逐步累積自己的功力。另外，我推薦的書都是英文的，或許有些人很抗拒英文，但我真的不建議看中文書。當 R 學到某個程度後，更進階的資源幾乎都是英文的；此外，在 google 問題解決方法時，用中文十之八九會找不到答案。看英文書會讓自己熟悉 R 的英文用語，而且這些書用的英文都很簡單。
+    我建議可以先從 **Hands-On Programming with R** 開始，因為這本書很短可以快速看完。之後再按照進度慢慢看 **R for Data Science** (可配合學校上課進度，這本書短時間內看不完)，逐步累積自己的功力。另外，我推薦的書都是英文的，或許有些人很抗拒英文，但我真的不建議看中文書。當 R 學到某個程度後，更進階的資源幾乎都是英文的；此外，在 google 問題解決方法時，用中文十之八九會找不到答案。看英文書會讓自己熟悉 R 的英文用語，而且這些書用的英文都很簡單。
 
-如果有志探索 R 的其它可能性，可以參考 [bookdown.org](https://bookdown.org/){target="_blank"} 網站上的書(僅推薦 star 100 以上，上面還是有一些雷書)。這裡的書都是用`bookdown`套件寫得，而且皆為 open (包含上述的**R for Data Science**)，可以在網頁上看或下載到電腦(詳見`bookdown`套件)。
+    如果有志探索 R 的其它可能性，可以參考 [bookdown.org](https://bookdown.org/){target="_blank"} 網站上的書(僅推薦 Star 100 以上，上面還是有一些雷書)。這裡的書都是用`bookdown`套件寫得，而且皆為 open (包含上述的**R for Data Science**)，可以在網頁上看或下載到電腦(詳見`bookdown`套件)。
 
 2. 學校課程：如同我於[課程回顧](#course)所提，一門 R 的課可以讓自己視野更加廣博。僅是自修閉門造車進步很慢，常常會落掉進度，而且頗為苦悶。有經驗的前輩帶領比較不會走偏方向，同時還能學到許多有趣的東西。
  
