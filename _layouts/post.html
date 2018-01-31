@@ -105,9 +105,12 @@ layout: blog-default
             return $window.outerWidth() > 1150 && $pageStage.hasClass('has-toc');
         }
         function setTocClass() {
+            // test toc
+            {% if page.toc != false %}
             if (hasTitle) {
                 !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
             }
+            {% endif %}
         }
 
         setTocClass();
