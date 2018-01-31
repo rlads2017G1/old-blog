@@ -21,7 +21,7 @@ Some of the posts might not be complete and might not be readable since they are
 
 ### Language
 
-Some of the posts would be written in Chinese, and some in English since many of my notes were originally taken in English. Some posts might be written in both Chinese and English if I have enough time to do so. Note however that I'm not a native speaker of English, so please bear with the grammatical errors if you encountered some.
+Some of the posts were written in Chinese, and some in English since many of my notes were originally taken in English. Some posts might be written in both Chinese and English if I have enough time to do so. Note however that I'm not a native speaker of English, so please bear with the grammatical errors if you encountered some.
 
 ### License
 
