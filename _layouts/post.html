@@ -45,14 +45,14 @@ layout: blog-default
                 
             </article>
         </div>
+        <!-- test: toc -->
+        {% if page.toc != false %}
         <div class="col-2">
             <aside class="js-article-aside">
-            <!-- test toc disable -->
-                {% if page.toc != false %} 
-                    <div class="m-toc js-toc"></div>
-                {% endif %}
+            <div class="m-toc js-toc"></div> 
             </aside>
         </div>
+        {% endif %}
     </div>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a598441175b1b4f"></script>
     <div class="addthis_inline_share_toolbox addthis_default_style"></div>    
