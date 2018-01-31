@@ -47,7 +47,10 @@ layout: blog-default
         </div>
         <div class="col-2">
             <aside class="js-article-aside">
-                <div class="m-toc js-toc"></div>
+            <!-- test toc disable -->
+                {% if page.toc != false %} 
+                    <div class="m-toc js-toc"></div>
+                {% endif %}
             </aside>
         </div>
     </div>
