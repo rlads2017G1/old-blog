@@ -10,7 +10,7 @@ key: page-about
 
 ### Interests and Motivation
 
-Hi, I'm Y.-F. Liao, a psychology major at NTU. I'm strongly interested in human evolution, particularly the (possible) dynamics of culture-gene coevolutionary process, which I believe had led to some of the most distinctive features of human psychologies. This interest has driven me to study a broad range of interesting subjects, and also gave me an insight about the importance of transmitting idea, knowledge, and experience.
+I'm a psychology major strongly interested in human evolution, particularly the (possible) dynamics of culture-gene coevolutionary process, which I believe had led to some of the most distinctive features of human psychologies. This interest has driven me to study a broad range of interesting subjects, and also gave me an insight about the importance of transmitting idea, knowledge, and experience.
 
 ### Posts
 
