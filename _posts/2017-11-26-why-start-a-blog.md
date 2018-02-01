@@ -16,7 +16,7 @@ I'm a not-so-smart student, and have spent a large amount of time figuring out m
 
 ## Starting a Blog for Myself
 
-Probably, few or no people will read any post on my blog. But as noted in [the post](https://www.r-bloggers.com/advice-to-aspiring-data-scientists-start-a-blog/){:target="_blank"} mentioned above, **writing posts is a great chance to practice skills and communicating about it**. By sharing what I've learned through writing a post on it, I'm actually reviewing it. And by communicating about what I've learned, I can know how well I understand the topic (thinking that you understand is different from understanding itself).
+Probably, few or no people will read any post on my blog. But as noted in [the post](https://www.r-bloggers.com/advice-to-aspiring-data-scientists-start-a-blog/){:target="_blank"} mentioned above, **writing posts is a great chance to practice skills and communicating about it**. By sharing what I've learned through writing a post, I'm actually reviewing it. And by communicating about what I've learned, I can know how well I understand the topic (thinking that you understand is different from understanding itself).
 
 ## Notes
 [^1]: I think we cannot fully understand human evolution without considering the effect of culture.
