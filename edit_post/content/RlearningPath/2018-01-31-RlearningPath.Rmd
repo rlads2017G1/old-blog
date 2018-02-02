@@ -40,16 +40,16 @@ tags:
 
 這門課與我個性相符，完全顯現在第一堂課實習課(Lab Session)的作業上。作業與 R 並無相關，而是要使用 Markdown 格式撰寫自我介紹。由於我對簡約風有點痴迷[^sim] (受 Markdown 影響後更為痴迷)，在 Markdown 上花了一些時間研究。目前，透過 R 與 Pandoc Markdown 語法的整合(即 Rmarkdown)，我可以快速簡潔地寫出含有上下標、Footnotes、超連結、citation 的精美文件[^md]或文章(例如，這篇部落格)而完全不須使用 html 語法。這讓我在寫許多作業時，效率提高不少。
 
-對 Rmarkdown 的痴迷與熱愛可說是我R語言功力進步的關鍵。**Rmarkdown 賦予每個人將想法傳達給其他人的能力**[^idea]，因此，**能做出美好的東西並與其他人分享**成為我學習 R 最強烈的動機之一。例如，當初在做這門課的[期末專案](https://rlads2017g1.github.io/presentation.html){target="_blank"}時，發覺 R 可以畫出很多種[互動式圖表](http://gallery.htmlwidgets.org/){target="_blank"}，於是我開始尋找最適合呈現資料的方式。由於不同種類的圖，常有不同資料格式的要求[^dt]，因此為了畫出最適合的圖，我反覆整理許多資料以符合格式。這使得我在 data wrangling 上，能力大幅提升。
+對 Rmarkdown 的痴迷與熱愛可說是我R語言功力進步的關鍵。**Rmarkdown 賦予每個人將想法傳達給其他人的能力**[^idea]，因此，**能做出美好的東西並與其他人分享**成為我學習 R 最強烈的動機之一。例如，當初在做這門課的[期末專案](https://rlads2017g1.github.io/presentation.html){target="_blank"}時，發覺 R 可以畫出很多種[互動式圖表](http://gallery.htmlwidgets.org/){target="_blank"}(不須懂 JavaScript)，於是我開始尋找最適合呈現資料的方式。由於不同種類的圖，常有不同資料格式的要求[^dt]，因此為了畫出最適合的圖，我反覆整理許多資料以符合格式。這使得我在 data wrangling 上，能力大幅提升。
 
 
 ## R 學習路徑
 
 ### 起步
 
-我剛開始學 R 時不算順遂(見註[^a])。剛進到 R 的世界，一定會被它為數眾多的 function[^fc] (以及更多的學習資源) 搞得迷失方向，不知從何開始。事實上，這不是我們的錯，因為連 R 的社群內也有相關的爭論：**Base R first vs. Tidyverse first**(詳細可參考[此文](http://varianceexplained.org/r/teach-tidyverse/){target="_blank"})。R 真的是一個使用門檻不低的軟體，要精通它不是一、兩年內的事情[^growth]，所以我認為一定要對 R 有熱情，才可能持續支撐對於 R 的學習[^persist]。
+我剛開始學 R 時不算順遂[^a]。剛進到 R 的世界，一定會被為數眾多的 function[^fc] (以及更多的學習資源) 搞得迷失方向，不知從何開始。事實上，這不是我們的錯，因為連 R 的社群內也有相關的爭論：**Base R first vs. Tidyverse first**(詳細可參考[此文](http://varianceexplained.org/r/teach-tidyverse/){target="_blank"})。R 真的是一個使用門檻不低的軟體，要精通它不是一、兩年內的事情[^growth]，所以一定要對 R 有熱情，才可能持續支撐對於 R 的學習[^persist]。
 
-R 語言的基礎─ **Base R** 是剛開始學 R 的一大障礙，這也是為何會有 **Base R first vs. Tidyverse first debate**。由於學好 R (更精確地說，是學好 **Base R**)需一段時間，我認為 **Base R first** 的學習方式很容易造成放棄。但學習 R 不可能不接觸 **Base R** ，因為它是 R 語言最重要的基礎。因此，我覺得最好的方式是**交錯並進**：
+R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是為何會有 **Base R first vs. Tidyverse first debate**。由於學好 R (更精確地說，是學好 **Base R**)需一段時間，我認為 **Base R first** 的學習方式很容易造成放棄。但學習 R 不可能不接觸 **Base R** ，因為它是 R 語言最重要的基礎。因此，我覺得最好的方式是**交錯並進**：
 
 > **Base R** 學到一定的基礎後(不必精通)[^base]，開始學習用`tidyverse`套件處理資料。之後隨著時間，自然而然就會熟悉這兩者。
 
@@ -65,7 +65,7 @@ R 語言的基礎─ **Base R** 是剛開始學 R 的一大障礙，這也是為
 
 <br> 
 
-3. **讓自己喜歡 R**：初學 R 時因為不知道這項的重要性，所以學得有點辛苦。這點真的很微妙，有時候太過專注於學習某項"技能"，反而會**過於專注實用性而忽略了趣味性**，於是我們只剩理性說服自己：*學這很有用，你一定要堅持下去*。通常開始這樣想，代表離放棄不遠了。這也是為何我很推[R 語言與資料科學導論](https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=142%20U0750&class=&dpt_code=1420&ser_no=76601&semester=106-1&lang=CH){target="_blank"}這門課的原因─老師真的很有智慧，不斷鼓勵學生們去想**有趣又可用資料科學回答的問題**，也常介紹一些 R 意想不到的有趣應用，但從未將焦點放在程式的硬實力。我自己由 R 善於**呈現**的特質切入，從 Rmarkdown 開始，擴展到資料視覺化，又到網頁設計(縱使我`html`和`css`基礎很差)，每一項對我來說都非常有趣，R 學起來因而樂此不疲。
+3. **讓自己喜歡 R**：初學 R 時因為不知道這項的重要性，所以學得有點辛苦。這點真的很微妙，有時候太過專注於學習某項"技能"，反而會**過於專注實用性而忽略了趣味性**，於是只剩理性說服自己：*學這很有用，你一定要堅持下去*。通常開始這樣想，代表離放棄不遠了。這也是為何我很推 [R 語言與資料科學導論](https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=142%20U0750&class=&dpt_code=1420&ser_no=76601&semester=106-1&lang=CH){target="_blank"}這門課的原因 ─ 老師真的很有智慧，不斷鼓勵學生們去想**有趣又可用資料科學回答的問題**，也常介紹一些 R 意想不到的有趣應用，但從未將焦點放在程式的硬實力。我自己由 R 善於**呈現**的特質切入，從 Rmarkdown 開始，擴展到資料視覺化，又到網頁設計(縱使我`html`和`css`基礎很差)，每一項對我來說都非常有趣，R 學起來因而樂此不疲。
 
 
 ### 實作：專案{#project}
