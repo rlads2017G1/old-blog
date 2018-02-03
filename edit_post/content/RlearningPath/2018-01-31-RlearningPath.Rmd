@@ -30,7 +30,7 @@ tags:
 
 - Open Source[^op] 以及 R 的生態圈[^1]
 
-- 資料科學與 Story telling: **Coding** 於資料科學中的角色不同於其在工程上的角色，亦即 Aesthetic Coding 與 Functional Coding 的概念。資料科學不僅包含傳統的 Functional Coding，也包含大量的 Aesthetic Coding，用於傳達資料科學上的發現。
+- 資料科學與 Story telling: **Coding** 於資料科學中的應用，不僅是傳統所強調的**功能性**，Coding 亦於**美觀及呈現**上扮演重要的角色。資料科學透過 Coding 處理、分析資料；同時也透過 Coding 作圖將資料視覺化，好將資料科學上的發現**說成故事給其他人聽**。
 
 - Reproducibility: [Rmarkdown](http://rmarkdown.rstudio.com/){target="_blank"} (`.Rmd`) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(`Rmd`)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版所花費的心力。例如，要報告可輸出成投影片、要列印可輸出成 PDF、要放到網路上可輸出成網頁。Rmarkdown 讓使用者能以簡單有效率的方式工作，這是達到 [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility){target="_blank"} 的前提與重要基礎。
 
