@@ -1,0 +1,98 @@
+{
+  "basics": {
+    "name": "Yong-Fu Liao",
+    "label": "Student",
+    "picture": "liao.jpg",
+    "email": "liaomovie2@gmail.com",
+    "website": "https://liao961120.github.io/",
+    "summary": "I’m strongly interested in human evolution, particularly the (possible) interactions of culture and genetic evolution, which I believe had led to some of the most distinctive features of human psychologies. This interest has driven me to study a range of interesting subjects in addition to psychology, such as prehistory, population genetics, and evolution. This interest has also given me an insight about the importance of transmitting idea, knowledge, and experience to others in human societies.",
+    "location": {
+      "address": "No. 1, Sec. 4, Roosevelt Rd.",
+      "postalCode": "10617",
+      "city": "Taipei",
+      "countryCode": "ROC",
+      "region": "Taiwan"
+    },
+    "profiles": [
+      {
+        "network": "Facebook",
+        "username": "liao961120",
+        "url": "https://www.facebook.com/liao961120"
+      }
+    ]
+  },
+  "volunteer": [
+    {
+      "organization": "Green-Tree Club",
+      "position": "Teaching",
+      "website": "https://ntugt.club/",
+      "startDate": "2012-10",
+      "endDate": "",
+      "summary": "Provide academic assistance to junior high students.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "National Taiwan University",
+      "area": "Psychology",
+      "studyType": "",
+      "startDate": "2015-09",
+      "endDate": "",
+      "gpa": ""
+    },
+    {
+      "institution": "Jianguo High School",
+      "startDate": "2012-09",
+      "endDate": "2015-06"
+    }
+  ],
+  "skills": [
+    {
+      "name": "R",
+      "level": "Advanced",
+      "keywords": [
+        "DS",
+        ".Rmd"
+      ]
+    },
+    {
+      "name": "Web Page Design",
+      "level": "Intermediate",
+      "keywords": [
+        "Jekyll",
+        "Hugo",
+        "blogdown"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Mandarin",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "Human Evolution",
+      "keywords": [
+        "Culture",
+        "Cognition",
+        "Creativity",
+        "Modeling"
+      ]
+    },
+    {
+      "name": "Rmarkdown document",
+      "keywords": [
+        "Simple & Clean",
+        "Communicate",
+        "Markdown"
+      ]
+    }
+  ]
+}
