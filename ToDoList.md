@@ -27,15 +27,21 @@ title: To do List
 2. Python
     - [NLP with Python](https://drive.google.com/file/d/1KvcIxJ0h1kFngERW8jzfmF1y25n_UFQ_/view?usp=sharing){:target="_blank"}
 
-### WebPage Design
-
-1. JavaScript [Books](https://drive.google.com/drive/folders/1rB0EA-on4JvX1CVW9GrPst9e5rppHeja?usp=sharing){:target="_blank"}
-
-## R
+### R
 
 1. **R for data science**
 
 2. **Text Mining with R**
+
+## Communicate
+
+### Dashboard Design
+
+### Graphic Design
+
+### WebPage Design
+
+1. JavaScript [Books](https://drive.google.com/drive/folders/1rB0EA-on4JvX1CVW9GrPst9e5rppHeja?usp=sharing){:target="_blank"}
 
 
 ## Linux/Ubuntu
