@@ -2,7 +2,6 @@
 layout: post
 title: 我的 R 學習歷程
 key: 20180127
-toc: false
 tags:
 - R
 - Course
