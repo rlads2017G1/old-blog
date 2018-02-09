@@ -3,7 +3,7 @@ layout: page
 key: page-about
 ---
 
-## About
+# About
 
 ### Interests and Motivation
 
