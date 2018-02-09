@@ -1,7 +1,9 @@
 ---
 layout: page
-titles: About
+key: page-about
 ---
+
+## About
 
 ### Interests and Motivation
 
