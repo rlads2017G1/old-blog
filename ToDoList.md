@@ -25,7 +25,7 @@ title: To do List
     - [C++](https://en.m.wikibooks.org/wiki/C%2B%2B_Programming){:target="_blank"}
 
 2. Python
-    - [NLP with Python](https://drive.google.com/file/d/1KvcIxJ0h1kFngERW8jzfmF1y25n_UFQ_/view?usp=sharing){:target="_blank"}
+    - [NLP with Python](https://drive.google.com/drive/u/0/folders/1f2nx0Q8M5QiH5pBfwqc-X2s8KfC575XP){:target="_blank"}
 
 ### R
 
@@ -41,12 +41,14 @@ title: To do List
 
 ### WebPage Design
 
-1. JavaScript [Books](https://drive.google.com/drive/folders/1rB0EA-on4JvX1CVW9GrPst9e5rppHeja?usp=sharing){:target="_blank"}
+1. JavaScript [Books](https://drive.google.com/drive/u/0/folders/1rB0EA-on4JvX1CVW9GrPst9e5rppHeja){:target="_blank"}
 
 
 ## Linux/Ubuntu
 
-1. Unix Intro 
+1. Unix Intro
+    - [The Unix Workbench](https://bookdown.org/sean/the-unix-workbench/){:target="_blank"}
+    
     - [Web page tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/){:target="_blank"}
     
     - [Data Camp](https://www.datacamp.com/courses/introduction-to-shell-for-data-science){:target="_blank"}
