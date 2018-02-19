@@ -2,7 +2,7 @@
 layout: page
 title: Work
 ---
-<!-- Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec. -->
+<!-- Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec.  -->
 
 <style>
     tab0 { padding-left: 3em; }
