@@ -12,15 +12,16 @@ title: Work
 </style>
 
 ## **Notes: 2017**
-- Nov 08 <tab0> [**Lotka－Volterra Competition**](./simulation/competition.html){:target="_blank"}
 
-- Nov 29 <tab0> [**Discrete Logistic Growth**](./simulation/Discrete_Logistic.html){:target="_blank"}
+Nov 08 <tab0> [Lotka－Volterra Competition](./simulation/competition.html){:target="_blank"}
+
+Nov 29 <tab0> [Discrete Logistic Growth](./simulation/Discrete_Logistic.html){:target="_blank"}
 
 <br>
 
 ## **Project: 2018**
 
-- Jan 04 <tab0> [**Travel the World**](https://rlads2017g1.github.io/presentation.html){:target="_blank"} (Displays properly only with Desktop Version Website)
+Jan 04 <tab0> [Travel the World](https://rlads2017g1.github.io/presentation.html){:target="_blank"} (Displays properly only with Desktop Version Website)
 
 
 
