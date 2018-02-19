@@ -20,6 +20,6 @@ Some of the posts were written in Chinese, and some in English since many of my 
 
 ## License
 
-All the posts on my blog are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC-BY-NC-4.0</a>. Translations are welcomed, both from *Chinese to English* and *English to Chinese*. You can contact me via Email or Facebook, the information needed is in my [CV](./resume/cv.html){:target="_blank"}.
+All the posts on my blog are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC-BY-NC-4.0</a>. Translations are welcomed, both from *Chinese to English* and *English to Chinese*. You can contact me via Email or Facebook, the information needed is in my [résumé](./resume/cv.html){:target="_blank"}.
 
 <br>
