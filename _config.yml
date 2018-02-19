@@ -20,20 +20,20 @@ description: > #this means to ignore newlines until "nav_lists:"
 
 nav_lists:
   # - title: About
+
+  - titles: 
+      en: Work
+      Zh: Work
+      zh-Hans: Work
+      zh-Hant: Work
+    url: ./work.html
+
   - titles:
       en: About
       zh: 关于
       zh-Hans: 关于
       zh-Hant: 關於
-    url: /about.html
-
-  - titles: 
-      en: CV
-      Zh: CV
-      zh-Hans: CV
-      zh-Hant: CV
-    url: ./resume/cv.html
-    
+    url: /about.html    
   # This is where you add new navigation bar
   # - titles:
   #     en: CV
