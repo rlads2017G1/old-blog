@@ -46,4 +46,13 @@ graph TD;
 </div>
 ```
 
+#### kramdown syntax
+
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{: .mermaid}
+
 [Documentation for Flowchart](https://mermaidjs.github.io/flowchart.html)
