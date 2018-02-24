@@ -13,7 +13,6 @@ mermaid: true
     });
 </script>
 
-body > div.m-page-stage.js-page-stage.has-toc > div > div > div > div.main.js-main > div.col-1 > article > div > pre > code
 
 ## Highlighted Area
 
