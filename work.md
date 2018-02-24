@@ -40,3 +40,5 @@ Dec 12, 2017 &nbsp;&nbsp; [Sexual Reproduction as Bet-hedging](./EvoSex/sexual_r
 Jan 24, 2018 &nbsp;&nbsp; [Hypotheses of Sex](./EvoSex/thoughts/Hypothesis_of_Sex.html){:target="_blank"}
 
 Feb 07, 2018 &nbsp;&nbsp; [Notes](./EvoSex/thoughts/Notes.html){:target="_blank"}
+
+<br><br>
