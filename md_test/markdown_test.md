@@ -6,12 +6,13 @@ mermaid: true
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.2/mermaid.min.js"></script>
 <!-- <script>mermaid.initialize({startOnLoad:true});</script> -->
 <script>
-    mermaid.init(undefined, 'code.language-mermaid');
+    mermaid.init(undefined, '.language-mermaid');
     $(function() {
       mermaid.initialize({ startOnLoad: true });
     });
 </script>
 
+body > div.m-page-stage.js-page-stage.has-toc > div > div > div > div.main.js-main > div.col-1 > article > div > pre > code
 
 ## Highlighted Area
 
@@ -27,7 +28,7 @@ Error Text.{:.error}
 
 ![](liao.jpg){:.circle.shadow}
 
-## Mermaid
+
 
 
 #### markdown:
@@ -42,9 +43,17 @@ Error Text.{:.error}
 ## Flowchart
 
 <!-- <div class="mermaid"></div> -->
+### div language mermaid
 
+<div class="language-mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
 
-## language mermaid
+### code chunk language mermaid
 
 ```mermaid
 graph TD;
