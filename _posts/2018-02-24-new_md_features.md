@@ -51,7 +51,7 @@ Error Text.
 
 ### kramdown Feature
 
-`{: something}` is a feature unique to kramdown syntax (the markdown syntax that Jekyll use). It's very useful for making your markdown more powerful. The code (e.g. `{: .error}` above) works by attaching the class, `error` to the paragraph right above it (e.g. the paragraph, `Error Text.`, above `{: .error}`. For more information, take a look at this post, [Markdown Kramdown Tips & Tricks](https://about.gitlab.com/2016/07/19/markdown-kramdown-tips-and-tricks/#classes-ids-and-attributes){:target="blank}.
+`{: something}` is a feature unique to kramdown syntax (the markdown syntax that used by Jekyll). It's very useful for making your markdown more powerful. The code (e.g. `{: .error}` above) works by attaching the class, `error` to the paragraph right above it (e.g. the paragraph, `Error Text.`, above `{: .error}`. For more information, take a look at this post, [Markdown Kramdown Tips & Tricks](https://about.gitlab.com/2016/07/19/markdown-kramdown-tips-and-tricks/#classes-ids-and-attributes){:target="blank}.
 
 
 ## Rounded Image
