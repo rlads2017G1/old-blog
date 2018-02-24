@@ -74,13 +74,15 @@
         {% else %}
             {% assign __path = '/feed.xml' %}
         {% endif %}
-        <li title="{{ __return | replace: '[NAME]', 'RSS' }}">
-            <div class="round-button googlepluse">
-                <a itemprop="sameAs" href="https://liao961120.github.io/feed.xml" target="_blank">
-                    <div class="icon">{% include icon/rss.svg %}</div>
-                </a>
-            </div>
-        </li>
+        {% if site.author.rss %}
+            <li title="{{ __return | replace: '[NAME]', 'RSS' }}">
+                <div class="round-button googlepluse">
+                    <a itemprop="sameAs" href="https://liao961120.github.io/feed.xml" target="_blank">
+                        <div class="icon">{% include icon/rss.svg %}</div>
+                    </a>
+                </div>
+            </li>
+        {% endif %}
         <!-- {% include snippets/prepend-baseurl.html %}
         {% assign href = __return %}
         {% assign __locale = site.data.locale.NAV.RSS %}
