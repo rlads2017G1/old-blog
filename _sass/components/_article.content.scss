@@ -150,28 +150,28 @@
   .success {
     padding: 15px;
     border-radius: 15px;
-    background-color: rgba(0, 255, 0, 0.4);    /* 40% opaque red */
+    background-color: rgba(0, 255, 0, 0.3);    /* 40% opaque red */
     border: 1px solid rgba(0, 255, 0, 1);
   }
   
   .info {
     padding: 15px;
     border-radius: 15px;
-    background-color: rgba(0, 0, 255, 0.4);
+    background-color: rgba(0, 0, 255, 0.25);
     border: 1px solid rgba(0, 0, 255, 1);
   }
 
   .warning {
     padding: 15px;
     border-radius: 15px;
-    background-color: rgba(255, 255, 0, 0.4);
+    background-color: rgba(255, 255, 0, 0.25);
     border: 1px solid rgba(255, 255, 0, 1);;
   }
 
   .error {
     padding: 15px;
     border-radius: 15px;
-    background-color: rgba(255, 0, 0, 0.4);
+    background-color: rgba(255, 0, 0, 0.3);
     border: 1px solid rgba(255, 0, 0, 1);
   }
 
