@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Markdown features + Mermaid test
+mermaid: true
 ---
 ## Highlighted Area
 
