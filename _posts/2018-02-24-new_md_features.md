@@ -21,7 +21,7 @@ The features I implemented:
 
 ## Alert Text
 
-Success Text. 成功
+Success Text.
 {: .success}
 
 Info Text.
@@ -36,7 +36,7 @@ Error Text.
 ### Code
 
 ```kramdown
-Success Text. 成功
+Success Text.
 {: .success}
 
 Info Text.
