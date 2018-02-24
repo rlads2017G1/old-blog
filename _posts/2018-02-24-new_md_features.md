@@ -55,7 +55,7 @@ Error Text.
 
 ## Circled Image
 
-![](/assets/images/tux.png)
+![](/assets/images/logo/icon-70x70.png)
 {:.circle}
 
 #### Code
