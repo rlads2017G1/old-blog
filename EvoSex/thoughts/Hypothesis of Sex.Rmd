@@ -13,4 +13,4 @@ library(mindr)
 markmap(folder = "./mindmap_hypothesis",options = markmapOption(spacingVertical =8,spacingHorizontal=10,linkShape='diagonal',renderer = 'basic',color = 'category20'))
 ```
 
-[Text]("./mindmap_md/hypothesis"){target="_blank"}
+[Text](./mindmap_hypothesis/Hypothesis_of_Sex.md){target="_blank"}
