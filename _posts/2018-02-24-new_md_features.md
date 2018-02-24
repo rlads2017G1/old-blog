@@ -56,7 +56,7 @@ Error Text.
 
 ## Rounded Image
 
-![](liao.jpg)
+![](/reusme/liao.jpg)
 {:.circle}
 
 #### Code
