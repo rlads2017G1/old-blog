@@ -4,8 +4,8 @@
 @charset "utf-8";
 
 @import
-    "colors/{{ site.text_color_theme | default: site.data.variables.default.text_color_theme }}",
-    // "colors/chocolate",
+    // "colors/{{ site.text_color_theme | default: site.data.variables.default.text_color_theme }}",
+    "colors/chocolate",
     // "colors/dark",
     // "colors/default",
     // "colors/forest",
