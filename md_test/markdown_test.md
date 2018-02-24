@@ -3,6 +3,15 @@ layout: post
 title: Markdown features + Mermaid test
 mermaid: true
 ---
+<script src="//cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js"></script>
+<script>
+    mermaid.init(undefined, '.language-mermaid');
+    $(function() {
+      mermaid.initialize({ startOnLoad: true });
+    });
+</script>
+
+
 ## Highlighted Area
 
 Success Text. 成功{:.success}
