@@ -1,0 +1,86 @@
+---
+layout: post
+title: Some New Features of TeXt Theme
+tags: 
+- markdown
+- Web Page
+key: 20180224
+---
+
+I started customizing my blog's template soon after I forked it from [kitian616](https://github.com/kitian616/jekyll-TeXt-theme/){:target="_blank"}. The downside of customizing is that once started, there's no going back. 
+
+I saw some new features added to the [TeXt theme](https://tianqi.name/jekyll-TeXt-theme/){:target="_blank"} recently, some of which are quite appealing to me. Since I started custimizing my blog and since I'm a layman of web page design, I have to figure out how to implement these features by myself. 
+
+The features I implemented:
+
+1. [Alert Text & Circled Image Shape](https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html){:target="_blank}
+These two features are basically simple CSS styling. I added these two features a bit different from the original **TeXt** theme, since we have different file structures now. But the concept is basically the same, and I copy-and-pasted most of the code from [`_article.content.extra.scss`](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/_sass/components/_article.content.extra.scss){:target="_blank} of the **Text** theme to [`_article.content.scss`](https://github.com/liao961120/liao961120.github.io/blob/master/_sass/components/_article.content.scss){:target="_blank"} of my blog's source. I couldn't figure out what some variables in `_article.content.extra.scss` refered to, so I changed all of them to plain CSS without refering to other files or variables.
+
+
+2. [Mermaid](https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html){:target="_blank}
+
+## Alert Text
+
+Success Text. 成功
+{: .success}
+
+Info Text.
+{: .info}
+
+Warning Text.
+{: .warning}
+
+Error Text.
+{: .error}
+
+#### Code
+```kramdown
+Success Text. 成功
+{: .success}
+
+Info Text.
+{: .info}
+
+Warning Text.
+{: .warning}
+
+Error Text.
+{: .error}
+```
+
+<br>
+
+## Rounded Image
+
+![](liao.jpg)
+{:.circle}
+
+#### Code
+```kramdown
+![](liao.jpg)
+{:.circle}
+```
+
+## Mermaid
+
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+
+#### Code
+```html
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+```
+
+
+[Documentation for Mermaid](https://mermaidjs.github.io){: target="_blank"}

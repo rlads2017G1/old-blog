@@ -1,12 +1,10 @@
 ---
 layout: post
-title: Markdown features + Mermaid test
+title: Some New Features
 mermaid: true
 ---
 
-
-
-## Highlighted Area
+## Alert Text
 
 Success Text. 成功
 {: .success}
@@ -20,10 +18,33 @@ Warning Text.
 Error Text.
 {: .error}
 
+#### Code
+```kramdown
+Success Text. 成功
+{: .success}
+
+Info Text.
+{: .info}
+
+Warning Text.
+{: .warning}
+
+Error Text.
+{: .error}
+```
+
+<br>
+
 ## Rounded Image
 
 ![](liao.jpg)
 {:.circle}
+
+#### Code
+```kramdown
+![](liao.jpg)
+{:.circle}
+```
 
 ## Mermaid
 
@@ -46,15 +67,5 @@ graph TD;
 </div>
 ```
 
-#### kramdown syntax
 
-```
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-{: .mermaid}
-
-[Documentation for Flowchart](https://mermaidjs.github.io/flowchart.html)
+[Documentation for Mermaid](https://mermaidjs.github.io){: target="_blank"}

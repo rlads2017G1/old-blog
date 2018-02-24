@@ -16,7 +16,7 @@ NAV:
     zh-Hant: RSS
 
 READMORE:
-  en:      Click to read more ...
+  en:      Read more ...
   zh:      点我阅读更多...
   zh-Hans: 点我阅读更多...
   zh-Hant: 「點我閱讀更多」
@@ -72,7 +72,7 @@ FOLLOW_ME:
   zh-Hant: 在 [NAME] 上關注我。
 
 EMAIL_ME:
-  en:      Send me Email.
+  en:      Send me an Email.
   zh:      给我发邮件。
   zh-Hans: 给我发邮件。
   zh-Hant: 給我發郵件。
