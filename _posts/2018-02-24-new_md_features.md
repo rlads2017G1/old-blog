@@ -8,7 +8,7 @@ key: 20180224
 ---
 <!--more-->
 
-I started customizing my blog's template soon after I forked it from [kitian616](https://github.com/kitian616/jekyll-TeXt-theme/){:target="_blank"}. The downside of customizing is that once started, there's no going back. 
+I started customizing my blog template soon after I forked it from [kitian616](https://github.com/kitian616/jekyll-TeXt-theme/){:target="_blank"}. The downside of customizing is that once started, there's no going back. 
 
 I saw some new features added to the [TeXt theme](https://tianqi.name/jekyll-TeXt-theme/){:target="_blank"} recently, some of which are quite appealing to me. Since I started custimizing my blog and since I'm a layman of web page design, I have to figure out how to implement these features by myself. 
 
