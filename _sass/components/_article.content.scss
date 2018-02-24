@@ -172,13 +172,13 @@
   }
 
 
-  .border > img {
-    border: 1px solid $border-color-l;
-  }
+  // .border > img {
+  //   border: 1px solid $border-color-l;
+  // }
 
-  .rounded > img {
-    border-radius: map-get($shape, round-rect-radius);
-  }
+  // .rounded > img {
+  //   border-radius: map-get($shape, round-rect-radius);
+  // }
 
   .circle > img {
     border-radius: 50%;
