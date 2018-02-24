@@ -103,9 +103,9 @@ exclude:
   - /test
   - /_posts/*.Rmd
   - /edit_posts
-  - /EvoSex/Maxima_edited_history/competition.md
-  - /EvoSex/Maxima_edited_history/input.md
-  - /EvoSex/Maxima_edited_history
+  - /notes/EvoSex/Maxima_edited_history/competition.md
+  - /notes/EvoSex/Maxima_edited_history/input.md
+  - /notes/EvoSex/Maxima_edited_history
   - "*.Rmd"
 
 ## Plugins ##
