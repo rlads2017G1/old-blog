@@ -3,7 +3,7 @@ layout: post
 title: Markdown features + Mermaid test
 mermaid: true
 ---
-<script src="//cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.2/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 <!-- <script>
     mermaid.init(undefined, '.language-mermaid');
