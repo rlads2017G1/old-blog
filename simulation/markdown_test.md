@@ -29,8 +29,6 @@ Error Text.{:.error}
         C-->D;
     ```
 
-#### chart
-
 ## Flowchart
 
 ```mermaid
