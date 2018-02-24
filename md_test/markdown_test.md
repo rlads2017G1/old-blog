@@ -4,12 +4,13 @@ title: Markdown features + Mermaid test
 mermaid: true
 ---
 <script src="//cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js"></script>
-<script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<!-- <script>
     mermaid.init(undefined, '.language-mermaid');
     $(function() {
       mermaid.initialize({ startOnLoad: true });
     });
-</script>
+</script> -->
 
 
 ## Highlighted Area
