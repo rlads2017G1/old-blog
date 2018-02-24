@@ -1,66 +1,52 @@
 .m-article-content {
   word-wrap: break-word;
-  line-height: map-get($base, line-height-large);
-  h1, h2, h3, h4, h5, h6, p,
-  hr, blockquote, figure, pre, .highlighter-rouge,
-  ul, ol, dl, table, .footnotes {
-    margin: map-get($base, vertical-space-large) 0;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    position: relative;
-    margin-top: map-get($base, vertical-space-large) + .8rem;
-    & > .anchor {
-      @include link-text-colors($border-color, $main-color-1);
-      @include transform(translate(-100% ,0));
-      visibility: hidden;
-      margin: .5rem;
-      text-decoration: none;
-      opacity: 0;
-    }
-    &:hover {
-      & > .anchor {
-        visibility: visible;
-        opacity: 1;
-        cursor: pointer;
-      }
-    }
+  line-height: $article-line-height;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: $content-gap * 2 0 $content-gap * .5 0;
   }
   h1,
   h2 {
-    @include split-line(bottom);
+    padding: 0 0 $base-font-size * .3 0;
+    border: 0 dashed $border-color;
+    border-bottom-width: 2px;
+    margin-bottom: $content-gap;
   }
-  hr {
-    @include split-line();
+  p {
+    margin: $content-gap 0;
   }
   blockquote {
-    padding-left: 1rem;
-    @include split-line(left, 4px, $border-color);
-    font-size: map-get($base, font-size-sub);
+    padding: 0 0 0 $spacing-unit / 2;
+    border: 0 solid $border-color;
+    border-left-width: 4px;
+    margin: $content-gap 0;
+    font-size: $small-font-size;
     color: $text-color-l;
     p {
-      margin: map-get($base, vertical-space) 0;
+      margin: $content-gap * .5 0;
     }
-    &>:last-child {
+    > :last-child {
       margin-bottom: 0;
     }
   }
-  .footnotes {
-    @include split-line();
-    margin-top: map-get($base, vertical-space-large) * 2;
-  }
   img:not(.emoji) {
     max-width: 100%;
-    max-height: 37rem;
+    max-height: 600px;
     vertical-align: middle;
   }
   .emoji {
     display: inline-block;
     vertical-align: text-bottom;
-    width: map-get($base, line-height-large) * .7rem;
-    height: map-get($base, line-height-large) * .7rem;
+    width: $base-font-size * $article-line-height * .7;
+    height: $base-font-size * $article-line-height * .7;
   }
   code {
-    @include round-rect(default, .2rem .5rem);
+    padding: $code-font-size * .2 $code-font-size * .5;
+    border-radius: $code-font-size * .4;
     background-color: $text-background-color;
     span {
       padding: 0;
@@ -68,92 +54,50 @@
     }
   }
   pre {
+    display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    margin: $content-gap 0;
+    border-radius: $code-font-size * .4;
+    ;
+    background-size: auto $code-font-size * $code-line-height * 2;
+    background-origin: content-box;
     &>code {
-      padding: 0;
-      background-color: transparent;
-      word-wrap: normal;
-      &.language-mermaid, &.language-chart {
-        display: none;
-        &[data-processed] {
-          display: block;
-        }
-      }
-    }
-  }
-  .highlighter-rouge>.highlight, figure.highlight {
-    &>pre {
-      @include round-rect(default, 1rem 1rem);
+      font-size: $code-font-size;
+      padding: $code-font-size;
       margin: 0;
-      background-color: $text-background-color;
-      &>code {
-        display: block;
-        line-height: map-get($base, line-height);
-
-      }
+      display: block;
+      line-height: $code-line-height;
+      background-color: transparent;
     }
   }
-  figure.highlight {
+  figure {
+    margin: $content-gap 0;
     &:before {
       content: attr(data-lang);
-      display: block;
-      border-top-left-radius: map-get($shape, round-rect-radius);
-      border-top-right-radius: map-get($shape, round-rect-radius);
-      padding: .5rem 1rem .5rem 0;
-      color: $decorate-color;
       background-color: $text-background-color;
-      font-weight: map-get($base, font-weight-bold);
+      display: block;
+      border-top-left-radius: $code-font-size / 2;
+      border-top-right-radius: $code-font-size / 2;
+      padding: $code-font-size / 2 $code-font-size $code-font-size / 2 0;
+      color: $decorate-color;
+      font-weight: $bold-font-weight;
+      font-size: $base-font-size;
       text-align: right;
       text-transform: uppercase;
     }
     &>pre {
-      padding-top: 0;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      margin: 0;
       &>code {
-        &>.rouge-table {
-          width: auto;
-          margin: -1rem;
-          margin-top: 0;
-          tbody, tr, td {
-            border: none;
-            padding-top: 0;
-            padding-bottom: 0;
-          }
-          &>tbody {
-            @include flexbox;
-            &>tr {
-              width: 100%;
-              @include flexbox;
-              &>.code {
-                padding: 0 1rem 1rem 1rem;
-                overflow: auto;
-                -webkit-overflow-scrolling: touch;
-              }
-            }
-          }
-          tbody td {
-            &.gl {
-              padding-left: 1rem;
-            }
-            &>pre {
-              @include round-rect(0);
-              display: block;
-              overflow: visible;
-              margin: 0;
-              &.lineno {
-                color: $text-color-l;
-                @include user-select(none);
-              }
-            }
-          }
-        }
+        padding-top: 0;
       }
     }
   }
-  ul, ol {
-    margin-left: 1.5rem;
+  ul,
+  ol {
+    margin: $content-gap 0 $content-gap $spacing-unit;
     li {
       margin: 0;
       p {
@@ -162,17 +106,19 @@
     }
   }
   dl {
-    dt, dd {
+    margin: $content-gap 0;
+    dt,
+    dd {
       margin: 0;
       p {
         margin: 0;
       }
     }
     dt {
-      font-weight: map-get($base, font-weight-bold);
+      font-weight: $bold-font-weight;
     }
     dd {
-      margin-left: 2rem;
+      margin-left: 2em;
     }
   }
   table {
@@ -180,16 +126,64 @@
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: $content-gap 0;
     border-collapse: collapse;
-    thead, tfoot {
+    th,
+    td {
+      border: 1px solid $border-color;
+      padding: $base-font-size * .5;
+    }
+    thead,
+    tbody {
+      border: 1px solid $border-color;
+    }
+    tbody>tr:nth-child(even) {
       background-color: $text-background-color;
     }
-    th, td {
-      border: 1px solid $border-color-l;
-      padding: .5rem;
-    }
-    th {
-      font-weight: map-get($base, font-weight-bold);
-    }
   }
+  hr {
+    border: 0 dashed $border-color;
+    border-top-width: 2px;
+    margin: $base-font-size 0;
+  }
+
+  // .success {
+  //   @include round-rect(default, .5rem 1rem);
+  //   background-color: mix($green, $background-color, 10%);
+  //   border: 1px solid $green;
+  // }
+
+  // .info {
+  //   @include round-rect(default, .5rem 1rem);
+  //   background-color: mix($blue, $background-color, 10%);
+  //   border: 1px solid $blue;
+  // }
+
+  // .warning {
+  //   @include round-rect(default, .5rem 1rem);
+  //   background-color: mix($yellow, $background-color, 10%);
+  //   border: 1px solid $yellow;
+  // }
+
+  // .error {
+  //   @include round-rect(default, .5rem 1rem);
+  //   background-color: mix($red, $background-color, 10%);
+  //   border: 1px solid $red;
+  // }
+
+  // .shadow > img {
+  //   @include box-shadow(3);
+  // }
+
+  // .border > img {
+  //   border: 1px solid $border-color-l;
+  // }
+
+  // .rounded > img {
+  //   border-radius: map-get($shape, round-rect-radius);
+  // }
+
+  // .circle > img {
+  //   border-radius: 50%;
+  // }
 }

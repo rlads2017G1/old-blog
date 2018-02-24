@@ -2,60 +2,64 @@
   ul {
     display: block;
     list-style-type: none;
+    &>li {
+      border: 0 solid rgba(0, 0, 0, 0);
+      border-left-width: 4px;
+      margin-left: -4px;
+      &:not(:last-child) {
+        margin-bottom: $content-gap / 4;
+      }
+    }
   }
   a {
-    display: inline-block;
-    font-size: map-get($base, font-size-sub);
+    display: block;
+    margin: $small-font-size / 4;
+    font-size: $small-font-size;
     text-decoration: none;
-    line-height: map-get($base, line-height-small);
-    font-weight: map-get($base, font-weight);
-    @include round-rect(default, .2rem 1rem);
+    line-height: $toc-line-height;
+    font-weight: $base-font-weight;
+    @include link-normal {
+      color: $text-color;
+    }
     @include link-emphasize-no-focus {
-      background-color: $text-background-color;
+      color: $main-color-1;
     }
   }
   .toc-h1,
   .toc-h2 {
     padding: 0;
-    &>a {
-      color: $text-color-d;
-      font-weight: map-get($base, font-weight-bold);
+    a {
+      font-weight: $bold-font-weight;
     }
   }
   .toc-h3,
   .toc-h4,
   .toc-h5,
   .toc-h6 {
-    &>a {
-      color: $text-color;
-      font-size: map-get($base, font-size-tiny);
+    a {
+      font-size: $tiny-font-size;
     }
-  }
-  .toc-h1>a {
-    font-size: map-get($base, font-size);
   }
   .toc-h1,
   .toc-h2 {
-    margin-top: .6rem;
+    margin-top: $small-font-size / 2;
   }
   .toc-h3 {
-    padding-left: 1.5rem;
+    padding-left: $small-font-size;
   }
   .toc-h4 {
-    padding-left: 3rem;
+    padding-left: $small-font-size * 2;
   }
   .toc-h5 {
-    color: $text-color-l;
-    padding-left: 3rem;
+    padding-left: $small-font-size * 3;
   }
   .toc-h6 {
-    color: $text-color-l;
-    font-size: map-get($base, font-size-tiny);
-    padding-left: 3rem;
+    padding-left: $small-font-size * 3;
   }
   .toc-active {
+    border-color: $main-color-1;
+    @include transition(border-color ease .8s);
     a {
-      background-color: $text-background-color;
       color: $main-color-1;
     }
   }
