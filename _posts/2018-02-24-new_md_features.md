@@ -56,12 +56,12 @@ Error Text.
 
 ## Rounded Image
 
-![](/resume/liao.jpg)
+![](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg)
 {:.circle}
 
 #### Code
 ```kramdown
-![](liao.jpg)
+![](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg)
 {:.circle}
 ```
 
