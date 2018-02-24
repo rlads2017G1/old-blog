@@ -28,5 +28,15 @@ Nov 08, 2017 &nbsp;&nbsp; [Lotka－Volterra Competition](./simulation/competitio
 
 Nov 29, 2017 &nbsp;&nbsp; [Discrete Logistic Growth](./simulation/Discrete_Logistic.html){:target="_blank"}
 
+### **Evolution of Sex**
 
-<br><br>
+Jan 28, 2018 &nbsp;&nbsp; [A Lotka–Volterra Model of Coexistence between a Sexual Population and Multiple Asexual Clones](./EvoSex/Doncaster_2002/LK.html){:target="_blank"}
+
+  - [Simulation](./EvoSex/simulation/Rmd/model.html){:target="_blank"}
+
+Dec 12, 2017 &nbsp;&nbsp; [Sexual Reproduction as Bet-hedging](./EvoSex/sexual_reproduction_bet_hedging/good_harsh_competition.html){:target="_blank"}
+
+#### **Mindmap**
+Jan 24, 2018 &nbsp;&nbsp; [Hypotheses of Sex](./EvoSex/thoughts/Hypothesis_of_Sex.html){:target="_blank"}
+
+Feb 07, 2018 &nbsp;&nbsp; [Notes](./EvoSex/thoughts/Notes.html){:target="_blank"}

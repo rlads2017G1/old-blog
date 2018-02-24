@@ -1,0 +1,41 @@
+;;; -*- Mode: LISP; package:maxima; syntax:common-lisp; -*- 
+(in-package :maxima)
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$EQ1|
+ '((|MAXIMA|::|MEQUAL| . #1=(|MAXIMA|::|SIMP|))
+   ((|MAXIMA|::|%DERIVATIVE| . #1#) ((|MAXIMA|::|$n| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|) |MAXIMA|::|$T|
+    1.)
+   ((|MAXIMA|::|MPLUS| . #2=(|MAXIMA|::|SIMP|))
+    (#3=(|MAXIMA|::|MTIMES| . #2#)
+     ((|MAXIMA|::|MQAPPLY| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|)
+      ((|MAXIMA|::|MNCTIMES| |MAXIMA|::|SIMP|) |MAXIMA|::|$c| |MAXIMA|::|$s|) |MAXIMA|::|$I|)
+     ((|MAXIMA|::|$n| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|)
+     ((|MAXIMA|::|$B| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|))
+    (#3# -1. ((|MAXIMA|::|$n| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|)
+     ((|MAXIMA|::|$D| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|))))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$EQ1| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$EQ2|
+ '((|MAXIMA|::|MEQUAL| . #1=(|MAXIMA|::|SIMP|))
+   ((|MAXIMA|::|%DERIVATIVE| . #1#) ((|MAXIMA|::|$s| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$J|) |MAXIMA|::|$T|
+    1.)
+   ((|MAXIMA|::|MPLUS| . #2=(|MAXIMA|::|SIMP|))
+    (#3=(|MAXIMA|::|MTIMES| . #2#) -1.
+     ((|MAXIMA|::|MQAPPLY| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|)
+      ((|MAXIMA|::|MNCTIMES| |MAXIMA|::|SIMP|) |MAXIMA|::|$C_trans| |MAXIMA|::|$n|) |MAXIMA|::|$J|)
+     ((|MAXIMA|::|$s| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$J|))
+    (#3# ((|MAXIMA|::|$s| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$J|)
+     ((|MAXIMA|::|$A| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$J|)
+     ((|MAXIMA|::|MPLUS| |MAXIMA|::|SIMP|) 1.
+      ((|MAXIMA|::|MTIMES| |MAXIMA|::|SIMP|) -1. ((|MAXIMA|::|$s| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$J|)
+       ((|MAXIMA|::|MEXPT| |MAXIMA|::|SIMP|) ((|MAXIMA|::|$K| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$J|)
+        -1.))))))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$EQ2| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$EQ1_0|
+ '((|MAXIMA|::|MPLUS| . #1=(|MAXIMA|::|SIMP|))
+   (#2=(|MAXIMA|::|MTIMES| . #1#)
+    ((|MAXIMA|::|MQAPPLY| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|)
+     ((|MAXIMA|::|MNCTIMES| . #1#) |MAXIMA|::|$c| |MAXIMA|::|$s|) |MAXIMA|::|$I|)
+    ((|MAXIMA|::|$n| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|)
+    ((|MAXIMA|::|$B| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|))
+   (#2# -1. ((|MAXIMA|::|$n| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|)
+    ((|MAXIMA|::|$D| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) |MAXIMA|::|$I|)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$EQ1_0| |MAXIMA|::|$VALUES|) 

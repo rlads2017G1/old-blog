@@ -1,0 +1,173 @@
+---
+title: "A Lotka–Volterra Model of Coexistence between a Sexual Population and
+Multiple Asexual Clones"
+author: Pound, G. E., Doncaster, C. P., & Cox, S. J. (2002)
+output:
+    html_document:
+        toc: true
+        toc_float: true
+---
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "all" } }
+});
+</script>
+
+<br>
+
+## General Form: Lotka–Volterra **Predator-Prey**
+
+$${{d}\over{d\,t}}\,N_{i}= b_{i} N_{i}\left[C S\right]_{i} - d_{i} N_{i} \notag$$
+ 
+$${{d}\over{d\,t}}\,S_{j}=a_{j} S_{j}\,\left(1-{{S_{j}}\over{k_{j}}}
+ \right)- S_{j} \left[{\it C^T} N\right]_{j} \notag$$, where $C$ is an $n \, by \, n$ consumption matrix
+
+<br>
+
+### Predator
+- $N_i$ : Population size of Predator $i$. &nbsp;&nbsp; $i=1: Sex$, &nbsp;&nbsp; $i \neq 1: Asex$.
+
+- $b_i$ : Birth rate of Predator $i$
+
+- $d_i$ : Death rate of Predator $i$
+
+- $C$ : Records the proportion of each Prey $j$ comsumed by each Predator $i$ (**niche breadths**). <br><br>$\hspace{0.5 mm}\sum_{j=1}^{n} c_{1j} = \sum_{j=1}^{n} c_{2j} = \hspace{1.0 mm} ... \hspace{1.0 mm} = \sum_{j=1}^{n} c_{nj} = row \, sum$.
+
+<br>
+
+### Prey
+- $S_j$ : Population size of Prey $j$
+
+- $a_j$ : Intrinsic growth rate of Prey $j$
+
+- $k_j$ : Carrying capacity of Prey $j$
+
+<br>
+
+-------------------------
+
+
+## 2-Predator & 2-Prey{#pp}
+
+$${{d}\over{d\,t}}\,N_{1} =\left[ b_{1} N_{1}\,\left( S_{2}\,c_{12}+S_{1}\,c_{11}\right)- d_{1} N_{1}\, \right]  \label{eq:N1}$$
+
+$${{d}\over{d\,t}}\, N_{2}  =\left[ b_{2} N_{2}\,\left(
+ S_{2}\,c_{22}+S_{1}\,c_{21}\right)- d_{2} N_{2}\, \right]  \label{eq:N2}$$
+
+$${{d}\over{d\,t}}\, S_{1}  =\left[ a_{1} S_{1}\,\,\left(
+ 1-{{S_{1}}\over{k_{1}}}\right)-S_{1}\,\left(N_{2}\,c_{21}+N_{1}\,c_{
+ 11}\right) \right] \label{eq:s1}$$
+
+$${{d}\over{d\,t}}\, S_{2}  =\left[ a_{2} S_{2}\,\,\left(
+ 1-{{S_{2}}\over{k_{2}}}\right)-S_{2}\,\left(N_{2}\,c_{22}+N_{1}\,c_{
+ 12}\right) \right] \label{eq:s2}$$
+
+### Conversion to Lotka-Volterra Competition Equations
+
+1. Set eq. $\eqref{eq:s1}$ & $\eqref{eq:s2}$ to $0$ and solve for $equilibrium \, \, S_j^*$
+
+$${\it S_1^*} = -{{\left({\it N_2} {\it c_{21}} + {\it N_1} {\it c_{11}} - {\it a_1}\right) {\it k_1}}\over{{\it a_1}}}, \,\, {\it S_1^*}=0 \label{eq:s1e}$$
+
+$${\it S_2^*}=-{{\left({\it N_2} {\it c_{22}} + {\it N_1} {\it c_{12}}-{\it a_2}\right) {\it k_2}}\over{{\it a_2}}}, \,\, {\it S_2^*}=0 \label{eq:s2e}$$
+
+<br>
+
+2. Replace $S_j$ with $S_j^*$ in eq. $\eqref{eq:N1}$ & $\eqref{eq:N2}$:
+
+$${{d}\over{d\,t}}\,{\it N_1}={\it N_1}\,{\it b_1}\,\left(-{{
+ {\it c_{12}}\,\left({\it N_2}\,{\it c_{22}}+{\it N_1}\,
+ {\it c_{12}}-{\it a_2}\right)\,{\it k_2}}\over{{\it a_2}}}-
+ {{{\it c_{11}}\,\left({\it N_2}\,{\it c_{21}}+{\it N_1}\,
+ {\it c_{11}}-{\it a_1}\right)\,{\it k_1}}\over{{\it a_1}}}
+ \right)-{\it N_1}\,{\it d_1} \label{eq:comp1}$$
+
+$${{d}\over{d\,t}}\,{\it N_2}={\it N_2}\,{\it b_2}\,\left(-{{
+ {\it c_{22}}\,\left({\it N_2}\,{\it c_{22}}+{\it N_1}\,
+ {\it c_{12}}-{\it a_2}\right)\,{\it k_2}}\over{{\it a_2}}}-
+ {{{\it c_{21}}\,\left({\it N_2}\,{\it c_{21}}+{\it N_1}\,
+ {\it c_{11}}-{\it a_1}\right)\,{\it k_1}}\over{{\it a_1}}}
+ \right)-{\it N_2}\,{\it d_2} \label{eq:comp2}$$
+
+<br><br>
+
+3. Set Consumption Matrix, $\pmatrix{c_{11}&c_{12}\cr c_{21}&c_{22}\cr }$ with $c_{21}=0$, i.e. $C = \pmatrix{c_{11}&c_{12}\cr 0&c_{22}\cr }$:
+
+$${{d}\over{d\,t}}\,{\it N_1}={\it N_1}\,{\it b_1}\,\left(-{{
+ {\it c_{12}}\,\left({\it N_2}\,{\it c_{22}}+{\it N_1}\,
+ {\it c_{12}}-{\it a_2}\right)\,{\it k_2}}\over{{\it a_2}}}-
+ {{{\it c_{11}}\,\left({\it N_2}\,{\it c_{21}}+{\it N_1}\,
+ {\it c_{11}}-{\it a_1}\right)\,{\it k_1}}\over{{\it a_1}}}
+ \right)-{\it N_1}\,{\it d_1} \label{eq:comp3}$$
+ 
+$${{d}\over{d\,t}}\,{\it N_2}=-{{{\it N_2}\,{\it b_2}\,
+ {\it c_{22}}\,\left({\it N_2}\,{\it c_{22}}+{\it N_1}\,
+ {\it c_{12}}-{\it a_2}\right)\,{\it k_2}}\over{{\it a_2}}}-
+ {\it N_2}\,{\it d_2} \label{eq:comp4}$$
+
+4. Comparison to LK competition equations
+
+$${{d}\over{d\,t}}\,{\it N_1}={\it r_1}{\it N_1} \left(1-{{{\it N_1} + {\it N_2}{\it \alpha_{12}}}\over{{\it K_1}}}\right)\,
+  - {\it d_1}{\it N_1}$$
+
+$${{d}\over{d\,t}}\,{\it N_2} = {\it r_2}{\it N_2} \left(1-{{{\it N_2} + {\it \alpha_{21}}{\it N_1}}\over{{\it K_2}}}\right) - {\it d_2} {\it N_2}$$
+```{r echo=FALSE, out.width="600px", fig.align='center'}
+knitr::include_graphics("./LK_para.PNG")
+```
+
+----------------------------------------------
+
+## Asumptions
+
+### Consumption Matrix
+
+$$C_{n \times n} = \pmatrix{
+c_{11}&c_{12}&...&c_{1n}\cr
+c_{21}&c_{22}&...&c_{2n}\cr
+.& .& &.\cr
+.& .& &.\cr
+.& .& &.\cr
+c_{n1}&c_{n2}&...&c_{nn}\cr
+}, \,\,\,\, \sum_{j=1}^{n} c_{1j} = \sum_{j=1}^{n} c_{2j} = \,\, ... \,\, = \sum_{j=1}^{n} c_{nj} = row \, sum, \, c_{ij}>0 \label{eq:matr}$$
+
+### Sex
+- Cost: $\bf b_1=0.5 \times b_i, \, i \neq 1$ in eq. $\eqref{eq:comp3}$ & $\eqref{eq:comp4}$
+
+- Benefit: **Broad niche** (Generalist). Consumption matrix: $\bf all \, c_{1j} \neq 0$
+
+### Asexual Clones
+- **Narrow niche** (Specialist)
+
+
+### Example
+
+$$C_{4 \times 4} = \pmatrix{
+0.25&0.25&0.25&0.25\cr
+0.7&0.1&0.1&0.1\cr
+0.1&0.7&0.1&0.1\cr
+0.1&0.1&0.1&0.7\cr}$$
+
+- row 1: Sex
+
+- row 2~4: Asex
+
+
+## Results
+
+### Sex vs. 1 Asex: [2-Predator & 2-Prey](#pp)
+
+
+```{r echo=FALSE, out.width="350px", fig.align='left'}
+knitr::include_graphics("./2_predtor.PNG")
+```
+
+$C = \pmatrix{c_{11}&c_{12}\cr 0&c_{22}\cr }$
+
+<br>
+
+### General Cases (More than 1 Asexual clones)
+- Sex may become **extinct**, **outcompete** or **coexist** with asexual clone(s)
+
+- Depend on **niche breadths of each asexual clones**, i.e. the setting of the consumption matrix, eq. $\eqref{eq:matr}$
+
+    - Sex can exist if it retains at least a small **resourse refuge**

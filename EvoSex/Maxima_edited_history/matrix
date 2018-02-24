@@ -1,0 +1,46 @@
+;;; -*- Mode: LISP; package:maxima; syntax:common-lisp; -*- 
+(in-package :maxima)
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$n|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$n| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 1.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$n| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 2.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$n| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$B|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$B| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 1.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$B| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 2.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$B| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$c|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 11.)
+    ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 12.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 21.)
+    ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 22.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$c| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$C_trans|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 11.)
+    ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 21.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 12.)
+    ((|MAXIMA|::|$C| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 22.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$C_trans| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$s|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$s| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 1.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$s| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 2.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$s| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$D|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$D| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 1.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$D| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 2.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$D| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$A|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$A| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 1.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$A| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 2.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$A| |MAXIMA|::|$VALUES|) 
+(|MAXIMA|::|DSKSETQ| |MAXIMA|::|$K|
+ '((|MAXIMA|::|$MATRIX| |MAXIMA|::|SIMP|)
+   ((|MAXIMA|::|MLIST| . #1=(|MAXIMA|::|SIMP|)) ((|MAXIMA|::|$K| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 1.))
+   ((|MAXIMA|::|MLIST| . #1#) ((|MAXIMA|::|$K| |MAXIMA|::|SIMP| |MAXIMA|::|ARRAY|) 2.)))) 
+(|MAXIMA|::|ADD2LNC| '|MAXIMA|::|$K| |MAXIMA|::|$VALUES|) 
