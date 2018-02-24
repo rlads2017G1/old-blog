@@ -77,7 +77,7 @@
         {% assign __locale = site.data.locale.NAV.RSS %}
         {% include snippets/locale-to-string.html %}
             <li title="{{ __return | replace: '[NAME]', 'RSS' }}">
-                 <div class="round-button googlepluse"></div>
+                 <div class="round-button googlepluse">
                      <a itemprop="sameAs" type="application/rss+xml" href="{{ href }}" target="_blank">{{ __return }}
                         <div class="icon">{% include icon/rss.svg %}</div>
                      </a>  <!-- This is navigation bar for RSS -->
