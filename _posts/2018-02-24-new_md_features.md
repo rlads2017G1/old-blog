@@ -56,7 +56,7 @@ Error Text.
 
 ## Rounded Image
 
-![](/assets/images/tux.svg)
+![](/assets/images/tux.png)
 {:.circle}
 
 #### Code
