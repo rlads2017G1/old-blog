@@ -13,11 +13,10 @@ I saw some new features added to the [TeXt theme](https://tianqi.name/jekyll-TeX
 
 The features I implemented:
 
-1. [Alert Text & Circled Image Shape](https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html){:target="_blank}
-These two features are basically simple CSS styling. I added these two features a bit different from the original **TeXt** theme, since we have different file structures now. But the concept is basically the same, and I copy-and-pasted most of the code from [`_article.content.extra.scss`](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/_sass/components/_article.content.extra.scss){:target="_blank} of the **Text** theme to [`_article.content.scss`](https://github.com/liao961120/liao961120.github.io/blob/master/_sass/components/_article.content.scss){:target="_blank"} of my blog's source. I couldn't figure out what some variables in `_article.content.extra.scss` refered to, so I changed all of them to plain CSS without refering to other files or variables.
+1. [**Alert Text & Circled Image Shape**](https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html){:target="_blank}: These two features are basically simple CSS styling. I added these two features a bit different from the original **TeXt** theme, since we have different file structures now. But the concept is basically the same, and I copy-and-pasted most of the code from [`_article.content.extra.scss`](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/_sass/components/_article.content.extra.scss){:target="_blank} of the **Text** theme to [`_article.content.scss`](https://github.com/liao961120/liao961120.github.io/blob/master/_sass/components/_article.content.scss){:target="_blank"} of my blog's source. I couldn't figure out what some variables in `_article.content.extra.scss` refered to, so I changed all of them to plain CSS without refering to other files or variables.
 
 
-2. [Mermaid](https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html){:target="_blank}
+2. [**mermaid**](https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html){:target="_blank}: Implementing **mermaid** is much more easy than the CSS things above, since I had experience with how JavaScript works on my blog ([MathJax Setup](https://liao961120.github.io/2018/01/27/mathjax.html)). But I still encountered some difficulties: I don't know how [Tian Qi](https://github.com/kitian616){:target="_blank"} (author of **TeXt** theme) implemented it by setting code chunck language to `mermaid`. Anyway, I dealt with it by using the official way[^mermaid]: using html `<div class="mermaid"> ... </div>` directly in markdown. I put the mermaid script in [`mathjax.html`](https://github.com/liao961120/liao961120.github.io/blob/master/_includes/utils/mathjax.html){:target="_blank"} instead of creating a new `mermaid.html`.
 
 ## Alert Text
 
@@ -33,7 +32,8 @@ Warning Text.
 Error Text.
 {: .error}
 
-#### Code
+### Code
+
 ```kramdown
 Success Text. 成功
 {: .success}
@@ -48,7 +48,10 @@ Error Text.
 {: .error}
 ```
 
-<br>
+### kramdown Feature
+
+`{: something}` is a feature unique to kramdown syntax (the markdown syntax that Jekyll use). It's very useful for making your markdown more powerful. The code (e.g. `{: .error}` above) works by attaching the class, `error` to the paragraph right above it (e.g. the paragraph, `Error Text.`, above `{: .error}`. For more information, take a look at this post, [Markdown Kramdown Tips & Tricks](https://about.gitlab.com/2016/07/19/markdown-kramdown-tips-and-tricks/#classes-ids-and-attributes){:target="blank}.
+
 
 ## Rounded Image
 
@@ -61,7 +64,9 @@ Error Text.
 {:.circle}
 ```
 
-## Mermaid
+## mermaid
+
+[mermaid](https://github.com/knsv/mermaid){:target="_blank} is a script language for generating charts from simple text. Below is an example of drawing a flow chart using **mermaid**.
 
 <div class="mermaid">
 graph TD;
@@ -72,6 +77,7 @@ graph TD;
 </div>
 
 #### Code
+
 ```html
 <div class="mermaid">
 graph TD;
@@ -82,5 +88,8 @@ graph TD;
 </div>
 ```
 
-
 [Documentation for Mermaid](https://mermaidjs.github.io){: target="_blank"}
+
+
+
+[^mermaid]: See the section, **Simple usage on a web page**, in [usage](https://mermaidjs.github.io/usage.html){:target="_blank"} of mermaid documentation.
