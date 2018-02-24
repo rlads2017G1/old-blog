@@ -66,7 +66,7 @@ Error Text.
 
 ## mermaid
 
-[mermaid](https://github.com/knsv/mermaid){:target="_blank} is a script language for generating charts from simple text. Below is an example of drawing a flow chart using **mermaid**.
+[mermaid](https://github.com/knsv/mermaid){:target="_blank} is a script language for generating charts from simple text. Below is an example of drawing a flow chart using **mermaid**. [Documentation for Mermaid](https://mermaidjs.github.io){: target="_blank"}.
 
 <div class="mermaid">
 graph TD;
@@ -88,8 +88,7 @@ graph TD;
 </div>
 ```
 
-[Documentation for Mermaid](https://mermaidjs.github.io){: target="_blank"}
 
 
-
+## Notes
 [^mermaid]: See the section, **Simple usage on a web page**, in [Usage](https://mermaidjs.github.io/usage.html){:target="_blank"} of mermaid documentation.
