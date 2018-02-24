@@ -40,11 +40,13 @@ Error Text.{:.error}
 
 ## Flowchart
 
+<div class="mermaid">
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
+</div>
 
 [Documentation for Flowchart](https://mermaidjs.github.io/flowchart.html)
 
