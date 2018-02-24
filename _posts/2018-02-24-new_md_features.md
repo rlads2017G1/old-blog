@@ -56,12 +56,12 @@ Error Text.
 
 ## Rounded Image
 
-![](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg)
+![](/assets/images/tux.svg)
 {:.circle}
 
 #### Code
 ```kramdown
-![](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg)
+![](/assets/images/tux.svg)
 {:.circle}
 ```
 
