@@ -61,7 +61,7 @@ Error Text.
 
 #### Code
 ```kramdown
-![](/assets/images/tux.svg)
+![](path-to-image)
 {:.circle}
 ```
 
