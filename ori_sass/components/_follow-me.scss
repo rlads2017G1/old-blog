@@ -3,7 +3,6 @@
   &>ul {
     margin: 0;
     justify-content: center;
-    @include horizontal-space();
   }
   .round-button {
     color: $text-color-1;
@@ -11,7 +10,7 @@
       fill: $text-color-1;
     }
     &:not(:last-child) {
-      margin-right: .4rem;
+      margin-right: $spacing-unit / 6;
     }
     @include link-background-colors ( $main-color-1, lighten($main-color-1, 5%))
   }
