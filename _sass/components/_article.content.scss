@@ -149,26 +149,26 @@
 
   .success {
     padding: 15px;
-    background-color: mix($green, $background-color, 10%);
-    border: 1px solid $green;
+    background-color: rgba(0, 255, 0, 0.4);    /* 40% opaque red */
+    border: 1px solid rgba(0, 255, 0, 1);
   }
-
+  
   .info {
     padding: 15px;
-    background-color: mix($blue, $background-color, 10%);
-    border: 1px solid $blue;
+    background-color: rgba(0, 0, 255, 0.4);
+    border: 1px solid rgba(0, 0, 255, 1);
   }
 
   .warning {
     padding: 15px;
-    background-color: mix($yellow, $background-color, 10%);
-    border: 1px solid $yellow;
+    background-color: rgba(255, 255, 0, 0.4);
+    border: 1px solid rgba(255, 255, 0, 1);;
   }
 
   .error {
     padding: 15px;
-    background-color: mix($red, $background-color, 10%);
-    border: 1px solid $red;
+    background-color: rgba(255, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 0, 1);
   }
 
 
