@@ -4,13 +4,13 @@ title: Markdown features + Mermaid test
 mermaid: true
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.2/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
-<!-- <script>
+<!-- <script>mermaid.initialize({startOnLoad:true});</script> -->
+<script>
     mermaid.init(undefined, '.language-mermaid');
     $(function() {
       mermaid.initialize({ startOnLoad: true });
     });
-</script> -->
+</script>
 
 
 ## Highlighted Area
@@ -41,13 +41,9 @@ Error Text.{:.error}
 
 ## Flowchart
 
-<div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</div>
+<!-- <div class="mermaid"></div> -->
+
+
 
 ```mermaid
 graph TD;
