@@ -175,4 +175,3 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 [^hobby]: 大學以前，我很排斥程式(詳見我的這篇[文章](https://liao961120.github.io/2017/11/26/mathematics.html){:target="_blank"})。後來發覺程式的實用性而開始想學程式語言。學了 R 後發現自己其實有資工魂(雖然 CS 領域似乎看不起 R，但 R 本來就不是 general purpose language)，根本很喜歡程式、電腦、網路之類的東西。
 
-<br>
