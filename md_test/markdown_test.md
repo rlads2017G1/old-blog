@@ -6,7 +6,8 @@ mermaid: true
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.2/mermaid.min.js"></script>
 <!-- <script>mermaid.initialize({startOnLoad:true});</script> -->
 <script>
-    mermaid.init(undefined, '.language-mermaid');
+    mermaid.init(undefined, $("#someId .language-mermaid"));
+    // mermaid.init(undefined, '.language-mermaid');
     $(function() {
       mermaid.initialize({ startOnLoad: true });
     });
