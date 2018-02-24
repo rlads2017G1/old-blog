@@ -4,7 +4,6 @@ title: Some New Features of TeXt Theme
 tags: 
 - markdown
 - Web Page
-key: 20180224
 ---
 <!--more-->
 
