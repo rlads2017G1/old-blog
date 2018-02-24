@@ -4,13 +4,13 @@ title: Markdown features + Mermaid test
 ---
 ## Highlighted Area
 
-Success Text. 成功 {:.success}
+Success Text. 成功{:.success}
 
-Info Text. {:.info}
+Info Text.{:.info}
 
-Warning Text. {:.warning}
+Warning Text.{:.warning}
 
-Error Text. {:.error}
+Error Text.{:.error}
 
 ## Rounded Image
 
@@ -29,10 +29,9 @@ Error Text. {:.error}
 
 #### chart
 
-```mermaid
+
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-```
