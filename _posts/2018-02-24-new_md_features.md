@@ -6,6 +6,7 @@ tags:
 - Web Page
 key: 20180224
 ---
+<!--more-->
 
 I started customizing my blog's template soon after I forked it from [kitian616](https://github.com/kitian616/jekyll-TeXt-theme/){:target="_blank"}. The downside of customizing is that once started, there's no going back. 
 
