@@ -78,7 +78,7 @@
             <li title="{{ __return | replace: '[NAME]', 'RSS' }}">
                 <div class="round-button googlepluse">
                     <a itemprop="sameAs" href="https://liao961120.github.io/feed.xml" target="_blank">
-                        <div class="icon">{% include icon/rss.svg %}</div>
+                        <div class="icon">RSS</div>
                     </a>
                 </div>
             </li>
@@ -90,8 +90,8 @@
                      <a itemprop="sameAs" type="application/rss+xml" href="{{ href }}" target="_blank">{{ __return }}
                         <div class="icon">{% include icon/rss.svg %}</div>
                      </a>   -->
-
     </ul>
+
     {% if site.author.email %}
     {% assign __locale = site.data.locale.EMAIL_ME %}
     {% include snippets/locale-to-string.html %}
