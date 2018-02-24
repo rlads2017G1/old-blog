@@ -92,4 +92,4 @@ graph TD;
 ## Notes
 [^mermaid]: See the section, **Simple usage on a web page**, in [Usage](https://mermaidjs.github.io/usage.html){:target="_blank"} of mermaid documentation.
 
-<br>
+<br><br>
