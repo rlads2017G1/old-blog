@@ -22,4 +22,16 @@ Some of the posts were written in Chinese, and some in English since many of my 
 
 All the posts on my blog are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC-BY-NC-4.0</a>. Translations are welcomed, both from *Chinese to English* and *English to Chinese*. You can contact me via Email or Facebook, the information needed is in my [résumé](./resume/cv.html){:target="_blank"}.
 
+## Credits & Acknowledgement
+
+#### Theme Template
+
+The theme of my blog is forked from [jekyll TeXt theme](https://github.com/kitian616/jekyll-TeXt-theme){:target="_blank"}, and some customization has been done to fit my own tastes. **TeXt theme** is by far the prettiest theme I've ever seen, the typeface and clean layout make it comfortable when reading the blog.
+
+#### Icon
+
+The favicon on the browser's tab and the icon beside the site's title are [Tux](https://en.wikipedia.org/wiki/Tux), the official brand character of the Linux kernel. Although I'm not a Linux user (I might become one in the future due to the annoying Windows), I really admire the concept of Open Source. **Tux** is used here mainly because of its cuteness, the version is [Tux Crystal 2nd revision](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg){:target="_blank"}.
+
+
+
 <br>
