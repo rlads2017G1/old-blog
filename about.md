@@ -11,7 +11,7 @@ I'm a psychology major strongly interested in human evolution, particularly the 
 
 This is a place where I share my notes and some personal experience on learning. You can read my post, [Why Start a Blog?](https://liao961120.github.io/2017/11/26/why-start-a-blog.html){:target="_blank"}, to have a better understanding of  my incentive.
 
-Some of the posts might not be complete and might not be readable since they are just quick drafts, which I didn't have time to turn them into complete posts. These posts might be helpful, however, if you already have some idea hinted by the post titles.
+Some of the posts might not be complete and might not be readable since they are just quick drafts, which I didn't have time to turn them into complete posts. These posts might be helpful, however, if you already gained some idea hinted by the post title.
 
 
 ## Language
@@ -20,7 +20,7 @@ Some of the posts were written in Chinese, and some in English since many of my 
 
 ## License
 
-All the posts on my blog are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC-BY-NC-4.0</a>. Translations are welcomed, both from *Chinese to English* and *English to Chinese*. You can contact me via Email or Facebook, the information needed is in my [résumé](./resume/cv.html){:target="_blank"}.
+All the posts on my blog are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC-BY-NC-4.0</a>. Translations are welcomed, both from **Chinese to English** and **English to Chinese**. You can contact me via Email or Facebook, the information needed is in my [résumé](./resume/cv.html){:target="_blank"}.
 
 ## Credits & Acknowledgement
 
