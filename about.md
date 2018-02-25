@@ -24,11 +24,11 @@ All the posts on my blog are licensed under <a rel="license" href="http://creati
 
 ## Credits & Acknowledgement
 
-#### Theme Template
+#### **Theme Template**
 
 The theme of my blog is forked from [jekyll TeXt theme](https://github.com/kitian616/jekyll-TeXt-theme){:target="_blank"}, and some customization has been done to fit my own tastes. **TeXt theme** is by far the prettiest theme I've ever seen, the typeface and clean layout make it comfortable when reading the blog.
 
-#### Icon
+#### **Icon**
 
 The favicon on the browser's tab and the icon beside the site's title are [Tux](https://en.wikipedia.org/wiki/Tux), the official brand character of the Linux kernel. Although I'm not a Linux user (I might become one in the future due to the annoying Windows), I really admire the concept of Open Source. **Tux** is used here mainly because of its cuteness, the version is [Tux Crystal 2nd revision](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg){:target="_blank"}.
 
