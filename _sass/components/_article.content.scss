@@ -101,7 +101,7 @@
     margin: $content-gap 0 $content-gap $spacing-unit;
     li {
       margin: 0;
-      padding-bottom: 5px; //add bottom padding
+      padding-bottom: 7px; //add bottom padding
       p {
         margin: 0;
       }
@@ -191,11 +191,11 @@
   }
 
   div.footnotes > ol > li {
-    padding-bottom: 10px;
+    padding-bottom: 12px;
   }
 
   div.footnotes {
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
 
 }
