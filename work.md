@@ -11,12 +11,10 @@ title: Work
     ul {list-style-image: none;}
 </style>
 
-
 ## **Projects**
 
 Jan 04, 2018 &nbsp;&nbsp; [Travel the World](https://rlads2017g1.github.io/presentation.html){:target="_blank"} (Displays properly only with Desktop Version Website)
 
-<br>
 
 ## **Notes**
 
