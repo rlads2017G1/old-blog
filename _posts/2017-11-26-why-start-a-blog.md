@@ -7,7 +7,7 @@ tags:
 ---
 
 There are many reasons to start a blog. I was inspired by [this post](https://www.r-bloggers.com/advice-to-aspiring-data-scientists-start-a-blog/){:target="_blank"} and my interest in psychology.
-<!--more-->
+<!--more--> 
 
 ## Starting a Blog for Others
 I have been reluctant to share my ideas with others (partly because I'm shy), but my interest in human evolution led me to realize the importance of learning and cultural transmission in our species[^1]: *A hard-working but not-so-smart student can do much better than a genius who never learn.* 
