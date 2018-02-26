@@ -188,11 +188,24 @@
     border-radius: 50%;
   }
 
+  div > ul > li,
+  div > ol > li {
+    padding-bottom: 5px;
+  }
+
   div.footnotes > ol > li {
     padding-bottom: 15px;
   }
 
   div.footnotes {
     padding-bottom: 20px;
+  }
+
+  h2 {
+    padding: 0 0 $base-font-size * .3 0;
+    border: 0 dashed $border-color;
+    border-bottom-width: 2px;
+    margin-bottom: $content-gap;
+    padding-top: 25px;
   }
 }
