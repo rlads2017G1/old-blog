@@ -9,7 +9,13 @@
   h6 {
     margin: $content-gap * 2 0 $content-gap * .5 0;
   }
-  h1,
+  h1 {
+    padding: 0 0 $base-font-size * .3 0;
+    border: 0 dashed $border-color;
+    border-bottom-width: 2px;
+    margin-bottom: $content-gap;
+  }
+  
   h2 {
     // padding: 0 0 $base-font-size * .3 0;
     border: 0 dashed $border-color;
