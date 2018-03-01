@@ -106,7 +106,9 @@ exclude:
   - /notes/EvoSex/Maxima_edited_history/competition.md
   - /notes/EvoSex/Maxima_edited_history/input.md
   - /notes/EvoSex/Maxima_edited_history
+  - /notes/EvoSex/dSFMT-src-2.2.3
   - "*.Rmd"
+  - /_site
 
 ## Plugins ##
 gems:
