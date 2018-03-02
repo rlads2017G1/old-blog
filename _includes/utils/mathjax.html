@@ -24,7 +24,7 @@
 <script>
   var renderer = new marked.Renderer();
 renderer.code = function (code, language) {
-    if(code.match(/^sequenceDiagram/)||code.match(/^graph/)){
+    if(code.match(/^sequenceDiagram/)||code.match(/^graph/)||code.match(/^gantt/)){
         return '<div class="mermaid">'+code+'</div>';
     }
     else{
