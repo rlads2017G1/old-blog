@@ -77,7 +77,7 @@ graph TD;
 </div>
 
 ## MD Render Code Block
-```graph
+```mermaid
 graph TD;
     A-->B;
     A-->C;
