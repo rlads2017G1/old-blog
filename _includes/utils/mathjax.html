@@ -19,32 +19,6 @@
 {% endif %}
 
 {% if site.mermaid == true or page.mermaid == true %}
-<script>
-var marked;
-
-marked = require('marked');
-
-module.exports = function(options) {
-  var hasMermaid, renderer;
-  hasMermaid = false;
-  renderer = new marked.Renderer();
-  renderer.defaultCode = renderer.code;
-  renderer.code = function(code, language) {
-    var html;
-    if (language === 'mermaid') {
-      html = '';
-      if (!hasMermaid) {
-        hasMermaid = true;
-        html += '<script src="' + options.mermaidPath + '"></script>';
-      }
-      return html + '<div class="mermaid">' + code + '</div>';
-    } else {
-      return this.defaultCode(code, language);
-    }
-  };
-  return renderer;};
-
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.1.2/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 
