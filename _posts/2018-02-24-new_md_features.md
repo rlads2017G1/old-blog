@@ -79,7 +79,7 @@ graph TD;
 ## MD Render Code Block
 ```mermaid
 graph TD;
-    A-->B;
+    A(<center>A</center>)-->B;
     A-->C;
     B-->D;
     C-->D;
