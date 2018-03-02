@@ -70,20 +70,12 @@ Error Text.
 
 <div class="mermaid">
 graph TD;
-    A-->B;
+    A("<center>text</center>")-->B(rounded);
     A-->C;
     B-->D;
     C-->D;
 </div>
 
-## MD Render Code Block
-```mermaid
-graph TD;
-    A(<center>text</center>)-->B(rounded);
-    A-->C;
-    B-->D;
-    C-->D;
-```
 
 #### Code
 
