@@ -77,15 +77,6 @@ graph TD;
 </div>
 
 
-**Code Block Version**
-```
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
 #### Code
 
 ```html
