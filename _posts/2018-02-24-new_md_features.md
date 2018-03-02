@@ -70,7 +70,7 @@ Error Text.
 
 <div class="mermaid">
 graph TD;
-    A("<center>text</center>")-->B(rounded);
+    A(text)-->B(rounded);
     A-->C;
     B-->D;
     C-->D;
