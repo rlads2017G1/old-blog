@@ -5,27 +5,7 @@
         <meta itemprop="name" content="{{ site.author.name }}">
         <link itemprop="url" href="{{ '/' | prepend: site.url }}">
 
-        {% if site.author.facebook %}
-        <li title="{{ __return | replace: '[NAME]', 'Facebook' }}">
-            <div class="round-button facebook">
-                <a itemprop="sameAs" href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank">
-                    <div class="icon">{% include icon/social/facebook.svg %}</div>
-                </a>
-            </div>
-        </li>
-        {% endif %}
-
-        {% if site.author.github %}
-            <li title="{{ __return | replace: '[NAME]', 'Github' }}">
-                <div class="round-button github">
-                    <a itemprop="sameAs" href="https://github.com/{{ site.author.github }}" target="_blank">
-                        <div class="icon">{% include icon/social/github.svg %}</div>
-                    </a>
-                </div>
-            </li>
-        {% endif %}
-
-        {% if site.author.weibo %}
+        <!-- {% if site.author.weibo %}
             <li title="{{ __return | replace: '[NAME]', 'Weibo' }}">
                 <div class="round-button weibo">
                     <a itemprop="sameAs" href="https://weibo.com/{{ site.author.weibo }}" target="_blank">
@@ -72,7 +52,28 @@
                     </a>
                 </div>
             </li>
+        {% endif %} -->
+
+        {% if site.author.github %}
+            <li title="{{ __return | replace: '[NAME]', 'Github' }}">
+                <div class="round-button github">
+                    <a itemprop="sameAs" href="https://github.com/{{ site.author.github }}" target="_blank">
+                        <div class="icon">{% include icon/social/github.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
+
+        {% if site.author.facebook %}
+        <li title="{{ __return | replace: '[NAME]', 'Facebook' }}">
+            <div class="round-button facebook">
+                <a itemprop="sameAs" href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank">
+                    <div class="icon">{% include icon/social/facebook.svg %}</div>
+                </a>
+            </div>
+        </li>
+        {% endif %}
+
 
         {% if site.author.email %}
         <!-- {% assign __locale = site.data.locale.EMAIL_ME %}
