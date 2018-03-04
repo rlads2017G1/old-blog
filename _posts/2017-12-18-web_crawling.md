@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Some Web Crawling Tecniques (Keep Updating)
-key: 20171121
 tags:
 - DS
 ---

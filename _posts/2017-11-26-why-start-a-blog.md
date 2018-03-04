@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Why start a Blog?
-key: 20171126
 tags:
 - experience
 ---

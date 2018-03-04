@@ -4,3 +4,4 @@
 .Ruserdata
 _posts/*.Rmd
 edit_post/
+_site/

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Creating Posts on GitHub Pages with R Studio (Part 1)
-key: 20171121
 tags:
 - Web Page
 mathjax2: true

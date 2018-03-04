@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 我們錯過了多少？
-key: 20171126
 tags:
 - experience
 - 中文
