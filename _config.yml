@@ -102,7 +102,7 @@ exclude:
   - /screenshots
   - /test
   - /_posts/*.Rmd
-  - /edit_posts
+  - /edit_post
   - /notes/EvoSex/Maxima_edited_history/competition.md
   - /notes/EvoSex/Maxima_edited_history/input.md
   - /notes/EvoSex/Maxima_edited_history

@@ -55,12 +55,12 @@ Error Text.
 
 ## Circled Image
 
-![](/assets/images/logo/icon-70x70.png)
+![](/assets/images/tux.png){:height="80px" width="80px"}
 {:.circle}
 
 #### Code
 ```kramdown
-![](path-to-image)
+![](path-to-image){:height="80px" width="80px"} 
 {:.circle}
 ```
 
