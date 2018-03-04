@@ -2,8 +2,23 @@
   border-radius: $spacing-unit / 2;
   background-color: $text-background-color;
   box-shadow: $shadow-base;
-  padding: $base-font-size / 2 $base-font-size;
+  padding-top: 2.5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 13px;
+  margin-right: 20px;
+  margin-left: 15px;
+  // padding: $base-font-size / 2 $base-font-size;
   font-weight: $bold-font-weight;
+
+
+  // p.license {
+  //   padding-left: 5px;
+  //   padding-right: 5px;
+  //   margin-right: 5px;
+  //   margin-left: 5px;  
+  // }
+
   img {
     vertical-align: bottom;
   }
