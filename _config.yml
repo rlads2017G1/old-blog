@@ -14,7 +14,7 @@
 ## Base settings ##
 # url:  #!the base hostname & protocol for your site e.g. https://www.someone.com (!!required!!)
 baseurl: /
-title: Y.-F. Liao's blog
+title: Yongfu's Blog
 description: > #this means to ignore newlines until "nav_lists:"
   About Learning
 
@@ -52,7 +52,7 @@ timezone: Asia/Shanghai
 
 ## Author & social ##
 author:
-  name: Y.-F. Liao
+  name: Yongfu Liao
   rss: https://liao961120.github.io/feed.xml
   email: liaomovie2@gmail.com
   facebook:  liao961120
