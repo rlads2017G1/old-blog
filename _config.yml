@@ -109,6 +109,7 @@ exclude:
   - /notes/EvoSex/dSFMT-src-2.2.3
   - "*.Rmd"
   - /_site
+  - /notes/106_2
 
 ## Plugins ##
 gems:
