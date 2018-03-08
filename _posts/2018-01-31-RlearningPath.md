@@ -30,10 +30,11 @@ tags:
 
 - 資料科學與 Story telling: **Coding** 於資料科學中的應用，不僅是傳統所強調的**功能性**，Coding 亦於**美觀及呈現**上扮演重要的角色。資料科學透過 Coding 處理、分析資料；同時也透過 Coding 作圖將資料視覺化，好將資料科學上的發現**說成故事給其他人聽**。
 
-- Reproducibility: [Rmarkdown](http://rmarkdown.rstudio.com/){:target="_blank"} (`.Rmd`) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(`Rmd`)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版所花費的心力。例如，要報告可輸出成投影片、要列印可輸出成 PDF、要放到網路上可輸出成網頁。Rmarkdown 讓使用者能以簡單有效率的方式工作，這是達到 [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility){:target="_blank"} 的前提與重要基礎。
-
 - 文本分析: 我本來對這部分最沒有興趣，直到我意識到文本資料是研究人類行為、社會與文化最重要的資料來源之一[^2] [^3]。
 
+- Reproducibility: [Rmarkdown](http://rmarkdown.rstudio.com/){:target="_blank"} (`.Rmd`) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(`Rmd`)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版所花費的心力。例如，要報告可輸出成投影片 (`.html`)、要列印可輸出成 PDF、要放到網路上可輸出成網頁。Rmarkdown 讓使用者能以簡單有效率的方式工作，這是達到 [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility){:target="_blank"} 的前提與重要基礎。![Reproducible Research with R](/assets/images/post_img/reproducible_research.png) [^repro]
+
+ 
 ### 課程起手式
 
 這門課與我個性相符，完全顯現在第一堂課實習課(Lab Session)的作業上。作業與 R 並無相關，而是要使用 Markdown 格式撰寫自我介紹。由於我對簡約風有點痴迷[^sim] (受 Markdown 影響後更為痴迷)，在 Markdown 上花了一些時間研究。目前，透過 R 與 Pandoc Markdown 語法的整合(即 Rmarkdown)，我可以快速簡潔地寫出含有上下標、Footnotes、超連結、citation 的精美文件[^md]或文章(例如，這篇部落格)而完全不須使用 html 語法。這讓我在寫許多作業時，效率提高不少。
@@ -175,3 +176,4 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 [^hobby]: 大學以前，我很排斥程式(詳見[此文](https://liao961120.github.io/2017/11/26/mathematics.html){:target="_blank"})。後來發覺程式的實用性而開始想學程式語言。學了 R 後發現自己其實有資工魂 (雖然 CS 領域似乎看不起 R 的速度，但這本就並非 R 的長處)，其實很喜歡程式語言、電腦等東西。
 
+[^repro]: 圖片擷取自 British Ecological Society 編寫之指南 [A Guide to Reproducible Code](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf)
