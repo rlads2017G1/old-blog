@@ -17,6 +17,9 @@ title: To do List
 2. Project Workflow
     - [The Art of Project Management](https://drive.google.com/file/d/1J8nqID81m6TYOzEEDrE6M7jSaiLr98y-/view?usp=sharing){:target="_blank"}
 
+3. R
+    - [Reproducible Research with R & Rstudio](https://drive.google.com/drive/u/0/folders/1Pzt38cx7295LNmU-zBqDQdhYPOWvJ_iA){:target="_blank"}
+
 ## Programming
 
 ### General Purpose Language
