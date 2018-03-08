@@ -176,4 +176,4 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 [^hobby]: 大學以前，我很排斥程式(詳見[此文](https://liao961120.github.io/2017/11/26/mathematics.html){:target="_blank"})。後來發覺程式的實用性而開始想學程式語言。學了 R 後發現自己其實有資工魂 (雖然 CS 領域似乎看不起 R 的速度，但這本就並非 R 的長處)，其實很喜歡程式語言、電腦等東西。
 
-[^repro]: 圖片擷取自 British Ecological Society 編寫之指南 [A Guide to Reproducible Code](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf)
+[^repro]: 圖片擷取自 British Ecological Society 編寫之指南 [A Guide to Reproducible Code](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf){:target="_blank"}
