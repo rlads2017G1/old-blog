@@ -83,7 +83,7 @@ graph TD;
 ```html
 <div class="mermaid">
 graph TD;
-    A-->B;
+    A(text)-->B(rounded);
     A-->C;
     B-->D;
     C-->D;
