@@ -20,7 +20,7 @@
         border: 0 dashed $border-color;
         border-bottom-width: 2px;
         margin-bottom: $content-gap;
-        padding-top: 20px; // add top padding 
+        padding-top: 0.8em; // add top padding 
     }
     p {
         margin: $content-gap 0;
@@ -185,6 +185,7 @@
     .rounded>img {
         border-radius: 15px;
         box-shadow: $shadow-base;
+        margin-bottom: 1em;
     }
     .circle>img {
         border-radius: 50%;

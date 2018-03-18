@@ -19,6 +19,8 @@ Jan 04, 2018 &nbsp;&nbsp; [Travel the World](https://rlads2017g1.github.io/prese
 
 ## **Notes**
 
+Mar 18, 2018 &nbsp;&nbsp; [Rmarkdown Features](./notes/rmd_features.html){:target="_blank"}
+
 Feb 21, 2018 &nbsp;&nbsp; [Plot test](./notes/graphics/widget_test.html){:target="_blank"}
 
 Feb 07, 2018 &nbsp;&nbsp; [ToDoList](./notes/ToDoList.html){:target="_blank"}
