@@ -146,8 +146,8 @@ $(document).ready(function () {
 
 
 <!--more-->
-<div id="setup-rmarkdown" class="section level2 tabset">
-<h2>Setup Rmarkdown</h2>
+<div id="yaml-setup" class="section level2 tabset">
+<h2>yaml Setup</h2>
 <div id="citation" class="section level3">
 <h3>Citation</h3>
 <p>Include the code in yaml header.</p>
@@ -168,11 +168,14 @@ link-citations: yes</code></pre>
 </div>
 <div id="dynamic-variables" class="section level2">
 <h2>Dynamic Variables</h2>
+<p>Include <strong>R Code Chunks’ Variables</strong> in the body of text.</p>
 <pre class="r"><code>alpha &lt;- 1:3
 text &lt;- c(&quot;a&quot;, &quot;b&quot;)</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The numeric variable <span class="math inline">\(\alpha =\)</span> 1.</p></li>
-<li><p>The string variable <span class="math inline">\(text =\)</span> a.</p></li>
+<li><p>The numeric variable <span class="math inline">\(\alpha =\)</span> 1.</p>
+<pre class="yaml"><code># The numeric variable $\alpha =$ `r alpha[1]`.</code></pre></li>
+<li><p>The string variable <span class="math inline">\(text =\)</span> a.</p>
+<pre class="yaml"><code># The string variable $text =$ `r text[1]`.</code></pre></li>
 </ol>
 </div>
 <div id="latex-rendering" class="section level2 tabset">
