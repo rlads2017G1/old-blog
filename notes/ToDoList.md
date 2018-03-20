@@ -3,6 +3,12 @@ layout: page
 title: To do List
 ---
 
+## Before 4/8
+
+1. Blogging
+2. Multivariate Notes
+3. HTML Notes
+
 ## Reproducible Research
 
 1. Version control

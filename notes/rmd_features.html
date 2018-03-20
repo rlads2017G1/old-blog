@@ -246,6 +246,7 @@ div.tocify {
 <!--more-->
 <div id="yaml-setup" class="section level2 tabset">
 <h2>yaml Setup</h2>
+<p>Include the code in yaml header.</p>
 <div id="citation" class="section level3">
 <h3>Citation</h3>
 <p>Include the code in yaml header.</p>
@@ -255,13 +256,16 @@ link-citations: yes</code></pre>
 </div>
 <div id="html-output-options" class="section level3">
 <h3>HTML Output Options</h3>
-<p>Include the code in yaml header.</p>
 <pre class="yaml"><code>output:
   html_document:
+    css: ../style_sheets/style.css
     df_print: kable
     code_folding: hide
     fig_width: 7
-    fig_height: 6</code></pre>
+    fig_height: 6
+    toc: true
+    toc_depth: 4
+    toc_float: true</code></pre>
 </div>
 </div>
 <div id="dynamic-variables" class="section level2">
