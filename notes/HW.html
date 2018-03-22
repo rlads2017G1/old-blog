@@ -123,16 +123,16 @@ $(document).ready(function () {
 </div>
 
 
-<div id="data-covariance-matrix" class="section level2">
-<h2>Data &amp; Covariance Matrix</h2>
+<div id="data" class="section level3">
+<h3>Data</h3>
 <pre class="r"><code>x_1 &lt;- c(1,2,3,3,4,5,6,8,9,11)
 x_2 &lt;- c(18.95,19,17.95,15.54,14,12.95,8.94,7.49,6,3.99)
 data &lt;- as.data.frame(cbind(x_1,x_2))</code></pre>
+</div>
 <div id="covariance-matrix" class="section level3">
 <h3>Covariance Matrix</h3>
 <pre class="r"><code>cov_mt &lt;- cov(data)
 mt_r &lt;- round(cov_mt, digits = 2)</code></pre>
-</div>
 </div>
 <div id="a-equations" class="section level2">
 <h2>(a): Equations</h2>
