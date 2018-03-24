@@ -19,6 +19,8 @@ Jan 04, 2018 &nbsp;&nbsp; [Travel the World](https://rlads2017g1.github.io/prese
 
 ## **Notes**
 
+Mar 24, 2018 &nbsp;&nbsp; [Multivariate Analysis HW1](./notes/HW.html){:target="_blank"}
+
 Mar 18, 2018 &nbsp;&nbsp; [Rmarkdown Features](./notes/rmd_features.html){:target="_blank"}
 
 Feb 21, 2018 &nbsp;&nbsp; [Plot test](./notes/graphics/widget_test.html){:target="_blank"}

@@ -6,7 +6,7 @@ comment: false
 
 ## Interests and Motivation
 
-I'm a psychology major strongly interested in human evolution, particularly the (possible) interactions of culture and genetic evolution, which I believe had led to some of the most distinctive features of human psychologies. This interest has driven me to study a range of interesting subjects in addition to psychology, such as prehistory, genetics, and evolution. This interest has also given me an insight about the importance of transmitting idea, knowledge, and experience to others in human societies.
+I'm a psychology major strongly interested in human evolution, particularly the (possible) interactions of culture and genetic evolution, which I believe had led to some of the most distinctive features of human psychologies. This interest has driven me to study a range of interesting subjects in addition to psychology, such as **Prehistory & Archaeology**, **Cultural Anthropology**, **Linguistics**, **Genetics**, **Ecology**, and **Evolution**. This interest has also given me an insight about the importance of transmitting idea, knowledge, and experience to others in human societies.
 
 ## Posts
 
