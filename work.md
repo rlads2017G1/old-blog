@@ -18,6 +18,7 @@ Jan 04, 2018 &nbsp;&nbsp; [Travel the World](https://rlads2017g1.github.io/prese
 
 
 ## **Notes**
+Mar 24, 2018 &nbsp;&nbsp; [R Notes: Multivariate Analysis](./notes/multi_Rnotes.html){:target="_blank"}
 
 Mar 24, 2018 &nbsp;&nbsp; [Multivariate Analysis HW1](./notes/HW.html){:target="_blank"}
 
