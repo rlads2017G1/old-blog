@@ -52,7 +52,7 @@ blockquote > p:nth-child(2)
 雖然跟上文沒有什麼太大的關係，但希望這句話可以鼓勵害怕數學的人。
 
 <style>
-blockquote > p:nth-child(2){
+blockquote#q1 > p:nth-child(2){
     text-align: right;
 }
 </style>
@@ -60,12 +60,7 @@ blockquote > p:nth-child(2){
 > If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.
 > 
 > --- von Neumann
-
-<!-- <blockquote align="right">
-<b>If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.</b>
-
-<p align="right">von Neumann</p>
-</blockquote> -->
+{:#q1}
 
 我很喜歡這句話，覺得 von Neumann 把人類的複雜形容的太貼切了，尤其在這對比下，特別能顯現數學的單純。
 
