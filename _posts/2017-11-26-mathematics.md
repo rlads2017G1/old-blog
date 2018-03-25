@@ -45,16 +45,27 @@ Schema很可怕，因為它來去無蹤，在給自己冷靜判斷喜歡、適�
 只有當我們認同了數學是天才的專利，而放棄掌握數學的機會，
 數學才會成為我們追求所愛的絆腳石
 
-<br>
 
+blockquote > p:nth-child(2)
 -----------------
 
 雖然跟上文沒有什麼太大的關係，但希望這句話可以鼓勵害怕數學的人。
-<blockquote align="right">
+
+<style>
+blockquote > p:nth-child(2){
+    text-align: right;
+}
+</style>
+
+> If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.
+> 
+> --- von Neumann
+
+<!-- <blockquote align="right">
 <b>If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.</b>
 
 <p align="right">von Neumann</p>
-</blockquote>
+</blockquote> -->
 
 我很喜歡這句話，覺得 von Neumann 把人類的複雜形容的太貼切了，尤其在這對比下，特別能顯現數學的單純。
 

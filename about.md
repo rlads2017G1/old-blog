@@ -6,7 +6,7 @@ comment: false
 
 ## Interests and Motivation
 
-I'm a psychology major strongly interested in human evolution, particularly the (possible) interactions of culture and genetic evolution, which I believe had led to some of the most distinctive features of human psychologies. This interest has driven me to study a range of interesting subjects in addition to psychology, such as **Prehistory & Archaeology**, **Cultural Anthropology**, **Linguistics**, **Genetics**, **Ecology**, and **Evolution**. This interest has also given me an insight about the importance of transmitting idea, knowledge, and experience to others in human societies.
+I'm a psychology major strongly interested in human evolution, particularly the interactions of culture and genetic evolution, which I believe have led to some of the most distinctive features of human psychologies. This interest has driven me to study a range of interesting subjects in addition to psychology, such as **Prehistory & Archaeology**, **Cultural Anthropology**, **Linguistics**, **Genetics**, **Ecology** and **Evolution**. This interest has also given me an insight about the importance of transmitting idea, knowledge, and experience to others in human societies.
 
 ## Posts
 
@@ -31,7 +31,7 @@ The theme of my blog is forked from [jekyll TeXt theme](https://github.com/kitia
 
 #### **Icon**
 
-The favicon on the browser's tab and the icon beside the site's title are [Tux](https://en.wikipedia.org/wiki/Tux), the official brand character of the Linux kernel. Although I'm not a Linux user (I might become one in the future due to the annoying Windows), I really admire the concept of Open Source. **Tux** is used here because of its cuteness, the version is [Tux Crystal 2nd revision](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg){:target="_blank"}.
+The favicon on the browser's tab and the icon beside the site's title are [Tux](https://en.wikipedia.org/wiki/Tux), the official brand character of the Linux kernel. Although I'm not a Linux user (I might become one in the future due to the annoying Windows), I really admire the concept of Open Source. **Tux** is used here because of its cuteness. The version is [Tux Crystal 2nd revision](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg){:target="_blank"}.
 
 
 
