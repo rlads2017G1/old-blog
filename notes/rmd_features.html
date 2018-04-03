@@ -135,7 +135,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3,h4",
+      selectors: "h1,h2,h3",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -268,7 +268,7 @@ output:
     css: /Users/user/local_depend/style_sheets/style.css
     df_print: kable
     toc: true
-    toc_depth: 4
+    toc_depth: 3
     toc_float:
         collapsed: false
 ---</code></pre>
@@ -437,8 +437,55 @@ iris_data2 %&gt;% ggplot() +
 <p>You can read the full documentation of <a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html" target="_blank">Bibliographies &amp; Citations</a> at Rstudio.</p>
 <div id="citation-syntax" class="section level3">
 <h3>Citation syntax</h3>
-<p>The text cited <span class="citation">(Abadia &amp; Gonzalez Morales, <a href="#ref-RN9">2010</a>)</span>.</p>
-<p><span class="citation">Csikszentmihalyi (<a href="#ref-RN15">2014</a>)</span> 主張…</p>
+<div id="classical-citation-author-year-and-brackets" class="section level4">
+<h4>Classical Citation: <strong>Author</strong>, <strong>year</strong>, and <strong>brackets</strong></h4>
+<ul>
+<li><code>Some text [@Bib.ID].</code>
+<ul>
+<li>Some text <span class="citation">(Abadia &amp; Gonzalez Morales, <a href="#ref-RN9">2010</a>)</span>.</li>
+</ul></li>
+</ul>
+</div>
+<div id="in-text-citation-author-year" class="section level4">
+<h4>In-text Citation: <strong>Author (year)</strong></h4>
+<ul>
+<li><code>@Bib.ID Some text</code>
+<ul>
+<li><span class="citation">Csikszentmihalyi (<a href="#ref-RN15">2014</a>)</span> Some text</li>
+</ul></li>
+<li><code>@Bib.ID [p. 20] Some text.</code>
+<ul>
+<li><span class="citation">Abadia &amp; Gonzalez Morales (<a href="#ref-RN9">2010</a>, p. 20)</span> Some text.</li>
+</ul></li>
+</ul>
+</div>
+<div id="year-only-suppress-author" class="section level4">
+<h4>Year only: Suppress Author</h4>
+<ul>
+<li><code>Some text [-@Bib.ID].</code>
+<ul>
+<li>Some text <span class="citation">(<a href="#ref-RN9">2010</a>)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="two-citations" class="section level4">
+<h4>Two Citations</h4>
+<ul>
+<li><code>Some text [@Bib.ID1; @Bib.ID2].</code>
+<ul>
+<li>Some text <span class="citation">(Abadia &amp; Gonzalez Morales, <a href="#ref-RN9">2010</a>; Csikszentmihalyi, <a href="#ref-RN15">2014</a>)</span>.</li>
+</ul></li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Prefix &amp; Suffix
+<ul>
+<li><code>Some text [see @Bib.ID1 pp.45; also, @Bib.ID2 ch. 2].</code>
+<ul>
+<li>Some text <span class="citation">(see Abadia &amp; Gonzalez Morales, <a href="#ref-RN9">2010</a>, p. 45; also, Csikszentmihalyi, <a href="#ref-RN15">2014</a> ch. 2)</span>.</li>
+</ul></li>
+</ul></li>
+</ol>
+</div>
 </div>
 <div id="include-.bib-file-in-reference" class="section level3 tabset">
 <h3>Include <code>.bib</code> file in Reference</h3>
