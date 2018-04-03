@@ -38,9 +38,15 @@ title: To do List
 
 ### R
 
+#### Wrap Functions
+- kable function
+- Multivariate Notes(R)
+
 1. **R for data science**
 
-2. **Text Mining with R**
+2. ggplot2
+
+3. **Text Mining with R**
 
 ## Communicate
 
