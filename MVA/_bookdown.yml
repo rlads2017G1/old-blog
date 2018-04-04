@@ -1,7 +1,0 @@
-book_filename: "Notes"
-delete_merged_file: true
-language:
-  ui:
-    chapter_name: "Chapter "
-rmd_files:
-  html: ["index.Rmd", "Multivar_distr.Rmd", "PCA.Rmd"]
