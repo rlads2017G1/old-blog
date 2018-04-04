@@ -1,0 +1,9 @@
+Principle Component Analysis {#PCA}
+==========================================
+
+
+Conversion Between Correlation & Covaraince Matrices
+------------------------------------------------------
+
+$$\mathbf{R} = diag(\mathbf{S})^{\frac{-1}{2}} ~ \mathbf{S} ~ diag(\mathbf{S})^{\frac{-1}{2}}
+(\#eq:cor2cov)$$
