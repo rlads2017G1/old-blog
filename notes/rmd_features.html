@@ -11,6 +11,7 @@
 
 <meta name="author" content="Yongfu Liao" />
 
+<meta name="date" content="2018-04-14" />
 
 <title>Rmarkdown Features</title>
 
@@ -243,7 +244,7 @@ div.tocify {
 <h1 class="title toc-ignore">Rmarkdown Features</h1>
 <h3 class="subtitle"><em>This is subtitle</em></h3>
 <h4 class="author"><em>Yongfu Liao</em></h4>
-<h4 class="date"><em>Apr 3, 2018</em></h4>
+<h4 class="date"><em>2018-04-14</em></h4>
 
 </div>
 
@@ -333,6 +334,27 @@ fontsize: 12pt
 csl: ./citation/apa-no-doi-no-issue.csl # APA style sheet
 link-citations: yes</code></pre>
 <p>For citation syntax, read the section <a href="#cite">Bibliography &amp; Citations</a>.</p>
+</div>
+</div>
+<div id="knitr-parameters" class="section level2">
+<h2>knitr Parameters</h2>
+<div id="root" class="section level3">
+<h3>Root</h3>
+<pre class="r"><code>knitr::opts_knit$set(root.dir='..')</code></pre>
+<p>The root directory of the <code>.rmd</code> file you want to knit is set to the directory where the <code>.rmd</code> file is located by default. In the case above, I changed it to the <strong>directory that is parent to the default directory</strong>.</p>
+</div>
+<div id="code-chunk-figure-options" class="section level3">
+<h3>Code Chunk &amp; Figure Options</h3>
+<pre class="r"><code>library(svglite) 
+knitr::opts_chunk$set(
+    echo = FALSE, # No display code chunks
+    message = FALSE,
+    warning = FALSE,
+    dev='svg', # or 'svglite' for multibite characters
+    comment=&quot;&quot;,
+    fig.dim = c(3.5, 3.5)  # (width, height)
+)
+options(digits = 2) # auto round to 2 decimals when printed</code></pre>
 </div>
 </div>
 <div id="dynamic-variables" class="section level2">
