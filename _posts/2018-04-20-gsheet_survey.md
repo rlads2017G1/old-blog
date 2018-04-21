@@ -8,7 +8,7 @@ tags:
 - 中文
 ---
 
-google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應**自動彙整成試算表**更使分析資料變得非常容易。然而，Google 表單缺乏一項重要的功能：**即時將分數回饋給問卷填答者**[^test]<!--more-->。
+google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應**自動彙整成試算表**更使分析資料變得非常容易。然而，google 表單缺乏一項重要的功能<!--more-->：**即時將分數回饋給問卷填答者**[^test]。
 
 具有即時分數回饋 (或根據填問卷者填答情況而有不同回饋) 的問卷，背後通常有伺服器在運算分數。換句話說，想要即時回饋就需要錢。以下將結合 **google 試算表** 以及 **[DataCamp Light](https://github.com/datacamp/datacamp-light)**，讓使用者能直接在**靜態網頁**上查詢自己填寫問卷的結果，而且不須花錢。
 
@@ -31,7 +31,7 @@ graph TD;
 	style dc fill:#08A8D0;
 	style user fill:#FFFFFF;
 	style sheet fill:#1FA463, stroke:#898989,stroke-width:3.5px,stroke-dasharray: 5, 5;
-
+	
 	Form2("表單") -->|"1. 自動產生"|sheet1("表單回應");
 	sheet1 -->|"2. 連結"|sheet2("運算分析");
 	sheet2  -->|"3. 連結"|sheet3("運算結果");
