@@ -10,11 +10,11 @@ tags:
 
 google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應**自動彙整成試算表**更使分析資料變得非常容易。然而，Google 表單缺乏一項重要的功能：**即時將分數回饋給問卷填答者**[^test]<!--more-->。
 
-具有即時分數回饋 (或根據填問卷者填答情況而有不同回饋) 的問卷，背後通常有伺服器在運算分數。換句話說，想要即時回饋就需要錢。以下將結合 **google 試算表** 以及 **[DataCamp Light](https://github.com/datacamp/datacamp-light){:target="_blank"}**，讓使用者能直接在**靜態網頁**上查詢自己填寫問卷的結果，而且不須花錢。
+具有即時分數回饋 (或根據填問卷者填答情況而有不同回饋) 的問卷，背後通常有伺服器在運算分數。換句話說，想要即時回饋就需要錢。以下將結合 **google 試算表** 以及 **[DataCamp Light](https://github.com/datacamp/datacamp-light)**，讓使用者能直接在**靜態網頁**上查詢自己填寫問卷的結果，而且不須花錢。
 
 
 **實際操作**<br>
-繼續閱讀下去前，可先至[示範問卷平台](/assets/gsheet_post/gsheet_demo.html){:target="_blank"}填寫問卷、查詢結果，比較容易理解之後的內容。文章中後段的實例說明即使用此表單為例。
+繼續閱讀下去前，可先至[示範問卷平台](/assets/gsheet_post/gsheet_demo.html)填寫問卷、查詢結果，比較容易理解之後的內容。文章中後段的實例說明即使用此表單為例。
 {: .success}
 
 概觀: 運作邏輯
@@ -58,7 +58,7 @@ graph TD;
 
 ## 連結表單至試算表
 
-可參考 [google 說明](https://support.google.com/docs/answer/2917686?hl=zh-Hant){:target="_blank"}。這項功能使用過 google 表單的人都知道，以下附圖簡單說明：
+可參考 [google 說明](https://support.google.com/docs/answer/2917686?hl=zh-Hant)。這項功能使用過 google 表單的人都知道，以下附圖簡單說明：
 
 從雲端硬碟或任何方法，進入到表單即會顯示下圖的頁面(具編輯權限)。**注意需於中間白色方塊點選「回覆」**(預設畫面為「問題」)畫面才會完全如下。接著點選白色方塊中，右上方的**綠色 icon**，即會出現選項要你：
 
@@ -76,7 +76,7 @@ graph TD;
 
 **千萬不要編輯`表單回應`**，這很可能會破壞收集到的問卷資料。google 試算表有一個很實用的函數`IMPORTRANGE`，能夠選取一試算表中特定的範圍，將其連結至另一獨立的試算表中(獨立檔案)。因此，每當原先的試算表更新，透過`IMPORTRANGE`連結的新試算表也會跟著更新。如此，即可在不更動`表單回應`下，對`表單回應`的內容進行運算。
 
-若文章中關於`IMPORTRANGE`有描述不清的地方，可參考[這篇](http://isvincent.pixnet.net/blog/post/46090834-excel-google%E8%A9%A6%E7%AE%97%E8%A1%A8%E5%A6%82%E4%BD%95%E9%97%9C%E8%81%AF%E5%88%B0%E5%8F%A6%E4%B8%80%E5%80%8B%E8%A9%A6%E7%AE%97%E8%A1%A8%E7%9A%84%E5%85%A7){:target="_blank"}，寫得相當清楚。
+若文章中關於`IMPORTRANGE`有描述不清的地方，可參考[這篇](http://isvincent.pixnet.net/blog/post/46090834-excel-google%E8%A9%A6%E7%AE%97%E8%A1%A8%E5%A6%82%E4%BD%95%E9%97%9C%E8%81%AF%E5%88%B0%E5%8F%A6%E4%B8%80%E5%80%8B%E8%A9%A6%E7%AE%97%E8%A1%A8%E7%9A%84%E5%85%A7)，寫得相當清楚。
 
 ```vbscript
 IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
@@ -85,20 +85,20 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 - `<工作表名稱>`: `表單回應`只會有一個工作表，將其名稱填入這裡。
 - `<儲存格範圍>`: 儲存格範圍視問卷的題數題數而定，其格式為：`A1:F9487`。
 
-以下將使用此[資料夾](https://drive.google.com/open?id=16lRn7UUo_-8OUdfaYrg7CSUNIvOAmAM8){:target="_blank"}中的檔案為例說明。檔案間的關係完全對應至上文**概觀**中的[概念圖](#mermaidChart0)。
+以下將使用此[資料夾](https://drive.google.com/open?id=16lRn7UUo_-8OUdfaYrg7CSUNIvOAmAM8)中的檔案為例說明。檔案間的關係完全對應至上文**概觀**中的[概念圖](#mermaidChart0)。
 {: .info}
 
 **`運算分析`**試算表
 -------------------------------------------
 
 ### 匯入
-在[`運算分析`](https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0){:target="_blank"}中的儲存格`A1`，我輸入了以下公式：
+在[`運算分析`](https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0)中的儲存格`A1`，我輸入了以下公式：
 
 ```vbscript
 =IMPORTRANGE("https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166","表單回應 1!A1:E9999")
 ```
 
-以匯入[`表單回應`](https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166){:target="_blank"}的 A 至 E 欄[^num]。
+以匯入[`表單回應`](https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166)的 A 至 E 欄[^num]。
 
 ### 運算公式
 我在 G 和 H 欄設定公式[^GH]計算 Q1, Q2, Q3 的分數總合，其中 **Q3 是反向計分**。
@@ -126,7 +126,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 2. **Token**: E 欄
 3. **score(conditioned)**: H 欄
 
-因此，[`運算結果`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing){:target="_blank"}中的 A、B、C 欄需分別對應到`運算分析`中的 A、E、H 欄。在`運算結果`的儲存格`A1`、`B1`、`C1`，分別使用`IMPORTRANGE`：
+因此，[`運算結果`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)中的 A、B、C 欄需分別對應到`運算分析`中的 A、E、H 欄。在`運算結果`的儲存格`A1`、`B1`、`C1`，分別使用`IMPORTRANGE`：
 
 1. 儲存格`A1`
 
@@ -149,7 +149,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 DataCamp Light 設置
 ==========================================
 
-[DataCamp](https://www.datacamp.com/){:target="_blank"} 是一個學習資料科學程式語言的線上教學網站，有 R 和 Python 的教學。[DataCamp Light](https://github.com/datacamp/datacamp-light){:target="_blank"}是一個互動式的程式語言輔助教學工具。其能夠鑲嵌在網頁上，讓使用者直接透過網頁學習 R 或 Python。
+[DataCamp](https://www.datacamp.com/) 是一個學習資料科學程式語言的線上教學網站，有 R 和 Python 的教學。[DataCamp Light](https://github.com/datacamp/datacamp-light)是一個互動式的程式語言輔助教學工具。其能夠鑲嵌在網頁上，讓使用者直接透過網頁學習 R 或 Python。
 
 ![](/assets/gsheet_post/DataCamp.PNG){: width="70%" height="70%"}
 {:.rounded}
@@ -158,7 +158,7 @@ DataCamp Light 設置
 
 ### 取得試算表權限
 
-DataCamp Light 讀取的是[`運算結果`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing){:target="_blank"}的內容，因此需將`運算結果`發佈(公開)至網路: 
+DataCamp Light 讀取的是[`運算結果`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)的內容，因此需將`運算結果`發佈(公開)至網路: 
 
 選取 `檔案` > `發佈到網路...`，即會開啟：
 
@@ -175,7 +175,7 @@ DataCamp Light 讀取的是[`運算結果`](https://docs.google.com/spreadsheets
 
 ### 完整程式碼
 
-以下是鑲嵌於[示範問卷平台](/assets/gsheet_post/gsheet_demo.html){:target="_blank"}的 DataCamp Light 程式碼(html)：
+以下是鑲嵌於[示範問卷平台](/assets/gsheet_post/gsheet_demo.html)的 DataCamp Light 程式碼(html)：
 
 ````html
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
@@ -238,7 +238,7 @@ score("A_Token_Example")
 
 ## GitHub Pages
 
-架設靜態網頁[^static]並非難事，難的是做出漂亮的靜態網頁。然而，網頁越漂亮，其結構通常也更加複雜。如何(短時間)打造美觀的靜態網頁以及基礎 HTML, CSS 的概念並非此文的目的。對於有這些需求的讀者，我推薦 [Yihui Xie](https://yihui.name/){:target="_blank"} 的 [blogdown](https://bookdown.org/yihui/blogdown/){:target="_blank"}。
+架設靜態網頁[^static]並非難事，難的是做出漂亮的靜態網頁。然而，網頁越漂亮，其結構通常也更加複雜。如何(短時間)打造美觀的靜態網頁以及基礎 HTML, CSS 的概念並非此文的目的。對於有這些需求的讀者，我推薦 [Yihui Xie](https://yihui.name/) 的 [blogdown](https://bookdown.org/yihui/blogdown/)。
 
 以下提供一個最精簡的例子，由註冊 GitHub 帳號到架設網頁，過程中僅需使用瀏覽器(電腦版為例)。
 
@@ -253,14 +253,14 @@ score("A_Token_Example")
 
 ### 上傳網頁
 
-[Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight){:target="_blank"} 裡面有兩個檔案：`index.html`以及`.nojekyll`。
+[Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有兩個檔案：`index.html`以及`.nojekyll`。
 
 - `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://username.github.io/`時所讀取的檔案。此為一最簡例子，所以網站僅有首頁一個頁面。此檔案僅包含 DataCamp Light 的程式碼和 HTML 的必要結構。因此，若要修改 DataCamp Light 的 R Script，需用文字編輯器開啟此檔案修改`<body>...</body>`裡面的內容。
 
-- `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/){:target="_blank"} 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案架構[^jekyll]。
+- `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案架構[^jekyll]。
 
 
-1. 下載 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight){:target="_blank"}(點擊連結自動下載。下載後需解壓縮。)
+1. 下載 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight)(點擊連結自動下載。下載後需解壓縮。)
 
 2. 至剛剛建立的 Repository (username.github.io)，點擊 **Upload files**(圖中黃色螢光處)。 <br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
 
@@ -268,7 +268,7 @@ score("A_Token_Example")
 
 4. 上傳完成後，即可看到下圖。`.nojekyll`不會顯示出來。<br>![](/assets/gsheet_post/gh_uploaded.PNG){: width="90%" height="90%"}
 
-5. **完成！**過 1, 2 分鐘後，即可至`username.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/){:target="_blank"}相同。
+5. **完成！**過 1, 2 分鐘後，即可至`username.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/)相同。
 
 
 隱私問題
@@ -282,12 +282,10 @@ score("A_Token_Example")
 <br><br>
 Last updated: Apr 20, 2018 9:59 PM
 
-<!-- FootNotes -->
-
 附註
 =======================================
 
-[^test]: 其實 google 表單確實能即時回饋分數，但僅限[測驗模式](https://support.google.com/docs/answer/7032287?hl=zh-Hant){:target="_blank"}，有諸多限制，例如，題目僅能為「對」或「錯」，無法處理反向計分的問題，無法使用線性刻度 (linear scale) 計分等。
+[^test]: 其實 google 表單確實能即時回饋分數，但僅限[測驗模式](https://support.google.com/docs/answer/7032287?hl=zh-Hant)，有諸多限制，例如，題目僅能為「對」或「錯」，無法處理反向計分的問題，無法使用線性刻度 (linear scale) 計分等。
 
 [^num]: 若擔心填答人數超過 9999 人，可設個更大的數字，如`E99999`。
 
@@ -299,8 +297,8 @@ Last updated: Apr 20, 2018 9:59 PM
 
 [^static]: 這裡的靜態網頁是架設在 GitHub 上，代表(1)可以任意修改網頁；(2)網頁的內容(檔案)是完全公開的。因此，相對於其他部落格平台，如 Blogger， 網站管理人的彈性相當大，而且網頁上不會出現廣告。然而，由於檔案是完全公開的，需**注意隱私以及版權問題**。
 
-[^blog]: 我對目前的部落格平台功能相當不熟悉，但就我所知提供此功能的應該不多。DataCamp Light 有提供 WordPress(不是 WordPress.com) 外掛，詳見 [DataCamp Light Wordpress Plugin](https://github.com/datacamp/datacamp-light-wordpress){:target="_blank"}。
+[^blog]: 我對目前的部落格平台功能相當不熟悉，但就我所知提供此功能的應該不多。DataCamp Light 有提供 WordPress(不是 WordPress.com) 外掛，詳見 [DataCamp Light Wordpress Plugin](https://github.com/datacamp/datacamp-light-wordpress)。
 
-[^jekyll]: 這是自行在 GitHub Pages 上架設部落格最困難的地方：使用者需對 Jekyll 有一定程度的理解。這同時也是我推薦 [blogdown](https://github.com/rstudio/blogdown){:target="_blank"} 的原因，其讓使用者略過理解複雜的靜態網頁產生器，而能專心在網頁的內容上。
+[^jekyll]: 這是自行在 GitHub Pages 上架設部落格最困難的地方：使用者需對 Jekyll 有一定程度的理解。這同時也是我推薦 [blogdown](https://github.com/rstudio/blogdown) 的原因，其讓使用者略過理解複雜的靜態網頁產生器，而能專心在網頁的內容上。
 
 [^secure]: 然`運算結果`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。

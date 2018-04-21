@@ -19,7 +19,7 @@ $("input[type='checkbox']").prop("checked", true);
 ### html table
 下載網頁成`.html`，至google搜尋: **html to csv**
 
-或至[**這裡**](http://www.convertcsv.com/html-table-to-csv.htm){:target="_blank"}上傳html，該網頁會幫你抓出table，接著就能直接下載成`.csv`
+或至[**這裡**](http://www.convertcsv.com/html-table-to-csv.htm)上傳html，該網頁會幫你抓出table，接著就能直接下載成`.csv`
 
 <br><br>
 

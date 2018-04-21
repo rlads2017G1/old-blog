@@ -23,7 +23,7 @@ tags:
 
 ## 課程回顧
 
-106學年上學期，我最喜歡、也意外收穫最多的課是謝舒凱老師開設的 [R 語言與資料科學導論](https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=142%20U0750&class=&dpt_code=1420&ser_no=76601&semester=106-1&lang=CH){:target="_blank"}，或許會是我大學生涯最喜歡的課吧。
+106學年上學期，我最喜歡、也意外收穫最多的課是謝舒凱老師開設的 [R 語言與資料科學導論](https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=142%20U0750&class=&dpt_code=1420&ser_no=76601&semester=106-1&lang=CH)，或許會是我大學生涯最喜歡的課吧。
 
 起初是抱著學好 R 語言(加上通識快修不完)的心情去加簽這門課的，但課堂上 R 語言的語法卻教得不多。然正是這種**不聚焦在程式語法的課程安排**，讓我把 R 學得非常好。如果課程從頭到尾都在教 R 語言，到期末我一定會受不了越顯複雜的語法，最後便隨意敷衍了事。我在這門課收穫最大的，反而不是課堂學到的技巧，而是老師、助教們傳達的一些概念與想法，以及自己探索這些概念想法的樂趣與收穫：
 
@@ -33,21 +33,21 @@ tags:
 
 - 文本分析: 我本來對這部分最沒有興趣，直到我意識到文本資料是研究人類行為、社會與文化最重要的資料來源之一[^2] [^3]。
 
-- Reproducibility: [Rmarkdown](http://rmarkdown.rstudio.com/){:target="_blank"} (`.Rmd`) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(`Rmd`)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版所花費的心力。例如，要報告可輸出成投影片 (`.html`)、要列印可輸出成 PDF、要放到網路上可輸出成網頁。Rmarkdown 讓使用者能以簡單有效率的方式工作，這是達到 [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility){:target="_blank"} 的前提與重要基礎。![Reproducible Research with R](/assets/images/post_img/reproducible_research.png) [^repro]
+- Reproducibility: [Rmarkdown](http://rmarkdown.rstudio.com/) (`.Rmd`) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(`Rmd`)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版所花費的心力。例如，要報告可輸出成投影片 (`.html`)、要列印可輸出成 PDF、要放到網路上可輸出成網頁。Rmarkdown 讓使用者能以簡單有效率的方式工作，這是達到 [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility) 的前提與重要基礎。![Reproducible Research with R](/assets/images/post_img/reproducible_research.png) [^repro]
 
  
 ### 課程起手式
 
 這門課與我個性相符，完全顯現在第一堂課實習課(Lab Session)的作業上。作業與 R 並無相關，而是要使用 Markdown 格式撰寫自我介紹。由於我對簡約風有點痴迷[^sim] (受 Markdown 影響後更為痴迷)，在 Markdown 上花了一些時間研究。目前，透過 R 與 Pandoc Markdown 語法的整合(即 Rmarkdown)，我可以快速簡潔地寫出含有上下標、Footnotes、超連結、citation 的精美文件[^md]或文章(例如，這篇部落格)而完全不須使用 html 語法。這讓我在寫許多作業時，效率提高不少。
 
-對 Rmarkdown 的痴迷與熱愛可說是我R語言功力進步的關鍵。**Rmarkdown 賦予每個人將想法傳達給其他人的能力**[^idea]，因此，**能做出美好的東西並與其他人分享**成為我學習 R 最強烈的動機之一。例如，當初在做這門課的[期末專案](https://rlads2017g1.github.io/presentation.html){:target="_blank"}時，發覺 R 可以畫出很多種[互動式圖表](http://gallery.htmlwidgets.org/){:target="_blank"}(不須懂 JavaScript)，於是我開始尋找最適合呈現資料的方式。由於不同種類的圖，常有不同資料格式的要求[^dt]，因此為了畫出最適合的圖，我反覆整理許多資料以符合格式。這使得我在 data wrangling 上，能力大幅提升。
+對 Rmarkdown 的痴迷與熱愛可說是我R語言功力進步的關鍵。**Rmarkdown 賦予每個人將想法傳達給其他人的能力**[^idea]，因此，**能做出美好的東西並與其他人分享**成為我學習 R 最強烈的動機之一。例如，當初在做這門課的[期末專案](https://rlads2017g1.github.io/presentation.html)時，發覺 R 可以畫出很多種[互動式圖表](http://gallery.htmlwidgets.org/)(不須懂 JavaScript)，於是我開始尋找最適合呈現資料的方式。由於不同種類的圖，常有不同資料格式的要求[^dt]，因此為了畫出最適合的圖，我反覆整理許多資料以符合格式。這使得我在 data wrangling 上，能力大幅提升。
 
 
 ## R 學習路徑
 
 ### 起步
 
-我剛開始學 R 時不算順遂[^a]。剛進到 R 的世界，一定會被為數眾多的 function[^fc] (以及更多的學習資源) 搞得迷失方向，不知從何開始。事實上，這不是我們的錯，因為連 R 的社群內也有相關的爭論：**Base R first vs. Tidyverse first**(詳細可參考[此文](http://varianceexplained.org/r/teach-tidyverse/){:target="_blank"})。R 真的是一個使用門檻不低的軟體，要精通它不是一、兩年內的事情[^growth]，所以一定要對 R 有熱情，才可能持續支撐對於 R 的學習[^persist]。
+我剛開始學 R 時不算順遂[^a]。剛進到 R 的世界，一定會被為數眾多的 function[^fc] (以及更多的學習資源) 搞得迷失方向，不知從何開始。事實上，這不是我們的錯，因為連 R 的社群內也有相關的爭論：**Base R first vs. Tidyverse first**(詳細可參考[此文](http://varianceexplained.org/r/teach-tidyverse/))。R 真的是一個使用門檻不低的軟體，要精通它不是一、兩年內的事情[^growth]，所以一定要對 R 有熱情，才可能持續支撐對於 R 的學習[^persist]。
 
 R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是為何會有 **Base R first vs. Tidyverse first debate**。由於學好 R (更精確地說，是學好 **Base R**)需一段時間，我認為 **Base R first** 的學習方式很容易造成放棄。但學習 R 不可能不接觸 **Base R** ，因為它是 R 語言最重要的基礎。因此，我覺得最好的方式是**交錯並進**：
 
@@ -61,7 +61,7 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 2. **修課**：我非常建議在學校修一門 R 語言的課(最好 3 學分以上)，但**不建議線上課程**[^online]。修課的話，有老師和助教提供經驗，能省下許多摸索的時間；每週有固定進度，或多或少可迫使自己持續接觸程式；若有期末專案，這會是 R 功力突飛猛進的最佳機會(效果比起純粹練習好太多)。
 
-3. **讓自己喜歡 R**：初學 R 時因為不知道這項的重要性，所以學得有點辛苦。這點真的很微妙，有時候太過專注於學習某項"技能"，反而會**過於專注實用性而忽略了趣味性**，於是只剩理性說服自己：*學這很有用，你一定要堅持下去*。通常開始這樣想，代表離放棄不遠了。這也是為何我很推 [R 語言與資料科學導論](https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=142%20U0750&class=&dpt_code=1420&ser_no=76601&semester=106-1&lang=CH){:target="_blank"}這門課的原因 ─ 老師真的很有智慧，不斷鼓勵學生們去想**有趣又可用資料科學回答的問題**，也常介紹一些 R 意想不到的有趣應用，但從未將焦點放在程式的硬實力。我自己由 R 善於**呈現**的特質切入，從 Rmarkdown 開始，擴展到資料視覺化，又到網頁設計(縱使我`html`和`css`基礎很差)，每一項對我來說都非常有趣，R 學起來因而樂此不疲。
+3. **讓自己喜歡 R**：初學 R 時因為不知道這項的重要性，所以學得有點辛苦。這點真的很微妙，有時候太過專注於學習某項"技能"，反而會**過於專注實用性而忽略了趣味性**，於是只剩理性說服自己：*學這很有用，你一定要堅持下去*。通常開始這樣想，代表離放棄不遠了。這也是為何我很推 [R 語言與資料科學導論](https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=142%20U0750&class=&dpt_code=1420&ser_no=76601&semester=106-1&lang=CH)這門課的原因 ─ 老師真的很有智慧，不斷鼓勵學生們去想**有趣又可用資料科學回答的問題**，也常介紹一些 R 意想不到的有趣應用，但從未將焦點放在程式的硬實力。我自己由 R 善於**呈現**的特質切入，從 Rmarkdown 開始，擴展到資料視覺化，又到網頁設計(縱使我`html`和`css`基礎很差)，每一項對我來說都非常有趣，R 學起來因而樂此不疲。
 
 
 ### 實作：專案
@@ -82,15 +82,15 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 1. 基礎參考書 (若有餘力的話 + `swirl`[^swirl] 當練習題)
     
-    - **Hands-On Programming with R**：這是一本寫得非常好且相當簡單的書，目標讀者是沒有程式經驗的初學者(雖然我覺得縱使有程式經驗也可看這本書了解 R 的邏輯)。此書內容僅聚焦在非常基礎的 **Base R**，但重點是其將 R 的邏輯寫得非常清楚。我是在學 R 一陣子之後才看了這本書，對我有莫大的幫助。這本書相當短，可以很快看完，更多資訊請 [google 書名](https://www.google.com.tw/search?biw=1280&bih=560&ei=rF90WtefO8W48QXcv4y4Dg&q=Hands-On+Programming+with+R&oq=Hands-On+Programming+with+R&gs_l=psy-ab.3...1714146.1714146.0.1714717.1.1.0.0.0.0.0.0..0.0....0...1c.1.64.psy-ab..1.0.0....0.FFjeBpwN_VQ){:target="_blank"}。
+    - **Hands-On Programming with R**：這是一本寫得非常好且相當簡單的書，目標讀者是沒有程式經驗的初學者(雖然我覺得縱使有程式經驗也可看這本書了解 R 的邏輯)。此書內容僅聚焦在非常基礎的 **Base R**，但重點是其將 R 的邏輯寫得非常清楚。我是在學 R 一陣子之後才看了這本書，對我有莫大的幫助。這本書相當短，可以很快看完，更多資訊請 [google 書名](https://www.google.com.tw/search?biw=1280&bih=560&ei=rF90WtefO8W48QXcv4y4Dg&q=Hands-On+Programming+with+R&oq=Hands-On+Programming+with+R&gs_l=psy-ab.3...1714146.1714146.0.1714717.1.1.0.0.0.0.0.0..0.0....0...1c.1.64.psy-ab..1.0.0....0.FFjeBpwN_VQ)。
 
-    - **[R for Data Science](http://r4ds.had.co.nz/){:target="_blank"}**：這本書應該只會越來越紅(不知道會不會變成 standard recommendation)。如同其名，這本書就在教 R 於資料科學上的應用。與上本書不同的是，這本書以`tidyverse`套件為基礎而非 Base R。雖然如此，此書並不需要 Base R 的基礎(有的話會更好，所以我才推薦**Hands-On**)，需要的基礎書中都有介紹。
+    - **[R for Data Science](http://r4ds.had.co.nz/)**：這本書應該只會越來越紅(不知道會不會變成 standard recommendation)。如同其名，這本書就在教 R 於資料科學上的應用。與上本書不同的是，這本書以`tidyverse`套件為基礎而非 Base R。雖然如此，此書並不需要 Base R 的基礎(有的話會更好，所以我才推薦**Hands-On**)，需要的基礎書中都有介紹。
 
     - 我建議可以先從 **Hands-On Programming with R** 開始，因為這本書很短可以快速看完。之後再按照章節慢慢看 **R for Data Science** (可配合學校上課進度，這本書短時間內看不完)，逐步累積自己的功力。
     
         - 上述的書都是英文的，或許有些人很抗拒英文，但中文書並非一個好選擇。當 R 學到某個程度後，更進階的資源幾乎全為英文；此外，google 問題解決方法時，用中文十之八九會找不到答案。看英文書可讓自己熟悉 R 的英文用語，而且這些書的英文都很簡單。
 
-    - 如果有志探索 R 的其它可能性，可以參考 [bookdown.org](https://bookdown.org/){:target="_blank"} 網站上的書(僅推薦 Star 100 以上，上面還是有一些雷書)。這裡的書都是用`bookdown`套件寫的，而且皆為 open source，可以在網頁上看或下載到電腦(詳見`bookdown`套件)。
+    - 如果有志探索 R 的其它可能性，可以參考 [bookdown.org](https://bookdown.org/) 網站上的書(僅推薦 Star 100 以上，上面還是有一些雷書)。這裡的書都是用`bookdown`套件寫的，而且皆為 open source，可以在網頁上看或下載到電腦(詳見`bookdown`套件)。
 
 
 2. 學校課程：如**課程回顧**所提及，一門 R 的課可以讓自己視野更加廣博。僅是自修閉門造車進步很慢、常常會落掉進度、而且頗為苦悶。有人帶領比較不會走偏方向，同時還能學到許多有趣的東西。
@@ -98,11 +98,11 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 3. 將 R 當玩具：如果學 R 如同遊戲一般好玩，那就沒有堅不堅持的問題了，這也是我自認學 R 相當成功的地方。以下，我將介紹一些我知道的有趣資源，不見得直接與資料分析相關，但一定可與 R 結合。
 
-    - [R Graph Gallery](https://www.r-graph-gallery.com/){:target="_blank"}、[htmlwidgets for R](http://www.htmlwidgets.org/){:target="_blank"}: R 最為吸引人的特徵之一就是其強大的繪圖功能，加上其它套件的擴充，幾乎所有跟資料有關的圖都可以用 R 畫。沒事多多欣賞其他人用 R 畫出的圖，不僅療癒放鬆，同時對 R 的能力有個大概的想像、未來更有可能會有使用需求。
+    - [R Graph Gallery](https://www.r-graph-gallery.com/)、[htmlwidgets for R](http://www.htmlwidgets.org/): R 最為吸引人的特徵之一就是其強大的繪圖功能，加上其它套件的擴充，幾乎所有跟資料有關的圖都可以用 R 畫。沒事多多欣賞其他人用 R 畫出的圖，不僅療癒放鬆，同時對 R 的能力有個大概的想像、未來更有可能會有使用需求。
 
-    - [Rmarkdown](http://rmarkdown.rstudio.com/gallery.html){:target="_blank"}: 先前提過 Rmarkdown 很強大，可以點進 gallery 感受一下其生產力。我認為不會用 Rmarkdown 比起不會用 R 還要可惜。
+    - [Rmarkdown](http://rmarkdown.rstudio.com/gallery.html): 先前提過 Rmarkdown 很強大，可以點進 gallery 感受一下其生產力。我認為不會用 Rmarkdown 比起不會用 R 還要可惜。
         
-    - [Blogdown](https://bookdown.org/yihui/blogdown/){:target="_blank"}: 我目前的網站(一部份)是透過 `blogdown` 套件在經營[^bg]的。Blogdown 大幅降低了架站的門檻，即使完全不懂 HTML/CSS 也能快速上手，同時配合 Git/GitHub 能讓發表(及修改)文章的過程非常有效率。此外，以 `blogdown` 架設的網頁是靜態的，不同於 Wordpress 等的動態網頁，靜態網頁的速度要快許多、不需要付費伺服器，而且容易搬遷。
+    - [Blogdown](https://bookdown.org/yihui/blogdown/): 我目前的網站(一部份)是透過 `blogdown` 套件在經營[^bg]的。Blogdown 大幅降低了架站的門檻，即使完全不懂 HTML/CSS 也能快速上手，同時配合 Git/GitHub 能讓發表(及修改)文章的過程非常有效率。此外，以 `blogdown` 架設的網頁是靜態的，不同於 Wordpress 等的動態網頁，靜態網頁的速度要快許多、不需要付費伺服器，而且容易搬遷。
 
 
 4. 集大成：專案製作
@@ -126,9 +126,9 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 - Followers: 追蹤該用戶的其他用戶
 
-透過追蹤 R 社群是一個讓自己跟上快速成長的 R 的好方法，讓自己每日都長一些知識。例如，我透過臉書追蹤 [R bloggers](https://www.facebook.com/rbloggers/){:target="_blank"}，裡面常出現優質好文，且內容通常清楚易讀。
+透過追蹤 R 社群是一個讓自己跟上快速成長的 R 的好方法，讓自己每日都長一些知識。例如，我透過臉書追蹤 [R bloggers](https://www.facebook.com/rbloggers/)，裡面常出現優質好文，且內容通常清楚易讀。
 
-另一個讓 R 功力快速成長的方式，就是自己成為 R bloggers：我不是指寫的文章要登上[R bloggers](https://www.facebook.com/rbloggers/){:target="_blank"}，而是像那些作者一樣在部落格上寫文章。寫文章是一種很好的學習方式，能幫自己重新組織所學，同時也可檢視是否真正了解正在撰寫的主題。文章不見得是寫給別人看的，有時忘記一些東西，透過自己的文字重新學習相當方便。推薦兩篇簡短的優質文說明寫 blog 的好處：[Yihui Xie](https://bookdown.org/yihui/blogdown/personal-experience.html){:target="_blank"}、[David Robertson](https://www.r-bloggers.com/advice-to-aspiring-data-scientists-start-a-blog/){:target="_blank"}。
+另一個讓 R 功力快速成長的方式，就是自己成為 R bloggers：我不是指寫的文章要登上[R bloggers](https://www.facebook.com/rbloggers/)，而是像那些作者一樣在部落格上寫文章。寫文章是一種很好的學習方式，能幫自己重新組織所學，同時也可檢視是否真正了解正在撰寫的主題。文章不見得是寫給別人看的，有時忘記一些東西，透過自己的文字重新學習相當方便。推薦兩篇簡短的優質文說明寫 blog 的好處：[Yihui Xie](https://bookdown.org/yihui/blogdown/personal-experience.html)、[David Robertson](https://www.r-bloggers.com/advice-to-aspiring-data-scientists-start-a-blog/)。
 
 ## 小結
 
@@ -147,13 +147,13 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 [^op]: 我覺得 Open Source 是一個很強盛且很令人感動的文化。其展現了透過分享與合作，人們能夠創造出多少美好的事物。
 
-[^2]: 至少是資訊量最大的資料來源，比較看看社群網站、網路、書籍(見 [Google Ngram](https://en.wikipedia.org/wiki/Google_Ngram_Viewer){:target="_blank"}，體驗一下文本資料的強大)累積的資料量與心理學實驗累積的資料量。
+[^2]: 至少是資訊量最大的資料來源，比較看看社群網站、網路、書籍(見 [Google Ngram](https://en.wikipedia.org/wiki/Google_Ngram_Viewer)，體驗一下文本資料的強大)累積的資料量與心理學實驗累積的資料量。
 
 [^3]: 語言學不僅可用於研究語言、還可拿來當作研究人類社會與文化的工具。
 
 [^sim]: 我本來對美感、簡約、使用者經驗完全不在乎，但受我好朋友的影響，越來越在意這些東西(看到乾淨舒服的版面就會很興奮，有點點不和諧就會想修改它)。
 
-[^md]: 見 [Rmarkdown](http://rmarkdown.rstudio.com/){:target="_blank"} 了解其強大。
+[^md]: 見 [Rmarkdown](http://rmarkdown.rstudio.com/) 了解其強大。
 
 [^idea]: Markdown 的學習門檻很低，使大家能簡單地寫出排版整潔漂亮的文章。Rmarkdown 大幅擴充 Markdown 的功能，秉持著相同的精神，Rmarkdown 使大家能簡單地寫出排版整潔漂亮(且含有R跑出之圖表)的**文章**、**投影片**、**書籍**，甚至**網站**。
 
@@ -161,7 +161,7 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 [^fc]: R 除了函數非常多，使用起來也非常彈性，對使用者的限制相當少：其它語言很容易跑出 error message，但在 R 卻相對不容易(例如，輸入`c(1, 2, "c")`不會跑出 error 但會將`1`, `2`從**數字**轉換成**字串**)。這對初學者不見得是好事：初學者常因此難以釐清 R 運作的邏輯。
 
-[^growth]: 精通 R 應該可算是一輩子的事吧，因為 R 是個不斷在成長的語言。R 的社群與生態圈成長非常迅速(例如，目前 [CRAN](https://cran.r-project.org/){:target="_blank"} 有 12,081 個 package)，要精通 R 勢必要與它一起成長。即使只求在傳統的資料分析上熟悉 R，也需要花不少的時間，而且很難在短時間內大幅進步。
+[^growth]: 精通 R 應該可算是一輩子的事吧，因為 R 是個不斷在成長的語言。R 的社群與生態圈成長非常迅速(例如，目前 [CRAN](https://cran.r-project.org/) 有 12,081 個 package)，要精通 R 勢必要與它一起成長。即使只求在傳統的資料分析上熟悉 R，也需要花不少的時間，而且很難在短時間內大幅進步。
 
 [^persist]: 這裡把 R 說得有點負面。當 R 融入你生活中，你喜歡它都來不及了(不論是它讓你做事更有效率或它能做出很厲害的東西)，根本就沒有**支撐學習**的問題，只有**時間不足**的問題。
 
@@ -171,10 +171,10 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 
 [^ask]: 在網路上要輸對關鍵字才找得到答案。起初由於不清楚 R 的運作邏輯，找答案的效率會很低。但隨著功力提升，會越容易知道問題的癥結在哪，找答案(或是確定問題能否被解決)也會變得更有效率。
 
-[^swirl]: swirl 是 R 的套件，可以讓使用者直接在 R 的環境中互動式學習 R。其提供許多課程可供使用者下載，我覺得學完最基礎的課程就夠了，可以熟悉 Base R 的環境。詳細的課程見 [swirl course](https://github.com/swirldev/swirl_courses#swirl-courses){:target="_blank"}。
+[^swirl]: swirl 是 R 的套件，可以讓使用者直接在 R 的環境中互動式學習 R。其提供許多課程可供使用者下載，我覺得學完最基礎的課程就夠了，可以熟悉 Base R 的環境。詳細的課程見 [swirl course](https://github.com/swirldev/swirl_courses#swirl-courses)。
 
-[^bg]: 我是在逛 bookdown.org 的書時，無意間發現 Blogdown 的書，可惜當時我早已用 Jekyll / GitHub Pages 架好網站。Jekyll 的使用門檻相當高，我也並未學會如何使用(我直接用別人做好的[模板](https://github.com/kitian616/jekyll-TeXt-theme){:target="_blank"}，因此只要修改一些`.html`和`.css`)。反之，`blogdown`支援的 [Hugo](https://gohugo.io/){:target="_blank"} 並沒有 Jekyll 那麼多的限制。`blogdown`同時大幅降低了架站的難度，例如，`blogdown`支援的 Markdown 語法 (Pandoc Markdown) 很豐富且很適合寫部落格，因此用其寫部落格就不必理會 Jekyll 或 Hugo 等網頁產生器所支援的特定 Markdown 語法(Jekyll 支援`kramdown`、Hugo 支援`blackfriday`)。
+[^bg]: 我是在逛 bookdown.org 的書時，無意間發現 Blogdown 的書，可惜當時我早已用 Jekyll / GitHub Pages 架好網站。Jekyll 的使用門檻相當高，我也並未學會如何使用(我直接用別人做好的[模板](https://github.com/kitian616/jekyll-TeXt-theme)，因此只要修改一些`.html`和`.css`)。反之，`blogdown`支援的 [Hugo](https://gohugo.io/) 並沒有 Jekyll 那麼多的限制。`blogdown`同時大幅降低了架站的難度，例如，`blogdown`支援的 Markdown 語法 (Pandoc Markdown) 很豐富且很適合寫部落格，因此用其寫部落格就不必理會 Jekyll 或 Hugo 等網頁產生器所支援的特定 Markdown 語法(Jekyll 支援`kramdown`、Hugo 支援`blackfriday`)。
 
-[^hobby]: 大學以前，我很排斥程式(詳見[此文](https://liao961120.github.io/2017/11/26/mathematics.html){:target="_blank"})。後來發覺程式的實用性而開始想學程式語言。學了 R 後發現自己其實有資工魂 (雖然 CS 領域似乎看不起 R 的速度，但這本就並非 R 的長處)，其實很喜歡程式語言、電腦等東西。
+[^hobby]: 大學以前，我很排斥程式(詳見[此文](https://liao961120.github.io/2017/11/26/mathematics.html))。後來發覺程式的實用性而開始想學程式語言。學了 R 後發現自己其實有資工魂 (雖然 CS 領域似乎看不起 R 的速度，但這本就並非 R 的長處)，其實很喜歡程式語言、電腦等東西。
 
-[^repro]: 圖片擷取自 British Ecological Society 編寫之指南 [A Guide to Reproducible Code](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf){:target="_blank"}
+[^repro]: 圖片擷取自 British Ecological Society 編寫之指南 [A Guide to Reproducible Code](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf)
