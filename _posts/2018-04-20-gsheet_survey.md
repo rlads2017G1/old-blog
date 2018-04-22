@@ -291,6 +291,8 @@ score("Enter_your_Token")
 - `rmarkdown/`: 對於有使用 R 的人，製作網頁非常簡單，因為網頁即是 HTML 檔，而 Rmarkdown 能直接輸出成 HTML 檔。更重要的是，在 Rmarkdown 中可以直接使用 HTML 語法，因此插入 DataCamp Light 變得相當容易。這資料夾的檔案是**回饋功能示範平台**的主要結構(包含 bootstrap 彈出視窗的功能)。若要新增或修改內容，僅需要修改`gsheet_demo.Rmd`[^dep]。若要使用`gsheet_demo.Rmd` knit 出的檔案作為網頁，記得將輸出的 HTML 檔更名為`index.html`。
 
 
+#### 步驟
+
 1. 下載 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight)(點擊連結自動下載。下載後需解壓縮。)
 
 2. 至剛剛建立的 Repository (username.github.io)，點擊 **Upload files**(圖中黃色螢光處)。 <br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}

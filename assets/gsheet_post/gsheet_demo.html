@@ -9,6 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Yongfu, Liao" />
 
 <meta name="date" content="2018-04-22" />
 
@@ -120,13 +121,16 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Google 表單即時回饋</h1>
+<h4 class="author"><em>Yongfu, Liao</em></h4>
 <h4 class="date"><em>2018-04-22</em></h4>
 
 </div>
 
 
+<p>此為 google 表單分數即時回饋的示範平台，請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 <strong>Token</strong>, 此 <strong>Token</strong> 是用來查詢問卷分數的，請將其記下。</p>
 <button type="button" class="btn btn-primary pull-left" data-toggle="modal" data-target="#sheet">填寫表單</button>
 <p><br><br><br></p>
+<p>以下區塊是 DataCamp Light, 為輔助程式語言教學與學習的工具，可用來執行 R 或 Python。下方的例子執行的是 R 語言，並且已預先讀入資料。您僅需於<code>score()</code>中輸入金鑰，例如，若您於問卷中 Token 那題填寫「abcde123」，請於下方輸入<code>score(&quot;abcde123&quot;)</code>。若查無結果，請重新整理頁面後再輸入一次。</p>
 
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
     <div data-datacamp-exercise data-lang="r">
@@ -169,7 +173,7 @@ $(document).ready(function () {
 <button type="button" class="close" data-dismiss="modal">&times;</button>
 <h4 class="modal-title">Google 表單</h4>
 </div>
-<div class="modal-body"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE-ke7yhlU3XRDIhw7vRL-mnYLi-jTOYF8Pz4ZLINjV53z2A/viewform?embedded=true" style="position: relative; height: 300px; width: 100%;" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe></div>
+<div class="modal-body"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE-ke7yhlU3XRDIhw7vRL-mnYLi-jTOYF8Pz4ZLINjV53z2A/viewform?embedded=true" style="position: relative; height: 360px; width: 100%;" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe></div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 </div>
