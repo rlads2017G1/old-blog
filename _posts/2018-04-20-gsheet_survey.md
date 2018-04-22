@@ -8,16 +8,16 @@ tags:
 - 中文
 ---
 
-google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應**自動彙整成試算表**更使分析資料變得非常容易。然而，google 表單缺乏一項重要的功能：**即時將分數回饋給問卷填答者**<!--more-->[^test]。
+google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應**自動彙整成試算表**更使分析資料變得非常容易。然而，google 表單缺乏一項重要的功能：**即時將問卷填答結果回饋給填寫者**<!--more-->[^test]。
 
-具有即時分數回饋 (或根據填問卷者填答情況而有不同回饋) 的問卷，背後通常有伺服器在運算分數。換句話說，想要即時回饋就需要錢。以下將結合 **google 試算表** 以及 **[DataCamp Light](https://github.com/datacamp/datacamp-light)**，讓使用者能直接在**靜態網頁**上查詢自己填寫問卷的結果，而且不須花錢。
+是否曾想過讓問卷填寫人能在 google 表單送出後，馬上知道填寫的結果？結果依據填寫情況有所不同，可以是一段敘述[^nar]，也可以是一個分數。這種類似線上測驗的分數即時回饋功能，背後通常有伺服器在運算分數，不是一般學生具有的資源。以下將介紹如何結合 **google 試算表** 以及 **[DataCamp Light](https://github.com/datacamp/datacamp-light)**，讓任何人都能製作出一個在**靜態網頁**上運行的平台，**使填寫者在送出 google 表單後，能直接查詢填寫結果**。
 
 
 **實際操作**<br>
-繼續閱讀下去前，可先至[示範問卷平台](/assets/gsheet_post/gsheet_demo.html)填寫問卷、查詢結果，比較容易理解之後的內容。文章中後段的實例說明即使用此表單為例。
+繼續閱讀下去前，可先至[回饋功能示範平台](/assets/gsheet_post/gsheet_demo.html)填寫問卷、查詢結果，比較容易理解下文內容。文章中後段的實例說明即以此表單為例。
 {: .success}
 
-概觀: 運作邏輯
+概觀: 運作邏輯 
 ===========================================
 
 <div class="mermaid">
@@ -34,7 +34,7 @@ graph TD;
 	
 	Form2("表單") -->|"1. 自動產生"|sheet1("表單回應");
 	sheet1 -->|"2. 連結"|sheet2("運算分析");
-	sheet2  -->|"3. 連結"|sheet3("運算結果");
+	sheet2  -->|"3. 連結"|sheet3("結果查找");
 	dc2("DataCamp") -.->|"4. 讀取資料"|sheet3;
 	
 	style sheet1 fill:#1FA463;
@@ -117,7 +117,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 1. 選擇時間戳記那欄(在此為 A 欄)
 2. `格式` > `數值` > `日期時間`
 
-**`運算結果`**試算表
+**`結果查找`**試算表
 -----------------------------------------------
 
 `運算分析`設置完成之後，需要**選擇希望使用者看的到的項目**:
@@ -126,7 +126,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 2. **Token**: E 欄
 3. **score(conditioned)**: H 欄
 
-因此，[`運算結果`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)中的 A、B、C 欄需分別對應到`運算分析`中的 A、E、H 欄。在`運算結果`的儲存格`A1`、`B1`、`C1`，分別使用`IMPORTRANGE`：
+因此，[`結果查找`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)中的 A、B、C 欄需分別對應到`運算分析`中的 A、E、H 欄。在`結果查找`的儲存格`A1`、`B1`、`C1`，分別使用`IMPORTRANGE`：
 
 1. 儲存格`A1`
 
@@ -154,11 +154,11 @@ DataCamp Light 設置
 ![](/assets/gsheet_post/DataCamp.PNG){: width="70%" height="70%"}
 {:.rounded}
 
-這裡即透過 DataCamp 執行預先寫入的 R Script，讀取儲存在雲端的`運算結果`。使用者在 DataCamp Light 輸入的`Token`是用以篩選資料，如此才會回傳使用者填寫的那筆問卷。
+這裡即透過 DataCamp 執行預先寫入的 R Script，讀取儲存在雲端的`結果查找`。使用者在 DataCamp Light 輸入的`Token`是用以篩選資料，如此才會回傳使用者填寫的那筆問卷。
 
 ### 取得試算表權限
 
-DataCamp Light 讀取的是[`運算結果`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)的內容，因此需將`運算結果`發佈(公開)至網路: 
+DataCamp Light 讀取的是[`結果查找`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)的內容，因此需將`結果查找`發佈(公開)至網路: 
 
 選取 `檔案` > `發佈到網路...`，即會開啟：
 
@@ -175,7 +175,7 @@ DataCamp Light 讀取的是[`運算結果`](https://docs.google.com/spreadsheets
 
 ### 完整程式碼
 
-以下是鑲嵌於[示範問卷平台](/assets/gsheet_post/gsheet_demo.html)的 DataCamp Light 程式碼(html)：
+以下是鑲嵌於[回饋功能示範平台](/assets/gsheet_post/gsheet_demo.html)的 DataCamp Light 程式碼(html)：
 
 ````html
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
@@ -184,15 +184,15 @@ DataCamp Light 讀取的是[`運算結果`](https://docs.google.com/spreadsheets
 		data <- readr::read_csv(url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQz4zjZfhWBYYRuW2Zhhx-sXvnlrS6vpvcgP0cJPdvsQI-6eKggXmpaWbu4dgbMQgcOHv0NQxL8a_K_/pub?output=csv"))
 		data <- as.data.frame(data)
 		colnames(data) <- c("DateTime", "Token", "Score")
-		data <- data[which(data$Score!=100),]
+		data <- data[which(data$Score != 100),]
 		score <- function(token) {
-			i <- which(data$Token==token)
+			i <- which(data$Token == token)
 			data[i,]
 		}
 	</code>
 	<code data-type="sample-code">
 		# Put Token in "". Ex: score("abcde123")
-		score("A_Token_Example")
+		score("Enter_your_Token")
 	</code>
 </div>
 ````
@@ -210,25 +210,56 @@ DataCamp Light **僅能正常顯示英文**，因此需確定 R Script 以及使
 data <- readr::read_csv(url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQz4zjZfhWBYYRuW2Zhhx-sXvnlrS6vpvcgP0cJPdvsQI-6eKggXmpaWbu4dgbMQgcOHv0NQxL8a_K_/pub?output=csv"))
 data <- as.data.frame(data)
 colnames(data) <- c("DateTime", "Token", "Score")
-data <- data[which(data$Score!=100),] #這行只是縮減資料，可省略不寫
+data <- data[which(data$Score != 100),] # 這行可不寫
 score <- function(token) {
-	i <- which(data$Token==token)
+	i <- which(data$Token == token)
 	data[i,]
 }
 ```
 
-第一行`data <- readr::read_csv(url("https://docs.google.com/spreadsheets..."))`是透過雲端讀取`運算結果`的指令。函數內的連結即是上圖[取得試算表權限](#release)**中間的連結**。
+#### 讀取資料
+
+```R
+data <- readr::read_csv(url("https://docs.google.com/spreadsheets..."))
+```
+
+上面這段程式碼是透過雲端讀取`結果查找`的指令，將其儲存於`data`這個變項。函數內的連結即是上面在設置`結果查找`的讀取權限時，[取得試算表權限](#release)**中間的連結**。
+
+#### 資料整理
+
+```R
+data <- as.data.frame(data)
+colnames(data) <- c("DateTime", "Token", "Score")
+data <- data[which(data$Score != 100),] # 這行可不寫
+```
+
+上面的程式碼做了 3 件事(1 行 1 件事)：
+
+1. 將`data`轉變成 base R 的`data.frame`。由`readr::read_csv`讀進來的`data.frame`會是`tibble`，而`tibble`在 DataCamp Light 的 console  印出時，會顯示出幾項對使用者沒用的訊息(這是 R 給資料分析者看的)，但傳統的 base R `data.frame`不會。
+2. 第二行則是將資料中每一個變項的名稱，更改為 **DateTime**(`時間戳記`)、**Token**(`Token`)、**Score**(`Score(conditioned)`)。括號內的名稱是`結果查找`內的變項名稱。
+3. 第三行是不必要的，可以不用寫。這裡篩選出第三個變項`Score`不是 100 的資料，其中 100 是我為了其他不相干的原因於`運算結果`設置的。
+
+#### 查找函數
+
+```R
+score <- function(token) {
+	i <- which(data$Token == token)
+	data[i,]
+}
+```
+
+這是 DataCamp Light 在此最關鍵的功能。`score()`是一函數，讓填寫者透過當初於問卷填寫的 Token ，查詢自己的問卷回饋[^two_data]。該函數的功能，即是在`data`中的`Token`變項，尋找符合使用者輸入的值，並將符合的資料印在 console 上。
 
 
-### 示範程式碼
+### 顯示程式碼
 
-`<code data-type="sample-code">...</code>`之間則是使用者看到的程式碼：
+`<code data-type="sample-code">...</code>`之間，則是使用者看的到的程式碼：
 
 ```r
 # Put Token in "". Ex: score("abcde123")
-score("A_Token_Example")
+score("Enter_your_Token")
 ```
-第一行是註解(不會執行)，可用以指示使用者。
+第一行是註解(不會執行)，可用來說明。第二行則預先印出`score()`函數，讓使用者僅需輸入 Token 而不需自行打出函數。
 
 
 靜態網頁
@@ -253,11 +284,11 @@ score("A_Token_Example")
 
 ### 上傳網頁
 
-[Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有兩個檔案：`index.html`以及`.nojekyll`。
+[Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有兩個檔案和一個資料結：`index.html`, `.nojekyll`, `rmarkdown/`。若有 R 或 Rmarkdown 的使用經驗，可使用`rmarkdown/`裡的檔案製作網頁，忽略前面兩個檔案。若不會用 Rmarkdown，可忽略`rmarkdown/`[^rmd]。
 
 - `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://username.github.io/`時所讀取的檔案。此為一最簡例子，所以網站僅有首頁一個頁面。此檔案僅包含 DataCamp Light 的程式碼和 HTML 的必要結構。因此，若要修改 DataCamp Light 的 R Script，需用文字編輯器開啟此檔案修改`<body>...</body>`裡面的內容。
-
 - `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案架構[^jekyll]。
+- `rmarkdown/`: 對於有使用 R 的人，製作網頁非常簡單，因為網頁即是 HTML 檔，而 Rmarkdown 能直接輸出成 HTML 檔。更重要的是，在 Rmarkdown 中可以直接使用 HTML 語法，因此插入 DataCamp Light 變得相當容易。這資料夾的檔案是**回饋功能示範平台**的主要結構(包含 bootstrap 彈出視窗的功能)。若要新增或修改內容，僅需要修改`gsheet_demo.Rmd`[^dep]。若要使用`gsheet_demo.Rmd` knit 出的檔案作為網頁，記得將輸出的 HTML 檔更名為`index.html`。
 
 
 1. 下載 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight)(點擊連結自動下載。下載後需解壓縮。)
@@ -274,24 +305,26 @@ score("A_Token_Example")
 隱私問題
 ==========================================
 
-在此需特別提醒問卷填答者隱私的問題。由於查詢個人的問卷回饋需透過 DataCamp Light，其**由雲端讀入之試算表(`運算結果`)是公開的**。縱使網頁表面看不見`運算結果`的網址，但只要檢視網頁的原始碼(透過瀏覽器的開發人員工具，或至 GitHub 直接下載`index.html`)，即可取得`運算結果`的網址，並下載整份資料[^secure]。這篇文章的`運算結果`僅含有 3 欄：時間戳記、Token、分數，其中 Token 是問卷填答者直接填寫。
+在此需特別提醒問卷填寫者隱私的問題。由於查詢個人的問卷回饋需透過 DataCamp Light，其**由雲端讀取之試算表(`結果查找`)是公開的**。縱使網頁表面看不見`結果查找`的網址，但只要檢視網頁的原始碼(透過瀏覽器的開發人員工具，或至 GitHub 直接下載`index.html`)，即可取得`結果查找`的網址，並下載整份資料[^secure]。
 
-在設計問卷時，需於 Token 那題特別提醒**不能填寫能關聯到個人身份的內容**。
+以這裡的例子說明，`結果查找`僅含有 3 欄：時間戳記、Token、分數。這 3 欄是任何人都能看見的內容，其中 **Token 是由問卷填寫者直接填寫**，因此
+
+在設計問卷時，需於 Token 那題特別提醒填寫者：**不能填寫能關聯到個人身份的內容，如學號、e-mail 等**。
 {: .error}
 
 <br><br>
-Last updated: Apr 20, 2018 9:59 PM
+Last updated: Apr 22, 2018 9:59 PM
 
 附註
 =======================================
 
 [^test]: 其實 google 表單確實能即時回饋分數，但僅限[測驗模式](https://support.google.com/docs/answer/7032287?hl=zh-Hant)，有諸多限制，例如，題目僅能為「對」或「錯」，無法處理反向計分的問題，無法使用線性刻度 (linear scale) 計分等。
-
+[^nar]: 例如，第 1, 3, 7 題答「是」就回饋敘述 A，其他狀況則回覆敘述 B。
 [^num]: 若擔心填答人數超過 9999 人，可設個更大的數字，如`E99999`。
 
 [^GH]: G、H 欄計算的東西是一樣的，當初為了其它不相干的目的所以設了兩欄，之後的僅會用到 H 欄: score(conditioned)。
 
-[^tz]: 你也可以設置時區，通常依據的是多數問卷填答者所在位置的時區。這邊設為台北時間。
+[^tz]: 你也可以設置時區，通常依據的是多數問卷填寫者所在位置的時區。這邊設為台北時間。
 
 [^format]: 這邊是為了方便之後 R parse 日期格式。
 
@@ -301,4 +334,13 @@ Last updated: Apr 20, 2018 9:59 PM
 
 [^jekyll]: 這是自行在 GitHub Pages 上架設部落格最困難的地方：使用者需對 Jekyll 有一定程度的理解。這同時也是我推薦 [blogdown](https://github.com/rstudio/blogdown) 的原因，其讓使用者略過理解複雜的靜態網頁產生器，而能專心在網頁的內容上。
 
-[^secure]: 然`運算結果`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。
+[^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。
+
+​	(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
+
+[^two_data]: 若有兩筆以上的資料有相同的 Token，`score()`就會篩選出相同筆數的資料，並將這些資料印在 console 上。此時，可以透過 **DateTime** 那行來確定填寫時間，以找到自己填寫的那筆資料。
+[^dep]: 裡面有些 package 需要安裝才能正常使用。
+[^rmd]: 使用 Rmarkdown 輸出網頁要比徒手打出 HTML 容易太多，能夠快速製作出**能看**的網頁。Rmarkdown 可輸出許多格式，其中 html_document 最為簡單。對於有興趣了解者，[見此](https://rmarkdown.rstudio.com/html_document_format.html)。
+
+
+
