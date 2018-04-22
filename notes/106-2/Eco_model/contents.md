@@ -10,3 +10,7 @@ layout: page
 [HW3](/notes/106-2/Eco_model/HW3.html)
 
 [HW4](/notes/106-2/Eco_model/HW4.html)
+
+[HW5](/notes/106-2/Eco_model/HW5.html)
+
+ Bifurication Map
