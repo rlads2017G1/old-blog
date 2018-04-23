@@ -284,7 +284,7 @@ score("Enter_your_Token")
 
 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有兩個檔案和一個資料結：`index.html`, `.nojekyll`, `rmarkdown/`。若有 R 或 Rmarkdown 的使用經驗，可使用`rmarkdown/`裡的檔案製作網頁，忽略前面兩個檔案。若不會用 Rmarkdown，可忽略`rmarkdown/`[^rmd]。
 
-- `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://username.github.io/`時所讀取的檔案。此為一最簡例子，所以網站僅有首頁一個頁面。此檔案僅包含 DataCamp Light 的程式碼和 HTML 的必要結構。因此，若要修改 DataCamp Light 的 R Script，需用文字編輯器開啟此檔案修改`<body>...</body>`裡面的內容。
+- `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此為一最簡例子，所以網站僅有首頁一個頁面。此檔案僅包含 DataCamp Light 的程式碼和 HTML 的必要結構。因此，若要修改 DataCamp Light 的 R Script，需用文字編輯器開啟此檔案修改`<body>...</body>`裡面的內容。
 - `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案架構[^jekyll]。
 - `rmarkdown/`: 對於有使用 R 的人，製作網頁非常簡單，因為網頁即是 HTML 檔，而 Rmarkdown 能直接輸出成 HTML 檔。更重要的是，在 Rmarkdown 中可以直接使用 HTML 語法，因此插入 DataCamp Light 變得相當容易。這資料夾的檔案是**回饋功能示範平台**的主要結構(包含 bootstrap 彈出視窗的功能)。若要新增或修改內容，僅需要修改`gsheet_demo.Rmd`[^dep]。若要使用`gsheet_demo.Rmd` knit 出的檔案作為網頁，記得將輸出的 HTML 檔更名為`index.html`。
 
@@ -293,13 +293,13 @@ score("Enter_your_Token")
 
 1. 下載 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight)(點擊連結自動下載。下載後需解壓縮。)
 
-2. 至剛剛建立的 Repository (username.github.io)，點擊 **Upload files**(圖中黃色螢光處)。 <br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
+2. 至剛剛建立的 Repository (<username>.github.io)，點擊 **Upload files**(圖中黃色螢光處)。 <br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
 
 3. 進入新畫面後，將`index.html`, `.nojekyll`拖曳上傳，並按下畫面最下方 **Commit changes**.
 
 4. 上傳完成後，即可看到下圖。`.nojekyll`不會顯示出來。<br>![](/assets/gsheet_post/gh_uploaded.PNG){: width="90%" height="90%"}
 
-5. **完成！**過 1, 2 分鐘後，即可至`username.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/)相同。
+5. **完成！**過 1, 2 分鐘後，即可至`<username>.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/)相同。
 
 
 隱私問題
