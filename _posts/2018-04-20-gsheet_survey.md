@@ -14,7 +14,7 @@ google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應*
 
 
 **實際操作**<br>
-繼續閱讀下去前，可先至[回饋功能示範平台](/assets/gsheet_post/gsheet_demo.html)填寫問卷、查詢結果，比較容易理解下文內容。文章中後段的實例說明即以此表單為例。
+繼續閱讀下去前，可先至[回饋功能示範平台](/assets/gsheet_post/demo/gsheet_demo.html)填寫問卷、查詢結果，比較容易理解下文內容。文章中後段的實例說明即以此表單為例。
 {: .success}
 
 概觀: 運作邏輯 
@@ -175,7 +175,7 @@ DataCamp Light 讀取的是[`結果查找`](https://docs.google.com/spreadsheets
 
 ### 完整程式碼
 
-以下是鑲嵌於[回饋功能示範平台](/assets/gsheet_post/gsheet_demo.html)的 DataCamp Light 程式碼(html)：
+以下是鑲嵌於[回饋功能示範平台](/assets/gsheet_post/demo/gsheet_demo.html)的 DataCamp Light 程式碼(html)：
 
 ````html
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
