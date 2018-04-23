@@ -1,4 +1,3 @@
----
 layout: post
 mermaid: true
 title: google 表單分數即時回饋
@@ -6,7 +5,6 @@ description: 透過結合靜態網頁、light、以及 google 試算表，使填
 tags:
 - Web Page
 - 中文
----
 
 google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應**自動彙整成試算表**更使分析資料變得非常容易。然而，google 表單缺乏一項重要的功能：**即時將問卷填答結果回饋給填寫者**<!--more-->[^test]。
 
@@ -101,13 +99,13 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 以匯入[`表單回應`](https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166)的 A 至 E 欄[^num]。
 
 ### 運算公式
-我在 G 和 H 欄設定公式[^GH]計算 Q1, Q2, Q3 的分數總合，其中 **Q3 是反向計分**。
+我在 G 欄設定公式[^GH]計算 Q1, Q2, Q3 的分數總合，其中 **Q3 是反向計分**。
 
 ### 時間戳記
 
 由於之後會透過 DataCamp Light 讀取 google 試算表，但其並不支援**英文以外的文字**，因此需**將試算表的格式改為英文**：
 
-`檔案` > `試算表設定` > `一般`:
+選擇試算表 `檔案` > `試算表設定` > `一般`:
 
 - 語言代碼: `美國`
 - 時區: `(GMT+08:00) Taipei`[^tz]
@@ -124,7 +122,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 
 1. **時間戳記**: A 欄
 2. **Token**: E 欄
-3. **score(conditioned)**: H 欄
+3. **score**: G 欄
 
 因此，[`結果查找`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)中的 A、B、C 欄需分別對應到`運算分析`中的 A、E、H 欄。在`結果查找`的儲存格`A1`、`B1`、`C1`，分別使用`IMPORTRANGE`：
 
@@ -184,7 +182,7 @@ DataCamp Light 讀取的是[`結果查找`](https://docs.google.com/spreadsheets
 		data <- readr::read_csv(url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQz4zjZfhWBYYRuW2Zhhx-sXvnlrS6vpvcgP0cJPdvsQI-6eKggXmpaWbu4dgbMQgcOHv0NQxL8a_K_/pub?output=csv"))
 		data <- as.data.frame(data)
 		colnames(data) <- c("DateTime", "Token", "Score")
-		data <- data[which(data$Score != 100),]
+		data <- data[which(!is.na(data$DateTime)),]
 		score <- function(token) {
 			i <- which(data$Token == token)
 			data[i,]
@@ -210,7 +208,7 @@ DataCamp Light **僅能正常顯示英文**，因此需確定 R Script 以及使
 data <- readr::read_csv(url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQz4zjZfhWBYYRuW2Zhhx-sXvnlrS6vpvcgP0cJPdvsQI-6eKggXmpaWbu4dgbMQgcOHv0NQxL8a_K_/pub?output=csv"))
 data <- as.data.frame(data)
 colnames(data) <- c("DateTime", "Token", "Score")
-data <- data[which(data$Score != 100),] # 這行可不寫
+data <- data[which(!is.na(data$DateTime)),]
 score <- function(token) {
 	i <- which(data$Token == token)
 	data[i,]
@@ -230,14 +228,14 @@ data <- readr::read_csv(url("https://docs.google.com/spreadsheets..."))
 ```R
 data <- as.data.frame(data)
 colnames(data) <- c("DateTime", "Token", "Score")
-data <- data[which(data$Score != 100),] # 這行可不寫
+data <- data[which(!is.na(data$DateTime)),]
 ```
 
 上面的程式碼做了 3 件事(1 行 1 件事)：
 
 1. 將`data`轉變成 base R 的`data.frame`。由`readr::read_csv`讀進來的`data.frame`會是`tibble`，而`tibble`在 DataCamp Light 的 console  印出時，會顯示出幾項對使用者沒用的訊息(這是 R 給資料分析者看的)，但傳統的 base R `data.frame`不會。
-2. 第二行則是將資料中每一個變項的名稱，更改為 **DateTime**(`時間戳記`)、**Token**(`Token`)、**Score**(`Score(conditioned)`)。括號內的名稱是`結果查找`內的變項名稱。
-3. 第三行是不必要的，可以不用寫。這裡篩選出第三個變項`Score`不是 100 的資料，其中 100 是我為了其他不相干的原因於`運算結果`設置的。
+2. 第二行則是將資料中每一個變項的名稱，更改為 **DateTime**(`時間戳記`)、**Token**(`Token`)、**Score**(`Score`)。括號內的名稱是`結果查找`內的變項名稱。
+3. 第三行是用以刪減多餘的資料。由於在`運算結果`套用公式時，勢必要為**未來**的儲存格著想：預先套入公式，才能計算未來產生的資料，因此，讀入的資料大多數都是空白的，僅有`Score`那欄為 6[^blank]。
 
 #### 查找函數
 
@@ -324,8 +322,6 @@ Last updated: Apr 22, 2018 9:59 PM
 [^nar]: 例如，第 1, 3, 7 題答「是」就回饋敘述 A，其他狀況則回覆敘述 B。
 [^num]: 若擔心填答人數超過 9999 人，可設個更大的數字，如`E99999`。
 
-[^GH]: G、H 欄計算的東西是一樣的，當初為了其它不相干的目的所以設了兩欄，之後的僅會用到 H 欄: score(conditioned)。
-
 [^tz]: 你也可以設置時區，通常依據的是多數問卷填寫者所在位置的時區。這邊設為台北時間。
 
 [^format]: 這邊是為了方便之後 R parse 日期格式。
@@ -336,11 +332,9 @@ Last updated: Apr 22, 2018 9:59 PM
 
 [^jekyll]: 這是自行在 GitHub Pages 上架設部落格最困難的地方：使用者需對 Jekyll 有一定程度的理解。這同時也是我推薦 [blogdown](https://github.com/rstudio/blogdown) 的原因，其讓使用者略過理解複雜的靜態網頁產生器，而能專心在網頁的內容上。
 
-[^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。<br><br>​(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
+[^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。<br>​(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
 
 [^two_data]: 若有兩筆以上的資料有相同的 Token，`score()`就會篩選出相同筆數的資料，並將這些資料印在 console 上。此時，可以透過 **DateTime** 那行來確定填寫時間，以找到自己填寫的那筆資料。
 [^dep]: 裡面有些 package 需要安裝才能正常使用。
 [^rmd]: 使用 Rmarkdown 輸出網頁要比徒手打出 HTML 容易太多，能夠快速製作出**能看**的網頁。Rmarkdown 可輸出許多格式，其中 html_document 最為簡單。對於有興趣了解者，[見此](https://rmarkdown.rstudio.com/html_document_format.html)。
-
-
-
+[^blank]: 總分(Score) = 空白(Q1) + 空白(Q2) + 6(6 - Q3)。Q3 是反向計分的五點量尺。
