@@ -37,7 +37,12 @@ modal(id="sheet", modal_header = "Google 表單", modal_body=iframe)
 
 <br><br><br>
 
-以下按鈕將開啟 DataCamp Light, 為輔助程式語言教學與學習的工具，可用來執行 R 或 Python。下方的例子執行的是 R 語言，並且已預先讀入資料。您僅需於`score()`中輸入金鑰，例如，若您於問卷中 Token 那題填寫「abcde123」，請於下方輸入`score("abcde123")`。若查無結果，請重新整理頁面後再輸入一次。
+以下按鈕是 DataCamp Light, 為輔助程式語言教學與學習的工具，可在其中執行 code。
+
+開啟後，DataCamp Light 已預先讀入資料。您僅需於`score()`中輸入金鑰。
+例如，若您於問卷中 **Token** 那題填寫「abcde123」，請輸入`score("abcde123")`。
+
+若查無結果，請按查詢視窗右下方 Reload 按鈕。
 
 ```{r}
 # Button trigger modal: search
