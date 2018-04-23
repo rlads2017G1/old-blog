@@ -18,6 +18,11 @@ date <- lubridate::with_tz(Sys.time(), tzone = "Asia/Taipei")
 library(htmltools)
 ```
 
+<script>
+document.getElementById('search_iframe').contentDocument.location.reload(true);
+</script>
+
+
 此為 google 表單分數即時回饋的示範平台，請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 **Token**, 此 **Token** 是用來查詢問卷分數的，請將其記下。
 
 
@@ -45,8 +50,8 @@ button_bs("查詢結果", data_toggle="modal", data_target="#search", class="pri
 ```
 
 ```{r}
-# iframe for Google Form
-iframe <- HTML('<iframe src="./blank.html" style="position: relative; height: 360px; width: 100%;" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>')
+# iframe for Search
+iframe <- HTML('<iframe id="search_iframe" src="./blank.html" style="position: relative; height: 360px; width: 100%;" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>')
 
 modal(id="search", modal_header = "查詢結果", modal_body=iframe)
 ```
