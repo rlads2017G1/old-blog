@@ -18,11 +18,6 @@ date <- lubridate::with_tz(Sys.time(), tzone = "Asia/Taipei")
 library(htmltools)
 ```
 
-<script>
-document.getElementById('search_iframe').contentDocument.location.reload(true);
-</script>
-
-
 此為 google 表單分數即時回饋的示範平台，請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 **Token**, 此 **Token** 是用來查詢問卷分數的，請將其記下。
 
 
@@ -42,7 +37,6 @@ modal(id="sheet", modal_header = "Google 表單", modal_body=iframe)
 <br><br><br>
 
 以下按鈕將開啟 DataCamp Light, 為輔助程式語言教學與學習的工具，可用來執行 R 或 Python。下方的例子執行的是 R 語言，並且已預先讀入資料。您僅需於`score()`中輸入金鑰，例如，若您於問卷中 Token 那題填寫「abcde123」，請於下方輸入`score("abcde123")`。若查無結果，請重新整理頁面後再輸入一次。
-
 
 ```{r}
 # Button trigger modal: search
