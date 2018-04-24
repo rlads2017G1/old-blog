@@ -13,7 +13,7 @@ google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應*
 是否曾想過讓問卷填寫人能在 google 表單送出後，馬上知道填寫的結果？結果依據填寫情況有所不同，可以是一段敘述[^nar]，也可以是一個分數。這種類似線上測驗的分數即時回饋功能，背後通常有伺服器在運算分數，不是一般學生具有的資源。以下將介紹如何結合 **google 試算表** 以及 **[DataCamp Light](https://github.com/datacamp/datacamp-light)**，讓任何人都能製作出一個在**靜態網頁**上運行的平台，**使填寫者在送出 google 表單後，能直接查詢填寫結果**。
 
 
-**實際操作**<br>
+**實際操作**  
 繼續閱讀下去前，可先至[回饋功能示範平台](/assets/gsheet_post/demo/gsheet_demo.html)填寫問卷、查詢結果，比較容易理解下文內容。文章中後段的實例說明即以此表單為例。
 {: .success}
 
@@ -85,7 +85,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 - `<工作表名稱>`: `表單回應`只會有一個工作表，將其名稱填入這裡。
 - `<儲存格範圍>`: 儲存格範圍視問卷的題數題數而定，其格式為：`A1:F9487`。
 
-以下將使用此[資料夾](https://drive.google.com/open?id=16lRn7UUo_-8OUdfaYrg7CSUNIvOAmAM8)中的檔案為例說明。檔案間的關係完全對應至上文**概觀**中的[概念圖](#mermaidChart0)。
+以下將使用此[資料夾](https://drive.google.com/open?id=16lRn7UUo_-8OUdfaYrg7CSUNIvOAmAM8)中的檔案為例說明。檔案間的關係完全對應至上文**概觀**中的[概念圖](#mermaidChart0)。下方的說明，單純閱讀文字會難以理解，可實際打開試算表(`運算分析`和`結果查找`)配合閱讀。
 {: .info}
 
 **`運算分析`**試算表
@@ -101,7 +101,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 以匯入[`表單回應`](https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166)的 A 至 E 欄[^num]。
 
 ### 運算公式
-我在 G 欄設定公式[^GH]計算 Q1, Q2, Q3 的分數總合，其中 **Q3 是反向計分**。
+我在 G 欄設定公式計算 Q1, Q2, Q3 的分數總合，其中 **Q3 是反向計分**。
 
 ### 時間戳記
 
@@ -197,7 +197,7 @@ DataCamp Light 讀取的是[`結果查找`](https://docs.google.com/spreadsheets
 </div>
 ````
 
-**注意**<br>
+**注意**  
 DataCamp Light **僅能正常顯示英文**，因此需確定 R Script 以及使用者填入的 Token 皆沒有多位元組字(例如，中文)。
 {: .error}
 
@@ -274,9 +274,9 @@ score("Enter_your_Token")
 以下提供一個最精簡的例子，由註冊 GitHub 帳號到架設網頁，過程中僅需使用瀏覽器(電腦版為例)。
 
 ### 註冊與建立 Repo
-1. 至 https://github.com/ ，填寫註冊資訊(一個 email 僅能註冊一次)，並記得去信箱認證。**Username** 即為之後網站的網址，以下圖為例，minimalghpage.github.io。<br>![](/assets/gsheet_post/github_signup.PNG){: width="55%" height="55%"}
+1. 至 https://github.com/ ，填寫註冊資訊(一個 email 僅能註冊一次)，並記得去信箱認證。**Username** 即為之後網站的網址，以下圖為例，minimalghpage.github.io。  ![](/assets/gsheet_post/github_signup.PNG){: width="55%" height="55%"}
 
-2. 信箱認證後，跳回 GitHub 頁面，基本上不需更動出現之畫面的設定，只要按下一步。之後應會出現下圖，按右上角圖示並選取**Your Profile**。<br>![](/assets/gsheet_post/gh_main.PNG){: width="80%" height="80%"}
+2. 信箱認證後，跳回 GitHub 頁面，基本上不需更動出現之畫面的設定，只要按下一步。之後應會出現下圖，按右上角圖示並選取**Your Profile**。  ![](/assets/gsheet_post/gh_main.PNG){: width="80%" height="80%"}
 
 3. 按下網頁中上方的 **Repositories** 後應會出現下圖，接著再按下右上方的綠色按鈕 **New**。 <br>![](/assets/gsheet_post/gh_repo.PNG){: width="80%" height="80%"}
 
