@@ -33,15 +33,15 @@ button_bs("填寫表單", data_toggle="modal", data_target="#sheet", class="succ
 
 ```{r}
 # iframe for Google Form
-iframe <- HTML('<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE-ke7yhlU3XRDIhw7vRL-mnYLi-jTOYF8Pz4ZLINjV53z2A/viewform?embedded=true" style="position: relative; height: 360px; width: 100%;" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>')
+iframe <- HTML('<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE-ke7yhlU3XRDIhw7vRL-mnYLi-jTOYF8Pz4ZLINjV53z2A/viewform?embedded=true" style="position: relative; height: 380px; width: 100%;" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>')
 
-modal(id="sheet", modal_header = "Google 表單", modal_body=iframe)
+modal(id="sheet", modal_header = "Google 表單", modal_body=iframe, foot=F)
 ```
 
 
 <br><br><br>
 
-以下按鈕是 DataCamp Light, 為輔助程式語言教學與學習的工具，可在其中執行 code。  
+以下按鈕開啟 DataCamp Light, 為輔助程式語言教學與學習的工具，可在其中執行 code。  
 開啟後，DataCamp Light 已預先讀入資料。您僅需於`score()`中輸入金鑰。
 例如，若您於問卷中 **Token** 那題填寫「abcde123」，請輸入`score("abcde123")`。  
 若查無結果，請按**查詢視窗**右下方的`Reload`按鈕。
