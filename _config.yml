@@ -91,7 +91,7 @@ excerpt_type: html ## text | html
 ## Build ##
 markdown: kramdown
 highlighter: rouge
-permalink: date
+permalink: pretty
 
 exclude:
   - CHANGELOG.md
@@ -124,3 +124,5 @@ server_url: "0.0.0.0"
 ## Development ##
 isdebug: false
 
+#plugins:
+  #- jekyll-redirect-from
