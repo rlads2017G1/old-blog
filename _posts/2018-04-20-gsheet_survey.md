@@ -54,6 +54,8 @@ graph TD;
 表單、試算表 設置
 ===========================================
 
+這節將設置**問卷回饋平台**的資料**蒐集與運算功能**，包含 1 個 google 表單(`表單`)及 3 個 google 試算表(`表單回應`, `運算分析`, `結果查找`)。
+
 ## 連結表單至試算表
 
 這項功能使用過 google 表單的人都知道，可參考 [google 說明](https://support.google.com/docs/answer/2917686?hl=zh-Hant)，以下附圖簡單說明：
@@ -120,30 +122,30 @@ IMPORTRANGE("<URL>", "<工作表名稱>!<儲存格範圍>")
 **`結果查找`**試算表
 -----------------------------------------------
 
-`運算分析`設置完成之後，需要**選擇希望使用者看的到的項目**:
+`運算分析`設置完成之後，需要**選擇希望使用者查詢時，能看到的項目**:
 
 1. **時間戳記**: A 欄
 2. **Token**: E 欄
 3. **score**: G 欄
 
-因此，[`結果查找`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)中的 A、B、C 欄需分別對應到`運算分析`中的 A、E、H 欄。在`結果查找`的儲存格`A1`、`B1`、`C1`，分別使用`IMPORTRANGE`：
+因此，需將`結果查找`中的 A、B、C 欄分別對應到`運算分析`中的 A、E、G 欄。在`結果查找`的儲存格`A1`、`B1`、`C1`，分別使用`IMPORTRANGE`：
 
 1. 儲存格`A1`
 
 ```vbscript
-=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0","工作表1!A1:A9999")
+=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0", "工作表1!A1:A9999")
 ```
 
 2. 儲存格`B1`
 
 ```vbscript
-=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0","工作表1!E1:E9999")
+=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0", "工作表1!E1:E9999")
 ```
 
 3. 儲存格`C1`
 
 ```vbscript
-=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0","工作表1!H1:H9999")
+=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0", "工作表1!G1:G9999")
 ```
 
 DataCamp Light 設置
@@ -156,11 +158,11 @@ DataCamp Light 設置
 
 這裡即透過 DataCamp 執行預先寫入的 R Script，讀取儲存在雲端的`結果查找`。使用者在 DataCamp Light 輸入的`Token`是用以篩選資料，如此才會回傳使用者填寫的那筆問卷。
 
-### 取得試算表權限
+## 取得試算表權限
 
-DataCamp Light 讀取的是[`結果查找`](https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing)的內容，因此需將`結果查找`發佈(公開)至網路: 
+DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`發佈(公開)至網路: 
 
-選取 `檔案` > `發佈到網路...`，即會開啟：
+開啟`結果查找`，選取 `檔案` > `發佈到網路...`，即會開啟：
 
 ![](/assets/gsheet_post/release_csv.PNG){: width="60%" height="60%" #release}
 {:.rounded}
@@ -169,13 +171,13 @@ DataCamp Light 讀取的是[`結果查找`](https://docs.google.com/spreadsheets
 
 1. **連結**(而非內嵌)
 2. **逗點分隔值(.csv)**
-3. **內容有所變更時自動重新發佈**打勾
+3. 打勾 **內容有所變更時自動重新發佈**
 
 並將**中間的連結**複製下來。
 
-### 完整程式碼
+## 完整程式碼
 
-以下是鑲嵌於[回饋功能示範平台](/assets/gsheet_post/demo/)的 DataCamp Light 程式碼(html)：
+以下是[回饋功能示範平台](/assets/gsheet_post/demo/)的 DataCamp Light 程式碼(html)：
 
 ````html
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
@@ -202,7 +204,7 @@ DataCamp Light **僅能正常顯示英文**，因此需確定 R Script 以及使
 {: .error}
 
 
-### 預先執行程式碼
+## 預先執行程式碼
 
 `<code data-type="pre-exercise-code">...</code>`之間的程式碼是使用者看不到，但會預先執行的 R Script：
 
@@ -217,7 +219,7 @@ score <- function(token) {
 }
 ```
 
-#### 讀取資料
+### 讀取資料
 
 ```R
 data <- readr::read_csv(url("https://docs.google.com/spreadsheets..."))
@@ -225,7 +227,7 @@ data <- readr::read_csv(url("https://docs.google.com/spreadsheets..."))
 
 上面這段程式碼是透過雲端讀取`結果查找`的指令，將其儲存於`data`這個變項。函數內的連結即是上面在設置`結果查找`的讀取權限時，[取得試算表權限](#release)**中間的連結**。
 
-#### 資料整理
+### 資料整理
 
 ```R
 data <- as.data.frame(data)
@@ -239,7 +241,7 @@ data <- data[which(!is.na(data$DateTime)),]
 2. 第二行則是將資料中每一個變項的名稱，更改為 **DateTime**(`時間戳記`)、**Token**(`Token`)、**Score**(`Score`)。括號內的名稱是`結果查找`內的變項名稱。
 3. 第三行是用以刪減多餘的資料。由於在`運算結果`套用公式時，勢必要為**未來**的儲存格著想：預先套入公式，才能計算未來產生的資料，因此，讀入的資料大多數都是空白的，僅有`Score`那欄為 6[^blank]。
 
-#### 查找函數
+### 查找函數
 
 ```R
 score <- function(token) {
@@ -251,7 +253,7 @@ score <- function(token) {
 這是 DataCamp Light 在此最關鍵的功能。`score()`是一函數，讓填寫者透過當初於問卷填寫的 Token ，查詢自己的問卷回饋[^two_data]。該函數的功能，即是在`data`中的`Token`變項，尋找符合使用者輸入的值，並將符合的資料印在 console 上。
 
 
-### 顯示程式碼
+## 顯示程式碼
 
 `<code data-type="sample-code">...</code>`之間，則是使用者看的到的程式碼：
 
@@ -280,32 +282,30 @@ score("Enter_your_Token")
 
 3. 按下網頁中上方的 **Repositories** 後應會出現下圖，接著再按下右上方的綠色按鈕 **New**。 <br>![](/assets/gsheet_post/gh_repo.PNG){: width="80%" height="80%"}
 
-4. 出現下圖後，在 **Repository name** 輸入`<username>.github.io`，並**勾選**下方 **Initialize this repository with a README**。最後按 **Create repository**。 <br>![](/assets/gsheet_post/create_repo.PNG){: width="70%" height="70%"}
+4. 出現下圖後，在 **Repository name** 輸入`<username>.github.io`，並**勾選**下方 **Initialize this repository with a README**。最後按 **Create repository**。<br>![](/assets/gsheet_post/create_repo.PNG){: width="70%" height="70%"}
 
 ### 上傳網頁
 
-**Minimal GitHub Page**([下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight))裡面有三個檔案：`index.html`, `search.html` `, .nojekyll`。
+1. [下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) **Minimal GitHub Page** (下載後需解壓縮。)
+2. 至剛剛建立的 Repository (<username>.github.io)，點擊 **Upload files**(圖中黃色螢光處)。 <br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
+3. 進入新畫面後，將`index.html`, `.nojekyll`拖曳上傳，並按下畫面最下方 **Commit changes**.
+4. 上傳完成後，即可看到下圖。`.nojekyll`不會顯示出來。<br>![](/assets/gsheet_post/gh_uploaded.PNG){: width="90%" height="90%"}
+5. **完成！**過 1, 2 分鐘後，即可至`<username>.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/)相同。
+
+
+## Minimal GitHub Page
+
+[Minimal GitHub Page](https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html` `, .nojekyll`。
 
 - `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此檔案內含 HTML 必要結構，並且匯入 [bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 的 CSS 和 JS 以快速製作漂亮的 Button 和 Modal。
 - `search.html`：這份檔案主要為 DataCamp Light 的 R Script，另外還有個重新整理頁面的按鈕(Reload)。若需修改其中的 R Script，需用[文字編輯器](https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8)開啟此檔案修改`<code>...</code>`裡面的內容。
 - `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案格式與架構[^jekyll]。
 
+### R 使用者
 
-會用 Rmarkdown[^rmd] 的人，可直接[下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/liao961120.github.io/tree/master/assets/gsheet_post/demo)**回饋功能示範平台**製作網頁[^dep]，不須使用上述資料夾內的檔案。這能省下許多製作網頁(`index.html`)的時間。
-{: .info}
+會用 Rmarkdown 的人，可直接[下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/liao961120.github.io/tree/master/assets/gsheet_post/demo)**回饋功能示範平台**製作網頁(需額外安裝一些 package)，不須使用上述資料夾內的檔案。這能省下許多製作網頁(`index.html`)的時間。
 
-#### 步驟
-
-1. 下載 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight)(點擊連結自動下載。下載後需解壓縮。)
-
-2. 至剛剛建立的 Repository (<username>.github.io)，點擊 **Upload files**(圖中黃色螢光處)。 <br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
-
-3. 進入新畫面後，將`index.html`, `.nojekyll`拖曳上傳，並按下畫面最下方 **Commit changes**.
-
-4. 上傳完成後，即可看到下圖。`.nojekyll`不會顯示出來。<br>![](/assets/gsheet_post/gh_uploaded.PNG){: width="90%" height="90%"}
-
-5. **完成！**過 1, 2 分鐘後，即可至`<username>.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/)相同。
-
+R markdown 是 Markdown 的擴充，其輸出的 HTML 格式已經過簡單的排版，同時也支援 bootstrap，因此能夠輕易地製作出**美觀**的網頁。Rmarkdown 可輸出許多格式，其中 [html_document](https://rmarkdown.rstudio.com/html_document_format.html) 最為簡單。Rmarkdown 的語法([Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf))即為 Markdown 語法，加上許多額外的功能(透過 R 實現)。
 
 隱私問題
 ==========================================
@@ -318,7 +318,7 @@ score("Enter_your_Token")
 {: .error}
 
 <br><br>
-Last updated: Apr 22, 2018 9:59 PM
+Last updated: Apr 24, 2018 11:44 AM
 
 附註
 =======================================
@@ -340,6 +340,4 @@ Last updated: Apr 22, 2018 9:59 PM
 [^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。<br>(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
 
 [^two_data]: 若有兩筆以上的資料有相同的 Token，`score()`就會篩選出相同筆數的資料，並將這些資料印在 console 上。此時，可以透過 **DateTime** 那行來確定填寫時間，以找到自己填寫的那筆資料。
-[^dep]: 需安裝一些 R package 才能使用。
-[^rmd]: 使用 Rmarkdown 輸出網頁要比徒手打出 HTML 容易太多，能夠快速製作出**能看**的網頁。Rmarkdown 可輸出許多格式，其中 html_document 最為簡單。有興趣了解者可[見此](https://rmarkdown.rstudio.com/html_document_format.html)。
 [^blank]: 總分(Score) = 空白(Q1) + 空白(Q2) + 6(6 - Q3)。Q3 是反向計分的五點量尺。
