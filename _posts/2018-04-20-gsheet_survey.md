@@ -73,18 +73,19 @@ graph TD;
 
 ## 試算表間的連結: `IMPORTRANGE`
 
-**千萬不要編輯`表單回應`**，這很可能會破壞收集到的問卷資料。google 試算表有一個很實用的函數`IMPORTRANGE`，能夠選取一試算表中特定的範圍，將其連結至另一獨立的試算表中(獨立檔案)。因此，每當原先的試算表更新，透過`IMPORTRANGE`連結的新試算表也會跟著更新。如此，即可在不更動`表單回應`下，對`表單回應`的內容進行運算。
+**千萬不能編輯`表單回應`**，這可能會破壞收集到的問卷資料。google 試算表有一個很實用的函數`IMPORTRANGE`，能夠選取一試算表中特定的範圍，將其連結至另一獨立的試算表中(獨立檔案)。因此，每當原先的試算表更新，透過`IMPORTRANGE`連結的新試算表也會跟著更新。如此，即可在不更動`表單回應`下，對`表單回應`的內容進行運算。
 
-若文章中關於`IMPORTRANGE`有描述不清的地方，可參考[這篇](http://isvincent.pixnet.net/blog/post/46090834-excel-google%E8%A9%A6%E7%AE%97%E8%A1%A8%E5%A6%82%E4%BD%95%E9%97%9C%E8%81%AF%E5%88%B0%E5%8F%A6%E4%B8%80%E5%80%8B%E8%A9%A6%E7%AE%97%E8%A1%A8%E7%9A%84%E5%85%A7)，寫得相當清楚。
+若此文關於`IMPORTRANGE`有描述不清的地方，可參考[這篇](http://isvincent.pixnet.net/blog/post/46090834-excel-google%E8%A9%A6%E7%AE%97%E8%A1%A8%E5%A6%82%E4%BD%95%E9%97%9C%E8%81%AF%E5%88%B0%E5%8F%A6%E4%B8%80%E5%80%8B%E8%A9%A6%E7%AE%97%E8%A1%A8%E7%9A%84%E5%85%A7)寫得相當清楚的文章。
+{: .info}
 
 ```vbscript
-IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
+IMPORTRANGE("<URL>", "<工作表名稱>!<儲存格範圍>")
 ```
 - `<URL>`: 所欲匯入資料之試算表的網址，在此為`表單回應`之URL
 - `<工作表名稱>`: `表單回應`只會有一個工作表，將其名稱填入這裡。
-- `<儲存格範圍>`: 儲存格範圍視問卷的題數題數而定，其格式為：`A1:F9487`。
+- `<儲存格範圍>`: 儲存格範圍視問卷的題數與筆數而定，其格式為：`A1:F9999`。大寫字母代表欄位，一個欄位即為問卷上的一題；字母後面的數字是列數，一筆資料(一份問卷)佔有一列(row)。
 
-以下將使用此[資料夾](https://drive.google.com/open?id=16lRn7UUo_-8OUdfaYrg7CSUNIvOAmAM8)中的檔案為例說明。檔案間的關係完全對應至上文**概觀**中的[概念圖](#mermaidChart0)。下方的說明，單純閱讀文字會難以理解，可實際打開試算表(`運算分析`和`結果查找`)配合閱讀。
+以下將使用此[資料夾](https://drive.google.com/open?id=16lRn7UUo_-8OUdfaYrg7CSUNIvOAmAM8)中的檔案說明。檔案間的關係完全對應至上文**概觀**中的[概念圖](#mermaidChart0)，也是**問卷回饋平台**背後蒐集及運算資料運用到的檔案。下方的說明，單純閱讀文字會難以理解，可實際打開試算表(`運算分析`和`結果查找`)配合閱讀，或甚至自己開一份新的試算表實際操作。
 {: .info}
 
 **`運算分析`**試算表
@@ -94,7 +95,7 @@ IMPORTRANGE("<URL>","<工作表名稱>!<儲存格範圍>")
 在[`運算分析`](https://docs.google.com/spreadsheets/d/1znFpdD_Kt1Jk274l0yD1dGZZyhsh7m1Xji9IYZUigEU/edit#gid=0)中的儲存格`A1`，我輸入了以下公式：
 
 ```vbscript
-=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166","表單回應 1!A1:E9999")
+=IMPORTRANGE("https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166", "表單回應 1!A1:E9999")
 ```
 
 以匯入[`表單回應`](https://docs.google.com/spreadsheets/d/1-eOAbpOZ1aeuNUHo3b0olLTrheq-T-pe2BsRXK-P-mM/edit#gid=579070166)的 A 至 E 欄[^num]。
@@ -324,7 +325,7 @@ Last updated: Apr 22, 2018 9:59 PM
 
 [^test]: 其實 google 表單確實能即時回饋分數，但僅限[測驗模式](https://support.google.com/docs/answer/7032287?hl=zh-Hant)，有諸多限制，例如，題目僅能為「對」或「錯」，無法處理反向計分的問題，無法使用線性刻度 (linear scale) 計分等。
 [^nar]: 例如，第 1, 3, 7 題答「是」就回饋敘述 A，其他狀況則回覆敘述 B。
-[^num]: 若擔心填答人數超過 9999 人，可設個更大的數字，如`E99999`。
+[^num]: 若擔心填答人數超過 9998 人，可設個更大的數字，如`E99999`。
 
 [^tz]: 你也可以設置時區，通常依據的是多數問卷填寫者所在位置的時區。這邊設為台北時間。
 
