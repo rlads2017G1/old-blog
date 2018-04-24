@@ -21,7 +21,9 @@ library(htmltools)
 
 此為 google 表單分數即時回饋的示範平台，配合[此篇文章](https://liao961120.github.io/2018/04/20/gsheet_survey.html)。
 
-請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 **Token**, 此 **Token** 是用來查詢問卷分數的，請將其記下。
+<br>
+請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 **Token**。  
+此 **Token** 是用來查詢問卷分數的，請將其記下。
 
 
 ```{r}
@@ -39,12 +41,10 @@ modal(id="sheet", modal_header = "Google 表單", modal_body=iframe)
 
 <br><br><br>
 
-以下按鈕是 DataCamp Light, 為輔助程式語言教學與學習的工具，可在其中執行 code。
-
+以下按鈕是 DataCamp Light, 為輔助程式語言教學與學習的工具，可在其中執行 code。  
 開啟後，DataCamp Light 已預先讀入資料。您僅需於`score()`中輸入金鑰。
-例如，若您於問卷中 **Token** 那題填寫「abcde123」，請輸入`score("abcde123")`。
-
-若查無結果，請按查詢視窗右下方 Reload 按鈕。
+例如，若您於問卷中 **Token** 那題填寫「abcde123」，請輸入`score("abcde123")`。  
+若查無結果，請按**查詢視窗**右下方的`Reload`按鈕。
 
 ```{r}
 # Button trigger modal: search
