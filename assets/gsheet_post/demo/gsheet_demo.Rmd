@@ -4,7 +4,7 @@ date: "`r Sys.Date()`"
 author: "Yongfu, Liao"
 output: 
     html_document:
-        css: /Users/user/local_depend/style_sheets/style.css
+        css: style.css
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 	message = FALSE,
 	warning = FALSE
 )
-source("C:/Users/user/local_depend/R functions/bootstrap_fc.R")
+source("bootstrap_fc.R")
 date <- lubridate::with_tz(Sys.time(), tzone = "Asia/Taipei")
 library(htmltools)
 ```

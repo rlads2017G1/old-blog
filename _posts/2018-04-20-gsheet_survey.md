@@ -262,7 +262,7 @@ score("Enter_your_Token")
 第一行是註解(不會執行)，可用來說明。第二行則預先印出`score()`函數，讓使用者僅需輸入 Token 而不需自行打出函數。
 
 
-靜態網頁
+靜態網頁 設置
 ==================================
 
 對於完全沒有概念的人，設置靜態網頁可能會是比較困難的部分，因為多數人對此相當陌生。靜態網頁的目的最主要是為了放 DataCamp Light 的程式碼，因此若讀者使用的部落格平台允許自由變更網頁的 html[^blog]，可以忽略此節內容。
@@ -284,7 +284,9 @@ score("Enter_your_Token")
 
 ### 上傳網頁
 
-[Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有兩個檔案和一個資料結：`index.html`, `.nojekyll`, `rmarkdown/`。若有 R 或 Rmarkdown 的使用經驗，可使用`rmarkdown/`裡的檔案製作網頁，忽略前面兩個檔案。若不會用 Rmarkdown，可忽略`rmarkdown/`[^rmd]。
+[Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html` `, .nojekyll`。
+
+若有 R 或 Rmarkdown 的使用經驗，可使用`rmarkdown/`裡的檔案製作網頁，忽略前面兩個檔案。若不會用 Rmarkdown，可忽略`rmarkdown/`[^rmd]。
 
 - `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此為一最簡例子，所以網站僅有首頁一個頁面。此檔案僅包含 DataCamp Light 的程式碼和 HTML 的必要結構。因此，若要修改 DataCamp Light 的 R Script，需用文字編輯器開啟此檔案修改`<body>...</body>`裡面的內容。
 - `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案架構[^jekyll]。
@@ -334,7 +336,7 @@ Last updated: Apr 22, 2018 9:59 PM
 
 [^jekyll]: 這是自行在 GitHub Pages 上架設部落格最困難的地方：使用者需對 Jekyll 有一定程度的理解。這同時也是我推薦 [blogdown](https://github.com/rstudio/blogdown) 的原因，其讓使用者略過理解複雜的靜態網頁產生器，而能專心在網頁的內容上。
 
-[^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。    ​(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
+[^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。<br>(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
 
 [^two_data]: 若有兩筆以上的資料有相同的 Token，`score()`就會篩選出相同筆數的資料，並將這些資料印在 console 上。此時，可以透過 **DateTime** 那行來確定填寫時間，以找到自己填寫的那筆資料。
 [^dep]: 裡面有些 package 需要安裝才能正常使用。
