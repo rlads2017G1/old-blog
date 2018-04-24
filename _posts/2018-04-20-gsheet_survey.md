@@ -287,7 +287,7 @@ score("Enter_your_Token")
 ### 上傳網頁
 
 1. [下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) **Minimal GitHub Page** (下載後需解壓縮。)
-2. 至剛剛建立的 Repository (<username>.github.io)，點擊 **Upload files**(圖中黃色螢光處)。 <br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
+2. 至剛剛建立的 Repository (<username>.github.io)，點擊 **Upload files**(圖中黃色螢光處)。<br>![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
 3. 進入新畫面後，將`index.html`, `search.html`, `.nojekyll`拖曳上傳，並按下畫面最下方 **Commit changes**.
 4. 上傳完成後，即可看到下圖。`.nojekyll`不會顯示出來。<br>![](/assets/gsheet_post/gh_uploaded.PNG){: width="90%" height="90%"}
 5. **完成！**過 1, 2 分鐘後，即可至`<username>.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/)相同。
