@@ -334,7 +334,7 @@ Last updated: Apr 22, 2018 9:59 PM
 
 [^jekyll]: 這是自行在 GitHub Pages 上架設部落格最困難的地方：使用者需對 Jekyll 有一定程度的理解。這同時也是我推薦 [blogdown](https://github.com/rstudio/blogdown) 的原因，其讓使用者略過理解複雜的靜態網頁產生器，而能專心在網頁的內容上。
 
-[^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。<br>​(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
+[^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。    ​(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
 
 [^two_data]: 若有兩筆以上的資料有相同的 Token，`score()`就會篩選出相同筆數的資料，並將這些資料印在 console 上。此時，可以透過 **DateTime** 那行來確定填寫時間，以找到自己填寫的那筆資料。
 [^dep]: 裡面有些 package 需要安裝才能正常使用。
