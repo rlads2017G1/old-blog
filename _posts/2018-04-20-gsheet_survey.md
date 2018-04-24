@@ -1,3 +1,4 @@
+---
 layout: post
 mermaid: true
 title: google 表單分數即時回饋
@@ -5,6 +6,7 @@ description: 透過結合靜態網頁、light、以及 google 試算表，使填
 tags:
 - Web Page
 - 中文
+---
 
 google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應**自動彙整成試算表**更使分析資料變得非常容易。然而，google 表單缺乏一項重要的功能：**即時將問卷填答結果回饋給填寫者**<!--more-->[^test]。
 
