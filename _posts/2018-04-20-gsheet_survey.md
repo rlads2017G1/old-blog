@@ -1,7 +1,7 @@
 ---
 layout: post
 mermaid: true
-title: google 表單分數即時回饋
+title: google 表單即時回饋
 description: 透過結合靜態網頁、light、以及 google 試算表，使填寫結果即時回饋成為可能
 tags:
 - Web Page
