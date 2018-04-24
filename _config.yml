@@ -91,7 +91,7 @@ excerpt_type: html ## text | html
 ## Build ##
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
+permalink: date #pretty
 
 exclude:
   - CHANGELOG.md
