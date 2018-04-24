@@ -26,21 +26,21 @@ nav_lists:
       Zh: Work
       zh-Hans: Work
       zh-Hant: Work
-    url: /work.html
+    url: /work
 
   - titles:
       en: About
       zh: 关于
       zh-Hans: 关于
       zh-Hant: 關於
-    url: /about.html    
+    url: /about    
   # This is where you add new navigation bar
   # - titles:
   #     en: CV
   #     zh: CV
   #     zh-Hans: CV
   #     zh-Hant: CV
-  #   url: /cv.html
+  #   url: /resume/cv
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 repository: https://liao961120.github.io/
