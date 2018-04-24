@@ -126,3 +126,6 @@ isdebug: false
 
 plugins:
   - jekyll-redirect-from
+  - alias_generator
+  
+safe: false
