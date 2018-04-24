@@ -4,7 +4,7 @@ title: 植物細胞
 ---
 
 
-![](./plant_cell.PNG){:width="60%" height="60%"}
+![](plant_cell.PNG){:width="60%" height="60%"}
 
 Vacuole, Chloroplast, 水蘊草: Cytoplasmic streaming(細胞質回流)
 
@@ -32,7 +32,7 @@ Chromoplast(雜色體)
 
 Tradescantia virginiana 紫鴨跖草
 
-![紫鴨跖草](cac204.png){:width="60%" height="60%"}
+![紫鴨跖草](cac204.PNG){:width="60%" height="60%"}
 
 {:width="60%" height="60%"}
 
