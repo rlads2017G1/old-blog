@@ -284,14 +284,15 @@ score("Enter_your_Token")
 
 ### 上傳網頁
 
-[Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html` `, .nojekyll`。
+**Minimal GitHub Page**([下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight))裡面有三個檔案：`index.html`, `search.html` `, .nojekyll`。
 
-具有 Rmarkdown 使用經驗者，可直接[下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/liao961120.github.io/tree/master/assets/gsheet_post/demo)**回饋功能示範平台**製作網頁。忽略前面兩個檔案。若不會用 Rmarkdown，可忽略`rmarkdown/`[^rmd]。
+- `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此檔案內含 HTML 必要結構，並且匯入 [bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 的 CSS 和 JS 以快速製作漂亮的 Button 和 Modal。
+- `search.html`：這份檔案主要為 DataCamp Light 的 R Script，另外還有個重新整理頁面的按鈕(Reload)。若需修改其中的 R Script，需用[文字編輯器](https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8)開啟此檔案修改`<code>...</code>`裡面的內容。
+- `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案格式與架構[^jekyll]。
 
-- `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此為一最簡例子，所以網站僅有首頁一個頁面。此檔案僅包含 DataCamp Light 的程式碼和 HTML 的必要結構。因此，若要修改 DataCamp Light 的 R Script，需用文字編輯器開啟此檔案修改`<body>...</body>`裡面的內容。
-- `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案架構[^jekyll]。
-- `rmarkdown/`: 對於有使用 R 的人，製作網頁非常簡單，因為網頁即是 HTML 檔，而 Rmarkdown 能直接輸出成 HTML 檔。更重要的是，在 Rmarkdown 中可以直接使用 HTML 語法，因此插入 DataCamp Light 變得相當容易。這資料夾的檔案是**回饋功能示範平台**的主要結構(包含 bootstrap 彈出視窗的功能)。若要新增或修改內容，僅需要修改`gsheet_demo.Rmd`[^dep]。若要使用`gsheet_demo.Rmd` knit 出的檔案作為網頁，記得將輸出的 HTML 檔更名為`index.html`。
 
+會用 Rmarkdown[^rmd] 的人，可直接[下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/liao961120.github.io/tree/master/assets/gsheet_post/demo)**回饋功能示範平台**製作網頁[^dep]，不須使用上述資料夾內的檔案。這能省下許多製作網頁(`index.html`)的時間。
+{: .info}
 
 #### 步驟
 
@@ -339,6 +340,6 @@ Last updated: Apr 22, 2018 9:59 PM
 [^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。<br>(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
 
 [^two_data]: 若有兩筆以上的資料有相同的 Token，`score()`就會篩選出相同筆數的資料，並將這些資料印在 console 上。此時，可以透過 **DateTime** 那行來確定填寫時間，以找到自己填寫的那筆資料。
-[^dep]: 裡面有些 package 需要安裝才能正常使用。
-[^rmd]: 使用 Rmarkdown 輸出網頁要比徒手打出 HTML 容易太多，能夠快速製作出**能看**的網頁。Rmarkdown 可輸出許多格式，其中 html_document 最為簡單。對於有興趣了解者，[見此](https://rmarkdown.rstudio.com/html_document_format.html)。
+[^dep]: 需安裝一些 R package 才能使用。
+[^rmd]: 使用 Rmarkdown 輸出網頁要比徒手打出 HTML 容易太多，能夠快速製作出**能看**的網頁。Rmarkdown 可輸出許多格式，其中 html_document 最為簡單。有興趣了解者可[見此](https://rmarkdown.rstudio.com/html_document_format.html)。
 [^blank]: 總分(Score) = 空白(Q1) + 空白(Q2) + 6(6 - Q3)。Q3 是反向計分的五點量尺。
