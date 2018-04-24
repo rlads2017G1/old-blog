@@ -287,8 +287,8 @@ score("Enter_your_Token")
 
 1. [下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) **Minimal GitHub Page** (下載後需解壓縮。)
 
-2. 至剛剛建立的 Repository (<username>.github.io)，點擊 **Upload files**(圖中黃色螢光處)。
-![](/assets/gsheet_post/gh_upload1.PNG){: width="90%" height="90%"}
+2. 至剛剛建立的 Repository (<username>.github.io)，點擊 **Upload files** (圖中黃色螢光處)。
+![](/assets/gsheet_post/gh_upload.PNG){: width="90%" height="90%"}
 
 3. 進入新畫面後，將`index.html`, `search.html`, `.nojekyll`拖曳上傳，並按下畫面最下方 **Commit changes**.
 
