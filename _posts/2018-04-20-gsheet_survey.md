@@ -295,7 +295,7 @@ score("Enter_your_Token")
 
 ## Minimal GitHub Page
 
-[Minimal GitHub Page](https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html` `, .nojekyll`。
+[Minimal GitHub Page](https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html`, `.nojekyll`。
 
 - `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此檔案內含 HTML 必要結構，並且匯入 [bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 的 CSS 和 JS 以快速製作漂亮的 Button 和 Modal。
 - `search.html`：這份檔案主要為 DataCamp Light 的 R Script，另外還有個重新整理頁面的按鈕(Reload)。若需修改其中的 R Script，需用[文字編輯器](https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8)開啟此檔案修改`<code>...</code>`裡面的內容。
