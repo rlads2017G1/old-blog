@@ -2,7 +2,7 @@
 layout: post
 title: 我的 R 學習歷程
 redirect_from:
-  - /2018/01/31/RlearningPath.html
+  - /2018/01/31/RlearningPath/
 tags:
 - R
 - Course
