@@ -3,12 +3,6 @@ layout: page
 title: To do List
 ---
 
-## Before 4/8
-
-1. Blogging
-2. Multivariate Notes
-3. HTML Notes
-
 ## Reproducible Research
 
 1. Version control
@@ -48,15 +42,10 @@ title: To do List
 
 3. **Text Mining with R**
 
-## Communicate
-
-### Dashboard Design
-
-### Graphic Design
-
-### WebPage Design
+## WebPage Design
 
 1. JavaScript [Books](https://drive.google.com/drive/u/0/folders/1rB0EA-on4JvX1CVW9GrPst9e5rppHeja){:target="_blank"}
+2. Jekyll: Auto list posts
 
 
 ## Linux/Ubuntu
