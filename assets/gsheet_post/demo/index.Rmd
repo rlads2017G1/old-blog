@@ -1,5 +1,5 @@
 ---
-title: "Google 表單即時回饋"
+title: "Google 表單即時回饋示範"
 date: "`r Sys.Date()`"
 author: "Yongfu, Liao"
 output: 
@@ -19,7 +19,9 @@ library(htmltools)
 ```
 
 
-此為 google 表單分數即時回饋的示範平台，請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 **Token**, 此 **Token** 是用來查詢問卷分數的，請將其記下。
+此為 google 表單分數即時回饋的示範平台，配合[此篇文章](https://liao961120.github.io/2018/04/20/gsheet_survey.html)。
+
+請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 **Token**, 此 **Token** 是用來查詢問卷分數的，請將其記下。
 
 
 ```{r}
