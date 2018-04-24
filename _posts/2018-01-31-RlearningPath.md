@@ -1,6 +1,9 @@
 ---
 layout: post
 title: 我的 R 學習歷程
+redirect_from:
+  - /2018/01/31/RlearningPath/
+  - /2018/01/31/RlearningPath.html
 tags:
 - R
 - Course
@@ -35,7 +38,7 @@ tags:
 
 - Reproducibility: [Rmarkdown](http://rmarkdown.rstudio.com/) (`.Rmd`) 是我見過最強大的文件格式，可以輸出成網頁、投影片、PDF、Word、Markdown 等。這讓使用者可以在一份文件中做事情(`Rmd`)，並依據所需輸出成各種文件，而不用剪剪貼貼(從 Word 貼到 PPT)，也省下排版所花費的心力。例如，要報告可輸出成投影片 (`.html`)、要列印可輸出成 PDF、要放到網路上可輸出成網頁。Rmarkdown 讓使用者能以簡單有效率的方式工作，這是達到 [Reproducibility](https://en.wikipedia.org/wiki/Reproducibility) 的前提與重要基礎。![Reproducible Research with R](/assets/images/post_img/reproducible_research.png) [^repro]
 
- 
+
 ### 課程起手式
 
 這門課與我個性相符，完全顯現在第一堂課實習課(Lab Session)的作業上。作業與 R 並無相關，而是要使用 Markdown 格式撰寫自我介紹。由於我對簡約風有點痴迷[^sim] (受 Markdown 影響後更為痴迷)，在 Markdown 上花了一些時間研究。目前，透過 R 與 Pandoc Markdown 語法的整合(即 Rmarkdown)，我可以快速簡潔地寫出含有上下標、Footnotes、超連結、citation 的精美文件[^md]或文章(例如，這篇部落格)而完全不須使用 html 語法。這讓我在寫許多作業時，效率提高不少。
@@ -81,7 +84,7 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
 若回到五個多月前，我會如此安排 R 的學習歷程：
 
 1. 基礎參考書 (若有餘力的話 + `swirl`[^swirl] 當練習題)
-    
+  
     - **Hands-On Programming with R**：這是一本寫得非常好且相當簡單的書，目標讀者是沒有程式經驗的初學者(雖然我覺得縱使有程式經驗也可看這本書了解 R 的邏輯)。此書內容僅聚焦在非常基礎的 **Base R**，但重點是其將 R 的邏輯寫得非常清楚。我是在學 R 一陣子之後才看了這本書，對我有莫大的幫助。這本書相當短，可以很快看完，更多資訊請 [google 書名](https://www.google.com.tw/search?biw=1280&bih=560&ei=rF90WtefO8W48QXcv4y4Dg&q=Hands-On+Programming+with+R&oq=Hands-On+Programming+with+R&gs_l=psy-ab.3...1714146.1714146.0.1714717.1.1.0.0.0.0.0.0..0.0....0...1c.1.64.psy-ab..1.0.0....0.FFjeBpwN_VQ)。
 
     - **[R for Data Science](http://r4ds.had.co.nz/)**：這本書應該只會越來越紅(不知道會不會變成 standard recommendation)。如同其名，這本書就在教 R 於資料科學上的應用。與上本書不同的是，這本書以`tidyverse`套件為基礎而非 Base R。雖然如此，此書並不需要 Base R 的基礎(有的話會更好，所以我才推薦**Hands-On**)，需要的基礎書中都有介紹。
@@ -101,7 +104,7 @@ R 語言的基礎 ─ **Base R** 是剛開始學 R 的一大障礙，這也是�
     - [R Graph Gallery](https://www.r-graph-gallery.com/)、[htmlwidgets for R](http://www.htmlwidgets.org/): R 最為吸引人的特徵之一就是其強大的繪圖功能，加上其它套件的擴充，幾乎所有跟資料有關的圖都可以用 R 畫。沒事多多欣賞其他人用 R 畫出的圖，不僅療癒放鬆，同時對 R 的能力有個大概的想像、未來更有可能會有使用需求。
 
     - [Rmarkdown](http://rmarkdown.rstudio.com/gallery.html): 先前提過 Rmarkdown 很強大，可以點進 gallery 感受一下其生產力。我認為不會用 Rmarkdown 比起不會用 R 還要可惜。
-        
+      
     - [Blogdown](https://bookdown.org/yihui/blogdown/): 我目前的網站(一部份)是透過 `blogdown` 套件在經營[^bg]的。Blogdown 大幅降低了架站的門檻，即使完全不懂 HTML/CSS 也能快速上手，同時配合 Git/GitHub 能讓發表(及修改)文章的過程非常有效率。此外，以 `blogdown` 架設的網頁是靜態的，不同於 Wordpress 等的動態網頁，靜態網頁的速度要快許多、不需要付費伺服器，而且容易搬遷。
 
 

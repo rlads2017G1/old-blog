@@ -124,5 +124,5 @@ server_url: "0.0.0.0"
 ## Development ##
 isdebug: false
 
-#plugins:
-  #- jekyll-redirect-from
+plugins:
+  - jekyll-redirect-from
