@@ -14,7 +14,7 @@ google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應*
 
 
 **實際操作**  
-繼續閱讀下去前，可先至[回饋功能示範平台](/assets/gsheet_post/demo/gsheet_demo.html)填寫問卷、查詢結果，比較容易理解下文內容。文章中後段的實例說明即以此表單為例。
+繼續閱讀下去前，可先至[回饋功能示範平台](/assets/gsheet_post/demo/)填寫問卷、查詢結果，比較容易理解下文內容。文章中後段的實例說明即以此表單為例。
 {: .success}
 
 概觀: 運作邏輯 
@@ -175,7 +175,7 @@ DataCamp Light 讀取的是[`結果查找`](https://docs.google.com/spreadsheets
 
 ### 完整程式碼
 
-以下是鑲嵌於[回饋功能示範平台](/assets/gsheet_post/demo/gsheet_demo.html)的 DataCamp Light 程式碼(html)：
+以下是鑲嵌於[回饋功能示範平台](/assets/gsheet_post/demo/)的 DataCamp Light 程式碼(html)：
 
 ````html
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
@@ -286,7 +286,7 @@ score("Enter_your_Token")
 
 [Minimal GitHub Page](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html` `, .nojekyll`。
 
-若有 R 或 Rmarkdown 的使用經驗，可使用`rmarkdown/`裡的檔案製作網頁，忽略前面兩個檔案。若不會用 Rmarkdown，可忽略`rmarkdown/`[^rmd]。
+具有 Rmarkdown 使用經驗者，可直接[下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/liao961120.github.io/tree/master/assets/gsheet_post/demo)**回饋功能示範平台**製作網頁。忽略前面兩個檔案。若不會用 Rmarkdown，可忽略`rmarkdown/`[^rmd]。
 
 - `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此為一最簡例子，所以網站僅有首頁一個頁面。此檔案僅包含 DataCamp Light 的程式碼和 HTML 的必要結構。因此，若要修改 DataCamp Light 的 R Script，需用文字編輯器開啟此檔案修改`<body>...</body>`裡面的內容。
 - `.nojekyll`: [Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/) 是 GitHub Pages 靜態網頁產生器，能自動將 Markdown 生成`.html`，對於常寫文章的使用者很方便：不需每次發文都要上傳文章的 html 檔。`.nojekyll`在此的作用是告訴 GitHub Pages **不要使用 Jekyll 產生網頁**，因為使用 Jekyll 產生網頁，repository 需符合特定的檔案架構[^jekyll]。
