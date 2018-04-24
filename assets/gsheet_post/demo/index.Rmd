@@ -19,7 +19,7 @@ library(htmltools)
 ```
 
 
-此為 google 表單分數即時回饋的示範平台，配合[此篇文章](https://liao961120.github.io/2018/04/20/gsheet_survey/)。
+此為 google 表單分數即時回饋的示範平台，配合[此篇文章](https://liao961120.github.io/2018/04/20/gsheet_survey)。
 
 <br>
 請先點選下方「填寫表單」以填寫問卷，問卷最後會要求你輸入 **Token**。  
