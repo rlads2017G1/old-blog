@@ -15,10 +15,7 @@
 
     <div data-datacamp-exercise data-lang="r">
         <code data-type="pre-exercise-code">
-                    install.packages("googlesheets")
-                    library(googlesheets)
-                    data <- gs_url("https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing")
-                    data <- gs_read(data)
+
                     <!--data <- readr::read_csv(url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQz4zjZfhWBYYRuW2Zhhx-sXvnlrS6vpvcgP0cJPdvsQI-6eKggXmpaWbu4dgbMQgcOHv0NQxL8a_K_/pub?output=csv"))-->
                     data <- as.data.frame(data)
                     colnames(data) <- c("DateTime", "Token", "Score")
@@ -37,7 +34,8 @@
     <button type="button" class="btn btn-outline-secondary btn-xs pull-right" onclick="myFunction()">Reload</button>
     <script>
         function myFunction() {
-            location.reload(true);
+            window.location.reload(true);
+            //location.reload(true);
         }
     </script>
 </body>
