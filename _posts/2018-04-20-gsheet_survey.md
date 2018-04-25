@@ -311,10 +311,11 @@ score("Enter_your_Token")
 會用 Rmarkdown 的人，可直接[下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/liao961120.github.io/tree/master/assets/gsheet_post/demo)**回饋功能示範平台**製作網頁(需額外安裝一些 package)，不須使用上述資料夾內的檔案。這能省下許多製作網頁(`index.html`)的時間。
 
 R markdown 是 Markdown 的擴充，其輸出的 HTML 格式已經過簡單的排版，同時也支援 bootstrap，因此能夠輕易地製作出**美觀**的網頁。Rmarkdown 可輸出許多格式，其中 [html_document](https://rmarkdown.rstudio.com/html_document_format.html) 最為簡單。Rmarkdown 的語法([Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf))即為 Markdown 語法，加上許多額外的功能(透過 R 實現)。
+<div id="privacy"></div>
 
 隱私問題
 ----------------------------------
-<div id="privacy"></div>
+
 在此需特別提醒問卷填寫者隱私的問題。由於查詢個人的問卷回饋需透過 DataCamp Light，其**由雲端讀取之試算表(`結果查找`)是公開的**。縱使網頁表面看不見`結果查找`的網址，但只要檢視網頁的原始碼(透過瀏覽器的開發人員工具，或至 GitHub 直接下載`search.html`)，即可取得`結果查找`的網址，並下載整份資料[^secure]。
 
 以這裡的例子說明，`結果查找`僅含有 3 欄：時間戳記、Token、分數。這 3 欄是任何人都能看見的內容，其中 **Token 是由問卷填寫者直接填寫**，因此
