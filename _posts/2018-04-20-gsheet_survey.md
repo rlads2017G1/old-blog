@@ -163,7 +163,7 @@ DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`�
 
 開啟`結果查找`，選取 `檔案` > `發佈到網路...`，即會開啟：
 
-![](/assets/gsheet_post/release_csv.PNG){: width="60%" height="60%" #release}
+![](/assets/gsheet_post/release_csv.PNG){: width="70%" height="65%" #release}
 {:.rounded}
 
 確定選取
