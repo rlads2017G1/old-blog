@@ -159,7 +159,7 @@ DataCamp Light 設置
 
 ### 取得試算表權限
 
-DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`發佈(公開)至網路: 
+DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`發佈(**公開**[^privacy])至網路: 
 
 開啟`結果查找`，選取 `檔案` > `發佈到網路...`，即會開啟：
 
@@ -272,7 +272,7 @@ score("Enter_your_Token")
 
 架設靜態網頁[^static]並非難事，難的是做出漂亮的靜態網頁。然而，網頁越漂亮，其結構通常也更加複雜。如何(短時間)打造美觀的靜態網頁以及基礎 HTML, CSS 的概念並非此文的目的。對於有這些需求的讀者，我推薦 [Yihui Xie](https://yihui.name/) 的 [blogdown](https://bookdown.org/yihui/blogdown/)。
 
-以下提供一個最精簡的例子，由註冊 GitHub 帳號到架設網頁，過程中僅需使用瀏覽器(電腦版為例)。
+以下提供一個最精簡的例子，由註冊 GitHub 帳號到架設網頁，過程中僅需使用到瀏覽器(GUI)，不需用到 Git。
 
 #### 註冊與建立 Repo
 1. 至 https://github.com/ ，填寫註冊資訊(一個 email 僅能註冊一次)，並記得去信箱認證。**Username** 即為之後網站的網址，以下圖為例，minimalghpage.github.io。  ![](/assets/gsheet_post/github_signup.PNG){: width="55%" height="55%"}
@@ -285,7 +285,7 @@ score("Enter_your_Token")
 
 #### 上傳網頁
 
-1. [下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) **Minimal GitHub Page** (下載後需解壓縮。)
+1. [下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) **Minimal Web Page** (下載後需解壓縮。)
 
 2. 至剛剛建立的 Repository (`<username>.github.io`)，點擊 **Upload files** (圖中黃色螢光處)。
 ![](/assets/gsheet_post/gh_upload.PNG){: width="90%" height="90%"}
@@ -298,9 +298,9 @@ score("Enter_your_Token")
 5. **完成！**過 1, 2 分鐘後，即可至`<username>.github.io`檢視網頁，其內容應[與此](https://minimalghpage.github.io/)相同。
 
 
-### Minimal GitHub Page
+### Minimal Web Page
 
-[Minimal GitHub Page](https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html`, `.nojekyll`。
+[Minimal Web Page](https://github.com/liao961120/local_depend/tree/master/minimal_web_DataCampLight) 裡面有三個檔案：`index.html`, `search.html`, `.nojekyll`。
 
 - `index.html`: 這是網站的首頁，亦即瀏覽器進入`https://<username>.github.io/`時所讀取的檔案。此檔案內含 HTML 必要結構，並且匯入 [bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 的 CSS 和 JS 以快速製作漂亮的 Button 和 Modal。
 - `search.html`：這份檔案主要為 DataCamp Light 的 R Script，另外還有個重新整理頁面的按鈕(Reload)。若需修改其中的 R Script，需用[文字編輯器](https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8)開啟此檔案修改`<code>...</code>`裡面的內容。
@@ -314,8 +314,8 @@ R markdown 是 Markdown 的擴充，其輸出的 HTML 格式已經過簡單的�
 
 隱私問題
 ----------------------------------
-
-在此需特別提醒問卷填寫者隱私的問題。由於查詢個人的問卷回饋需透過 DataCamp Light，其**由雲端讀取之試算表(`結果查找`)是公開的**。縱使網頁表面看不見`結果查找`的網址，但只要檢視網頁的原始碼(透過瀏覽器的開發人員工具，或至 GitHub 直接下載`index.html`)，即可取得`結果查找`的網址，並下載整份資料[^secure]。
+<div id="privacy"></div>
+在此需特別提醒問卷填寫者隱私的問題。由於查詢個人的問卷回饋需透過 DataCamp Light，其**由雲端讀取之試算表(`結果查找`)是公開的**。縱使網頁表面看不見`結果查找`的網址，但只要檢視網頁的原始碼(透過瀏覽器的開發人員工具，或至 GitHub 直接下載`search.html`)，即可取得`結果查找`的網址，並下載整份資料[^secure]。
 
 以這裡的例子說明，`結果查找`僅含有 3 欄：時間戳記、Token、分數。這 3 欄是任何人都能看見的內容，其中 **Token 是由問卷填寫者直接填寫**，因此
 
@@ -323,13 +323,15 @@ R markdown 是 Markdown 的擴充，其輸出的 HTML 格式已經過簡單的�
 {: .error}
 
 <br><br>
-Last updated: Apr 24, 2018 11:44 AM
+Last updated: Apr 25, 2018 11:44 AM
 
 附註
 ---------------------------------
 
 [^test]: 其實 google 表單確實能即時回饋分數，但僅限[測驗模式](https://support.google.com/docs/answer/7032287?hl=zh-Hant)，有諸多限制，例如，題目僅能為「對」或「錯」，無法處理反向計分的問題，無法使用線性刻度 (linear scale) 計分等。
+
 [^nar]: 例如，第 1, 3, 7 題答「是」就回饋敘述 A，其他狀況則回覆敘述 B。
+
 [^num]: 若擔心填答人數超過 9998 人，可設個更大的數字，如`E99999`。
 
 [^tz]: 你也可以設置時區，通常依據的是多數問卷填寫者所在位置的時區。這邊設為台北時間。
@@ -345,4 +347,7 @@ Last updated: Apr 24, 2018 11:44 AM
 [^secure]: 然`結果查找`透過`IMPORTRANGE`匯入的試算表只要**未開放共用連結**，仍是安全的。這也是為何即使僅需 2 個(或甚至 1 個)試算表和 DataCamp Light 即可做到問卷回饋，但我仍使用了 3 個試算表。<br>(另一原因是考量 google 及 DataCamp Light 的運算資源及時間。縱使我較喜歡，也應該要用 R 語言處理資料，考量到 google 擁有較強大的運算資源，多數的運算因此交給 google 試算表，而 DataCamp Light 僅用來讀取資料。)
 
 [^two_data]: 若有兩筆以上的資料有相同的 Token，`score()`就會篩選出相同筆數的資料，並將這些資料印在 console 上。此時，可以透過 **DateTime** 那行來確定填寫時間，以找到自己填寫的那筆資料。
+
 [^blank]: 總分(Score) = 空白(Q1) + 空白(Q2) + 6(6 - Q3)。Q3 是反向計分的五點量尺。
+
+[^privacy]: 這關係到隱私問題，詳見最後一節[隱私問題](#privacy)
