@@ -275,7 +275,7 @@ score("Enter_your_Token")
 以下提供一個最精簡的例子，由註冊 GitHub 帳號到架設網頁，過程中僅需使用到瀏覽器(GUI)，不需用到 Git。
 
 #### 註冊與建立 Repo
-1. 至 https://github.com/ ，填寫註冊資訊(一個 email 僅能註冊一次)，並記得去信箱認證。**Username** 即為之後網站的網址，以下圖為例，minimalghpage.github.io。  ![](/assets/gsheet_post/github_signup.PNG){: width="55%" height="55%"}
+1. 至 https://github.com/ ，填寫註冊資訊(一個 email 僅能註冊一次)，並記得去信箱認證。**Username** 即為之後網站的網址，以下圖為例，minimalghpage.github.io。  ![](/assets/gsheet_post/github_signup.PNG){: width="48%" height="48%"}
 
 2. 信箱認證後，跳回 GitHub 頁面，基本上不需更動出現之畫面的設定，只要按下一步。之後應會出現下圖，按右上角圖示並選取**Your Profile**。  ![](/assets/gsheet_post/gh_main.PNG){: width="80%" height="80%"}
 
