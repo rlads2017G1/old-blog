@@ -174,6 +174,9 @@ DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`�
 
 並將**中間的連結**複製下來。
 
+以此方式取得的試算表，每隔 5 分鐘才會重新發布，無法做到完全的即時。  目前正向 DataCamp light 提出要求安裝 `googlesheets` 套件以解決此問題。
+{:.warning}
+
 ### 完整程式碼
 
 以下是[回饋功能示範平台](/assets/gsheet_post/demo/)的 DataCamp Light 程式碼(html)：
