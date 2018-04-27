@@ -12,8 +12,6 @@ google 表單大幅降低蒐集問卷資料的難度；此外，表單將回應*
 
 你是否曾想過讓問卷填寫人能在 google 表單送出後，馬上知道填寫的結果？回饋依據填寫情況有所不同，可以是一段敘述[^nar]，也可以是一個分數。這種類似線上測驗的分數即時回饋功能，背後通常有伺服器在運算分數，不是一般學生會有的資源。以下將介紹如何結合 **google 試算表** 以及 **[DataCamp Light](https://github.com/datacamp/datacamp-light)**，讓任何人都能製作出一個在**靜態網頁**上運行的平台，**使填寫者能在此填寫問卷、查詢結果**。
 
-目前的系統會有些許的時間延遲(5 分鐘)，詳見[此](#delay)
-{:.error}
 
 **實際操作**  
 繼續閱讀下去前，可先至[回饋功能示範平台](/assets/gsheet_post/demo/)操作看看，比較容易理解下文內容。文章中的說明即是依據此**回饋功能示範平台**。
@@ -161,23 +159,19 @@ DataCamp Light 設置
 
 ### 取得試算表權限
 
-DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`發佈(**公開**[^privacy])至網路: 
+DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`需將`結果查找`透過連結分享[^privacy])至網路: 
 
-開啟`結果查找`，選取 `檔案` > `發佈到網路...`，即會開啟：
+開啟`結果查找`，選取右上角藍色按鍵**共用**即會開啟：
 
-![](/assets/gsheet_post/release_csv.PNG){: width="70%" height="65%" #release}
+![](/assets/gsheet_post/release_csv.PNG){: width="80%" height="80%" #release}
 {:.rounded}
 
 確定選取
 
-1. **連結**(而非內嵌)
-2. **逗點分隔值(.csv)**
-3. 打勾 **內容有所變更時自動重新發佈**
+1. 知道連結的人均**可以檢視**(注意**不要選到可以編輯**)
+2. 複製連結
+3. 按下方「完成」
 
-並將**中間的連結**複製下來。
-
-以此方式取得的試算表，每隔 5 分鐘才會重新發布，無法做到完全的即時。  目前正向 DataCamp light 提出要求安裝 `googlesheets` 套件以解決此問題。
-{:.error #delay}
 
 ### 完整程式碼
 
@@ -187,7 +181,9 @@ DataCamp Light 讀取的是`結果查找`的內容，因此需將`結果查找`�
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 <div data-datacamp-exercise data-lang="r">
 	<code data-type="pre-exercise-code">
-		data <- readr::read_csv(url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQz4zjZfhWBYYRuW2Zhhx-sXvnlrS6vpvcgP0cJPdvsQI-6eKggXmpaWbu4dgbMQgcOHv0NQxL8a_K_/pub?output=csv"))
+		library(googlesheets)
+        data <- gs_read(gs_url("https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing"))
+                            
 		data <- as.data.frame(data)
 		colnames(data) <- c("DateTime", "Token", "Score")
 		data <- data[which(!is.na(data$DateTime)),]
@@ -212,8 +208,10 @@ DataCamp Light **僅能正常顯示英文**，因此需確定 R Script 以及使
 
 `<code data-type="pre-exercise-code">...</code>`之間的程式碼是使用者看不到，但會預先執行的 R Script：
 
-```r
-data <- readr::read_csv(url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQz4zjZfhWBYYRuW2Zhhx-sXvnlrS6vpvcgP0cJPdvsQI-6eKggXmpaWbu4dgbMQgcOHv0NQxL8a_K_/pub?output=csv"))
+```R
+library(googlesheets)
+data <- gs_read(gs_url("https://docs.google.com/spreadsheets/d/1ufuzTL9VCxdvX1QeFQcMGxYbEMq1ZEWVht3CEDpXBmc/edit?usp=sharing"))
+
 data <- as.data.frame(data)
 colnames(data) <- c("DateTime", "Token", "Score")
 data <- data[which(!is.na(data$DateTime)),]
@@ -226,10 +224,11 @@ score <- function(token) {
 #### 讀取資料
 
 ```R
-data <- readr::read_csv(url("https://docs.google.com/spreadsheets..."))
+library(googlesheets)
+data <- gs_read(gs_url("https://docs.google.com/spreadsheets/..."))
 ```
 
-上面這段程式碼是透過雲端讀取`結果查找`的指令，將其儲存於`data`這個變項。函數內的連結即是上面在設置`結果查找`的讀取權限時，[取得試算表權限](#release)**中間的連結**。
+上面這段程式碼透過雲端讀取`結果查找`，並將其儲存於變項`data`。函數內的連結即是上面在設置`結果查找`的讀取權限時的共用分享連結。
 
 #### 資料整理
 
