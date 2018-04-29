@@ -11,7 +11,7 @@
 
 <meta name="author" content="Yongfu Liao" />
 
-<meta name="date" content="2018-04-21" />
+<meta name="date" content="2018-04-29" />
 
 <title>Rmarkdown Features</title>
 
@@ -244,7 +244,7 @@ div.tocify {
 <h1 class="title toc-ignore">Rmarkdown Features</h1>
 <h3 class="subtitle"><em>This is subtitle</em></h3>
 <h4 class="author"><em>Yongfu Liao</em></h4>
-<h4 class="date"><em>2018-04-21</em></h4>
+<h4 class="date"><em>2018-04-29</em></h4>
 
 </div>
 
@@ -278,6 +278,8 @@ output:
 <h3>HTML Output</h3>
 <pre class="yaml"><code>output:
   html_document:
+    includes:
+        before_body: mathjax_bm.tex
     css: ../style_sheets/style.css
     df_print: kable
     code_folding: hide
@@ -299,7 +301,7 @@ output:
 documentclass: article
 urlcolor: &quot;blue&quot;
 fontsize: 12pt
-geometry: margin=0.4in
+geometry: a5paper, headheight=0pt, margin=0.4in
 ---</code></pre>
 </div>
 <div id="pdf-header" class="section level3">
@@ -309,6 +311,9 @@ geometry: margin=0.4in
 \usepackage{fontspec}
 %使用xeCJK，其他的還有CJK或是xCJK
 \usepackage{xeCJK}
+
+\usepackage{multicol}
+\usepackage{bm}
 
 %設定英文字型，不設的話就會使用預設的字型
 \setmainfont{Calibri}
@@ -377,18 +382,22 @@ text &lt;- c(&quot;a&quot;, &quot;b&quot;)</code></pre>
 <div id="setup" class="section level4">
 <h4>Setup</h4>
 <p>Add <code>results='asis'</code> to r code chunk option.</p>
-<pre class="r"><code>library(mat2tex)
+<pre class="r"><code>```{r results='asis', echo=FALSE}
+library(mat2tex)
 mt &lt;- c(1,2)
-&quot;$A =&quot; %_% xm(mt,0) %_%&quot;_{2 \\times 1}$&quot;</code></pre>
+&quot;$A =&quot; %_% xm(mt,0) %_%&quot;_{2 \\times 1}$&quot;
+```</code></pre>
 <p><span class="math inline">\(A = \begin{pmatrix}  1 \\  2 \\  \end{pmatrix} _{2 \times 1}\)</span></p>
 </div>
 <div id="include-matrix-in-text" class="section level4">
 <h4>Include Matrix in Text</h4>
-<pre class="r"><code>```{r results='asis', echo=FALSE}
+<pre class="r"><code>This is the variable `mt`,
+```{r results='asis', echo=FALSE}
 library(mat2tex)
 mt &lt;- matrix(1:4, 2,2)
 &quot;$A =&quot; %_% xm(mt,0) %_%&quot;^{-1}$&quot;
-```</code></pre>
+```
+, which is a matrix.</code></pre>
 <p>renders as:</p>
 <div class="success">
 <p>This is the variable <code>mt</code>, <span class="math inline">\(A = \begin{pmatrix}  1 &amp; 3 \\  2 &amp; 4 \\  \end{pmatrix} ^{-1}\)</span> , which is a matrix.</p>
