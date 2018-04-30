@@ -32,6 +32,8 @@ Mar 24, 2018 &nbsp;&nbsp; [Class: Multivariate Analysis](./notes/106-2/multivari
 
 ### Ecological Simultion
 
+Apr 30, 2018 &nbsp;&nbsp; [Ecological Modeling with C](./notes/106-2/Eco_model/)
+
 Nov 08, 2017 &nbsp;&nbsp; [Lotka－Volterra Competition](./notes/simulation/competition.html){:target="_blank"}
 
 Nov 29, 2017 &nbsp;&nbsp; [Discrete Logistic Growth](./notes/simulation/Discrete_Logistic.html){:target="_blank"}

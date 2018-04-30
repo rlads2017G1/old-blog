@@ -14,3 +14,5 @@ layout: page
 [HW5](/notes/106-2/Eco_model/HW5.html)
 
  Bifurication Map
+ 
+[HW6](/notes/106-2/Eco_model/HW6.html)
