@@ -26,13 +26,9 @@ Feb 21, 2018 &nbsp;&nbsp; [Plot test](./notes/graphics/widget_test.html){:target
 Feb 07, 2018 &nbsp;&nbsp; [ToDoList](./notes/ToDoList.html){:target="_blank"}
 
 ### Multivariate Analysis
-Mar 24, 2018 &nbsp;&nbsp; [R Notes for Multivariate Analysis](./MVA.github.io/index.html){:target="_blank"}
+Apr 29, 2018 &nbsp;&nbsp; [R Notes for Multivariate Analysis](./MVA.github.io/index.html){:target="_blank"}
 
-Mar 24, 2018 &nbsp;&nbsp; [Multivariate Analysis HW1](./notes/106-2/multivariate/HW1){:target="_blank"}
-
-Apr 09, 2018 &nbsp;&nbsp; [Multivariate Analysis HW2](./notes/106-2/multivariate/HW2){:target="_blank"}
-
-
+Mar 24, 2018 &nbsp;&nbsp; [Class: Multivariate Analysis](./notes/106-2/multivariate/){:target="_blank"}
 
 ### Ecological Simultion
 
