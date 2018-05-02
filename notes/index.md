@@ -7,7 +7,7 @@ comment: false
 <!-- Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec.  -->
 
 <style>
-    .tab0 { padding-left: 1.2em; }
+    .tab0 { padding-left: 1.1em; }
     .tab1 { padding-left: 4em; }
     .tab2 { padding-left: 8em; }
     ul {list-style-image: none;}
@@ -42,7 +42,7 @@ Nov 29, 2017 [Discrete Logistic Growth](/notes/simulation/Discrete_Logistic.html
 
 Jan 28, 2018 [Lotka–Volterra Model of Coexistence between Sexual and Asexual Clones](/notes/EvoSex/Doncaster_2002/LK.html){:target="_blank" class="tab0"}
 
-- [Simulation](/notes/EvoSex/simulation/Rmd/model.html){:target="_blank" class="tab0"}
+- [Simulation](/notes/EvoSex/simulation/Rmd/model.html){:target="_blank"}
 
 Dec 12, 2017 [Sexual Reproduction as Bet-hedging](/notes/EvoSex/sexual_reproduction_bet_hedging/good_harsh_competition.html){:target="_blank" class="tab0"}
 
