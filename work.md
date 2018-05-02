@@ -12,43 +12,18 @@ comment: false
     ul {list-style-image: none;}
 </style>
 
-## **Projects**
+## Project
 
 Jan 04, 2018 &nbsp;&nbsp; [Travel the World](https://rlads2017g1.github.io/presentation.html){:target="_blank"} (Displays properly only with Desktop Version Website)
 
 
-## **Notes**
+## Books
 
-Mar 18, 2018 &nbsp;&nbsp; [Rmarkdown Features](./notes/rmd_features.html){:target="_blank"}
-
-Feb 21, 2018 &nbsp;&nbsp; [Plot test](./notes/graphics/widget_test.html){:target="_blank"}
-
-Feb 07, 2018 &nbsp;&nbsp; [ToDoList](./notes/ToDoList.html){:target="_blank"}
-
-### Multivariate Analysis
 Apr 29, 2018 &nbsp;&nbsp; [R Notes for Multivariate Analysis](./MVA.github.io/index.html){:target="_blank"}
 
-Mar 24, 2018 &nbsp;&nbsp; [Class: Multivariate Analysis](./notes/106-2/multivariate/){:target="_blank"}
+Mar 18, 2018 &nbsp;&nbsp; [Rmarkdown Features](/notes/rmd_features.html){:target="_blank"} (Not a book yet, a long document now.)
 
-### Ecological Simultion
 
-Apr 30, 2018 &nbsp;&nbsp; [Ecological Modeling with C](./notes/106-2/Eco_model/)
 
-Nov 08, 2017 &nbsp;&nbsp; [Lotka－Volterra Competition](./notes/simulation/competition.html){:target="_blank"}
-
-Nov 29, 2017 &nbsp;&nbsp; [Discrete Logistic Growth](./notes/simulation/Discrete_Logistic.html){:target="_blank"}
-
-### Evolution of Sex
-
-Jan 28, 2018 &nbsp;&nbsp; [Lotka–Volterra Model of Coexistence between Sexual and Asexual Clones](./notes/EvoSex/Doncaster_2002/LK.html){:target="_blank"}
-
-- [Simulation](./notes/EvoSex/simulation/Rmd/model.html){:target="_blank"}
-
-Dec 12, 2017 &nbsp;&nbsp; [Sexual Reproduction as Bet-hedging](./notes/EvoSex/sexual_reproduction_bet_hedging/good_harsh_competition.html){:target="_blank"}
-
-#### **Mindmap**
-Jan 24, 2018 &nbsp;&nbsp; [Hypotheses of Sex](./notes/EvoSex/thoughts/Hypothesis_of_Sex.html){:target="_blank"}
-
-Feb 07, 2018 &nbsp;&nbsp; [Notes](./notes/EvoSex/thoughts/Notes.html){:target="_blank"}
 
 <br><br>
