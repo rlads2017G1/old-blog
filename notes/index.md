@@ -7,7 +7,7 @@ comment: false
 <!-- Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec.  -->
 
 <style>
-    .tab0 { padding-left: 1.5em; }
+    .tab0 { padding-left: 1.2em; }
     .tab1 { padding-left: 4em; }
     .tab2 { padding-left: 8em; }
     ul {list-style-image: none;}
