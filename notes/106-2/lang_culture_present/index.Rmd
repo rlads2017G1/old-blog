@@ -6,7 +6,7 @@ date: May 08, 2018
 output:
   ioslides_presentation:
     widescreen: true
-    css: /Users/user/local_depend/style_sheets/presentation_style.css
+    css: presentation_style.css
     incremental: yes
     transition: 0.4
     logo: tux.svg
@@ -46,7 +46,7 @@ Hello
 
 - Spelling Difference
     - Hallo, Hello, Hillo, Hollo, Hullo  
-[Stress was on the second syllable, difficult to hear the quality of the first vowel.]{style="color:gray"}
+[Stress was on the second syllable, difficult to hear the quality of the first vowel.]{.gray}
 
     - Google Ngram Viewer  
 <iframe name="ngram_chart" src="./ngram1.html" width=100% height=60% marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
@@ -63,10 +63,10 @@ Hello
 
 - **Thomas Edison**
     - Prefered Hello:  
-[Shouted 'Hello' ('Halloo') into the mouthpiece when testing a phonograph (留聲機)]{style="color:gray"}
+[Shouted 'Hello' ('Halloo') into the mouthpiece when testing a phonograph (留聲機)]{.gray}
     
     - A letter (1877) used **Hello**:  
-["I don't think we shall need a call bell as 'Hello!' can be heard 10 to 20 feet away. What do you think?"]{style="color:gray"}
+["I don't think we shall need a call bell as 'Hello!' can be heard 10 to 20 feet away. What do you think?"]{.gray}
 
 ## Bell & Edison
 
@@ -81,7 +81,7 @@ Hello
 - <img src="hello_girls.jpg" height="40%" width="40%">
 
 - *I mean, hello! How crazy was that?*  
-[Implying that someone has missed the point in some way.]{style="color:gray"}
+[Implying that someone has missed the point in some way.]{.gray}
 
 ## *Hi*{.smaller}
 
@@ -101,23 +101,88 @@ Disinterested
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 [A confusible (17th century)]{.white}
 
-## **Dis**interested vs. **Un**interested
+## Interest (名詞)
 
-## *Dis-* vs. *Un-*: History
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+- 15th Century
+    1. 擁有權  
+    [have an interest in an estate]{.gray}
+    
+    2. 股份  
+    [hold an interest in a company]{.gray}
+    
+    3. 好處、利益  
+    [It’s in your interest to vote for me]{.gray}
+
+- 17th Century: 興趣、嗜好
+
+## Interested (形容詞)
+
+- 名詞 &#x1F449; 形容詞
+
+-
+```{r out.width="100%"}
+library(DiagrammeR)
+mermaid('
+graph LR
+
+subgraph 
+d("感興趣的") --> c("有利害關係的")
+end
+
+subgraph 
+A(擁有權)-->B(股份)
+B-->C("好處、利益")
+C-->D("興趣、嗜好")
+end
+
+C -.-> c
+
+style A fill:#f8766d
+style B fill:#f8766d
+style C fill:#f8766d
+style D fill:#f8766d
+
+style c fill:#00bfc4
+style d fill:#00bfc4
+')
+```
+
+
+## **Dis-** vs. **Un-**{.build}
+
+
+- **Dis-** only
+    - Discontent vs. Uncontent
+<br>
+
+- **Un-** only
+    - Discomfortable vs. Uncomfortable
+<br>
+
+- Both **Dis-** & **Un-** with different meanings
+    - Disterested vs. Uninterested
+<br>
+
+- Both **Dis-** & **Un-** with overlapping meanings
+    - Disterested vs. Uninterested
+
+## History: **Dis**interested vs. **Un**interested
 
 ```{r}
 source("plot.R")
 ```
 
 ```{r}
-frameWidget(line_dis_un)
+frameWidget(line_dis_un, height = 300)
 ```
 
 - **1750**: Meanings completely overlap
 
 
 
-## *Dis-* vs. *Un-*: Modern
+## Modern: **Dis**interested vs. **Un**interested
 
 - Disinterested: impartial, bored('incorrect', [Oxford](https://en.oxforddictionaries.com/usage/disinterested-or-uninterested){target="_blank"})
 
