@@ -103,7 +103,6 @@ Disinterested
 
 ## Interest (名詞)
 
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
 - 15th Century
     1. 擁有權  
@@ -198,4 +197,41 @@ pie_UK
 ```    
 </div>
 
-    
+
+Dragsman
+==================================
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+[Thieves’ cant (19th century)]{.white}
+
+
+## *A Dictionary of the Slang and Cant Languages*
+
+- George Andrewes, 1809
+
+- (Hope to) Make it easier to detect crimes  
+<img src="slang_dict2.PNG" height="40%" width="40%">
+
+
+## Dragsmen
+
+- 18th century
+
+- Drag: Horse-drawn wagon
+
+- <img src="dragsman.jpg" height="40%" width="40%">
+
+- Dragsman (old meaning)  
+[someone who stole goods or luggage from vehicles.]{.gray}
+
+
+## Cants still used today
+
+- footpad: one who robs pedestrians
+
+- water-pad: One who robs ships
+
+- coiner: 偽造貨幣者
+
+## 臺灣的黑話
+
+[法務部]()
