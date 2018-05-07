@@ -118,3 +118,9 @@ slides>slide:not(.nobackground):before {
 .gray {
     color: gray;
 }
+
+
+.title-slide hgroup h1 {
+    font-size: 60px;
+    line-height: 1.1;
+}

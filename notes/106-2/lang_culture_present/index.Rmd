@@ -1,7 +1,7 @@
 ---
-title: "報告"
-subtitle: "副標題"
-author: Yongfu Liao
+title: "Hello <br>Dragsman <br>Disinterested"
+subtitle: "語言與文化"
+author: "廖永賦"
 date: May 08, 2018
 output:
   ioslides_presentation:
@@ -232,6 +232,20 @@ Dragsman
 
 - coiner: 偽造貨幣者
 
-## 臺灣的黑話
 
-[法務部]()
+## 臺灣黑話
+
+- 吃土豆 (閩南語)?
+
+- 食品藥物管理署: 毒品相關術語
+
+
+## 吸食相關
+
+![](tw_drug_1.PNG)
+
+
+## 交易相關
+
+![](tw_drug_3.PNG)
+
