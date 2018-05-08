@@ -190,7 +190,9 @@ Interest 在 **15 世紀**出現時, 只有**名詞**的用法
 ## Interested (形容詞) (11)
 
 <div class="red">
-Mermaid Plot: 名詞, 形容詞 演變
+紅色: 名詞 出現順序
+
+藍色: 形容詞 出現順序
 </div>
 
 ## **Dis-** vs. **Un-** (12)

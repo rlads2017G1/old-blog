@@ -140,6 +140,7 @@ C-->D("興趣、嗜好")
 end
 
 C -.-> c
+D -.-> d
 
 style A fill:#f8766d
 style B fill:#f8766d
