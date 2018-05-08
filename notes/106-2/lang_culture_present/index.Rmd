@@ -30,23 +30,25 @@ Hello
 ## H-words
 
 - Catch each other’s attention
-    - **Hey**, **Ho**: 13th century
 
-    - **Hi**: 15th century
+    > - **Hey**, **Ho**: 13th century
 
-    - **Hollo**, **Hillo**, **Holla**, **Halloo**: 16th century
-        - Shouts used in hunting
+    > - **Hi**: 15th century
+
+    > - **Hollo**, **Hillo**, **Holla**, **Halloo**: 16th century  
+    &nbsp;&nbsp;[Shouts used in hunting]{.gray}
 
 - Greetings
-    - **Hal**: Be healthy
+
+    > - **Hal**: Be healthy
  
-    - **Hail**: 13th century
+    > - **Hail**: 13th century
 
 ## *Hello*
 
 - Spelling Difference
     - Hallo, Hello, Hillo, Hollo, Hullo  
-[Stress was on the second syllable, difficult to hear the quality of the first vowel.]{.gray}
+    &nbsp;&nbsp;[Stress was on the second syllable, <br>difficult to hear the quality of the first vowel.]{.gray}
 
     - Google Ngram Viewer  
 <iframe name="ngram_chart" src="./ngram1.html" width=100% height=60% marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
@@ -57,16 +59,19 @@ Hello
 - Early 1800s: informal, street slang
 
 - **Telephone**
-    - 1876: Invented by *Alexander Graham Bell* (Not *Edison*)
+
+    > - 1876: Invented by *Alexander Graham Bell* (Not *Edison*)
     
-    - Need a way of starting a conversation
+- Need a way of starting a conversation
 
 - **Thomas Edison**
-    - Prefered Hello:  
+
+    > - Prefered Hello:  
 [Shouted 'Hello' ('Halloo') into the mouthpiece when testing a phonograph (留聲機)]{.gray}
     
-    - A letter (1877) used **Hello**:  
-["I don't think we shall need a call bell as 'Hello!' can be heard 10 to 20 feet away. What do you think?"]{.gray}
+    > - A letter (1877) used **Hello**:  
+["I don't think we shall need a call bell, as 'Hello!' can be heard 10 to 20 feet away. What do you think?"]{.gray}
+
 
 ## Bell & Edison
 
@@ -76,22 +81,21 @@ Hello
 ![](Edison.jpg)
 </div>
 
-## Other Uses
+## Hello Girls
 
-- <img src="hello_girls.jpg" height="40%" width="40%">
+- <img src="hello_girls.jpg" height="70%" width="70%">
 
-- *I mean, hello! How crazy was that?*  
-[Implying that someone has missed the point in some way.]{.gray}
 
 ## *Hi*{.smaller}
 
-- USA: 19th century
+> - USA: 19th century
 
-- Widely spread
+> - Widely spread
 
 - Replace Hello?
-    - Common in Email
-    - Easier to type than 'Hello'
+
+    > - Common in Email
+    > - Easier to type than 'Hello'
 
 - 
 <iframe name="ngram_chart" src="./ngram2.html" width=100% height=60% marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
@@ -105,22 +109,21 @@ Disinterested
 
 
 - 15th Century
-    1. 擁有權  
+
+    > - 擁有權  
     [have an interest in an estate]{.gray}
-    
-    2. 股份  
+
+    > - 股份  
     [hold an interest in a company]{.gray}
     
-    3. 好處、利益  
+    > - 好處、利益  
     [It’s in your interest to vote for me]{.gray}
 
 - 17th Century: 興趣、嗜好
 
 ## Interested (形容詞)
 
-- 名詞 &#x1F449; 形容詞
 
--
 ```{r out.width="100%"}
 library(DiagrammeR)
 mermaid('
@@ -149,23 +152,26 @@ style d fill:#00bfc4
 ```
 
 
-## **Dis-** vs. **Un-**{.build}
+## **Dis-** vs. **Un-**
 
 
 - **Dis-** only
-    - Discontent vs. Uncontent
-<br>
+
+    > - Discontent vs. ~~Uncontent~~
 
 - **Un-** only
-    - Discomfortable vs. Uncomfortable
+
+    > - ~~Discomfortable~~ vs. Uncomfortable
+
 <br>
 
-- Both **Dis-** & **Un-** with different meanings
-    - Disterested vs. Uninterested
-<br>
+- **Dis-** & **Un-** with **different** meanings
 
-- Both **Dis-** & **Un-** with overlapping meanings
-    - Disterested vs. Uninterested
+    > - Disterested vs. Uninterested
+
+- **Dis-** & **Un-** with **overlapping** meanings
+
+    > - Disterested vs. Uninterested
 
 ## History: **Dis**interested vs. **Un**interested
 
@@ -183,9 +189,10 @@ frameWidget(line_dis_un, height = 300)
 
 ## Modern: **Dis**interested vs. **Un**interested
 
+- Uninterested: bored, unconcerned
+
 - Disinterested: impartial, bored('incorrect', [Oxford](https://en.oxforddictionaries.com/usage/disinterested-or-uninterested){target="_blank"})
 
-- Uninterested: bored, unconcerned 
 
 <div class="columns-2">
 ```{r, out.width="80%"}
@@ -206,31 +213,30 @@ Dragsman
 
 ## *A Dictionary of the Slang and Cant Languages*
 
-- George Andrewes, 1809
+> - George Andrewes, 1809
 
-- (Hope to) Make it easier to detect crimes  
+> - (Hope to) Make it easier to detect crimes  
 <img src="slang_dict2.PNG" height="40%" width="40%">
 
 
-## Dragsmen
+## Dragsman
 
-- 18th century
-
-- Drag: Horse-drawn wagon
+> - Drag (18th 世紀): Horse-drawn wagon
 
 - <img src="dragsman.jpg" height="40%" width="40%">
 
-- Dragsman (old meaning)  
-[someone who stole goods or luggage from vehicles.]{.gray}
+- Dragsman
+    - 車夫
+    - one who stole goods or luggage from vehicles
 
 
-## Cants still used today
+## Cant Languages still used today
 
-- footpad: one who robs pedestrians
+> - footpad: one who robs pedestrians
 
-- water-pad: One who robs ships
+> - water-pad: One who robs ships
 
-- coiner: 偽造貨幣者
+> - coiner: 偽造貨幣者
 
 
 ## 臺灣黑話
@@ -240,12 +246,11 @@ Dragsman
 - 食品藥物管理署: 毒品相關術語
 
 
-## 吸食相關
+## 毒品術語 (使用)
 
-![](tw_drug_1.PNG)
+<img src="tw_drug_1.PNG" height="60%" width="60%">
 
 
-## 交易相關
-
-![](tw_drug_3.PNG)
+## 毒品術語 (交易)
+<img src="tw_drug_3.PNG" height="60%" width="60%">
 
