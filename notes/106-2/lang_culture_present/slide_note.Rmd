@@ -197,7 +197,7 @@ Mermaid Plot: 名詞, 形容詞 演變
 
 <div class="red">
 
-Interested 出現之後  
+形容詞出現之後  
 自然而然就會有**否定**型式的出現  
 
 英文中形容詞的否定型態  
@@ -264,7 +264,7 @@ Plot: 意義轉變
 
 但在英國, Disinterested 有 **25%** 的部分被用來指**無聊的**  
 美國則有 50%
-<div>
+</div>
 
 
 1. Uninterested: bored, unconcerned 
@@ -280,14 +280,16 @@ Pie chart: Meaning of **disinterested** in US, UK
 <div class="red">
 接下來要講的  
 是社會中**特定族群**的用語  
-書中是舉**小偷**和**強盜**的用語為例子
+書中的特定族群是**小偷**和**強盜**
 </div>
 
 ## *A Dictionary of the Slang and Cant Languages* (16)
 
 <div class="red">
-19 世紀
-
+書中所舉的用語皆來自這本書 *1809 年*出版的字典  
+這本書的作者叫 George Andrewes  
+他撰寫這本字典的目的是希望*大眾*能了解小偷, 強盜的用語  
+藉此達到預防犯罪的目的
 </div>
 
 - George Andrewes, 1809
@@ -299,7 +301,17 @@ Pie chart: Meaning of **disinterested** in US, UK
 ## Dragsman (17)
 
 <div class="red">
-Dragsman 今日已很少在使用
+Dragsman 這個字來自 Drag  
+Drag 在 18 世紀的時候, 指的是*馬車*
+
+**(1)**  
+
+**(2, 2-1)**  
+Dragsman 就是駕駛馬車的車夫  
+
+**(2-2)**
+之後, Dragsman 成為術語  
+專指從馬車中偷東西的小偷
 </div>
 
 - Drag (18th 世紀): Horse-drawn wagon
@@ -312,9 +324,14 @@ Dragsman 今日已很少在使用
 
 
 
-
-
 ## Cant Languages still used today (18)
+
+<div class="red">
+George Andrewes 的字典中記載字詞今日多半已經不再使用  
+例如 Dragsman 今日已未再使用
+
+下面是一些**進入日常使用**的**術語**  
+</div>
 
 - footpad: one who robs pedestrians
 
@@ -325,18 +342,30 @@ Dragsman 今日已很少在使用
 
 ## 臺灣黑話 (19)
 
-- 吃土豆 (閩南語)?
+<div class="red">
+**(1)**
 
-- 食品藥物管理署: 毒品相關術語
+**(2)**  
+食品藥物管理署的想法與 George Andrewes 很類似  
+透過編撰字典希望能防範毒品犯罪
+</div>
+
+1. 吃土豆 (閩南語)?
+
+2. 食品藥物管理署: 毒品相關術語
 
 
 ## 毒品術語 (使用) (20)
 
+<div class="red">
 - 常見: 嗑藥, 拉 K
 - 生動: 走水路(靜脈注射), 螞蟻蛋(高純度)
+</div>
 
 
 ## 毒品術語 (交易) (21)
 
+<div class="red">
 - 運轉手
 - 海角七號
+</div>
