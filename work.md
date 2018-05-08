@@ -10,7 +10,7 @@ comment: false
     tab1 { padding-left: 4em; }
     tab2 { padding-left: 8em; }
     ul {list-style-image: none;}
-    div.indent{
+    p.indent{
     	padding-left: 2em;
     }
 </style>
