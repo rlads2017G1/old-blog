@@ -3,15 +3,6 @@ title: "Ecological Modeling HW7"
 layout: page
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-	echo = TRUE,
-	message = FALSE,
-	warning = FALSE
-	)
-```
-
-
 ## Question 1
 
 1. Asks the user to input 5

@@ -22,11 +22,17 @@ layout: page
 
 [HW4](/notes/106-2/Eco_model/HW4.html)
 
-[HW5](/notes/106-2/Eco_model/HW5.html)  
-[Bifurication Map]{:.indent}
- 
-[HW6](/notes/106-2/Eco_model/HW6.html)  
-[Predator-Prey]{:.indent}
+[HW5](/notes/106-2/Eco_model/HW5.html)
 
-[HW7](/notes/106-2/Eco_model/HW7.html)  
-[Array & Functions]{:.indent}
+Bifurication Map
+{:.indent}
+ 
+[HW6](/notes/106-2/Eco_model/HW6.html)
+
+Predator-Prey
+{:.indent}
+
+[HW7](/notes/106-2/Eco_model/HW7.html)
+
+Array & Functions
+{:.indent}
