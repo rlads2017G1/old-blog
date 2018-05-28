@@ -29,7 +29,7 @@ Bifurication Map
  
 [HW6](/notes/106-2/Eco_model/HW6.html)
 
-Predator-Prey
+Predator-Prey (RK4 by hand)
 {:.indent}
 
 [HW7](/notes/106-2/Eco_model/HW7.html)
