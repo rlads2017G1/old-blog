@@ -278,7 +278,7 @@ $(document).ready(function () {
 <span class="math display" id="eq:ref-2">\[\begin{equation}
 \begin{split}
 \hat{y} &amp;\geq \frac{1}{2} (\bar{\bm{x}}_1 - \bar{\bm{x}}_2)^T S_{pool}^{-1} ~ (\bar{\bm{x}}_1 + \bar{\bm{x}}_2) \\
-&amp;= \bm{a}^T (\bar{\bm{x}}_1 + \bar{\bm{x}}_2)
+&amp;= \frac{1}{2} \bm{a}^T (\bar{\bm{x}}_1 + \bar{\bm{x}}_2)
 = -3.559
 \end{split}
 \tag{2}
@@ -325,10 +325,26 @@ p(\pi_2|\bm{x}_0) &amp;= 1 - p(\pi_1|\bm{x}_0)
 \end{split}
 \tag{3}
 \end{equation}\]</span>
+<p>, where the densities <span class="math inline">\(f_1(\bm{x}_0)\)</span> and <span class="math inline">\(f_2(\bm{x}_0)\)</span> are assumed to be normal and are estimated using <span class="math inline">\(\bar{\bm{x}}_1, \bar{\bm{x}}_2, \bm{S}_1, \bm{S}_2\)</span>.</p>
 <p>By <span class="math inline">\(p(\pi_1|\bm{x}_0) &gt; p(\pi_2|\bm{x}_0)\)</span>, <span class="math inline">\(\bm{x}_0\)</span> is classified as <strong>Group 1</strong>.</p>
 </div>
 <div id="e" class="section level3">
 <h3>(e)</h3>
+<p>By eq. <a href="#eq:ref-1">(1)</a>, eq. <a href="#eq:ref-2">(2)</a>, and <a href="#c">c</a>, the linear discriminant score is calculated as <span class="math inline">\(\hat{y}_0 - \frac{1}{2} (\bar{\bm{x}}_1 - \bar{\bm{x}}_2)^T S_{pool}^{-1} ~ (\bar{\bm{x}}_1 + \bar{\bm{x}}_2) = 6.173\)</span>.</p>
+</div>
+<div id="f" class="section level3">
+<h3>(f)</h3>
+<p>Assume <span class="math inline">\(p_1 = 0.75\)</span> and <span class="math inline">\(p_2 = 0.25\)</span>, then allocate <span class="math inline">\(\bar{\bm{x}}_0\)</span> to <span class="math inline">\(\pi_1\)</span> if:</p>
+<span class="math display" id="eq:uneq-prior">\[\begin{equation}
+\begin{split}
+\hat{y} &amp;\geq \frac{1}{2} (\bar{\bm{x}}_1 - \bar{\bm{x}}_2)^T S_{pool}^{-1} ~ (\bar{\bm{x}}_1 + \bar{\bm{x}}_2) + 
+ln (\frac{c(1|2) p_2}{c(2|1) p_1}) \\
+&amp;= \frac{1}{2} \bm{a}^T (\bar{\bm{x}}_1 + \bar{\bm{x}}_2) + ln (\frac{0.25}{0.75})
+= -4.658
+\end{split}
+\tag{4}
+\end{equation}\]</span>
+<p>where, <span class="math inline">\(\bar{\bm{x}}_1 =\begin{pmatrix} -0.135 \\ -0.078 \end{pmatrix}, \bar{\bm{x}}_2 = \begin{pmatrix} -0.308 \\ -0.006 \end{pmatrix}\)</span></p>
 </div>
 </div>
 
