@@ -36,3 +36,8 @@ Predator-Prey (RK4 by hand)
 
 Array & Functions
 {:.indent}
+
+[rk4](/notes/106-2/Eco_model/rk4.html)
+
+rk4 method for soving ODE
+{:.indent}
