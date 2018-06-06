@@ -20,7 +20,11 @@ layout: page
 
 [HW3](/notes/106-2/Eco_model/HW3.html)
 
+
 [HW4](/notes/106-2/Eco_model/HW4.html)
+
+basic for loop
+{:.indent}
 
 [HW5](/notes/106-2/Eco_model/HW5.html)
 
@@ -41,3 +45,23 @@ Array & Functions
 
 rk4 method for soving ODE
 {:.indent}
+
+[Monte Carlo Simulation and Random Number Generator](/notes/106-2/Eco_model/monte-carlo.html)
+
+Monte Carlo Simulation.
+{:.indent}
+
+
+
+-------------------------
+
+Class 3: Variables
+
+- data type
+- `scanf`
+
+Class 4: Expression and operator 
+
+- type casting
+
+Class 5: if else, loop
