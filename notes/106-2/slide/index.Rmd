@@ -75,7 +75,7 @@ knitr::kable(df, format = "markdown", align = "c",
 <br>
 [說話者轉換次數：12]{.grey}
 
-圖表
+圖
 -------------------------------------
 ```{r fig.show='hold', out.width="30%", fig.dim=c(3,4)}
 library(ggplot2)
