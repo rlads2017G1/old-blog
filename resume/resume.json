@@ -27,7 +27,7 @@
       "position": "Teaching",
       "website": "https://ntugt.club/",
       "startDate": "2015-10",
-      "endDate": "",
+      "endDate": "2017-5",
       "summary": "Provide academic assistance to junior high students.",
       "highlights": []
     }
@@ -37,14 +37,14 @@
       "institution": "National Taiwan University",
       "area": "Psychology",
       "studyType": "",
-      "startDate": "2015-09",
+      "startDate": "2015-9",
       "endDate": "",
       "gpa": ""
     },
     {
       "institution": "Jianguo High School",
-      "startDate": "2012-09",
-      "endDate": "2015-06"
+      "startDate": "2012-9",
+      "endDate": "2015-6"
     }
   ],
   "skills": [
@@ -52,8 +52,14 @@
       "name": "R",
       "level": "Advanced",
       "keywords": [
-        "DS",
-        ".Rmd"
+        "Dynamic Document"
+      ]
+    },
+    {
+      "name": "C",
+      "level": "Beginner",
+      "keywords": [
+        "Ecological Modeling"
       ]
     },
     {
@@ -61,8 +67,17 @@
       "level": "Intermediate",
       "keywords": [
         "Jekyll",
-        "Hugo",
+        "Rmarkdown Website",
         "blogdown"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "Beginner",
+      "keywords": [
+        "Free & OpenSource",
+        "Automation",
+        "Reproducible Research"
       ]
     }
   ],
@@ -92,6 +107,14 @@
         "Simple & Clean",
         "Communicate",
         "Markdown"
+      ]
+    },
+    {
+      "name": "Map Making with R",
+      "keywords": [
+        "sf",
+        "ggplot2",
+        "tmap"
       ]
     }
   ]
