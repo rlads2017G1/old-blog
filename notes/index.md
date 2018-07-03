@@ -21,9 +21,7 @@ Mar 18, 2018 [Rmarkdown Features](/notes/rmd_features.html){:class="tab0"}
 
 ### 106-2
 
-May 08, 2018 [Class: 3 English Words Presentation](/notes/106-2/lang_culture_present/){:class="tab0"}
-
-Mar 24, 2018 [Class: Multivariate Analysis](/notes/106-2/multivariate/){:class="tab0"}
+Mar 24, 2018 [Multivariate Analysis HW](/notes/106-2/multivariate/){:class="tab0"}
 
 
 
