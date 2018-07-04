@@ -14,42 +14,25 @@ layout: page
 </style>
 
 
-[HW1](/notes/106-2/Eco_model/HW1.html)
+[HW1](./HW1.html)
 
-[HW2](/notes/106-2/Eco_model/HW2.html)
+[HW2](./HW2.html)
 
-[HW3](/notes/106-2/Eco_model/HW3.html)
+[HW3](./HW3.html)
 
+[HW4](./HW4.html): basic for loop
 
-[HW4](/notes/106-2/Eco_model/HW4.html)
-
-basic for loop
-{:.indent}
-
-[HW5](/notes/106-2/Eco_model/HW5.html)
-
-Bifurication Map
-{:.indent}
+[HW5](./HW5.html): Bifurication Map
  
-[HW6](/notes/106-2/Eco_model/HW6.html)
+[HW6](./HW6.html): Predator-Prey (RK4 by hand)
 
-Predator-Prey (RK4 by hand)
-{:.indent}
+[HW7](./HW7.html): Array & Functions
 
-[HW7](/notes/106-2/Eco_model/HW7.html)
+[rk4](./rk4.html): rk4 method for soving ODE
 
-Array & Functions
-{:.indent}
+[Monte Carlo Simulation and Random Number Generator](./monte-carlo.html)
 
-[rk4](/notes/106-2/Eco_model/rk4.html)
-
-rk4 method for soving ODE
-{:.indent}
-
-[Monte Carlo Simulation and Random Number Generator](/notes/106-2/Eco_model/monte-carlo.html)
-
-Monte Carlo Simulation.
-{:.indent}
+[Spatial Population Dynamics](./spatial_model.html): 
 
 
 
