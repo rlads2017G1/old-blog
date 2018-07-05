@@ -27,7 +27,7 @@ This is a web page for visualizing a [survey](https://docs.google.com/forms/d/e/
 
 ### Tutorials
 
-Apr 29, 2018 &nbsp;&nbsp; [R Notes for Multivariate Analysis](./MVA.github.io/index.html)  
+Apr 29, 2018 &nbsp;&nbsp; [R Notes for Multivariate Analysis](./MVA)  
 
 Working on the book currently.
 {:.indent}
@@ -43,7 +43,7 @@ This is a blog post that teaches how to set up a feedback system based on the re
 
 Mar 18, 2018 &nbsp;&nbsp; [Rmarkdown Features](/notes/rmd_features.html)  
 
-Not a book yet, a long document now.
+A compact reference to Rmarkdown. Contains useful formatting tips for both PDF and HTML outputs.
 {:.indent}
 
 <br>
