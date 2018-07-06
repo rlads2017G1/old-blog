@@ -21,11 +21,17 @@ Some of the posts were written in Chinese, and some in English since many of my 
 
 ## License
 
-All the posts on my blog are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>. Translations are welcomed, both from **Chinese to English** and **English to Chinese**. You can contact me via Email or Facebook, the information needed is in my [résumé](./resume/cv.html).
+All the posts on my blog are licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>. Translations are welcomed, both from **Chinese to English** and **English to Chinese**. 
 
 Other part of this website, such as HTML/CSS code for constructing the webpage, is licensed under the MIT license.
 
-## Credits & Acknowledgement
+## Contact Info
+
+You can contact me via Email or Facebook, the info is in the footer region of the web page.
+
+<!--  via my [résumé](./resume/cv.html) or  -->
+
+## Credits & Acknowledgment
 
 #### **Theme Template**
 
