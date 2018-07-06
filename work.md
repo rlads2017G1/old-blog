@@ -43,7 +43,7 @@ This is a blog post that teaches how to set up a feedback system based on the re
 
 Mar 18, 2018 &nbsp;&nbsp; [Rmarkdown Features](/notes/rmd_features.html)  
 
-A compact reference to Rmarkdown. Contains useful formatting tips for both PDF and HTML outputs.
+A compact reference to [R markdown](https://rmarkdown.rstudio.com/). Contains useful formatting tips for both PDF and HTML outputs.
 {:.indent}
 
 <br>

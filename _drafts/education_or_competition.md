@@ -22,7 +22,7 @@ tags:
 生物學，或演化生物學，帶給人類最寶貴的概念就是**族群層次的思考**(**population-level thinking**)。將焦點由個體轉移到由許多個體組成的族群上，能幫助我們看見許多單單研究個體無法發現的事情。
 
 ## 有性生殖的好處
-世界上幾乎所有的真核生物[^eukar]都會行有性生殖，剩下的原核生物[^prokar]以及少數失去有性生殖能力的真核生物，或多或少會與其它個體交換遺傳物質(透過[基因水平轉移](https://zh.wikipedia.org/wiki/%E5%9F%BA%E5%9B%A0%E6%B0%B4%E5%B9%B3%E8%BD%89%E7%A7%BB){:.target="_blank"})。無論透過有性生殖或基因水平轉移，生物總是努力不斷地混合，製造出新(組合)的遺傳物質：**當個特殊的個體在自然界中似乎有相當的好處**。
+世界上幾乎所有的真核生物[^eukar]都會行有性生殖，剩下的原核生物[^prokar]以及少數失去有性生殖能力的真核生物，或多或少會與其它個體交換遺傳物質(透過[基因水平轉移](https://zh.wikipedia.org/wiki/%E5%9F%BA%E5%9B%A0%E6%B0%B4%E5%B9%B3%E8%BD%89%E7%A7%BB))。無論透過有性生殖或基因水平轉移，生物總是努力不斷地混合，製造出新(組合)的遺傳物質：**當個特殊的個體在自然界中似乎有相當的好處**。
 
 <div class="mermaid">
 graph LR
@@ -60,9 +60,9 @@ B-. 學測 .-> C(臺灣大學)
 
 
 
-[^eukar]: [真核生物](https://zh.wikipedia.org/wiki/%E7%9C%9F%E6%A0%B8%E7%94%9F%E7%89%A9){:.target="_blank"}(eukaryotes)為細胞具有細胞核、胞器的生物，包含所有的多細胞生物。
+[^eukar]: [真核生物](https://zh.wikipedia.org/wiki/%E7%9C%9F%E6%A0%B8%E7%94%9F%E7%89%A9)(eukaryotes)為細胞具有細胞核、胞器的生物，包含所有的多細胞生物。
 
-[^prokar]: [原核生物](https://zh.wikipedia.org/wiki/%E5%8E%9F%E6%A0%B8%E7%94%9F%E7%89%A9){:.target="_blank"}(prokaryotes)則包含細菌及古菌。
+[^prokar]: [原核生物](https://zh.wikipedia.org/wiki/%E5%8E%9F%E6%A0%B8%E7%94%9F%E7%89%A9)(prokaryotes)則包含細菌及古菌。
 
 [^adp]: 我在天龍國長大，從小就有豐富的教育支援，父母也相當重視教育。此外，我相當能忍受無聊的教學內容，能忍住玩樂的衝動，乖乖寫作業複習考試，然後順利進入分數排名第一的高中、預算最多的大學。
 
