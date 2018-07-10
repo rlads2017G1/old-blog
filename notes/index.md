@@ -15,7 +15,7 @@ comment: false
 
 Feb 07, 2018 [ToLearnList](/notes/ToLearnList.html){: class="tab0"}
 
-Mar 18, 2018 [Rmarkdown Features](/notes/rmd_features.html){:class="tab0"}
+Mar 18, 2018 [R Markdown Features](/notes/rmd_features.html){:class="tab0"}
 
 
 
