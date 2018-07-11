@@ -396,18 +396,18 @@ options(digits = 2) # auto round to 2 decimals when printed</code></pre>
 <p>Include <strong>R Code Chunk Variables</strong> in the body of text. This can be a really useful feature for writing thesis or research paper:</p>
 <ul>
 <li><p>No need to copy &amp; paste the outcomes, such as the statistics. This greatly reduce the risk of error, and it also largely boosts efficiency.</p></li>
-<li><p>Automatically updates the results in the paper when the data are updated. This too boosts efficiency and, more importantly, increases the <strong>reproducibility</strong> of the research: you can be confident that the results come directly from the data (unless there are errors in the <em>code</em>, which can be ‘seen’, whereas <strong>errors from copy-&amp;-paste’s are invisible</strong>).</p></li>
+<li><p>Automatically updates the results in the paper when the data are updated. This also boosts efficiency and, more importantly, increases the <strong>reproducibility</strong> of the research: you can be confident that the results come directly from the data (unless there are errors in the <em>code</em>, which can be ‘seen’, whereas <strong>errors from copy-&amp;-paste’s are invisible</strong>).</p></li>
 </ul>
 <p>Below is a simple demonstration of this feature.</p>
-<pre class="r"><code>tr1 &lt;- rnorm(n=25, mean = 1.1)
-tr2 &lt;- rnorm(n=25, mean = 0.9)
+<pre class="r"><code>tr1 &lt;- rnorm(n=25, mean=1.1) #data of treatment1
+tr2 &lt;- rnorm(n=25, mean=0.9) #data of treatment2
 ttest &lt;- t.test(tr1, tr2, paired = T)
 diff &lt;- ttest[[&quot;estimate&quot;]][[&quot;mean of the differences&quot;]]
 p_val &lt;- ttest[[&quot;p.value&quot;]]</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is 0.635.</p>
+<li><p>The mean difference between the two groups is 0.229.</p>
 <pre class="latex"><code>The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.0401, which is significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.5279, which is not significant.</p>
 <pre class="latex"><code>    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></li>
 </ol>
 </div>
