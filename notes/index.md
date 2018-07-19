@@ -17,6 +17,7 @@ Feb 07, 2018 [ToLearnList](/notes/ToLearnList.html){: class="tab0"}
 
 Mar 18, 2018 [R Markdown Features](/notes/rmd_features.html){:class="tab0"}
 
+July 19, 2018 [My Linux Notes](/notes/mylinux.html){:class="tab0"}
 
 
 ### 106-2
