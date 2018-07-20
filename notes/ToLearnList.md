@@ -15,13 +15,6 @@ title: To Learn List
 
 ## Programming
 
-### Python
-
-1. [NLP with Python](https://drive.google.com/drive/u/0/folders/1f2nx0Q8M5QiH5pBfwqc-X2s8KfC575XP)
-
-2. [MIT Python](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm)
-
-
 ### R
 
 1. [Automated Data Collection with R](https://drive.google.com/drive/u/0/folders/0B6SZ3Aul30ytMHM4SEVvbW1WWVU)
@@ -30,6 +23,12 @@ title: To Learn List
 
 3. [R Package](https://drive.google.com/drive/u/0/folders/0B6SZ3Aul30ytSUVIRkxtQlJwQ28)
 
+
+### Python
+
+1. [NLP with Python](https://drive.google.com/drive/u/0/folders/1f2nx0Q8M5QiH5pBfwqc-X2s8KfC575XP)
+
+2. [MIT Python](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm)
 
 
 ### Linux/Ubuntu
