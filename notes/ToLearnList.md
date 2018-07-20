@@ -35,10 +35,6 @@ title: To Learn List
 
 1. The Linux Command Line
 
-2. Perl
-
-
-
 
 ## Leisure Time
 
@@ -73,3 +69,7 @@ title: To Learn List
 1. [Non Linear Dynamics and Chaos](https://www.youtube.com/watch?v=ycJEoqmQvwg&list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V&index=1)
 
 2. [MIT Python](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm)
+
+### Programming Languages
+
+1. [Perl](https://drive.google.com/file/d/1-49kYYivzHQaOp9l4lPFF04O9LeSbFeE/view?usp=sharing): Text Processing
