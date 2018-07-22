@@ -11,13 +11,15 @@ title: To Learn List
     - [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
     
     - [ProGit](https://git-scm.com/book/en/v2)
+    
+2. [GNU Make](https://drive.google.com/file/d/1fCfdvAUC1ux2WFi0dpndaV_owXu2KGs8/view?usp=sharing)
 
 
 ## Programming
 
 ### R
 
-1. [Automated Data Collection with R](https://drive.google.com/drive/u/0/folders/0B6SZ3Aul30ytMHM4SEVvbW1WWVU)
+1. [Automated Data Collection with R](https://drive.google.com/file/d/1KfQ098B8TcILXivEX2Z2w-q_9m2dXT2q/view?usp=sharing)
 
 2. [Advanced R](https://drive.google.com/drive/u/0/folders/0B6SZ3Aul30ytSUVIRkxtQlJwQ28)
 

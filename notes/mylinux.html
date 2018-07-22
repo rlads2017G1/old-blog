@@ -11,7 +11,7 @@
 
 <meta name="author" content="Yongfu Liao" />
 
-<meta name="date" content="2018-07-19" />
+<meta name="date" content="2018-07-21" />
 
 <title>My Linux Notes</title>
 
@@ -230,15 +230,21 @@ div.tocify {
 <h1 class="title toc-ignore">My Linux Notes</h1>
 <h3 class="subtitle"><em>A Quick Reference</em></h3>
 <h4 class="author"><em><a href="https://liao961120.github.io/">Yongfu Liao</a></em></h4>
-<h4 class="date"><em>July 19, 2018</em></h4>
+<h4 class="date"><em>July 21, 2018</em></h4>
 
 </div>
 
 
 <div id="common-techniques" class="section level1">
 <h1><span class="header-section-number">1</span> Common Techniques</h1>
+<div id="copy-previous-command-to-file" class="section level2">
+<h2><span class="header-section-number">1.1</span> Copy Previous Command to file</h2>
+<pre class="bash"><code>cat ~/foo.txt &gt;&gt; doc.Rmd
+echo &quot;!!&quot; &gt;&gt; file.txt</code></pre>
+<p>Then the command appends literal <code>cat ~/foo.txt &gt;&gt; doc.Rmd echo &quot;!!&quot; &gt;&gt; file.txt</code> to the end of <code>file.txt</code>.</p>
+</div>
 <div id="expansion-with-text" class="section level2">
-<h2><span class="header-section-number">1.1</span> Expansion with text</h2>
+<h2><span class="header-section-number">1.2</span> Expansion with text</h2>
 <p>Download all web pages starting from <code>www.millionbook.net/wx/j/jingyong/sdxl/001.htm</code> to <code>www.millionbook.net/wx/j/jingyong/sdxl/041.htm</code>:</p>
 <pre class="bash"><code>url=http://www.millionbook.net/wx/j/jingyong/sdxl/
 wget &quot;$url&quot;{001..041}&quot;.htm&quot;</code></pre>
