@@ -11,9 +11,11 @@ tags:
 ### 提供下載
 
 有時候會有很多勾勾，這時打開**開發者工具**，按**console**輸入：
-```
+
+```javascript
 $("input[type='checkbox']").prop("checked", true);
 ```
+
 就可幫你全部打勾
 
 ### html table
