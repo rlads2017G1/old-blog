@@ -19,7 +19,7 @@ comment: false
 
 June 21, 2018 &nbsp;&nbsp; [Taiwan Language Survey](https://twlangsurvey.github.io/main/)  
 
-This is a web page for visualizing a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform) about language usage in Taiwan. It is aimed at raising public awareness about language loss in Taiwan.
+This is a web page for visualizing a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform) about language usage in Taiwan. It is aimed at raising public awareness of language loss in Taiwan.
 {:.indent}
 
 <br>
