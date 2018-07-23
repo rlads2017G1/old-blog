@@ -296,6 +296,7 @@ output:
 <h2>PDF Output</h2>
 <p>You may need to attatch an additional <code>header.tex</code> and set <code>latex_engine</code> to <code>xelatex</code> for PDF documents containing multibite characters (e.g. Chinese). Read more about <a href="#pdf-header">header.txt</a>.</p>
 <pre class="yaml"><code>---
+author: &quot;廖永賦\\thanks{組別：3 ~~ 系級：心理三 ~~ 學號：B00000000}&quot;
 output:
   pdf_document:
     latex_engine: xelatex    
@@ -312,6 +313,7 @@ geometry: a5paper, headheight=0pt, margin=0.4in
 <h2>PDF Output2</h2>
 <p>This is the yaml header for <code>bookdown::pdf_document2</code> output. Using <code>bookdown</code> extensions have several advantages. Search ‘bookdown’ for details.</p>
 <pre class="yaml"><code>---
+author: &quot;廖永賦\\thanks{組別：3 ~~ 系級：心理三 ~~ 學號：B00000000}&quot;
 output:
   bookdown::pdf_document2:
     number_sections: FALSE
@@ -405,9 +407,9 @@ ttest &lt;- t.test(tr1, tr2, paired = T)
 diff &lt;- ttest[[&quot;estimate&quot;]][[&quot;mean of the differences&quot;]]
 p_val &lt;- ttest[[&quot;p.value&quot;]]</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is 0.09.</p>
+<li><p>The mean difference between the two groups is -0.055.</p>
 <pre class="latex"><code>The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.7633, which is not significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.8331, which is not significant.</p>
 <pre class="latex"><code>    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></li>
 </ol>
 </div>
