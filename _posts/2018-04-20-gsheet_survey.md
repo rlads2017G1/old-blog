@@ -335,7 +335,7 @@ R markdown 是 Markdown 的擴充，其輸出的 HTML 格式已經過簡單的�
 在設計問卷時，需於 Token 那題特別提醒填寫者：**不能填寫能關聯到個人身份的內容，如學號、e-mail 等**。
 {: .error}
 
-<div style="font-size:9pt; text-align:right">Last updated: Apr 27, 2018 21:04</div>
+<div style="font-size:10pt; text-align:right">Last updated: Apr 27, 2018</div>
 
 附註
 ---------------------------------
