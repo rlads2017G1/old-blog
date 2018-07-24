@@ -22,7 +22,6 @@ June 21, 2018 &nbsp;&nbsp; [Taiwan Language Survey](https://twlangsurvey.github.
 This is a web page for visualizing a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform) about language usage in Taiwan. It is aimed at raising public awareness of language loss in Taiwan.
 {:.indent}
 
-<br>
 
 
 ### Tutorials
@@ -32,21 +31,18 @@ Apr 29, 2018 &nbsp;&nbsp; [R Notes for Multivariate Analysis](./MVA)
 Working on the book currently.
 {:.indent}
 
-<br>
 
 Apr 20, 2018 &nbsp;&nbsp; [Google Form: Auto scoring and Feedback](https://liao961120.github.io/2018/04/20/gsheet_survey.html)  
 
 This is a blog post that teaches how to set up a feedback system based on the responses collected from google form. Written in Chinese.
 {:.indent}
 
-<br>
 
 Mar 18, 2018 &nbsp;&nbsp; [R Markdown Features](/notes/rmd_features.html)  
 
 A compact reference to [R Markdown](https://rmarkdown.rstudio.com/). Contains useful formatting tips for both PDF and HTML outputs.
 {:.indent}
 
-<br>
 
 ## Team Work
 
@@ -56,5 +52,3 @@ This is a final group project of the course [Introduction to Data Science with R
 *Note the project displays properly only on screens that are large enough, and it may take some time to load the webpage, be patient!*
 {:.indent}
 
-
-<br><br>
