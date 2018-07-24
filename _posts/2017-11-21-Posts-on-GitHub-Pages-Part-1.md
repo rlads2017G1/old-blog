@@ -77,5 +77,3 @@ knitr::opts_chunk$set(fig.path = "folder_for_image/")
 ```
 The code above will save the output images in a folder called `folder_for_image` in the current working directory.
 
-<br>
-<br>

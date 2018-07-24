@@ -23,6 +23,5 @@ $("input[type='checkbox']").prop("checked", true);
 
 或至[**這裡**](http://www.convertcsv.com/html-table-to-csv.htm)上傳html，該網頁會幫你抓出table，接著就能直接下載成`.csv`
 
-<br><br>
 
 

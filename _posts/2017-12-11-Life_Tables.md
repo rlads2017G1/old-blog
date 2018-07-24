@@ -158,5 +158,3 @@ kable(life_table, format="markdown", align="c")
 |  9  | 0.0000000 |   0   | 0.00000 | 0.0000  | 0.0000000 |   NaN    | 1.2829 | 3.06727 | 0.0812198 | 0.0847117 | 0.0000000 |  0.0000000  | 0.0000000 |     0.0000000      |
 
 Note that I edited the column names of the table in a text editor to make it display in **LaTeX** style. There is no simple `knitr` function (at least I don't know) that print out pretty displayed style text in a table generated from a data frame 
-<br>
-<br>
