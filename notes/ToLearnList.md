@@ -14,7 +14,6 @@ title: To Learn List
     
     - [ProGit](https://git-scm.com/book/en/v2) 
 
-
 ## Programming
 
 ### R
