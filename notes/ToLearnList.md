@@ -85,7 +85,6 @@ title: To Learn List
 1. JavaScript [Books](https://drive.google.com/drive/u/0/folders/1rB0EA-on4JvX1CVW9GrPst9e5rppHeja)
 	- [CoffeeScript](https://coffeescript.org/)
 
-
 ## Future?
 
 ### Summer 2019
