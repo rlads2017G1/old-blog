@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 _posts/*.Rmd
+_posts/foo.html
 edit_post/
 _site/
 *.pdf
