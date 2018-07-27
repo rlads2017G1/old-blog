@@ -31,7 +31,7 @@ yaml-->
 <div class="section level2">
 <h2>爬資料</h2>
 <p>這邊使用金庸神雕俠侶第二至第八回的文本當作分析資料。 在下面的網站，小說的每一回是一個獨立的<code>htm</code>檔。 如果使用 Mac 或是 Linux 系統，可直接透過<code>bash</code>指令下載網頁：</p>
-<pre class="bash"><code>cd ~/quanteda-chinese/htm
+<pre class="bash"><code class="bash">cd ~/quanteda-chinese/htm
 url=http://www.millionbook.net/wx/j/jingyong/sdxl/
 wget ${url}{002..008}.htm</code></pre>
 </div>
@@ -46,16 +46,16 @@ wget ${url}{002..008}.htm</code></pre>
 <div id="-html-" class="section level3">
 <h3>擷取 HTML 元素內容</h3>
 <p>有了 CSS Selector 之後，擷取文字內容變得非常容易，僅需 3 個函數：<code>read_html()</code>, <code>html_nodes()</code>, <code>html_text()</code></p>
-<pre class="r"><code>library(rvest)
+<pre class="r"><code class="r">library(rvest)
 text &lt;- read_html(&quot;htm/002.htm&quot;) %&gt;% 
     html_nodes(&quot;.tt2&quot;) %&gt;% html_text()
 
 strtrim(text, 300) # String too long, display a portion</code></pre>
 <pre><code>[1] &quot;第二回　故人之子\r\n\r\n　　武三娘正沒做理會處，忽聽得丈夫叫喚，又喜又惱，心想你這瘋子不知在胡鬧些什麼，卻到這時才來，只見他上身扯得破破爛爛，頸中兀自掛著何沅君兒時所用的那塊圍涎，急奔而至，不住的叫道：「娘子，你沒事麼？」她近十年來從未見丈夫對自己這般關懷，心中甚喜，叫道：「我在這裡。」武三通撲到跟前，&quot;</code></pre>
 <p>接著需將擷取下來的<code>text</code>儲存成<code>.txt</code>檔</p>
-<pre class="r"><code>readr::write_file(&quot;txt/002.txt&quot;)</code></pre>
+<pre class="r"><code class="r">readr::write_file(&quot;txt/002.txt&quot;)</code></pre>
 <p>因為要重複處理第二至第八回，我們可以將上面的程式碼改寫成<code>for</code>迴圈的形式：</p>
-<pre class="r"><code>library(readr)
+<pre class="r"><code class="r">library(readr)
 for (i in paste0(0, 2:8)) {
         path1 &lt;- paste0(&quot;htm/0&quot;,i,&quot;.htm&quot;)
         path2 &lt;- paste0(&quot;txt/original/0&quot;,i,&quot;.txt&quot;)
