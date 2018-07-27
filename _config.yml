@@ -79,6 +79,7 @@ leancloud:
 mathjax: true
 mathjax2: false
 mermaid: true
+highlight: false
 
 ## Paginate ##
 paginate: 7
