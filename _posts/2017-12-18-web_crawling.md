@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Some Web Crawling Tecniques (Keep Updating)
-tags:
-- DS
+tags: [DS, Web Page]
 ---
 
 <!--more-->
