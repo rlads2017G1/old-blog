@@ -9,6 +9,8 @@ description: "因為中文的特性，使得中文 Text Mining 的前處理較�
 tags: [R, DS, bash, 中文]
 ---
 
+
+
 <!--yaml
 ---
 layout: post
@@ -500,7 +502,7 @@ corp &lt;- corpus(all_post_seg,
                text_field = &quot;content&quot;) 
 
 corp %&gt;% summary() %&gt;% as_data_frame() %&gt;% 
-    head() %&gt;%
+    head(3) %&gt;%
     mutate(links = str_trunc(links, 8),
            link_text = str_trunc(link_text, 8)) %&gt;%
     kable(&quot;markdown&quot;, align = &quot;c&quot;)</code></pre>
@@ -548,36 +550,6 @@ corp %&gt;% summary() %&gt;% as_data_frame() %&gt;%
 <td align="center">c(“ht…</td>
 <td align="center">c(“查阅…</td>
 </tr>
-<tr class="even">
-<td align="center">毛姆的文學回憶錄</td>
-<td align="center">489</td>
-<td align="center">956</td>
-<td align="center">28</td>
-<td align="center">2018-05-04</td>
-<td align="center">14</td>
-<td align="center">c(“/c…</td>
-<td align="center">c(“职业…</td>
-</tr>
-<tr class="odd">
-<td align="center">距離的組織</td>
-<td align="center">212</td>
-<td align="center">380</td>
-<td align="center">23</td>
-<td align="center">2018-05-03</td>
-<td align="center">5</td>
-<td align="center">/cn/2…</td>
-<td align="center">闲情赋</td>
-</tr>
-<tr class="even">
-<td align="center">語言聖戰的終結？</td>
-<td align="center">169</td>
-<td align="center">249</td>
-<td align="center">9</td>
-<td align="center">2018-04-19</td>
-<td align="center">3</td>
-<td align="center">c(“ht…</td>
-<td align="center">c(“惊天…</td>
-</tr>
 </tbody>
 </table>
 <p>有了<code>corpus</code>的資料結構後，即進入了下圖<code>quanteda</code>的分析架構，也結束了資料前處理的階段，開始進入 EDA 的階段。</p>
@@ -611,6 +583,10 @@ corp %&gt;% summary() %&gt;% as_data_frame() %&gt;%
 <p><a href="https://quanteda.io/">quanteda</a> 有相當完整的<a href="https://tutorials.quanteda.io/">教學資源</a>，且有很多有用的函數。同時，<a href="https://github.com/juliasilge/tidytext"><code>tidytext</code></a> 套件也能輕易與 <code>quanteda</code> 配合，在 <code>document-feature matrix</code> 與<code>tidytext</code>所提倡的 <strong>tidy data frame</strong>(one-token-per-document-per-row) 兩種資料結構間自由轉換。<strong>tidy data frame</strong> 的格式與<a href="https://github.com/tidyverse/ggplot2"><code>ggplot2</code></a>相吻合，有助於資料視覺化的進行。</p>
 <p>這裡選擇以<code>quanteda</code>而非<code>tidytext</code>作為主要架構的原因在於<code>tidytext</code>的架構僅容許 <strong>bag-of-words</strong> 的架構，但<code>quanteda</code>除了 <strong>bag-of-words</strong> 之外，還保有** Positional analysis** 的潛力。</p>
 <p>由於篇幅有限，這裡不多加細談<code>quanteda</code>套件<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>。關於<code>quanteda</code>的使用，可以參考 <a href="https://tutorials.quanteda.io/">quanteda tutorial</a>，內容非常詳盡。</p>
+</div>
+<div id="reproduce" class="section level2">
+<h2>Reproduce</h2>
+<p>這篇文章的原始碼在我的 <a href="https://github.com/liao961120/local_depend/tree/master/post_source/quanteda-chinese">GitHub</a>，歡迎下載至自己的電腦執行。</p>
 <p style="text-align:right;font-size:7px;margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:1px">
 上次更新：2018-07-29
 </p>
