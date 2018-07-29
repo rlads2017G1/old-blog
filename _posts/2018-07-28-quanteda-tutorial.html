@@ -55,7 +55,7 @@ linkStyle 5 stroke-width:0px,fill:none;
 </div>
 <div class="section level2">
 <h2>資料爬取</h2>
-<p>這邊使用 <a href="https://www.rstudio.com/">RStudio</a> 軟體工程師 <a href="https://yihui.name/en/about/">Yihui</a>的<a href="https://yihui.name/cn/">中文部落格</a>文章作為練習素材。首先需要取得文章的網址，因此先到部落格的文章列表頁面(<a href="https://yihui.name/cn/" class="uri">https://yihui.name/cn/</a>)，使用瀏覽器的<a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-tw">開發者工具</a>(按<code>Ctrl + Shift + I</code>開啟)進行<strong>觀察</strong>。</p>
+<p>這邊使用 <a href="https://www.rstudio.com/">RStudio</a> 軟體工程師 <a href="https://yihui.name/en/about/">Yihui</a> 的<a href="https://yihui.name/cn/">中文部落格</a>文章作為練習素材。首先需要取得文章的網址，因此先到部落格的文章列表頁面(<a href="https://yihui.name/cn/" class="uri">https://yihui.name/cn/</a>)，使用瀏覽器的<a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-tw">開發者工具</a>(按<code>Ctrl + Shift + I</code>開啟)進行<strong>觀察</strong>。</p>
 <p>接著使用<a href="https://github.com/hadley/rvest"><code>rvest</code></a>套件擷取網頁中所有文章的連結，並將文章網址儲存成<code>list_of_post.txt</code>：</p>
 <pre><code class="r">library(dplyr)
 library(rvest)
