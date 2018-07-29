@@ -32,7 +32,11 @@ yaml-->
 <div class="section level2">
 <h2>流程</h2>
 <div class="mermaid">
-<p>graph LR html(“HTML”) html -.-&gt;|“rvest”| df0 subgraph 前處理 df1(“斷詞 data_frame”) df0(“data_frame”) df0 -.-&gt;|“<br> jiebaR <br> (保留標點)<br>”| df1 df1 -.-&gt;|“ropencc <br> 簡轉繁”| df1 end corp(“Corpus”) token(“Tokens”) subgraph quanteda df1 -.-&gt;|“quanteda <br> corpus”| corp corp -.-&gt;|“quanteda <br> tokenize”| token end html -.- bls(&quot; “) style bls fill:none,stroke:none style html fill:#ccbdb9 style df1 fill:#92ff7f linkStyle 5 stroke-width:0px,fill:none;</p>
+<p>graph LR; html(“HTML”); html -.-&gt;|“rvest”| df0;</p>
+<p>subgraph 前處理; df1(“斷詞 data_frame”); df0(“data_frame”); df0 -.-&gt;|“<br> jiebaR <br> (保留標點)<br>”| df1; df1 -.-&gt;|“ropencc <br> 簡轉繁”| df1; end;</p>
+<p>corp(“Corpus”); token(“Tokens”);</p>
+<p>subgraph quanteda; df1 -.-&gt;|“quanteda <br> corpus”| corp; corp -.-&gt;|“quanteda <br> tokenize”| token; end;</p>
+<p>html -.- bls(&quot; “); style bls fill:none,stroke:none; style html fill:#ccbdb9; style df1 fill:#92ff7f; linkStyle 5 stroke-width:0px,fill:none;</p>
 </div>
 </div>
 <div class="section level2">
@@ -150,11 +154,34 @@ df &lt;- data_frame(title = title,
            links = list(links),
            link_text = list(link_text)
            )
-df</code></pre>
-<pre><code># A tibble: 1 x 6
-  title    date       content                      num_sec links link_text
-  &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;                          &lt;int&gt; &lt;lis&gt; &lt;list&gt;   
-1 同行评审 2015-11-11 &quot;看到这么一则关于同行评审论文的故事，又启动了我的期刊…       8 &lt;chr… &lt;chr [6]&gt;</code></pre>
+df %&gt;%
+    mutate(title = str_trunc(title, 8),
+           content = str_trunc(content, 8),
+           links = str_trunc(links, 8),
+           link_text = str_trunc(link_text, 8)) %&gt;%
+    kable(&quot;markdown&quot;, align = &quot;c&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">title</th>
+<th align="center">date</th>
+<th align="center">content</th>
+<th align="center">num_sec</th>
+<th align="center">links</th>
+<th align="center">link_text</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">同行评审</td>
+<td align="center">2015-11-11</td>
+<td align="center">看到这么一…</td>
+<td align="center">8</td>
+<td align="center">c(“ht…</td>
+<td align="center">c(“一则…</td>
+</tr>
+</tbody>
+</table>
 <p>我們可以將上面的程式碼改寫成函數<code>post_data()</code>，自動讀取文章並輸出 data frame：</p>
 <pre><code class="r">post_data &lt;- function (path) {
     all &lt;- read_html(path) %&gt;%
