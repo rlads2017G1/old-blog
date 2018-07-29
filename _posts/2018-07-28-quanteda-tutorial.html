@@ -26,9 +26,6 @@ yaml-->
 <p>中文 Text Mining 的前處理比起其它以拉丁字母為主的文本困難許多，參考資源也相對龐雜不全。 這裡以較晚近出現的<a href="https://quanteda.io/"><code>quanteda</code></a>套件為根據，依其需求進行中文文本前處理<!--more-->。</p>
 <p>選擇 <code>quanteda</code>而非其它較流行的套件如<code>tm</code>的原因是因為其<a href="https://github.com/quanteda/stopwords">多語言支持</a>較佳，譬如其內建的 tokenizer 能直接對中文進行斷詞。然而，由於 <a href="https://github.com/fxsjy/jieba"><code>jieba</code></a>的社群資源以及斷詞效果較佳，此文還是以<a href="https://github.com/qinwf/jiebaR"><code>jiebaR</code></a>進行斷詞。</p>
 <p>此外，因為使用的語料是簡體字，這裡也提到簡體、繁體轉換處理的相關資源。 我希望這篇文章能整理出一套中文文本前處理的架構，試圖減輕未來可能遇到的問題。</p>
-<p style="text-align:right;font-size:8px;margin-top:0px ;margin-bottom:2px;padding-top:0px;padding-bottom:1px">
-上次更新：2018-07-29
-</p>
 <div class="section level2">
 <h2>流程</h2>
 
@@ -45,8 +42,8 @@ end
 corp("Corpus")
 token("Tokens")
 subgraph quanteda
-df1 -.->|"quanteda <br> corpus"| corp
-corp -.->|"quanteda <br> tokenize"| token
+df1 -.->|"quanteda <br> corpus()"| corp
+corp -.->|"quanteda <br> tokenize()"| token
 end
 html -.- bls(" ")
 style bls fill:none,stroke:none
@@ -58,7 +55,7 @@ linkStyle 5 stroke-width:0px,fill:none;
 </div>
 <div class="section level2">
 <h2>資料爬取</h2>
-<p>這邊使用<a href="https://yihui.name/en/about/">謝益輝</a>的中文<a href="https://yihui.name/cn/">部落格</a>文章作為練習素材。首先需要取得文章的網址，因此先到部落格的文章列表頁面(<a href="https://yihui.name/cn/" class="uri">https://yihui.name/cn/</a>)，使用瀏覽器的<a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-tw">開發者工具</a>(按<code>Ctrl + Shift + I</code>開啟)進行<strong>觀察</strong>。</p>
+<p>這邊使用 <a href="https://www.rstudio.com/">RStudio</a> 軟體工程師 <a href="https://yihui.name/en/about/">Yihui</a>的<a href="https://yihui.name/cn/">中文部落格</a>文章作為練習素材。首先需要取得文章的網址，因此先到部落格的文章列表頁面(<a href="https://yihui.name/cn/" class="uri">https://yihui.name/cn/</a>)，使用瀏覽器的<a href="https://developers.google.com/web/tools/chrome-devtools/?hl=zh-tw">開發者工具</a>(按<code>Ctrl + Shift + I</code>開啟)進行<strong>觀察</strong>。</p>
 <p>接著使用<a href="https://github.com/hadley/rvest"><code>rvest</code></a>套件擷取網頁中所有文章的連結，並將文章網址儲存成<code>list_of_post.txt</code>：</p>
 <pre><code class="r">library(dplyr)
 library(rvest)
@@ -415,7 +412,7 @@ run_convert(trans, &quot;開放中文轉換軟體&quot;)</code></pre>
 <pre><code class="r">trans &lt;- converter(S2TWP) # 簡轉臺灣用法
 run_convert(trans, &quot;开放中文转换软件&quot;)</code></pre>
 <pre><code>[1] &quot;開放中文轉換軟體&quot;</code></pre>
-<p>在此我們使用<code>S2TWP</code>轉換<code>all_post_seg$content</code>、<code>S2T</code>轉換<code>all_post_seg$title</code>：</p>
+<p>在此我使用<code>S2TWP</code>轉換<code>$content</code>；<code>S2T</code>轉換<code>$title</code>：</p>
 <pre><code class="r">library(ropencc)
 all_post_seg$content &lt;- run_convert(converter(S2TWP),
                                     all_post_seg$content)
@@ -494,6 +491,42 @@ head(all_post_seg) %&gt;%
 </div>
 <div id="quanteda" class="section level2">
 <h2>quanteda</h2>
+<p>選擇使用 <a href="https://quanteda.io/">quanteda</a> 的原因是因為其有相當完整的<a href="https://tutorials.quanteda.io/">教學資源</a>，且有很多有用的函數。</p>
+<p>同時，<a href="https://github.com/juliasilge/tidytext"><code>tidytext</code></a> 套件也能輕易與 <code>quanteda</code> 配合，在 <code>document-feature matrix</code> 與<code>tidytext</code>所提倡的 <strong>tidy data frame</strong>(one-token-per-document-per-row) 兩種資料結構間自由轉換。</p>
+<p>因此，當我們完成資料的前處理之後，即可以下圖的架構進行 Text Mining。 
+<div class="mermaid">
+    graph TD
+    C(Corpus)
+    token(Tokens)
+    AP["Positional analysis"]
+    AN["Non-positional analysis"]
+    dfm(DFM)
+    tidy("Tidy Text Format")
+    vis("Visualize")
+    C --> token 
+    token --> dfm
+    token -.-> AP
+    dfm -.-> AN
+    tidy -->|"cast_dfm()"| dfm
+    dfm -->|"tidy()"| tidy
+    dfm -.- vis
+    tidy -.-> vis
+    AP -.- vis
+    style C stroke-width:0px,fill:#6bbcff
+    style token stroke-width:0px,fill:#6bbcff
+    style dfm stroke-width:0px,fill:#6bbcff
+    style tidy stroke-width:0px,fill:orange
+    linkStyle 6 stroke-width:0px,fill:none;
+    linkStyle 8 stroke-width:0px,fill:none;
+</div>
+</p>
+<div id="-corpus" class="section level3">
+<h3>讀入 <code>corpus</code></h3>
+<p>我們前面進行的資料前處理，已經將資料整理成符合<a href="https://tutorials.quanteda.io/basic-operations/corpus/corpus/"><code>quanteda::corpus()</code>輸入的格式</a>：</p>
+<blockquote>
+<p>A data frame consisting of a character vector for documents, and additional vectors for document-level variables</p>
+</blockquote>
+<p>因此，依以下指令即可將<code>all_post_seg</code>轉換成<code>corpus</code>：</p>
 <pre><code class="r">library(quanteda)
 corp &lt;- corpus(all_post_seg, 
                docid_field = &quot;title&quot;, 
@@ -580,9 +613,23 @@ corp %&gt;% summary() %&gt;% as_data_frame() %&gt;%
 </tr>
 </tbody>
 </table>
+<p>有了<code>corpus</code>的資料結構後，即進入了上圖<code>quanteda</code>的分析架構，也結束了資料前處理的階段，開始進入 EDA 的階段。</p>
+<p>由於篇幅有限，在此不多加細談<code>quanteda</code>套件<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>。關於<code>quanteda</code>的使用，可以參考 <a href="https://tutorials.quanteda.io/">quanteda tutorial</a>，內容非常詳盡。</p>
+<p style="text-align:right;font-size:7px;margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:1px">
+上次更新：2018-07-29
+</p>
 </div>
-<div class="section level2">
-<h2>附註</h2>
+</div>
+<div class="section level2 unnumbered">
+<h2>參考資料</h2>
+<div id="refs" class="references">
+<div id="ref-silge2017">
+<p>Silge, Julia, and David Robinson. 2017. <em>Text Mining with R: A Tidy Approach</em>. 1st ed. O’Reilly Media, Inc.</p>
+</div>
+<div id="ref-watanabe2018">
+<p>Watanabe, Kohei, and Stefan Müller. 2018. “Quanteda Tutorials.” <em>Quanteda Tutorials</em>. https://tutorials.quanteda.io/.</p>
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr />
@@ -591,6 +638,7 @@ corp %&gt;% summary() %&gt;% as_data_frame() %&gt;%
 <li id="fn2"><p>要能直接執行<code>wget_list</code>需先給予其執行的權限，因此需設置<code>chmod 755 &lt;path to wget_list&gt;</code>，並且將<code>wget_list</code>置於 shell 會自動搜尋程式的地方(如<code>/usr/bin/</code>)。</p>
 <p>另一個方法是不設置權限，直接執行<code>wget_list</code>：<br />
 <code>bash &lt;path to wget_list&gt; &lt;file1&gt; &lt;file2&gt;</code> <!--FOOTNOTE END--><a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>未來可能會發一篇續作。<a href="#fnref3">↩</a></p></li>
 </ol>
 </div>
 
