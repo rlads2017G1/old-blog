@@ -333,8 +333,8 @@ all_post &lt;- bind_rows(all_post) %&gt;% arrange(desc(date))</code></pre>
 <p>我們將使用<code>jiebaR</code>套件的<code>segment()</code>進行斷詞。由<code>?segment()</code>查看其 documentation 可知<strong><code>segment()</code>只吃文字檔或 一個句子</strong>，因此需先搞清楚<code>all_post</code>的結構才能進行斷詞：</p>
 <p><code>all_post</code>: 20*5 的<code>data_frame</code>，每列(row)為一篇文章 - $title: 每列為 1 個值 - $date: 每列為 1 個值 - $content: 每列為 1 個值，段落資訊藏在字串中的<code>\n</code>符號 - $links: 每列為 1 個 list - $link_text: 每列為 1 個 list</p>
 <p><code>all_post$content</code>的結構相當簡單(一篇文章一個字串)，因此不須經過額外處理。其它變項不須斷詞處理，因此在此不加細談。</p>
-<div id="jiebarsegment-optional" class="section level4">
-<h4>jiebaR::segment (optional)</h4>
+<div id="jiebarsegment" class="section level4">
+<h4>jiebaR::segment</h4>
 <p>因為<code>all_post$content</code>簡單的結構符合<code>jiebaR</code>套件的預設需求，但有時資料會比較複雜，因此記錄下來供未來參考。</p>
 <p>前面提到<code>jiebaR::segment</code>只吃一個句子(一個字串)或文字檔，那如果丟一個 vector 給它會怎樣？答案是看<code>worker()</code>的設定：</p>
 <pre><code class="r">library(jiebaR)
@@ -588,7 +588,7 @@ corp %&gt;% summary() %&gt;% as_data_frame() %&gt;%
 <h2>Reproduce</h2>
 <p>這篇文章的原始碼在我的 <a href="https://github.com/liao961120/local_depend/tree/master/post_source/quanteda-chinese">GitHub</a>，歡迎下載至自己的電腦執行。</p>
 <p style="text-align:right;font-size:7px;margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:1px">
-上次更新：2018-07-29
+上次更新：2018-07-30
 </p>
 </div>
 <div class="section level2 unnumbered">
