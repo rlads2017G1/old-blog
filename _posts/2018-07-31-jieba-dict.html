@@ -156,9 +156,9 @@ segment(raw_text, seg) %&gt;%
 </div>
 <div class="section level3">
 <h3>使用自訂詞庫</h3>
-<p>在<code>jiebaR::worker()</code>中設定自訂詞庫的位置：<code>user=&quot;sdxl_wordlist.csv&quot;</code>，即可在斷詞系統中新增字典：</p>
+<p>在<code>jiebaR::worker()</code>中設定自訂詞庫的位置：<code>user = &quot;sdxl_wordlist.csv&quot;</code>，即可在斷詞系統中新增字典：</p>
 <pre><code class="r">seg &lt;- worker(bylines = F, symbol = T,
-              user=&quot;sdxl_wordlist.csv&quot;)
+              user = &quot;sdxl_wordlist.csv&quot;)
 
 segment(raw_text, seg) %&gt;%
     as_data_frame() %&gt;% 
@@ -206,7 +206,7 @@ segment(raw_text, seg) %&gt;%
 <div class="footnotes"><h2>附註</h2>
 
 <ol>
-<li id="fn1"><p>本文目的僅在促進教育與學術，並無營利導向。且本文僅顯示極少的小說內容，應在合理使用的範圍內。若有侵犯著作權的疑慮，麻煩透過 <a href="mailto:liaomovie2@gmail.com">Email</a> 與我聯絡。<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>本文目的僅在促進教育與學術，並無營利企圖。且本文僅顯示極少的小說內容，應屬合理使用。若有侵犯著作權的疑慮，麻煩透過 <a href="mailto:liaomovie2@gmail.com">Email</a> 與我聯絡。<a href="#fnref1">↩</a></p></li>
 </ol>
 </div>
 
