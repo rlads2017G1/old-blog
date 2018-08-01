@@ -65,7 +65,11 @@ output:
 +---index.html
 +---_config.yml</code></pre>
 <p>I set my figure directory to <code>assets/rblogger-criterion-img/</code>:</p>
-<p>`r’’`<code>{r setup, include=FALSE} knitr::opts_chunk$set(     fig.path = &quot;../../assets/rblogger-criterion-img/&quot; )</code></p>
+<pre><code class="r">```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+    fig.path = &quot;../../assets/rblogger-criterion-img/&quot;
+)
+```</code></pre>
 <p>so when the site is rendered, the image would be in <code>https://liao961120.github.io/assets/rblogger-criterion-img/</code></p>
 <p>The last thing to do is to process the output <code>rblogger-criterion.html</code>, replacing <code>&lt;img src=&quot;../../assets</code> with <code>&lt;img src=&quot;/assets</code> in the <code>&lt;img&gt;</code> tag. I do this with a simple bash script:</p>
 <pre><code class="bash">sed &quot;s#&lt;img src=\&quot;../../assets#&lt;img src=\&quot;/assets#g&quot; rblogger-criterion.html &gt; temp
@@ -73,13 +77,13 @@ cat temp &gt; rblogger-criterion.html</code></pre>
 </div>
 <div id="a-demo" class="section level2">
 <h2>A Demo</h2>
-<p><a href="/assets/rblogger-criterion-img/iris-1.png">image source</a></p>
 <pre><code class="r">library(ggplot2)
 ggplot(iris, aes(Sepal.Length, Petal.Width)) +
     geom_point(aes(color = Species))</code></pre>
 <p><img src="/assets/rblogger-criterion-img/iris-1.png" width="100%" /></p>
+<p><a href="/assets/rblogger-criterion-img/iris-1.png">image source</a></p>
 </div>
-<div class="footnotes"><h2>Notes</h2>
+<div class="footnotes"><h2>附註</h2>
 
 <ol>
 <li id="fn1"><p>Well, at least for a guy who uses <a href="https://rmarkdown.rstudio.com">R Markdown</a> to write post and uses <a href="https://jekyllrb.com/">Jekyll</a> to generate static web page on GitHub.<a href="#fnref1">↩</a></p></li>

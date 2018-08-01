@@ -83,11 +83,13 @@ For example, the source of this post(`rblogger-criterion.rmd`) is two layers bel
 
 I set my figure directory to `assets/rblogger-criterion-img/`:
 
-`r''````{r setup, include=FALSE}
+````r
+`r ''````{r setup, include=FALSE}
 knitr::opts_chunk$set(
 	fig.path = "../../assets/rblogger-criterion-img/"
 )
 ```
+````
 
 so when the site is rendered, the image would be in `https://liao961120.github.io/assets/rblogger-criterion-img/`
 
@@ -100,12 +102,10 @@ cat temp > rblogger-criterion.html
 
 ## A Demo
 
-[image source](/assets/rblogger-criterion-img/iris-1.png)
-
 ```{r iris}
 library(ggplot2)
 ggplot(iris, aes(Sepal.Length, Petal.Width)) +
     geom_point(aes(color = Species))
 ```
 
-
+[image source](/assets/rblogger-criterion-img/iris-1.png)
