@@ -4,6 +4,8 @@
 .Ruserdata
 _posts/*.Rmd
 _posts/foo.html
+post_source/*/*.html
+post_source/*.html
 edit_post/
 _site/
 *.pdf
