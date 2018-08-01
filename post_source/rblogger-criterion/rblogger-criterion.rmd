@@ -81,13 +81,15 @@ For example, the source of this post(`rblogger-criterion.rmd`) is two layers bel
 +---_config.yml
 ```
 
-I set my figure directory to `assets/rblogger-criterion-img/`
+I set my figure directory to `assets/rblogger-criterion-img/`:
+
 `r''````{r setup, include=FALSE}
 knitr::opts_chunk$set(
 	fig.path = "../../assets/rblogger-criterion-img/"
 )
 ```
-so when the site is rendered, the image would be in  `https://liao961120.github.io/assets/rblogger-criterion-img/`
+
+so when the site is rendered, the image would be in `https://liao961120.github.io/assets/rblogger-criterion-img/`
 
 The last thing to do is to process the output `rblogger-criterion.html`, replacing `<img src="../../assets` with `<img src="/assets` in the `<img>` tag. I do this with a simple bash script:
 

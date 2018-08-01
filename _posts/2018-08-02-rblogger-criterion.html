@@ -64,7 +64,9 @@ output:
 |   |   \---rblogger-criterion.rmd
 +---index.html
 +---_config.yml</code></pre>
-<p>I set my figure directory to <code>assets/rblogger-criterion-img/</code> <code>r''````{r setup, include=FALSE} knitr::opts_chunk$set(     fig.path = &quot;../../assets/rblogger-criterion-img/&quot; ) ``` so when the site is rendered, the image would be in</code><a href="https://liao961120.github.io/assets/rblogger-criterion-img/" class="uri">https://liao961120.github.io/assets/rblogger-criterion-img/</a>`</p>
+<p>I set my figure directory to <code>assets/rblogger-criterion-img/</code>:</p>
+<p>`r’’`<code>{r setup, include=FALSE} knitr::opts_chunk$set(     fig.path = &quot;../../assets/rblogger-criterion-img/&quot; )</code></p>
+<p>so when the site is rendered, the image would be in <code>https://liao961120.github.io/assets/rblogger-criterion-img/</code></p>
 <p>The last thing to do is to process the output <code>rblogger-criterion.html</code>, replacing <code>&lt;img src=&quot;../../assets</code> with <code>&lt;img src=&quot;/assets</code> in the <code>&lt;img&gt;</code> tag. I do this with a simple bash script:</p>
 <pre><code class="bash">sed &quot;s#&lt;img src=\&quot;../../assets#&lt;img src=\&quot;/assets#g&quot; rblogger-criterion.html &gt; temp
 cat temp &gt; rblogger-criterion.html</code></pre>
