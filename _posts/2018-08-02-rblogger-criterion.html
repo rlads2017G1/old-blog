@@ -42,7 +42,7 @@ yaml-->
 </ol>
 <div id="solving-the-first-problem" class="section level2">
 <h2>Solving the First Problem</h2>
-<p>For <strong>Jekyll</strong> sites using <a href="https://github.com/jekyll/jekyll-feed">jekyll-feed</a> plugin to generate sitemaps, it is not possible to have RSS feed for different a particular tag or category of posts. However there’s a workaround using <strong>Jekyll</strong>’s <a href="https://shopify.github.io/liquid/">Liquid tempalate</a>, as indicated by <a href="https://devblog.dymel.pl/2017/02/09/category-rss-feed-in-jekyll/">this post</a>.</p>
+<p>For <strong>Jekyll</strong> sites using <a href="https://github.com/jekyll/jekyll-feed">jekyll-feed</a> plugin to generate sitemaps, it is not possible to have RSS feed for a particular tag or category of posts. However there’s a workaround using <strong>Jekyll</strong>’s <a href="https://shopify.github.io/liquid/">Liquid tempalate</a>, as indicated by <a href="https://devblog.dymel.pl/2017/02/09/category-rss-feed-in-jekyll/">this post</a>. I modified the template to make it suitable for the criterions set by R-bloggers, you can take a look at the file <a href="https://github.com/liao961120/liao961120.github.io/blob/master/feed.rbloggers.xml">feed.rbloggers.xml</a>.</p>
 </div>
 <div id="solving-the-second-problem" class="section level2">
 <h2>Solving the Second Problem</h2>
@@ -61,7 +61,8 @@ output:
 +---_posts/
 +---post_source/
 |   +---rblogger-criterion/
-|   |   \---rblogger-criterion.rmd
+|   |   +---rblogger-criterion.rmd
+|   |   \---rblogger-criterion.html
 +---index.html
 +---_config.yml</code></pre>
 <p>I set my figure directory to <code>assets/rblogger-criterion-img/</code>:</p>

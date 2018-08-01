@@ -50,7 +50,7 @@ Two main reasons make it difficult:
 
 ## Solving the First Problem
 
-For **Jekyll** sites using [jekyll-feed](https://github.com/jekyll/jekyll-feed) plugin to generate sitemaps, it is not possible to have RSS feed for different a particular tag or category of posts. However there's a workaround using **Jekyll**'s [Liquid tempalate](https://shopify.github.io/liquid/), as indicated by [this post](https://devblog.dymel.pl/2017/02/09/category-rss-feed-in-jekyll/).
+For **Jekyll** sites using [jekyll-feed](https://github.com/jekyll/jekyll-feed) plugin to generate sitemaps, it is not possible to have RSS feed for a particular tag or category of posts. However there's a workaround using **Jekyll**'s [Liquid tempalate](https://shopify.github.io/liquid/), as indicated by [this post](https://devblog.dymel.pl/2017/02/09/category-rss-feed-in-jekyll/). I modified the template to make it suitable for the criterions set by R-bloggers, you can take a look at the file [feed.rbloggers.xml](https://github.com/liao961120/liao961120.github.io/blob/master/feed.rbloggers.xml).
 
 
 ## Solving the Second Problem
@@ -76,7 +76,8 @@ For example, the source of this post(`rblogger-criterion.rmd`) is two layers bel
 +---_posts/
 +---post_source/
 |   +---rblogger-criterion/
-|   |   \---rblogger-criterion.rmd
+|   |   +---rblogger-criterion.rmd
+|   |   \---rblogger-criterion.html
 +---index.html
 +---_config.yml
 ```
