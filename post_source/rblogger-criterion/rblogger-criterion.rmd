@@ -36,11 +36,10 @@ library(knitr)
 
 According to the post [add your blog!](https://www.r-bloggers.com/add-your-blog/page/5/), adding one's blog to [R-bloggers](https://www.r-bloggers.com/) isn't easy at all[^easy].
 
-
 Two main reasons make it difficult<!--more-->:
 
 1. > The **feed** you submit **should ONLY be about R** (e.g: with R code, or directly related to the R world/community).
-    - This causes problem because most bloggers writes posts about different topics, and some blogging platform doesn't support RSS feed for a particular category of posts.
+    - This causes problem because most bloggers write posts spanning several topics, and some blogging platform doesn't support RSS feed for a particular category of posts.
 
 2. > Make sure the HTML of your feed’s content is well formatted – otherwise it would not be able to load on r-bloggers. This includes to NOT copy-pasting from RStudio’s notebook extension – the feed **should NOT include “base64” images**, make sure your images are saved as png or similar file formats.
     - For posts written with [R Markdown](https://rmarkdown.rstudio.com) and [HTML Fragment](https://rmarkdown.rstudio.com/html_fragment_format.html) output format, the embedded images generated from code chunks (such as outputs of `plot()`) are **base64 images**.
