@@ -57,7 +57,7 @@ For **Jekyll** sites using [jekyll-feed](https://github.com/jekyll/jekyll-feed) 
 
 To solve the second problem, set `self_contained: false` in the yaml header of the R Markdown document. With this setting, plots from code chunks are automatically generated in a figure directory, and the `.html` output uses `<img>` tags to source the plots in that figure directory.
 
-```{yaml}
+```
 ---
 output:
   html_fragment:

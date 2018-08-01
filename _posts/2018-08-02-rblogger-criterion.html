@@ -47,7 +47,7 @@ yaml-->
 <div id="solving-the-second-problem" class="section level2">
 <h2>Solving the Second Problem</h2>
 <p>To solve the second problem, set <code>self_contained: false</code> in the yaml header of the R Markdown document. With this setting, plots from code chunks are automatically generated in a figure directory, and the <code>.html</code> output uses <code>&lt;img&gt;</code> tags to source the plots in that figure directory.</p>
-<pre class="yaml"><code>---
+<pre><code class="nohighlight">---
 output:
   html_fragment:
     self_contained: false
@@ -83,7 +83,7 @@ ggplot(iris, aes(Sepal.Length, Petal.Width)) +
 <p><img src="/assets/rblogger-criterion-img/iris-1.png" width="100%" /></p>
 <p><a href="/assets/rblogger-criterion-img/iris-1.png">image source</a></p>
 </div>
-<div class="footnotes"><h2>附註</h2>
+<div class="footnotes"><h2>Notes</h2>
 
 <ol>
 <li id="fn1"><p>Well, at least for a guy who uses <a href="https://rmarkdown.rstudio.com">R Markdown</a> to write post and uses <a href="https://jekyllrb.com/">Jekyll</a> to generate static web page on GitHub.<a href="#fnref1">↩</a></p></li>
