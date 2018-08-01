@@ -17,6 +17,6 @@ comment: false
 
 ## 2018
 
-Jul 31 &nbsp;&nbsp; [jieba 自訂詞庫斷詞](https://liao961120.github.io/2018/07/31/jieba-dict.html){.post-link}
+Jul 31 &nbsp;&nbsp; [jieba 自訂詞庫斷詞](https://liao961120.github.io/2018/07/31/jieba-dict.html){:.post-link}
 
-Jul 28 &nbsp;&nbsp; [Text Mining 前處理：中文、R 與 quanteda](https://liao961120.github.io/2018/07/28/quanteda-tutorial.html){.post-link}
+Jul 28 &nbsp;&nbsp; [Text Mining 前處理：中文、R 與 quanteda](https://liao961120.github.io/2018/07/28/quanteda-tutorial.html){:.post-link}
