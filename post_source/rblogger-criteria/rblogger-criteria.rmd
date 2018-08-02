@@ -6,7 +6,6 @@ output:
     includes:
     number_sections: no
 ---
-<!--For external images, set self_contained: false-->
 
 <!--yaml
 ---
