@@ -1,11 +1,38 @@
 ---
+link-citations: yes
+output:
+  html_fragment:
+    self_contained: false
+    includes:
+    number_sections: no
+---
+<!--For external images, set self_contained: false-->
+
+<!--yaml
+---
 layout: post
-mermaid: true
+mermaid: false
+mathjax2: false
+mathjax: false
+highlight: true
 title: "My Notes on R Markdown"
 description: "A compact reference to R Markdown"
 tags: [R Markdown, R-bloggers]
 ---
+yaml-->
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	fig.dim = c(7, 4),
+	message = FALSE,
+	warning = FALSE,
+	comment = "",
+	#fig.path = "../../assets/",
+	out.width = "100%"
+)
+library(knitr)
+```
 
 I've used [R Markdown](https://rmarkdown.rstudio.com/) to do lots of work, such as writing a [book](/MVA/), doing homework on [statistics](/notes/106-2/multivariate/) and [ecology](/notes/106-2/Eco_model/spatial_model.html), and making [web pages](https://twlangsurvey.github.io/main/).
 <!--more-->
@@ -23,7 +50,5 @@ Because of doing so much work with R Markdown, I write down some of the most com
 
 - [R Markdown Cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
-
-## Footnotes
 
 [^note]: Since it is intended for **quick lookup**, the document is very compact. That means you need to have some basic knowledge on R Markdown to be able to understand all of it. For more detailed documents for beginners, see the [last section](#other-resources-of-r-markdown) of this post.
