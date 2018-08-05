@@ -42,5 +42,3 @@ The theme of my blog is forked from [kitian616/jekyll TeXt theme](https://github
 The favicon on the browser's tab and the icon beside the site's title are [Tux](https://en.wikipedia.org/wiki/Tux), the official brand character of the Linux kernel. **Tux** is used here because of its cuteness. The version of this Tux is [Tux Crystal 2nd revision](https://en.wikipedia.org/wiki/Tux#/media/File:TUX_G2.svg){:target="_blank"}.
 
 
-
-<br>
