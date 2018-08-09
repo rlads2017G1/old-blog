@@ -13,11 +13,13 @@ comment: false
     ul {list-style-image: none;}
 </style>
 
-Feb 07, 2018 [ToLearnList](/notes/ToLearnList.html){: class="tab0"}
+Aug 09, 2018 [My Python Notes](/notes/python_notes.html){:class="tab0"}
+
+July 19, 2018 [My Linux Notes](/notes/mylinux.html){:class="tab0"}
 
 Mar 18, 2018 [R Markdown Features](/notes/rmd_features.html){:class="tab0"}
 
-July 19, 2018 [My Linux Notes](/notes/mylinux.html){:class="tab0"}
+Feb 07, 2018 [ToLearnList](/notes/ToLearnList.html){: class="tab0"}
 
 
 ### 106-2
@@ -46,6 +48,7 @@ Dec 12, 2017 [Sexual Reproduction as Bet-hedging](/notes/EvoSex/sexual_reproduct
 
 
 ##### **Mindmap**
+
 Jan 24, 2018 [Hypotheses of Sex](/notes/EvoSex/thoughts/Hypothesis_of_Sex.html){:class="tab0"}
 
 Feb 07, 2018 [Notes](/notes/EvoSex/thoughts/Notes.html){:class="tab0"}
