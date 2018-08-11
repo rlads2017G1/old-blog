@@ -11,7 +11,7 @@
 
 <meta name="author" content="Yongfu Liao" />
 
-<meta name="date" content="2018-08-09" />
+<meta name="date" content="2018-08-11" />
 
 <title>My Python Notes</title>
 
@@ -229,7 +229,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">My Python Notes</h1>
 <h4 class="author"><em><a href="https://liao961120.github.io/">Yongfu Liao</a></em></h4>
-<h4 class="date"><em>August 09, 2018</em></h4>
+<h4 class="date"><em>August 11, 2018</em></h4>
 
 </div>
 
@@ -251,8 +251,8 @@ c = 'str'   # string
 print('Printing an integer: {}, a floating point number: {}, and a string: {}'.format(a, b, c))</code></pre>
 <pre><code>Printing an integer: 1, a floating point number: 1.0, and a string: str</code></pre>
 </div>
-<div id="type-checking" class="section level2">
-<h2><span class="header-section-number">1.2</span> Type Checking</h2>
+<div id="type" class="section level2">
+<h2><span class="header-section-number">1.2</span> Type</h2>
 <pre class="python"><code>a = 1       # integer
 b = 1.0     # float
 c = 'str'   # string
@@ -260,6 +260,18 @@ print(&quot;{}\n{}\n{}&quot;.format(type(a), type(b), type(c)))</code></pre>
 <pre><code>&lt;class 'int'&gt;
 &lt;class 'float'&gt;
 &lt;class 'str'&gt;</code></pre>
+<div id="type-casting" class="section level3 unnumbered">
+<h3>Type Casting</h3>
+<pre class="python"><code>int1 = int('300')
+int2 = int(30.7)
+fl1 = float(1)
+fl2 = float('1')
+str1 = str(123)
+print('int1 = {}\tint2 = {}\nfl1 = {}\tfl2 = {}\nstr1 = {}'.format(int1, int2, fl1, fl2, str1))</code></pre>
+<pre><code>int1 = 300  int2 = 30
+fl1 = 1.0   fl2 = 1.0
+str1 = 123</code></pre>
+</div>
 </div>
 <div id="the-range-function" class="section level2">
 <h2><span class="header-section-number">1.3</span> The <code>range()</code> Function</h2>
@@ -306,10 +318,41 @@ print('a1 = {}\na2 = {}'.format(a1, a2))</code></pre>
 <pre><code>a1 = 11
 a2 = 11</code></pre>
 <p><code>-=</code>, <code>*=</code>, <code>/=</code> are equivalent forms for substraction, multipilcation, and division, respectively.</p>
+<div id="other-operators" class="section level3 unnumbered">
+<h3>Other Operators</h3>
+<ul>
+<li><code>%</code>: modulus</li>
+<li><code>//</code>: floor division</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="boolean-logical" class="section level1">
+<h1><span class="header-section-number">3</span> Boolean &amp; Logical</h1>
+<div id="boolean-expressions" class="section level2">
+<h2><span class="header-section-number">3.1</span> Boolean Expressions</h2>
+<ul>
+<li><code>True</code></li>
+<li><code>False</code></li>
+<li><code>==</code>, <code>!=</code></li>
+<li><code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></li>
+</ul>
+</div>
+<div id="logical-operators" class="section level2">
+<h2><span class="header-section-number">3.2</span> Logical Operators</h2>
+<ul>
+<li><code>and</code></li>
+<li><code>or</code></li>
+</ul>
+<p>Note that <code>a &lt; x and x &lt; b</code> can be simplified as <code>a &lt; x &lt; b</code>:</p>
+<pre class="python"><code>x = 5
+if 0 &lt; x &lt; 10:
+    print(True)</code></pre>
+<pre><code>True</code></pre>
 </div>
 </div>
 <div id="flow-control" class="section level1">
-<h1><span class="header-section-number">3</span> Flow Control</h1>
+<h1><span class="header-section-number">4</span> Flow Control</h1>
 <pre class="python"><code>if &lt;condition&gt;:
     &lt;commands&gt;
 elif &lt;condition&gt;:
@@ -326,6 +369,18 @@ if 2 &lt;= a:
 else:
     print('2 &gt; {}'.format(a))</code></pre>
 <pre><code>2 &gt; 1</code></pre>
+</div>
+<div id="string" class="section level1">
+<h1><span class="header-section-number">5</span> String</h1>
+<div id="string-concatenation" class="section level2">
+<h2><span class="header-section-number">5.1</span> String Concatenation</h2>
+<pre class="python"><code>str1 = 'A' + '' + 'string'
+str2 = 'Text '*4
+print(str1)</code></pre>
+<pre><code>Astring</code></pre>
+<pre class="python"><code>print(str2)</code></pre>
+<pre><code>Text Text Text Text </code></pre>
+</div>
 </div>
 
 
