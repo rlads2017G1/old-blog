@@ -19,8 +19,8 @@ comment: false
 
 June 21, 2018 &nbsp;&nbsp; [Taiwan Language Survey](https://twlangsurvey.github.io/main/)  
 
-This is a web page for visualizing a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform) about language usage in Taiwan. It is aimed at raising public awareness of language loss in Taiwan.
-(Updates weekly to continuously incorporate new survey data.)
+This is a web page for visualizing a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform) about language usage in Taiwan. It is aimed at raising public awareness of language loss in Taiwan.  
+(*Updates weekly to continuously incorporate new survey data.*)
 {:.indent}
 
 
@@ -49,6 +49,6 @@ A compact reference to [R Markdown](https://rmarkdown.rstudio.com/). Contains us
 Jan 04, 2018 &nbsp;&nbsp; [Travel the World](https://rlads2017g1.github.io/presentation.html)  
 
 This is a final group project of the course [Introduction to Data Science with R](https://nol2.aca.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=142%20U0750&class=&dpt_code=1420&ser_no=76601&semester=106-1&lang=CH) at NTU, Autumn, 2017. Check our [group members](https://rlads2017g1.github.io).  
-*Note the project displays properly only on screens that are large enough, and it may take some time to load the webpage, be patient!*
+(*Displays properly only on screens large enough. Takes some time to load the web page, be patient!*)
 {:.indent}
 
