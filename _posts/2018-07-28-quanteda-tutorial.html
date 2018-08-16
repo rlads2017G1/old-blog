@@ -52,12 +52,12 @@ list_of_posts &lt;- read_html(&quot;https://yihui.name/cn/&quot;) %&gt;%
 
 readr::write_lines(list_of_posts, &quot;yihui/list_of_post.txt&quot;)</code></pre>
 <pre><code class="r">head(list_of_posts, 2)</code></pre>
-<pre><code class="nohighlight">[1] &quot;/cn/2018/07/lost-bow/&quot;     &quot;/cn/2018/07/fluent-essay/&quot;</code></pre>
+<pre><code class="nohighlight">[1] &quot;/cn/2018/08/knitting-method/&quot; &quot;/cn/2018/08/sweet-spicy/&quot;    </code></pre>
 <pre><code class="r">tail(list_of_posts, 2)</code></pre>
 <pre><code class="nohighlight">[1] &quot;/cn/2005/01/rtx/&quot;      &quot;/cn/2005/01/20-13-00/&quot;</code></pre>
 <pre><code class="r">length(list_of_posts)</code></pre>
-<pre><code class="nohighlight">[1] 1032</code></pre>
-<p>可以看到總共有 1032 篇文章，時間從 2005 年到今年七月都有發文的紀錄。</p>
+<pre><code class="nohighlight">[1] 1057</code></pre>
+<p>可以看到總共有 1057 篇文章，時間從 2005 年到今年七月都有發文的紀錄。</p>
 <p>由於文章數量相當多，因此之後僅會下載部分文章，<strong>避免造成伺服器負擔過大</strong>。下載網頁時，可以在 R 中直接使用<code>rvest</code>(見下文<strong>資料前處理</strong>)，但我比較建議使用 Bash<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>的<code>wget</code>指令，才不會因為重複下載網頁造成伺服器負擔。</p>
 <p>在下載前，需先決定目標文章的網址<code>sub_list</code>：</p>
 <pre><code class="r">library(stringr)
@@ -343,9 +343,8 @@ all_post_seg &lt;- all_post
 seg &lt;- worker(symbol = T, bylines = F)
 
 all_post_seg$content[1] &lt;- all_post$content[1] %&gt;%
-    segment(seg) %&gt;% paste(collapse = &quot; &quot;)
-
-all_post$content[1] %&gt;% str_trunc(20)</code></pre>
+    segment(seg) %&gt;% paste(collapse = &quot; &quot;)</code></pre>
+<pre><code class="r">all_post$content[1] %&gt;% str_trunc(20)</code></pre>
 <pre><code class="nohighlight">[1] &quot;说两封让我感到“我天，给亲友的书信...&quot;</code></pre>
 <pre><code class="r">all_post_seg$content[1] %&gt;% str_trunc(30)</code></pre>
 <pre><code class="nohighlight">[1] &quot;说 两封 让 我 感到 “ 我 天 ， 给 亲友 的 ...&quot;</code></pre>
@@ -596,5 +595,6 @@ corp %&gt;% summary() %&gt;% as_data_frame() %&gt;%
 </div>
 
 <p style="text-align:right;font-size:7px;margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:1px">
-Last updated: 2018-08-02
+
+Last updated: 2018-08-16
 </p>

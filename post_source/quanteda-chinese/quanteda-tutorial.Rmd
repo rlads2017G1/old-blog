@@ -348,7 +348,9 @@ seg <- worker(symbol = T, bylines = F)
 
 all_post_seg$content[1] <- all_post$content[1] %>%
     segment(seg) %>% paste(collapse = " ")
+```
 
+```{r}
 all_post$content[1] %>% str_trunc(20)
 all_post_seg$content[1] %>% str_trunc(30)
 ```

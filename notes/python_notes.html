@@ -278,17 +278,25 @@ str1 = 123</code></pre>
 <pre class="python"><code>range(start, stop, step)</code></pre>
 <p>Commonly used in for loop:</p>
 <pre class="python"><code>for i in range(3):    # range(3) == range(0, 3)
-    print(i)</code></pre>
+  print(i)</code></pre>
 <pre><code>0
 1
 2</code></pre>
 <pre class="python"><code>for i in range(0, 10, 2):    # range(10) == range(0, 10)
-    print(i)</code></pre>
+  print(i)</code></pre>
 <pre><code>0
 2
 4
 6
 8</code></pre>
+</div>
+<div id="user-input-input" class="section level2">
+<h2><span class="header-section-number">1.4</span> User Input: <code>input()</code></h2>
+<pre class="python"><code>&gt;&gt;&gt; name = input('Please enter your name:\n')</code></pre>
+<pre><code>Please enter your name:
+&gt;? Liao</code></pre>
+<pre><code>&gt;&gt;&gt; name
+Liao</code></pre>
 </div>
 </div>
 <div id="math-arithmetic" class="section level1">
@@ -347,7 +355,7 @@ a2 = 11</code></pre>
 <p>Note that <code>a &lt; x and x &lt; b</code> can be simplified as <code>a &lt; x &lt; b</code>:</p>
 <pre class="python"><code>x = 5
 if 0 &lt; x &lt; 10:
-    print(True)</code></pre>
+  print(True)</code></pre>
 <pre><code>True</code></pre>
 </div>
 </div>
@@ -365,9 +373,9 @@ while &lt;condition&gt;:
     &lt;commands&gt;</code></pre>
 <pre class="python"><code>a = 1
 if 2 &lt;= a:
-    print('2 &lt;= {}'.format(a))
+  print('2 &lt;= {}'.format(a))
 else:
-    print('2 &gt; {}'.format(a))</code></pre>
+  print('2 &gt; {}'.format(a))</code></pre>
 <pre><code>2 &gt; 1</code></pre>
 </div>
 <div id="string" class="section level1">
@@ -380,6 +388,26 @@ print(str1)</code></pre>
 <pre><code>Astring</code></pre>
 <pre class="python"><code>print(str2)</code></pre>
 <pre><code>Text Text Text Text </code></pre>
+</div>
+</div>
+<div id="programming-concepts" class="section level1">
+<h1><span class="header-section-number">6</span> Programming Concepts</h1>
+<div id="recursion" class="section level2">
+<h2><span class="header-section-number">6.1</span> Recursion</h2>
+<p>A function that calls itself in its definition.</p>
+<pre class="python"><code>def countdown(n):
+  if n &lt;= 0:
+    print('Blastoff!')
+  else:
+    print(n)
+    countdown(n-1)
+countdown(5)</code></pre>
+<pre><code>5
+4
+3
+2
+1
+Blastoff!</code></pre>
 </div>
 </div>
 
