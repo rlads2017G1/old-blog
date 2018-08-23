@@ -483,7 +483,7 @@ HTML('
 
 ## Reproduce
 
-這篇文章的原始碼在我的 [GitHub](https://github.com/liao961120/local_depend/tree/master/post_source/quanteda-chinese)，歡迎下載至自己的電腦執行。
+這篇文章的原始碼在我的 [GitHub](https://github.com/liao961120/liao961120.github.io/tree/master/post_source/quanteda-chinese)，歡迎下載至自己的電腦執行。
 
 
 ## 參考資料
