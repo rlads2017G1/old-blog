@@ -1,16 +1,16 @@
 ---
 link-citations: yes
 output:
+  html_fragment:
+    self_contained: true
+    includes:
+    number_sections: no
   bookdown::pdf_document2:
     number_sections: no
     toc: no
     includes:
       in_header: header.tex
     latex_engine: xelatex
-  html_fragment:
-    self_contained: true
-    includes:
-    number_sections: no
 ---
 <!--For external images, set self_contained: false-->
 
@@ -111,6 +111,9 @@ if (knitr::opts_knit$get('rmarkdown.pandoc.to') == "latex") {
 }
 ```
 The IPA symbols are set in the variable `ipa` and can be access inline in R Markdown with, e.g., `r str1` or `r str2`, which renders to **`r ipa`** and **`r ipa[3]`**, respectively.
+
+
+The source of this post is in my [GitHub repo](https://github.com/liao961120/liao961120.github.io/tree/master/post_source/ipa-symbols). You can reproduce it locally to see the differnce between HTML and PDF output of this post.
 
 
 ## Obstacles to Adopting a Reproducible Workflow
