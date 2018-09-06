@@ -144,4 +144,4 @@ If using R Markdown (or R) has benefits specific to the field related to the res
 
 [^tree]: There are LaTeX packages supporting drawing syntax tree, but LaTeX package is not compatible with HTML output.
 
-[^me]: I actually stared and gave up learning programming languages for three times (C++, C, and then Python) before I successfully learned R.
+[^me]: I actually stared and gave up learning programming languages three times (C++, C, and then Python) before I successfully learned R.
