@@ -63,7 +63,7 @@ Solving the first problem (IPA symbol) is easy, draing syntax trees is hard and 
 
 ## Typing IPA Symbols
 
-There are two problems to be solved in order facilitate using IPA symbols in R Markdown:
+There are two problems to be solved in order to facilitate using IPA symbols in R Markdown:
 
 1. Input method
 1. Font support (only related to PDF output)
