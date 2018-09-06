@@ -44,7 +44,6 @@ library(knitr)
 # Rendering IPA Symbols in R Markdown
 '`
 
-
 I was thinking about promoting reproducible research in Linguistics, or more precisely, how to attract people with no programming skills to have incentives to learn at least a bit programming, so that they have the ability to make their research more reproducible.
 <!--more-->
 
@@ -60,7 +59,7 @@ I came out with some common tasks related to document writing in Linguistics (I 
 
 To enhance R Markdown's ability to do these tasks without compromising one of it's great feature: render nicely to HTML and PDF with the same source, one need to consider the incompatiblity of LaTeX and HTML code.
 
-Solving the first task (IPA symbol) is easy, draing syntax trees is hard and I haven't have a solution yet[^tree].
+Solving the first problem (IPA symbol) is easy, draing syntax trees is hard and I haven't have a solution yet[^tree].
 
 ## Typing IPA Symbols
 
@@ -111,7 +110,6 @@ if (knitr::opts_knit$get('rmarkdown.pandoc.to') == "latex") {
 }
 ```
 The IPA symbols are set in the variable `ipa` and can be access inline in R Markdown with, e.g., `r str1` or `r str2`, which renders to **`r ipa`** and **`r ipa[3]`**, respectively.
-
 
 The source of this post is in my [GitHub repo](https://github.com/liao961120/liao961120.github.io/tree/master/post_source/ipa-symbols). You can reproduce it locally to see the differnce between HTML and PDF output of this post.
 
