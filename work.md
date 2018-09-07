@@ -11,11 +11,17 @@ comment: false
     tab2 { padding-left: 8em; }
     ul {list-style-image: none;}
     p.indent{
+        font-size: 15px;
     	padding-left: 1.1em;
     }
 </style>
 
 ## Personal Work
+
+Jep 07, 2018 &nbsp;&nbsp; [PTT Slang](https://liao961120.github.io/PTT-scrapy/)
+
+This is a small web scraping project for collecting the special expressions used by people on [PTT](https://en.wikipedia.org/wiki/PTT_Bulletin_Board_System). The expressions are scraped from an online encyclopedia about PTT.
+{:.indent}
 
 June 21, 2018 &nbsp;&nbsp; [Taiwan Language Survey](https://twlangsurvey.github.io/main/)  
 
