@@ -11,8 +11,9 @@ comment: false
     tab2 { padding-left: 8em; }
     ul {list-style-image: none;}
     p.indent{
-        font-size: 15px;
+      font-size: 0.9em;
     	padding-left: 1.1em;
+    	padding-bottom: 1.5em;
     }
 </style>
 
