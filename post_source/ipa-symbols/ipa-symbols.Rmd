@@ -57,7 +57,7 @@ I came out with some common tasks related to document writing in Linguistics (I 
 1. Typing IPA symbols.
 1. Drawing syntax trees.
 
-To enhance R Markdown's ability to do these tasks without compromising one of it's great feature: render nicely to HTML and PDF with the same source, one need to consider the incompatiblity of LaTeX and HTML code.
+To enhance R Markdown's ability to do these tasks without compromising one of it's great feature: render nicely to both HTML and PDF with the same source, one needs to consider the incompatiblity of LaTeX and HTML code.
 
 Solving the first problem (IPA symbol) is easy, draing syntax trees is hard and I haven't have a solution yet[^tree].
 
