@@ -23,7 +23,7 @@ mathjax: false
 highlight: true
 title: "Rendering IPA Symbols in R Markdown"
 description: ""
-tags: [R, R Markdown, LaTeX]
+tags: [R, R Markdown, LaTeX, R-bloggers]
 ---
 yaml-->
 
@@ -75,8 +75,16 @@ After doing a little research, I came out with a quick solution which stems from
 
 The solution is very simple: define a new font family that supports IPA symbols in LaTeX and use conditional compilation to render the document: when compiled to HTML, use raw unicode string; when compiled to PDF, wrap LaTeX code around IPA unicode strings.
 
-To define a new font family for IPA symbols, set `header.tex` and include it in the yaml header of R Markdown document:
-```tex
+To define a new font family for IPA symbols, set `header.tex` and include it by setting the yaml header of R Markdown document:
+```yaml
+output:
+  bookdown::pdf_document2:
+    includes:
+      in_header: header.tex
+```
+
+Here's `header.tex`:
+```latex
 % Set font size
 \usepackage[fontsize=12pt]{scrextend}
 
@@ -101,7 +109,7 @@ str1 <- "`r ipa`"
 str2 <- "`r ipa[3]`"
 ```
 
-The code chunk below is for conditional compilation.
+The code chunk below is for conditional compilation:
 ```{r}
 ipa <- c('e\u026A', 'a\u026A', '\u0254\u026A')
 

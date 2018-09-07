@@ -6,7 +6,7 @@ mathjax: false
 highlight: true
 title: "Rendering IPA Symbols in R Markdown"
 description: ""
-tags: [R, R Markdown, LaTeX]
+tags: [R, R Markdown, LaTeX, R-bloggers]
 ---
 <p>I was thinking about promoting reproducible research in Linguistics, or more precisely, how to attract people with no programming skills to have incentives to learn at least a bit programming, so that they have the ability to make their research more reproducible. <!--more--></p>
 <p>I arrived at the solution: start by adopting R Markdown to write articles (see <a href="#obstacles-to-adopting-a-reproducible-workflow">the last section</a> for details), but making R Markdown more friendly to novices in a particular field of academia is crucial to enhance their incentives to learn programming.</p>
@@ -30,8 +30,13 @@ tags: [R, R Markdown, LaTeX]
 <p>The first one is essentially about mapping some combination of keys to unicode strings. This post demenstates how to solve the second, which is more fundamental.</p>
 <p>After doing a little research, I came out with a quick solution which stems from the combination of <a href="http://www.languagebits.com/phonetics-english/ipa-symbols-in-r/">IPA Symbols in R</a>, <a href="https://tex.stackexchange.com/questions/25249/how-do-i-use-a-particular-font-for-a-small-section-of-text-in-my-document">How do I use a particular font for a small section of text in my document?</a>, and <a href="https://github.com/rstudio/bookdown/issues/168">Conditional compilation of book chunks to ensure compatibility with both HTML and XeLaTeX</a>.</p>
 <p>The solution is very simple: define a new font family that supports IPA symbols in LaTeX and use conditional compilation to render the document: when compiled to HTML, use raw unicode string; when compiled to PDF, wrap LaTeX code around IPA unicode strings.</p>
-<p>To define a new font family for IPA symbols, set <code>header.tex</code> and include it in the yaml header of R Markdown document:</p>
-<pre class="tex"><code>% Set font size
+<p>To define a new font family for IPA symbols, set <code>header.tex</code> and include it by setting the yaml header of R Markdown document:</p>
+<pre class="yaml"><code>output:
+  bookdown::pdf_document2:
+    includes:
+      in_header: header.tex</code></pre>
+<p>Here’s <code>header.tex</code>:</p>
+<pre class="latex"><code>% Set font size
 \usepackage[fontsize=12pt]{scrextend}
 
 % Set font family
@@ -48,7 +53,7 @@ tags: [R, R Markdown, LaTeX]
 \newfontfamily\ipa{Doulos SIL}
 \DeclareTextFontCommand{\ipatext}{\ipa}</code></pre>
 <p>The font, <a href="https://software.sil.org/doulos/">Doulos SIL</a>, which supports IPA symbols can be freely dowloaded.</p>
-<p>The code chunk below is for conditional compilation.</p>
+<p>The code chunk below is for conditional compilation:</p>
 <pre><code class="r">ipa &lt;- c('e\u026A', 'a\u026A', '\u0254\u026A')
 
 if (knitr::opts_knit$get('rmarkdown.pandoc.to') == &quot;latex&quot;) {
@@ -87,6 +92,6 @@ if (knitr::opts_knit$get('rmarkdown.pandoc.to') == &quot;latex&quot;) {
 </div>
 
 <p style="text-align:right;font-size:7px;margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:1px">
-
-Last updated: 2018-09-06
+<a href="https://www.r-bloggers.com/">Visit R-bloggers</a><br>
+Last updated: 2018-09-07
 </p>
