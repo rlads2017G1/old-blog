@@ -2,7 +2,7 @@
 link-citations: yes
 output:
   html_fragment:
-    self_contained: true
+    self_contained: false
     includes:
     number_sections: no
 ---
@@ -41,7 +41,7 @@ I implemented the ideas in that post and make it into an R package.
 **linguisticsdown** provides a Shiny interface to facilitate
 inserting IPA symbols in R Markdown. This gif is a quick demo of the current main feature of **linguisticsdown**:
 
-![](https://liao961120.github.io/linguisticsdown/man/figs/features.gif)
+![](https://liao961120.github.io/linguisticsdown/man/figs/features.gif){width="70%"}
 
 A [live demo](https://liao961120.shinyapps.io/IPA-Easily-Written/) is hosted on shinyapps.io.
 
