@@ -39,13 +39,15 @@ I implemented the ideas in that post and make it into an R package.
 <!--more-->
 
 **linguisticsdown** provides a Shiny interface to facilitate
-inserting IPA symbols in R Markdown. This gif is a quick demo of the current main feature of **linguisticsdown**:
+inserting IPA symbols in R Markdown. 
+See a quick demo of the current feature of **linguisticsdown** in the gif at the end of the post.
+
+A [live demo](https://liao961120.shinyapps.io/IPA-Easily-Written/) is hosted on shinyapps.io. For more information about **linguisticsdown**, 
+visit the [package web site](https://liao961120.github.io/linguisticsdown/).
+
+
 
 ![](https://liao961120.github.io/linguisticsdown/man/figs/features.gif){width="70%"}
 
-A [live demo](https://liao961120.shinyapps.io/IPA-Easily-Written/) is hosted on shinyapps.io.
-
-For more information about **linguisticsdown**, 
-visit the [package web site](https://liao961120.github.io/linguisticsdown/).
 
 
