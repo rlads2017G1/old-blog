@@ -47,7 +47,7 @@ visit [**linguisticsdown**](https://liao961120.github.io/linguisticsdown/).
 
 
 
-![](https://liao961120.github.io/linguisticsdown/man/figs/features.gif){width="70%"}
+![](https://liao961120.github.io/linguisticsdown/man/figs/features.gif)
 
 
 
