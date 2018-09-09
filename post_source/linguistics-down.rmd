@@ -35,15 +35,15 @@ library(knitr)
 ```
 
 I've written [a post](https://liao961120.github.io/2018/09/06/ipa-symbols.html) about rendering IPA symbols properly regardless of the output format of the R Markdown document.
-I implemented the ideas in that post and make it into an R package.
+I implemented the ideas into an R package, **linguisticsdown**.
 <!--more-->
 
 **linguisticsdown** provides a Shiny interface to facilitate
 inserting IPA symbols in R Markdown. 
 See a quick demo of the current feature of **linguisticsdown** in the gif at the end of the post.
 
-A [live demo](https://liao961120.shinyapps.io/IPA-Easily-Written/) is hosted on shinyapps.io. For more information about **linguisticsdown**, 
-visit the [package web site](https://liao961120.github.io/linguisticsdown/).
+A [live demo](https://liao961120.shinyapps.io/IPA-Easily-Written/) is hosted on shinyapps.io. For more details, 
+visit the [**linguisticsdown**](https://liao961120.github.io/linguisticsdown/).
 
 
 
