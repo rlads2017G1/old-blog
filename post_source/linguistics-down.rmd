@@ -43,7 +43,7 @@ inserting IPA symbols in R Markdown.
 See a quick demo of the current feature of **linguisticsdown** in the gif at the end of the post.
 
 A [live demo](https://liao961120.shinyapps.io/IPA-Easily-Written/) is hosted on shinyapps.io. For more details, 
-visit the [**linguisticsdown**](https://liao961120.github.io/linguisticsdown/).
+visit [**linguisticsdown**](https://liao961120.github.io/linguisticsdown/).
 
 
 
