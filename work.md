@@ -19,7 +19,12 @@ comment: false
 
 ## Personal Work
 
-Jep 07, 2018 &nbsp;&nbsp; [PTT Slang](https://liao961120.github.io/PTT-scrapy/)
+Sep 09, 2018 &nbsp;&nbsp; [linguisticsdown](https://liao961120.github.io/linguisticsdown)
+
+This is an R package that facilitates authoring Linguistics-related documents in R Markdown. Features include easy inserting IPA symbols with a Shiny gadget and proper rendering of IPA symbols to PDF outputs.
+{:.indent}
+
+Sep 07, 2018 &nbsp;&nbsp; [PTT Slang](https://liao961120.github.io/PTT-scrapy/)
 
 This is a small web scraping project for collecting the special expressions used by people on [PTT](https://en.wikipedia.org/wiki/PTT_Bulletin_Board_System). The expressions are scraped from an online encyclopedia about PTT.
 {:.indent}

@@ -1,6 +1,8 @@
 ---
 link-citations: yes
 output:
+  bookdown::pdf_document2:
+    toc: no
   html_fragment:
     self_contained: false
     includes:
