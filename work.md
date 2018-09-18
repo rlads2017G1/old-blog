@@ -44,9 +44,9 @@ Working on the book currently.
 {:.indent}
 
 
-Apr 20, 2018 &nbsp;&nbsp; [Google Form: Auto scoring and Feedback](https://liao961120.github.io/2018/04/20/gsheet_survey.html)  
+Apr 20, 2018 &nbsp;&nbsp; [Google Form: Auto Scoring and Feedback](https://liao961120.github.io/2018/04/20/gsheet_survey.html)  
 
-This is a blog post that teaches how to set up a feedback system based on the responses collected from google form. Written in Chinese.
+This is a blog post about setting up an automatic feedback system based on the response collected from google form. Written in Chinese.
 {:.indent}
 
 
