@@ -133,84 +133,82 @@ $(document).ready(function () {
 <div id="-4" class="section level2 smaller">
 <h2>巨人的肩膀 | 4</h2>
 <p>閒聊：<br />
-pttR 是我第一個 R 套件，<br />
 我是在八月初的時候開始寫這個套件<br />
-在那之前，我通常只用 R 來寫報告和交作業，<br />
-所以我以為會花很久的時間學 R 的套件開發。<br />
-但結果比我想像中的容易很多，<br />
-我先花了 3 天看完這本書(200頁 左右)，<br />
-之後撰寫套件的過程都很順利。</p>
-<p><strong>(Click)</strong><br />
-然後，我覺得這本書讓我收穫最大的地方<br />
-反而不是在套件開發本身上<br />
-而是介紹 R 套件的架構，<br />
-因為這個套件的架構可以用在其它許多地方，<br />
-譬如說可以把 R 套件的架構直接用在資料分析上。</p>
+在那之前，我只會用 R 來寫報告和交作業，<br />
+完全<strong>沒有碰過 R 套件開發</strong>這塊。 所以我以為會花很久的時間學才能上手。<br />
+但結果比我想像中的容易很多。<br />
+這都要感謝 Hadley Wickham 寫的這本書，<br />
+這應該是我看過 <strong>cp 值最高的電腦書</strong>，<br />
+我先花了 3 天看完這本不到200頁書，<br />
+之後<strong>撰寫套件的過程</strong>都很順利</p>
+<p><strong>(Next)</strong><br />
+然後，這本書提到一個很<strong>有趣</strong>的想法<br />
+就是 R 套件的架構不僅可用在軟體開發， 也<strong>可以用來組織工作流程</strong>，<br />
+這樣就不需要為<strong>檔案管理</strong>而傷腦筋，<br />
+而且也可以直接<strong>將成果透過安裝套件的方式分享</strong>給他人。</p>
+<p>這篇文章就說明如何把 R 套件的架構運用在資料分析上。</p>
 </div>
 <div id="pttr--5" class="section level2 smaller">
-<h2>pttR 階段目標 | 5</h2>
-<p>pttR 是一個協助使用者取得和處理 PTT 資料的 R 套件<br />
-因為是第一次寫套件，不敢把套件的規模設得太過巨大，<br />
+<h2>pttR 目標 | 5</h2>
+<p>pttR 當前的目標是<strong>協助</strong>使用者<strong>取得和處理 PTT 資料</strong><br />
+因為是第一次寫套件，不敢把套件的<strong>規模設得太過巨大</strong>，<br />
 所以現階段的 pttR 就是以這 3 個目標去構想的</p>
-<p><strong>(Click)</strong><br />
+<p><strong>(Next)</strong><br />
 簡單來說，<br />
-pttR 目前的功能就是將「原始資料(網頁)」轉換成<br />
-「與 text mining 套件相容的資料」</p>
+pttR 功能就是將「原始資料(網頁)」轉換成<br />
+「text mining 套件的資料結構」</p>
 </div>
 <div id="how-pttr-works-6" class="section level2 smaller">
 <h2>How pttR Works | 6</h2>
-<p>這張流程圖是我對於 pttR 應該如何運作的想像<br />
+<p>這張流程圖是我對於 pttR <strong>該如何運作</strong>的<strong>想像</strong><br />
 圖中可以分成 3 個部份，正好對應到前一張投影片的三個目標</p>
 </div>
 <div id="get-started-7" class="section level2 smaller">
 <h2>Get Started | 7</h2>
-<p>接下來我會一邊實際操作一邊用投影片。<br />
-如果大家有興趣玩玩的話，可以用第一行程式碼下載 pttR。</p>
-<p>下方的「範例程式碼」則大致是上一張流程圖寫成 code 之後的樣子</p>
+<p>接下來我會<strong>一邊實際操作一邊用投影片</strong><br />
+如果大家有興趣玩玩的話，可以用第一行程式碼<strong>下載 pttR</strong></p>
+<p>下方的「範例程式碼」則大致是上一張<strong>流程圖寫成 code</strong> 的樣子</p>
 </div>
 <div id="-8" class="section level2 smaller">
 <h2>資料抓取 | 8</h2>
 <p>pttR 從「批踢踢網頁版」(不須輸入密碼) 抓資料</p>
-<p><strong>(Click)</strong><br />
-<code>index2df()</code> 以及 <code>post2df()</code> 是將網頁轉換成 data frame 的兩個函數<br />
-可以將這兩個函數想像成「網頁頁面」，只是把網頁的資訊濃縮成 data frame 呈現而已</p>
+<p><strong>(Next)</strong><br />
+<code>index2df()</code> 以及 <code>post2df()</code> 是將<strong>網頁轉換成 data frame</strong> 的兩個函數<br />
+可以將這兩個<strong>函數的回傳值</strong>想像成<strong>網頁頁面</strong>，只是網頁的資訊<strong>濃縮成 data frame</strong>而已</p>
 <p><strong>(Open 1st link) –&gt; nav to (Gossiping/index)</strong><br />
 我現在進來「八卦板文章列表」<br />
 <code>index2df()</code> 就是從這個頁面抓取資料<br />
 <strong>(Demo index2df)</strong></p>
-<p><br><br> <strong>下頁續</strong></p>
-</div>
-<div id="2-8" class="section level2 smaller">
-<h2>資料抓取(2) | 8</h2>
+<hr />
 <p><strong>(Back to Web) –&gt; (Copy Post Link)</strong><br />
 <code>post2df()</code> 則是從「某篇文章頁面」抓取資料</p>
 <p><strong>(Demo post2df() 1 post)</strong><br />
-因為文章的結構比較複雜，所以<code>post2df()</code>回傳的 data frame 結構上也比較複雜，<br />
+因為<strong>文章的結構</strong>比較<strong>複雜</strong>，所以<code>post2df()</code>回傳的 <strong>data frame 結構</strong>上也比較<strong>複雜</strong>，<br />
 例如，<code>comment</code> 這個 column 是一個 <strong>list-column</strong>，它每個 cell 儲存的不是一個值，而是一個 data frame。</p>
 <p><code>post2df()</code> 除了吃「單一」的網址外，也可以吃<strong>一個 vector</strong> 的「網址」，<br />
-因此可以與<code>index2df()</code>合用<br />
+因此可以<strong>與<code>index2df()</code>合用</strong><br />
 <strong>(Demo post2df() mult posts)</strong></p>
 </div>
 <div id="-9" class="section level2 smaller">
 <h2>斷詞 | 9</h2>
-<p>pttR 的斷詞函數是直接去包 jiebaR 的函數<br />
+<p>pttR 的斷詞函數是直接去<strong>包 jiebaR 的函數</strong><br />
 jiebaR 有提供「使用者自訂辭庫」的功能，<br />
-這邊使用的函數已經包含「自訂辭庫」，<br />
+這邊使用的<strong>函數已經包含「自訂辭庫」</strong>，<br />
 至於詞庫的來源之後會介紹</p>
-<p><strong>(Click)</strong><br />
-這邊斷詞函數的用法，可以用 tidyverse 的寫法</p>
-<p><strong>(Open Link) –&gt; (Demo Segmentation 1)</strong><br />
+<p><strong>(Next)</strong><br />
+這邊斷詞函數的用法，可以用 <strong>tidyverse</strong> 的寫法</p>
+<p><strong>(Open Demo Post Link) –&gt; (Demo Segmentation 1)</strong><br />
 這邊使用這篇文章當例子(西索)，</p>
 <p>如果不滿意斷詞結果，可以自行<strong>添加詞彙</strong><br />
 <strong>(Demo Segmentation 2)</strong></p>
 </div>
 <div id="-new-section" class="section level2 smaller">
 <h2>批踢踢詞庫 | New Section</h2>
-<p>將 data frame 轉換為成 <strong>Corpus object</strong> 的函數<br />
-因為時間的關係，這裡就不介紹了，<br />
+<p>最後兩個將 data frame 轉換為成 <strong>Corpus object</strong> 的<strong>函數</strong><br />
+因為時間的關係，這裡就略過，<br />
 這些函數使用上就只有一行，<br />
 有興趣的人可以自己試看看</p>
-<p>那我接下來介紹 PTT 詞庫的來源</p>
+<p>那接下來介紹前面<strong>斷詞函數</strong>用到的 <strong>PTT 詞庫</strong></p>
 </div>
 <div id="-11" class="section level2 smaller">
 <h2>鄉民百科資料擷取 | 11</h2>
