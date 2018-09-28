@@ -155,63 +155,103 @@ $(document).ready(function () {
 </div>
 <div id="outline-3" class="section level2">
 <h2>Outline | 3</h2>
+<ul>
+<li><p>第一部份<br />
+<strong>簡單介紹</strong> pttR，並且會<strong>實際操作幾個函數</strong></p></li>
+<li><p>第二部份<br />
+介紹 <strong>pttR 內部</strong>用到的<strong>斷詞詞庫</strong></p></li>
+</ul>
 </div>
 <div id="pttr-section" class="section level2">
 <h2>pttR | Section</h2>
+<p>None</p>
 </div>
-<div id="pttr--5" class="section level2 smaller">
+<div id="pttr--5" class="section level2">
 <h2>pttR 目標 | 5</h2>
-<p>pttR 當前的目標是<strong>協助</strong>使用者<strong>取得和處理 PTT 資料</strong><br />
-因為是第一次寫套件，不敢把套件的<strong>規模設得太過巨大</strong>，<br />
-所以現階段的 pttR 就是以這 3 個目標去構想的</p>
+<ul>
+<li>pttR 當前的目標是<strong>協助</strong>使用者<strong>取得和處理 PTT 資料</strong><br />
+</li>
+<li>因為是第一次寫套件，不敢把套件的<strong>規模設得太過巨大</strong>，<br />
+</li>
+<li>所以現階段的 pttR 就是以這 3 個目標去構想的</li>
+</ul>
 <p><strong>(Next)</strong><br />
-簡單來說，<br />
-pttR 功能就是將「原始資料(網頁)」轉換成<br />
-「text mining 套件的資料結構」</p>
+簡單來說，</p>
+<ul>
+<li>將「原始資料(網頁)」轉換成「其它 text mining 套件的 corpus object」</li>
+</ul>
 </div>
 <div id="how-pttr-works-6" class="section level2 smaller">
 <h2>How pttR Works | 6</h2>
-<p>這張流程圖是我對於 pttR <strong>該如何運作</strong>的<strong>想像</strong><br />
-圖中可以分成 3 個部份，正好對應到前一張投影片的三個目標</p>
+<ul>
+<li>這張<strong>流程圖</strong>是我對於 pttR <strong>該如何運作</strong>的<strong>想像</strong><br />
+</li>
+<li>圖中可以分成 <strong>3 個部份</strong>，正好對應到<strong>前一張投影片</strong>的 3 個目標</li>
+</ul>
 </div>
 <div id="get-started-7" class="section level2 smaller">
 <h2>Get Started | 7</h2>
-<p>接下來我會<strong>一邊實際操作一邊用投影片</strong><br />
-如果大家有興趣玩玩的話，可以用第一行程式碼<strong>下載 pttR</strong></p>
-<p>下方的「範例程式碼」則大致是上一張<strong>流程圖寫成 code</strong> 的樣子</p>
+<ul>
+<li>接下來我會<strong>一邊實際操作一邊用投影片</strong><br />
+</li>
+<li>大家可以用最上面的<strong>程式碼下載 pttR</strong><br />
+</li>
+<li>下方的「範例程式碼」則大致是上一張<strong>流程圖寫成 code</strong> 的樣子</li>
+</ul>
 </div>
 <div id="-8" class="section level2 smaller">
 <h2>資料抓取 | 8</h2>
-<p>pttR 從「批踢踢網頁版」(不須輸入密碼) 抓資料</p>
-<p><strong>(Next)</strong><br />
-<code>index2df()</code> 以及 <code>post2df()</code> 是將<strong>網頁轉換成 data frame</strong> 的兩個函數<br />
-可以將這兩個<strong>函數的回傳值</strong>想像成<strong>網頁頁面</strong>，只是網頁的資訊<strong>濃縮成 data frame</strong>而已</p>
-<p><strong>(Open 1st link) –&gt; nav to (Gossiping/index)</strong><br />
-我現在進來「八卦板文章列表」<br />
-<code>index2df()</code> 就是從這個頁面抓取資料<br />
-<strong>(Demo index2df)</strong></p>
+<ul>
+<li>pttR 是從<strong>批踢踢網頁版</strong>抓資料</li>
+</ul>
+<p><strong>(Next)</strong></p>
+<ul>
+<li><code>index2df()</code> 以及 <code>post2df()</code> 是將<strong>網頁轉換成 data frame</strong> 的兩個函數</li>
+<li>可以將這兩個<strong>函數的回傳值</strong>想像成<strong>網頁頁面</strong>，只是網頁的資訊<strong>濃縮成 data frame</strong>而已</li>
+</ul>
+<p><strong>(Open 1st link) –&gt; nav to (Gossiping/index)</strong></p>
+<ul>
+<li><strong><code>index2df()</code></strong> 就是<strong>從這個頁面抓取資料</strong></li>
+</ul>
+<p><strong>(Demo index2df)</strong></p>
 <hr />
-<p><strong>(Back to Web) –&gt; (Copy Post Link)</strong><br />
-<code>post2df()</code> 則是從「某篇文章頁面」抓取資料</p>
-<p><strong>(Demo post2df() 1 post)</strong><br />
-因為<strong>文章的結構</strong>比較<strong>複雜</strong>，所以<code>post2df()</code>回傳的 <strong>data frame 結構</strong>上也比較<strong>複雜</strong>，<br />
-例如，<code>comment</code> 這個 column 是一個 <strong>list-column</strong>，它每個 cell 儲存的不是一個值，而是一個 data frame。</p>
-<p><code>post2df()</code> 除了吃「單一」的網址外，也可以吃<strong>一個 vector</strong> 的「網址」，<br />
-因此可以<strong>與<code>index2df()</code>合用</strong><br />
-<strong>(Demo post2df() mult posts)</strong></p>
+<p><strong>(Back to Web) –&gt; (Copy Post Link)</strong></p>
+<ul>
+<li><strong><code>post2df()</code></strong> 則是從<strong>某篇文章頁面</strong>抓取資料</li>
+</ul>
+<p><strong>(Demo post2df() 1 post)</strong></p>
+<ul>
+<li><p>因為<strong>文章的結構</strong>比較<strong>複雜</strong>，所以<code>post2df()</code>回傳的 <strong>data frame 結構</strong>也比較<strong>複雜</strong></p></li>
+<li><p><code>comment</code> 這個 column 是一個 <strong>list-column</strong>，它<strong>每個 cell</strong> 裡不是一個值，而是一個 data frame。</p></li>
+</ul>
+<p><strong>(Demo post2df() mult posts)</strong></p>
+<ul>
+<li><code>post2df()</code> 除了吃<strong>單一網址</strong>外，也可以吃<strong>一個 vector</strong> 的「網址」
+<ul>
+<li>可以<strong>與<code>index2df()</code>合用</strong></li>
+</ul></li>
+</ul>
 </div>
 <div id="-9" class="section level2 smaller">
 <h2>斷詞 | 9</h2>
-<p>pttR 的斷詞函數是直接去<strong>包 jiebaR 的函數</strong><br />
-jiebaR 有提供「使用者自訂辭庫」的功能，<br />
-這邊使用的<strong>函數已經包含「自訂辭庫」</strong>，<br />
-至於詞庫的來源之後會介紹</p>
-<p><strong>(Next)</strong><br />
-這邊斷詞函數的用法，可以用 <strong>tidyverse</strong> 的寫法</p>
-<p><strong>(Open Demo Post Link) –&gt; (Demo Segmentation 1)</strong><br />
-這邊使用這篇文章當例子(西索)，</p>
-<p>如果不滿意斷詞結果，可以自行<strong>添加詞彙</strong><br />
-<strong>(Demo Segmentation 2)</strong></p>
+<ul>
+<li><p>pttR 的斷詞函數是直接去<strong>包 jiebaR 的函數</strong></p></li>
+<li>jiebaR 有提供<strong>使用者自訂辭庫</strong>的功能
+<ul>
+<li>pttR 的<strong>函數就是使用「自訂辭庫」加入 PTT 用語</strong>，<br />
+</li>
+<li><strong>詞庫來源</strong>之後會介紹</li>
+</ul></li>
+</ul>
+<p><strong>(Next)</strong></p>
+<ul>
+<li>這邊<strong>斷詞函數的設計</strong>，讓函數可以使用 <strong>tidyverse</strong> 的寫法</li>
+</ul>
+<p><strong>(Open Demo Post Link) –&gt; (Demo Segmentation 1)</strong></p>
+<p><strong>(Demo Segmentation 2)</strong></p>
+<ul>
+<li>如果不滿意斷詞結果，可以自行<strong>添加詞彙</strong></li>
+</ul>
 </div>
 <div id="-section" class="section level2 smaller">
 <h2>批踢踢詞庫 | Section</h2>
