@@ -8,4 +8,3 @@ post_source/*/*.html
 post_source/*.html
 edit_post/
 _site/
-*.pdf
