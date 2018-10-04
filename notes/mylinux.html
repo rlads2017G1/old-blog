@@ -339,6 +339,9 @@ wget &quot;$url&quot;{001..041}&quot;.htm&quot;</code></pre>
 <h1><span class="header-section-number">4</span> String Manipulation</h1>
 <div id="cut" class="section level2">
 <h2><span class="header-section-number">4.1</span> cut</h2>
+<p><code>list.txt</code>:</p>
+<pre><code>10/04 2018,xaringan
+09/28 2018,pttR-intro</code></pre>
 <p>Read one line of <code>list.txt</code> in each loop, cut the line into 2 fields, seperated by <code>,</code>.</p>
 <pre class="bash"><code>while read p; do
   date=$(echo &quot;$p&quot; | cut -d ',' -f 1)
@@ -417,16 +420,16 @@ $(ls -l)&quot;</code></pre>
 <pre><code>&gt; Before:
 &gt; total 16
 &gt; -rw-r--r-- 1 liao liao    6 Jul 22 18:19 cmd_hist
-&gt; drwxr-xr-x 3 liao liao 4096 Oct  4 20:03 dir
+&gt; drwxr-xr-x 3 liao liao 4096 Oct  4 20:07 dir
 &gt; -rw-r--r-- 1 liao liao 1080 Jul 22 18:19 doc.Rmd
 &gt; -rw-r--r-- 1 liao liao  540 Jul 22 18:17 rmd-head.txt
 &gt; 
 &gt; After:
 &gt; total 16
 &gt; -rw-r--r-- 1 liao liao    6 Jul 22 18:19 cmd_hist
-&gt; drwxr-xr-x 3 liao liao 4096 Oct  4 20:03 dir
+&gt; drwxr-xr-x 3 liao liao 4096 Oct  4 20:07 dir
 &gt; -rw-r--r-- 1 liao liao 1080 Jul 22 18:19 doc.Rmd
-&gt; lrwxrwxrwx 1 liao liao   33 Oct  4 20:03 foo-sym -&gt; /home/liao/bash_pract/dir/foo.txt
+&gt; lrwxrwxrwx 1 liao liao   33 Oct  4 20:07 foo-sym -&gt; /home/liao/bash_pract/dir/foo.txt
 &gt; -rw-r--r-- 1 liao liao  540 Jul 22 18:17 rmd-head.txt</code></pre>
 </div>
 </div>
