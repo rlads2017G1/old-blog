@@ -11,7 +11,7 @@
 
 <meta name="author" content="Yongfu Liao" />
 
-<meta name="date" content="2018-08-09" />
+<meta name="date" content="2018-10-04" />
 
 <title>My Linux Notes</title>
 
@@ -230,7 +230,7 @@ div.tocify {
 <h1 class="title toc-ignore">My Linux Notes</h1>
 <h3 class="subtitle"><em>A Quick Reference</em></h3>
 <h4 class="author"><em><a href="https://liao961120.github.io/">Yongfu Liao</a></em></h4>
-<h4 class="date"><em>August 09, 2018</em></h4>
+<h4 class="date"><em>October 04, 2018</em></h4>
 
 </div>
 
@@ -259,6 +259,11 @@ elif [[ ]]; then
 else
     commands
 fi</code></pre>
+<div id="pipe" class="section level4">
+<h4><span class="header-section-number">1.1.2.1</span> pipe</h4>
+<pre class="bash"><code>[ -f &lt;file-name&gt; ] &amp;&amp; &lt;command&gt;
+[ -d &lt;dir-name&gt; ] || &lt;command&gt;</code></pre>
+</div>
 </div>
 </div>
 <div id="loops" class="section level2">
@@ -330,12 +335,49 @@ wget &quot;$url&quot;{001..041}&quot;.htm&quot;</code></pre>
 </ul></li>
 </ul>
 </div>
+<div id="string-manipulation" class="section level1">
+<h1><span class="header-section-number">4</span> String Manipulation</h1>
+<div id="cut" class="section level2">
+<h2><span class="header-section-number">4.1</span> cut</h2>
+<p>Read one line of <code>list.txt</code> in each loop, cut the line into 2 fields, seperated by <code>,</code>.</p>
+<pre class="bash"><code>while read p; do
+  date=$(echo &quot;$p&quot; | cut -d ',' -f 1)
+  file=$(echo &quot;$p&quot; | cut -d ',' -f 2)
+done &lt; list.txt</code></pre>
+</div>
+<div id="printf" class="section level2">
+<h2><span class="header-section-number">4.2</span> printf</h2>
+<p>More consistent then <code>echo</code>, can use special characters like <code>\\n</code>.</p>
+<pre class="bash"><code>printf &quot;$date &amp;nbsp;&amp;nbsp; [$file](${file}/index.html)\n\n&quot;</code></pre>
+</div>
+<div id="cat" class="section level2">
+<h2><span class="header-section-number">4.3</span> cat</h2>
+<p><code>cat</code> the text between the two <code>_EOF_</code>.</p>
+<pre class="bash"><code>cat &lt;&lt; _EOF_
+---
+title: Slides
+---
+
+# List of Slides
+&lt;br&gt;&lt;br&gt;
+_EOF_</code></pre>
+<p><code>cat</code> the text between the two <code>_EOF_</code>, then <strong>redirect the text to <code>index.md</code></strong>.</p>
+<pre class="bash"><code>cat &gt;&gt; index.md  &lt;&lt; _EOF_
+---
+title: Slides
+---
+
+# List of Slides
+&lt;br&gt;&lt;br&gt;
+_EOF_</code></pre>
+</div>
+</div>
 <div id="navigation" class="section level1">
-<h1><span class="header-section-number">4</span> Navigation</h1>
+<h1><span class="header-section-number">5</span> Navigation</h1>
 <div id="file-manipulation" class="section level2">
-<h2><span class="header-section-number">4.1</span> File Manipulation</h2>
+<h2><span class="header-section-number">5.1</span> File Manipulation</h2>
 <div id="recursive-rename" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Recursive Rename</h3>
+<h3><span class="header-section-number">5.1.1</span> Recursive Rename</h3>
 <p>Systematically rename multiple files by <code>for</code> loop.</p>
 <p>Original files in the working dir:</p>
 <pre class="bash"><code>ls ~/bash_pract/dir</code></pre>
@@ -360,7 +402,7 @@ ls</code></pre>
 </div>
 </div>
 <div id="soft-link" class="section level2">
-<h2><span class="header-section-number">4.2</span> Soft Link</h2>
+<h2><span class="header-section-number">5.2</span> Soft Link</h2>
 <p>Syntax: <code>ln -s &lt;target&gt; &lt;link-name&gt;</code></p>
 <p>e.g.</p>
 <pre class="bash"><code>cd ~/bash_pract
@@ -375,23 +417,23 @@ $(ls -l)&quot;</code></pre>
 <pre><code>&gt; Before:
 &gt; total 16
 &gt; -rw-r--r-- 1 liao liao    6 Jul 22 18:19 cmd_hist
-&gt; drwxr-xr-x 3 liao liao 4096 Aug  9 22:26 dir
+&gt; drwxr-xr-x 3 liao liao 4096 Oct  4 20:03 dir
 &gt; -rw-r--r-- 1 liao liao 1080 Jul 22 18:19 doc.Rmd
 &gt; -rw-r--r-- 1 liao liao  540 Jul 22 18:17 rmd-head.txt
 &gt; 
 &gt; After:
 &gt; total 16
 &gt; -rw-r--r-- 1 liao liao    6 Jul 22 18:19 cmd_hist
-&gt; drwxr-xr-x 3 liao liao 4096 Aug  9 22:26 dir
+&gt; drwxr-xr-x 3 liao liao 4096 Oct  4 20:03 dir
 &gt; -rw-r--r-- 1 liao liao 1080 Jul 22 18:19 doc.Rmd
-&gt; lrwxrwxrwx 1 liao liao   33 Aug  9 22:26 foo-sym -&gt; /home/liao/bash_pract/dir/foo.txt
+&gt; lrwxrwxrwx 1 liao liao   33 Oct  4 20:03 foo-sym -&gt; /home/liao/bash_pract/dir/foo.txt
 &gt; -rw-r--r-- 1 liao liao  540 Jul 22 18:17 rmd-head.txt</code></pre>
 </div>
 </div>
 <div id="network" class="section level1">
-<h1><span class="header-section-number">5</span> Network</h1>
+<h1><span class="header-section-number">6</span> Network</h1>
 <div id="setup-ssh" class="section level2">
-<h2><span class="header-section-number">5.1</span> Setup SSH</h2>
+<h2><span class="header-section-number">6.1</span> Setup SSH</h2>
 <div id="server-setup" class="section level3 unnumbered">
 <h3>Server Setup</h3>
 <p>Install SSH Server (so be connected by a remote client):</p>
@@ -415,9 +457,9 @@ $(ls -l)&quot;</code></pre>
 </div>
 </div>
 <div id="remote-control-via-ssh" class="section level1">
-<h1><span class="header-section-number">6</span> Remote Control Via SSH</h1>
+<h1><span class="header-section-number">7</span> Remote Control Via SSH</h1>
 <div id="hardware-configuration" class="section level2">
-<h2><span class="header-section-number">6.1</span> Hardware Configuration</h2>
+<h2><span class="header-section-number">7.1</span> Hardware Configuration</h2>
 <ol style="list-style-type: decimal">
 <li>Fix floating IP (Alternative: auto push IP address when turned on <a href="https://superuser.com/questions/471253/ubuntu-how-to-run-a-terminal-command-on-boot" class="uri">https://superuser.com/questions/471253/ubuntu-how-to-run-a-terminal-command-on-boot</a>)</li>
 <li>Enable WakeOnLane(WOL) at BIOS:
@@ -428,23 +470,23 @@ $(ls -l)&quot;</code></pre>
 </ol>
 </div>
 <div id="wakeonlan" class="section level2">
-<h2><span class="header-section-number">6.2</span> wakeonlan</h2>
+<h2><span class="header-section-number">7.2</span> wakeonlan</h2>
 <p>wakeonlan -i <broadcast-ip> <MAC></p>
 <pre class="bash"><code>wakeonlan -i 192.168.2.255 44:87:fc:a1:0b:cc
 wakeonlan -i $rm_ip_b $rm_MAC</code></pre>
 </div>
 <div id="ssh-login" class="section level2">
-<h2><span class="header-section-number">6.3</span> SSH login</h2>
+<h2><span class="header-section-number">7.3</span> SSH login</h2>
 <p>ssh liao961120@<ip></p>
 <pre class="bash"><code>ssh liao961120@192.168.2.110
 ssh $ssh_pc</code></pre>
 </div>
 <div id="ssh-logout-suspend-computer" class="section level2">
-<h2><span class="header-section-number">6.4</span> SSH logout &amp; suspend computer</h2>
+<h2><span class="header-section-number">7.4</span> SSH logout &amp; suspend computer</h2>
 <p>Use <code>sudo shutdown 0</code> to leave. Remember to enable <code>Power of Mode</code> in BIOS, so you can WOL to open the computer again.</p>
 </div>
 <div id="variable-definition-in-.bashrc" class="section level2">
-<h2><span class="header-section-number">6.5</span> Variable Definition (in <code>~/.bashrc</code>)</h2>
+<h2><span class="header-section-number">7.5</span> Variable Definition (in <code>~/.bashrc</code>)</h2>
 <pre class="bash"><code>rm_MAC=&quot;44:87:fc:a1:0b:cc&quot;
 rm_ip=&quot;192.168.2.110&quot;
 rm_ip_b=`bash ~/ip2ipb.sh $rm_ip`
