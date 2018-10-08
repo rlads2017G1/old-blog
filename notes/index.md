@@ -13,6 +13,8 @@ comment: false
     ul {list-style-image: none;}
 </style>
 
+Oct 07, 2018 [slides](/slides/){:class="tab0"}
+
 Aug 09, 2018 [My Python Notes](/notes/python_notes.html){:class="tab0"}
 
 July 19, 2018 [My Linux Notes](/notes/mylinux.html){:class="tab0"}
