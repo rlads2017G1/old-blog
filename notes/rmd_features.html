@@ -426,9 +426,9 @@ ttest &lt;- t.test(tr1, tr2, paired = T)
 diff &lt;- ttest[[&quot;estimate&quot;]][[&quot;mean of the differences&quot;]]
 p_val &lt;- ttest[[&quot;p.value&quot;]]</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is 0.343.</p>
+<li><p>The mean difference between the two groups is 0.579.</p>
 <pre class="latex"><code>The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.2159, which is not significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.0232, which is significant.</p>
 <pre class="latex"><code>    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></li>
 </ol>
 </div>
@@ -842,6 +842,7 @@ Figure 13.1: An Caption of the Plot
 <p>Xaringan is a HTML presentation output format of R Markdown. Xaringan doesn’t support Pandoc markdown, but is very flexible and easy to use if having basic CSS knowledge. It also prints well on PDF (using Chrome or <a href="https://github.com/astefanutti/decktape">decktape</a>). Read the <a href="https://bookdown.org/yihui/rmarkdown/xaringan.html">Chapter 7</a> of <em>R Markdown Guide</em> for more details.</p>
 <iframe src="https://liao961120.github.io/slides/xaringan/index.html" , width="465," height="350">
 </iframe>
+<p><a href="https://liao961120.github.io/slides/xaringan/index.html">Slide Link</a></p>
 </div>
 <div id="beamer-slide" class="section level1">
 <h1><span class="header-section-number">15</span> Beamer Slide</h1>
