@@ -11,7 +11,7 @@
 
 <meta name="author" content="Yongfu Liao" />
 
-<meta name="date" content="2018-10-10" />
+<meta name="date" content="2018-10-12" />
 
 <title>R Markdown Features</title>
 
@@ -230,7 +230,7 @@ div.tocify {
 <h1 class="title toc-ignore">R Markdown Features</h1>
 <h3 class="subtitle"><em>A Compact Reference</em></h3>
 <h4 class="author"><em><a href="https://liao961120.github.io/">Yongfu Liao</a></em></h4>
-<h4 class="date"><em>October 10, 2018</em></h4>
+<h4 class="date"><em>October 12, 2018</em></h4>
 
 </div>
 
@@ -238,8 +238,8 @@ div.tocify {
 <div id="yaml-setup" class="section level1 tabset">
 <h1><span class="header-section-number">1</span> yaml Setup</h1>
 <p>yaml metadata determines the output file format, looking, and any other additional customizing features of Rmarkdown files.</p>
-<div id="yaml-of-this-doc" class="section level2 unnumbered">
-<h2>yaml of this Doc</h2>
+<div id="yaml" class="section level2 unnumbered">
+<h2>yaml</h2>
 <p>This is the complete yaml header of this document.</p>
 <pre class="yaml"><code>---
 title: &quot;R Markdown Features&quot;
@@ -260,8 +260,8 @@ output:
         collapsed: false
 ---</code></pre>
 </div>
-<div id="html-output" class="section level2 unnumbered">
-<h2>HTML Output</h2>
+<div id="html" class="section level2 unnumbered">
+<h2>HTML</h2>
 <pre class="yaml"><code>output:
   html_document:
     includes:
@@ -275,8 +275,8 @@ output:
     toc_depth: 4
     toc_float: true</code></pre>
 </div>
-<div id="pdf-output" class="section level2 unnumbered">
-<h2>PDF Output</h2>
+<div id="pdf" class="section level2 unnumbered">
+<h2>PDF</h2>
 <p>You may need to attatch an additional <code>header.tex</code> and set <code>latex_engine</code> to <code>xelatex</code> for PDF documents containing multibite characters (e.g. Chinese). Read more about <a href="#pdf-header">header.txt</a>.</p>
 <pre class="yaml"><code>---
 author: &quot;廖永賦\\thanks{組別：3 ~~ 系級：心理三 ~~ 學號：B00000000}&quot;
@@ -292,8 +292,8 @@ geometry: a5paper, headheight=0pt, margin=0.4in
 ---</code></pre>
 <p>Note that Latex only accepts fontsize of 10pt, 11pt, or 12pt. See <a href="https://github.com/rstudio/rmarkdown/issues/878">this</a> for more detail.</p>
 </div>
-<div id="pdf-output2" class="section level2 unnumbered">
-<h2>PDF Output2</h2>
+<div id="pdf-2" class="section level2 unnumbered">
+<h2>PDF 2</h2>
 <p>This is the yaml header for <code>bookdown::pdf_document2</code> output. Using <code>bookdown</code> extensions have several advantages. Search ‘bookdown’ for details.</p>
 <pre class="yaml"><code>---
 author: &quot;廖永賦\\thanks{組別：3 ~~ 系級：心理三 ~~ 學號：B00000000}&quot;
@@ -346,6 +346,18 @@ always_allow_html: yes
 
 %suppress page number
 %\pagenumbering{gobble}</code></pre>
+</div>
+<div id="pdf-template" class="section level2 unnumbered">
+<h2>PDF: template</h2>
+<pre class="markdown"><code>output:
+  pdf_document:
+    template: two-col.latex
+    includes:
+      in_header: header.tex</code></pre>
+<p>It is possible to define <a href="https://rmarkdown.rstudio.com/pdf_document_format#custom_templates">custom latex template</a>. For example, <a href="https://github.com/liao961120/local_depend/blob/master/style_sheets/two-col.latex"><code>two-col.latex</code></a> is created by putting the variable <code>body</code> (which is the rendered content of the Rmd file) inside <code>multicols</code> latex extension:</p>
+<pre class="tex"><code>\begin{multicols}{2}
+$body$
+\end{multicols}</code></pre>
 </div>
 <div id="bibliography" class="section level2 unnumbered">
 <h2>Bibliography</h2>
@@ -426,9 +438,9 @@ ttest &lt;- t.test(tr1, tr2, paired = T)
 diff &lt;- ttest[[&quot;estimate&quot;]][[&quot;mean of the differences&quot;]]
 p_val &lt;- ttest[[&quot;p.value&quot;]]</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is 0.579.</p>
+<li><p>The mean difference between the two groups is 0.663.</p>
 <pre class="latex"><code>The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.0232, which is significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.0067, which is significant.</p>
 <pre class="latex"><code>    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></li>
 </ol>
 </div>
@@ -840,7 +852,7 @@ Figure 13.1: An Caption of the Plot
 <div id="xaringan-remark.js-slide" class="section level1">
 <h1><span class="header-section-number">14</span> Xaringan (remark.js Slide)</h1>
 <p>Xaringan is a HTML presentation output format of R Markdown. Xaringan doesn’t support Pandoc markdown, but is very flexible and easy to use if having basic CSS knowledge. It also prints well on PDF (using Chrome or <a href="https://github.com/astefanutti/decktape">decktape</a>). Read the <a href="https://bookdown.org/yihui/rmarkdown/xaringan.html">Chapter 7</a> of <em>R Markdown Guide</em> for more details.</p>
-<iframe src="https://liao961120.github.io/slides/xaringan/index.html" , width="465," height="350">
+<iframe src="https://liao961120.github.io/slides/xaringan/index.html" , width="400," height="301">
 </iframe>
 <p><a href="https://liao961120.github.io/slides/xaringan/index.html">Slide Link</a></p>
 </div>
