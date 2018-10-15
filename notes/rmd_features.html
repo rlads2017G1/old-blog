@@ -130,7 +130,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2",
+      selectors: "h1",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -236,7 +236,8 @@ div.tocify {
 
 
 <div id="part-yaml" class="section level1 unnumbered">
-<h1><span class="header-section-number">I</span> yaml</h1>
+<h1><span class="header-section-number">I</span> <strong>yaml</strong></h1>
+<p><br></p>
 </div>
 <div id="yaml-setup" class="section level1 tabset">
 <h1><span class="header-section-number">1</span> yaml Setup</h1>
@@ -362,7 +363,8 @@ link-citations: yes</code></pre>
 </div>
 </div>
 <div id="part-knitr" class="section level1 unnumbered">
-<h1><span class="header-section-number">II</span> knitr</h1>
+<h1><span class="header-section-number">II</span> <strong>knitr</strong></h1>
+<p><br></p>
 </div>
 <div id="knitr-parameters" class="section level1">
 <h1><span class="header-section-number">2</span> knitr Parameters</h1>
@@ -435,9 +437,9 @@ ttest &lt;- t.test(tr1, tr2, paired = T)
 diff &lt;- ttest[[&quot;estimate&quot;]][[&quot;mean of the differences&quot;]]
 p_val &lt;- ttest[[&quot;p.value&quot;]]</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>The mean difference between the two groups is 0.092.</p>
+<li><p>The mean difference between the two groups is 0.17.</p>
 <pre class="latex"><code>The mean difference between the two treatments is `r round(diff, 3)`.</code></pre></li>
-<li><p>The <em>p</em>-value of the paired t-test is 0.7866, which is not significant.</p>
+<li><p>The <em>p</em>-value of the paired t-test is 0.5794, which is not significant.</p>
 <pre class="latex"><code>    The *p*-value of the paired t-test is `r round(p_val, 4)`, which is `r ifelse(p_val&lt;=0.05, &quot;&quot;, &quot;not&quot;)` significant.</code></pre></li>
 </ol>
 </div>
@@ -733,7 +735,8 @@ Figure 11.1: An Caption of the Plot
 </div>
 </div>
 <div id="part-latex" class="section level1 unnumbered">
-<h1><span class="header-section-number">III</span> LaTeX</h1>
+<h1><span class="header-section-number">III</span> <strong>LaTeX</strong></h1>
+<p><br></p>
 </div>
 <div id="some-latex-for-pdf-output" class="section level1">
 <h1><span class="header-section-number">12</span> Some <span class="math inline">\(\LaTeX\)</span> for PDF output</h1>
@@ -850,7 +853,8 @@ iris_data2 %&gt;% ggplot() +
 </div>
 </div>
 <div id="part-presentation" class="section level1 unnumbered">
-<h1><span class="header-section-number">IV</span> Presentation</h1>
+<h1><span class="header-section-number">IV</span> <strong>Presentation</strong></h1>
+<p><br></p>
 </div>
 <div id="xaringan-remark.js-slide" class="section level1">
 <h1><span class="header-section-number">14</span> Xaringan (remark.js Slide)</h1>
