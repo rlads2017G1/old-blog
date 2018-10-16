@@ -13,7 +13,7 @@ comment: false
     ul {list-style-image: none;}
 </style>
 
-Oct 07, 2018  s[slides](/slides/){:class="tab0"}
+Oct 07, 2018  [slides](/slides/){:class="tab0"}
 
 Aug 09, 2018  [My Python Notes](/notes/python_notes.html){:class="tab0"}
 
