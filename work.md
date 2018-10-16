@@ -26,12 +26,12 @@ An R Markdown ([bookdown](https://bookdown.org/yihui/bookdown/)) thesis template
 
 Oct 10, 2018 &nbsp;&nbsp; [Xaringan Chocolate Theme](https://liao961120.github.io/slides/xaringan/)
 
-A CSS theme created for the HTML slide R package [xaringan](https://github.com/yihui/xaringan) (writing [remark.js](https://github.com/gnab/remark) slide in R Markdown).
+A CSS theme created for the slide making R package [xaringan](https://github.com/yihui/xaringan) (making [remark.js](https://github.com/gnab/remark) slide in R Markdown).
 {:.indent}
 
 Sep 09, 2018 &nbsp;&nbsp; [linguisticsdown](https://liao961120.github.io/linguisticsdown)
 
-An R package that facilitates authoring Linguistics-related documents in R Markdown. Features include easy inserting IPA symbols with a Shiny gadget and proper rendering of IPA symbols to PDF outputs.
+An R package that facilitates authoring linguistics-related documents in R Markdown. Features include easy inserting IPA symbols with a Shiny gadget and proper rendering of IPA symbols to PDF outputs.
 {:.indent}
 
 Sep 07, 2018 &nbsp;&nbsp; [PTT Slang](https://liao961120.github.io/PTT-scrapy/)
