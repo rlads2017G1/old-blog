@@ -13,15 +13,15 @@ comment: false
     ul {list-style-image: none;}
 </style>
 
-Oct 07, 2018 [slides](/slides/){:class="tab0"}
+Oct 07, 2018  s[slides](/slides/){:class="tab0"}
 
-Aug 09, 2018 [My Python Notes](/notes/python_notes.html){:class="tab0"}
+Aug 09, 2018  [My Python Notes](/notes/python_notes.html){:class="tab0"}
 
 July 19, 2018 [My Linux Notes](/notes/mylinux.html){:class="tab0"}
 
-Mar 18, 2018 [R Markdown Features](/notes/rmd_features.html){:class="tab0"}
+Mar 18, 2018  [R Markdown Features](/notes/rmd_features.html){:class="tab0"}
 
-Feb 07, 2018 [ToLearnList](/notes/ToLearnList.html){: class="tab0"}
+Feb 07, 2018  [ToLearnList](/notes/ToLearnList.html){: class="tab0"}
 
 
 ### 106-2
