@@ -19,9 +19,9 @@ comment: false
 
 ## Personal Work
 
-Oct 13, 2018 &nbsp;&nbsp; [NTUbookdown](https://github.com/liao961120/NTUbookdown)
+Oct 13, 2018 &nbsp;&nbsp; [ntuthesis](https://github.com/liao961120/ntuthesis)
 
-An R Markdown ([bookdown](https://bookdown.org/yihui/bookdown/)) thesis template for National Taiwan University.
+A [bookdown](https://bookdown.org/yihui/bookdown/) master and PhD thesis template for National Taiwan University. The template is bundled into an R package, along with several handy functions, to make it easier to use.
 {:.indent}
 
 Oct 10, 2018 &nbsp;&nbsp; [Xaringan Chocolate Theme](https://liao961120.github.io/slides/xaringan/)
