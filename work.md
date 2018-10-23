@@ -14,6 +14,7 @@ comment: false
       font-size: 0.9em;
     	padding-left: 1.1em;
     	padding-bottom: 1.5em;
+      margin-top: -0.3em;
     }
 </style>
 
