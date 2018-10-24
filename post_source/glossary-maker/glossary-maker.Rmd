@@ -15,7 +15,7 @@ mermaid: false
 mathjax2: false
 mathjax: false
 highlight: true
-title: "Make a Glossary in R Markdown"
+title: "Create a Glossary in R Markdown"
 description: "Use Pandoc definition list to make glossary in R Markdown"
 tags: [R Markdown, R, R-bloggers]
 ---
@@ -53,9 +53,9 @@ The output in PDF looks like this (I used the `multicol` package)[^source]:
 
 ![](https://raw.githubusercontent.com/liao961120/liao961120.github.io/master/post_source/glossary-maker/glossary.png)
 
-## Function Source Code
+## Source Code
 
 <script src="https://gist.github.com/liao961120/bdae1d0c1c7d90da8ae201899c69b40b.js"></script>
 
 
-[^source]: To see the source Rmd file, visit [`glossary.rmd`](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd)
+[^source]: To see the source R Markdown file, visit [`glossary.rmd`](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd). To see the output PDF, visit [glossary.pdf](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.pdf)
