@@ -38,7 +38,7 @@ library(knitr)
 I was thinking about creating a glossary in [bookdown](https://bookdown.org/yihui/bookdown/) and found out that there was already an [issue](https://github.com/rstudio/bookdown/issues/199) about it. I like Yihui's [recommendation](https://github.com/rstudio/bookdown/issues/199#issuecomment-246888361): use Pandoc's [definition lists](http://pandoc.org/MANUAL.html#definition-lists).<!--more-->
 This was exactly what I had been doing, but I quickly found out that there was a major drawback -- the definition lists **won't order alphabetically unless written in that way**.
 
-So I wrote an R function to help me reorder the definition lists written in R Markdown. Note that this functions **only works for R Markdown files containing defintion lists exclusively**. If the R Markdown files aren't whole-definition-lists, it will fail.
+So I wrote an R function to reorder the definition lists written in R Markdown. Note that this functions **only works for R Markdown files containing defintion lists exclusively**. If the R Markdown files aren't whole-definition-lists, the function will fail.
 
 
 ## Useage
@@ -58,4 +58,4 @@ The output in PDF looks like this (I used the `multicol` package)[^source]:
 <script src="https://gist.github.com/liao961120/bdae1d0c1c7d90da8ae201899c69b40b.js"></script>
 
 
-[^source]: See the source Rmd file, `glossary.rmd`, [here](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd)
+[^source]: To see the source Rmd file, visit [`glossary.rmd`](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd)
