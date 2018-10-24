@@ -41,7 +41,7 @@ This was exactly what I had been doing, but I quickly found out that there was a
 So I wrote an R function to reorder the definition lists written in R Markdown. Note that this functions **only works for R Markdown files containing defintion lists exclusively**. If the R Markdown files aren't whole-definition-lists, the function will fail.
 
 
-## Useage
+## Usage
 
 To order the definition lists alphabetically, simply put the Rmd file path in the function. To have a different output file, provide the output file path as the second argument.
 ```{r eval=FALSE, include=TRUE}
