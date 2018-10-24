@@ -43,7 +43,14 @@ So I wrote an R function to help me reorder the definition lists written in R Ma
 
 ## Useage
 
-```r
+To order the definition lists alphabetically, simply put the Rmd file path in the function. To have a different output file, provide the output file path as the second argument.
+```{r eval=FALSE, include=TRUE}
 sort_def_list("glossary.Rmd")
+# sort_def_list("glossary.Rmd", "reordered.Rmd")
 ```
+
+
+
 <script src="https://gist.github.com/liao961120/bdae1d0c1c7d90da8ae201899c69b40b.js"></script>
+
+https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd
