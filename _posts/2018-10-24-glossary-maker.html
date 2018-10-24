@@ -1,0 +1,37 @@
+---
+layout: post
+mermaid: false
+mathjax2: false
+mathjax: false
+highlight: true
+title: "Making a Glossary in R Markdown"
+description: "Use Pandoc definition list to make glossary in R Markdown"
+tags: [R Markdown, R, R-bloggers]
+---
+<p>I was thinking about creating a glossary in <a href="https://bookdown.org/yihui/bookdown/">bookdown</a> and found out that there was already an <a href="https://github.com/rstudio/bookdown/issues/199">issue</a> about it. I like Yihui’s <a href="https://github.com/rstudio/bookdown/issues/199#issuecomment-246888361">recommendation</a>: use Pandoc’s <a href="http://pandoc.org/MANUAL.html#definition-lists">definition lists</a>.<!--more--> This was exactly what I had been doing, but I quickly found out that there was a major drawback – the definition lists <strong>won’t order alphabetically unless written in that way</strong>.</p>
+<p>So I wrote an R function to help me reorder the definition lists written in R Markdown. Note that this functions <strong>only works for R Markdown files containing defintion lists exclusively</strong>. If the R Markdown files aren’t whole-definition-lists, it will fail.</p>
+<div id="useage" class="section level2">
+<h2>Useage</h2>
+<p>To order the definition lists alphabetically, simply put the Rmd file path in the function. To have a different output file, provide the output file path as the second argument.</p>
+<pre><code class="r">sort_def_list(&quot;glossary.Rmd&quot;)
+# sort_def_list(&quot;glossary.Rmd&quot;, &quot;reordered.Rmd&quot;)</code></pre>
+<p>The output in PDF looks like this (I used the <code>multicol</code> package)<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>:</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/liao961120/liao961120.github.io/master/post_source/glossary-maker/glossary.png" />
+
+</div>
+</div>
+<div id="function-source-code" class="section level2">
+<h2>Function Source Code</h2>
+<script src="https://gist.github.com/liao961120/bdae1d0c1c7d90da8ae201899c69b40b.js"></script>
+</div>
+<div class="footnotes"><h2>Notes</h2>
+
+<ol>
+<li id="fn1"><p>See the source Rmd file, <code>glossary.rmd</code>, <a href="https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd">here</a><a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+<p style="text-align:right;font-size:7px;margin-top:0px;margin-bottom:0px;padding-top:0px;padding-bottom:1px">
+
+Last updated: 2018-10-24
+</p>

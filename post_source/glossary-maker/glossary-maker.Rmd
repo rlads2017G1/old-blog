@@ -49,8 +49,13 @@ sort_def_list("glossary.Rmd")
 # sort_def_list("glossary.Rmd", "reordered.Rmd")
 ```
 
+The output in PDF looks like this (I used the `multicol` package)[^source]:
 
+![](https://raw.githubusercontent.com/liao961120/liao961120.github.io/master/post_source/glossary-maker/glossary.png)
+
+## Function Source Code
 
 <script src="https://gist.github.com/liao961120/bdae1d0c1c7d90da8ae201899c69b40b.js"></script>
 
-https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd
+
+[^source]: See the source Rmd file, `glossary.rmd`, [here](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd)
