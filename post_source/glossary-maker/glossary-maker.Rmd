@@ -17,7 +17,7 @@ mathjax: false
 highlight: true
 title: "Create a Glossary in R Markdown"
 description: "Use Pandoc definition list to make glossary in R Markdown"
-tags: [R Markdown, R, R-bloggers]
+tags: [R, R Markdown, R-bloggers]
 ---
 yaml-->
 
