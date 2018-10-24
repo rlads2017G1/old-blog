@@ -1,0 +1,49 @@
+---
+link-citations: yes
+output:
+  html_fragment:
+    self_contained: false
+    includes:
+    number_sections: no
+---
+<!--For external images, set self_contained: false-->
+
+<!--yaml
+---
+layout: post
+mermaid: false
+mathjax2: false
+mathjax: false
+highlight: true
+title: "Making a Glossary in R Markdown"
+description: "Use Pandoc definition list to make glossary in R Markdown"
+tags: [R Markdown, R, R-bloggers]
+---
+yaml-->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	fig.dim = c(7, 4),
+	message = FALSE,
+	warning = FALSE,
+	comment = "",
+	#fig.path = "../../assets/",
+	out.width = "100%"
+)
+library(knitr)
+```
+
+
+I was thinking about creating a glossary in [bookdown](https://bookdown.org/yihui/bookdown/) and found out that there was already an [issue](https://github.com/rstudio/bookdown/issues/199) about it. I like Yihui's [recommendation](https://github.com/rstudio/bookdown/issues/199#issuecomment-246888361): use Pandoc's [definition lists](http://pandoc.org/MANUAL.html#definition-lists).<!--more-->
+This was exactly what I had been doing, but I quickly found out that there was a major drawback -- the definition lists **won't order alphabetically unless written in that way**.
+
+So I wrote an R function to help me reorder the definition lists written in R Markdown. Note that this functions **only works for R Markdown files containing defintion lists exclusively**. If the R Markdown files aren't whole-definition-lists, it will fail.
+
+
+## Useage
+
+```r
+sort_def_list("glossary.Rmd")
+```
+<script src="https://gist.github.com/liao961120/bdae1d0c1c7d90da8ae201899c69b40b.js"></script>
