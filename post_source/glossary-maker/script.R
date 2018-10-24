@@ -22,8 +22,7 @@ sort_def_list <- function(in_file, out_file = NULL) {
                       c(1, (end-start+1)[-length(term)])
                       )
                   ) %>%
-    dplyr::mutate(len = end-start) %>%
-    dplyr::mutate(new_end = new_start + len)
+    dplyr::mutate(new_end = new_start + (end-start))
   
   
   # Create ordered definition list

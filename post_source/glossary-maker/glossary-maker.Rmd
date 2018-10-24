@@ -58,4 +58,4 @@ The output in PDF looks like this (I used the `multicol` package)[^source]:
 <script src="https://gist.github.com/liao961120/bdae1d0c1c7d90da8ae201899c69b40b.js"></script>
 
 
-[^source]: To see the source R Markdown file, visit [`glossary.rmd`](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd). To see the output PDF, visit [glossary.pdf](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.pdf)
+[^source]: To see the source R Markdown file, visit [`glossary.rmd`](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.rmd). To see the output PDF, visit [`glossary.pdf`](https://github.com/liao961120/liao961120.github.io/blob/master/post_source/glossary-maker/glossary.pdf)
