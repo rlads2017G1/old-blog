@@ -21,9 +21,6 @@ July 19, 2018 [My Linux Notes](/notes/mylinux.html){:class="tab0"}
 
 Mar 18, 2018  [R Markdown Features](/notes/rmd_features.html){:class="tab0"}
 
-Feb 07, 2018  [ToLearnList](/notes/ToLearnList.html){: class="tab0"}
-
-
 ### 106-2
 
 Mar 24, 2018 [Multivariate Analysis HW](/notes/106-2/multivariate/){:class="tab0"}
