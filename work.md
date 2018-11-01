@@ -22,7 +22,7 @@ comment: false
 
 Oct 13, 2018 &nbsp;&nbsp; [ntuthesis](https://liao961120.github.io/ntuthesis)
 
-A [bookdown](https://bookdown.org/yihui/bookdown/) master and PhD thesis template for National Taiwan University. The template is bundled into an R package, along with several handy functions, to make it easier to use.
+A [bookdown](https://bookdown.org/yihui/bookdown/) Master and PhD thesis template for National Taiwan University. The template is bundled into an R package, along with several handy functions, to make it easier to use.
 {:.indent}
 
 Oct 10, 2018 &nbsp;&nbsp; [Xaringan Chocolate Theme](https://liao961120.github.io/slides/xaringan/)
