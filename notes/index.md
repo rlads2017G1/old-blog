@@ -13,7 +13,6 @@ comment: false
     ul {list-style-image: none;}
 </style>
 
-[interview](./interview.html)
 
 Oct 07, 2018  [slides](/slides/){:class="tab0"}
 
