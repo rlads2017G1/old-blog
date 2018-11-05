@@ -13,6 +13,8 @@ comment: false
     ul {list-style-image: none;}
 </style>
 
+[interview](./interview.html)
+
 Oct 07, 2018  [slides](/slides/){:class="tab0"}
 
 Aug 09, 2018  [My Python Notes](/notes/python_notes.html){:class="tab0"}
